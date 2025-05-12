@@ -2,6 +2,7 @@
   "name": "neurotransmitter-quiz",
   "version": "0.0.0",
   "scripts": {
+    "deploy": "ng build --base-href=/lifeflow_app/ && npx angular-cli-ghpages --dir=dist/browser",
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
