@@ -1,0 +1,24 @@
+<div class="quiz-container">
+    <h2>Neurotransmitter Quiz</h2>
+    <p>{{scores.oxytocin}}</p>
+    <p>{{scores.serotonin}}</p>
+    <p>{{scores.dopamine}}</p>
+    <p>{{scores.endorphins}}</p>
+
+    @if (!isQuizComplete) {
+      <p>{{ questions[currentQuestionIndex].text }}</p>
+      @for (answer of questions[currentQuestionIndex].answers; track answer.text) {
+        <button (click)="selectAnswer(answer.effects)">
+            {{ answer.text }}
+        </button>
+        } @empty {
+        <li>There are no items.</li>
+        }
+    } 
+
+    @if (isQuizComplete) {
+      is complete
+      <h3>Your Results:</h3>
+      <p>{{ resultMessage }}</p>
+    } 
+  </div>
