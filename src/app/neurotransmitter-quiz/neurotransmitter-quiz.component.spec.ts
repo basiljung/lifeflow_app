@@ -8,9 +8,8 @@ describe('NeurotransmitterQuizComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [NeurotransmitterQuizComponent]
-    })
-    .compileComponents();
+      imports: [NeurotransmitterQuizComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(NeurotransmitterQuizComponent);
     component = fixture.componentInstance;

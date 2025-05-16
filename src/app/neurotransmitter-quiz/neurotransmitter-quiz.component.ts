@@ -3,11 +3,10 @@ import { QUESTIONS } from '../data/questions';
 
 type Neurotransmitter = 'oxytocin' | 'serotonin' | 'dopamine' | 'endorphins';
 
-
 @Component({
   selector: 'app-neurotransmitter-quiz',
   templateUrl: './neurotransmitter-quiz.component.html',
-  styleUrls: ['./neurotransmitter-quiz.component.scss']
+  styleUrls: ['./neurotransmitter-quiz.component.scss'],
 })
 export class NeurotransmitterQuizComponent {
   currentQuestionIndex = 0;
@@ -18,7 +17,7 @@ export class NeurotransmitterQuizComponent {
     oxytocin: 0,
     serotonin: 0,
     dopamine: 0,
-    endorphins: 0
+    endorphins: 0,
   };
 
   selectAnswer(effects: any) {
