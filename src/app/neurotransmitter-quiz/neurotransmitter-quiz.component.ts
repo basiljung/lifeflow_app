@@ -59,11 +59,11 @@ export class NeurotransmitterQuizComponent implements AfterViewInit {
   }
 
   getTestResults() {
-    const results = [];
+    const results: Neurotransmitter[] = [];
     for (let key in this.scores) {
       const score = this.scores[key as Neurotransmitter];
       if (score >= 3) {
-        results.push(key);
+        results.push(key as Neurotransmitter);
       }
     }
     this.resultDataSet = results.reduce(

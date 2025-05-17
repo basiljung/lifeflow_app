@@ -8,7 +8,7 @@ export type Neurotransmitter =
   | 'ziel';
 
 export const RESULTDATA: {
-  [key: string]: {
+  [key in Neurotransmitter]: {
     tips: { title: string; text: string }[];
     reasons: string[];
     input: string;

@@ -10,7 +10,7 @@ export const QUESTIONS = [
     ],
   },
   {
-    text: 'Wie oft suchst du gezielt nach schnellen Belohnungen oder Ablenkungen (z. B. Social Media, Snacks, Serien), obwohl du eigentlich etwas anderes tun wolltest?',
+    text: 'Wie oft suchst du gezielt nach schnellen Belohnungen oder Ablenkungen (z.B. Social Media, Snacks, Serien), obwohl du eigentlich etwas anderes tun wolltest?',
     answers: [
       { text: 'Selten', effects: { dopamine: 2 } },
       { text: 'Manchmal', effects: { dopamine: 1 } },
