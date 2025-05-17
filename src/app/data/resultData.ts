@@ -17,13 +17,17 @@ export const RESULTDATA: {
   dopamine: {
     tips: [
       {
-        title: '1. Dopamin-Detox-Zonen schaffen',
+        title: '💪 1. Herausforderungen meistern',
         text: '👉 Lege bewusste Zeiten ohne Social Media, Handy & Reizüberflutung ein (z. B. 1–2 Stunden morgens ohne Bildschirm).→ Das reduziert künstliche Reize und hilft dem System, sich neu zu regulieren.',
+      },
+      {
+        title: '🧹 2. Kleine Aufgaben erledigen',
+        text: '👉 Das Dopaminsystem liebt das erfüllen von Zielen. Schon Dinge wie Aufräumen, To-dos abhaken oder dein Bett machen geben deinem Gehirn ein klares Dopamin-Signal: "Ich komme voran."',
       },
     ],
     reasons: [
-      'Zu viel kurzfristige Belohnung (Handy, Zucker, Serien, etc.)',
-      'Low reward sensitivity',
+      '📱 Chronische Überstimulation: Ständige Reize durch Social Media, Dopamin-Kicks (Zucker, Pornografie, Serien, Benachrichtigungen & Mails checken) überfordern das System.',
+      'Bewegungsmangel & schlechter Schlaf: Dopamin wird durch körperliche Aktivität aufgebaut und im Schlaf reguliert.',
     ],
     input:
       'Dopamin sorgt dafür, dass du motiviert bist, etwas zu tun und Herausforderungen anzugehen. Es macht dich neugierig, fokussiert und zielgerichtet. Ohne ausreichend Dopamin fehlt dir der Antrieb – du schiebst Dinge auf, lässt dich leicht ablenken und suchst nach schnellen Belohnungen. Ein stabiles Dopamin-System hilft dir, dranzubleiben, deinen Weg zu gehen, und die Aufgaben und Ideen umzusetzen, die dir wichtig sind und dich erfüllen.',
