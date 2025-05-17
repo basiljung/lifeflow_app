@@ -1,11 +1,13 @@
 <div class="quiz-container">
-  <h2>Neurotransmitter Quiz</h2>
   <p>{{ scores.oxytocin }}</p>
   <p>{{ scores.serotonin }}</p>
   <p>{{ scores.dopamine }}</p>
   <p>{{ scores.endorphins }}</p>
+  <p>{{ scores.ziel }}</p>
+  <p>{{ scores.machbarkeit }}</p>
+  <p>{{ scores.sinn }}</p>
 
-  @if (!isQuizComplete) {
+  @if (showQuestions) {
     <p>{{ questions[currentQuestionIndex].text }}</p>
     @for (
       answer of questions[currentQuestionIndex].answers;
@@ -19,9 +21,40 @@
     }
   }
 
-  @if (isQuizComplete) {
-    is complete
+  @if (showResult) {
     <h3>Your Results:</h3>
-    <p>{{ resultMessage }}</p>
+    <h4>Du hast potentiell wenig...</h4>
+    <ul class="collapsible" *ngIf="resultDataSet | keyvalue as resultEntries">
+      <ng-container *ngFor="let entry of resultEntries">
+        <li>
+          <div class="collapsible-header">
+            <i class="material-icons">psychology</i>
+            {{ entry.key | titlecase }}
+            <span class="badge">klick for details</span>
+          </div>
+          <div class="collapsible-body">
+            <p><strong>Warum:</strong></p>
+            <ul>
+              <li *ngFor="let reason of entry.value.reasons">
+                🔍 {{ reason }}
+              </li>
+            </ul>
+
+            <p><strong>Tipp:</strong></p>
+            <ul>
+              <li *ngFor="let tip of entry.value.tips">
+                <strong>{{ tip.title }}</strong
+                ><br />
+                {{ tip.text }}
+              </li>
+            </ul>
+          </div>
+        </li>
+      </ng-container>
+    </ul>
+
+    <p *ngIf="!(resultDataSet | keyvalue)?.length">
+      Deine Leben scheint in Balance zu sein.
+    </p>
   }
 </div>
