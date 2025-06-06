@@ -10,7 +10,6 @@
       body {
         margin: 0;
       }
-
       body::before {
         content: "";
         position: fixed;
@@ -21,7 +20,6 @@
         background: url("assets/background.jpg") center/cover no-repeat;
         z-index: -2;
       }
-
       body::after {
         content: "";
         position: fixed;
@@ -35,51 +33,6 @@
     </style>
   </head>
   <body>
-    <div class="container" style="margin-top: 2rem">
-      <div class="card">
-        <div class="card-content">
-          <span class="card-title">🧠🌿 Welcome to the LifeFlow-Test!</span>
-        </div>
-        <div
-          style="
-            border-bottom: 1px solid #1e6f5c;
-            margin-left: 50px;
-            margin-right: 50px;
-          "
-        ></div>
-        <app-root></app-root>
-        <div class="card-reveal">
-          <span class="card-title grey-text text-darken-4"
-            >👉 Details & FAQ<i class="material-icons right">close</i></span
-          >
-          <p>
-            Here is some more information about this product that is only
-            revealed once clicked on.
-          </p>
-        </div>
-        <div
-          class="card-action"
-          style="
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-          "
-        >
-          <a
-            target="_blank"
-            href="https://lifeflow.now/"
-            style="text-transform: none"
-            >lifeflow.now</a
-          >
-
-          <a
-            class="activator"
-            style="color: #1e6f5c; margin: 0; padding: 0; text-transform: none"
-          >
-            👉 Details & FAQ
-          </a>
-        </div>
-      </div>
-    </div>
+    <app-root></app-root>
   </body>
 </html>
