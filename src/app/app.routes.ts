@@ -1,4 +1,4 @@
 import { Routes } from '@angular/router';
-import { NeurotransmitterQuizComponent } from './neurotransmitter-quiz/neurotransmitter-quiz.component';
+import { HomeComponent } from './home/home.component';
 
-export const routes: Routes = [{ path: '', component: NeurotransmitterQuizComponent }];
+export const routes: Routes = [{ path: '', component: HomeComponent }];

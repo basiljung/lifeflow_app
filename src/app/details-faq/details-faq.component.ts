@@ -6,4 +6,10 @@ import { Component } from '@angular/core';
   templateUrl: './details-faq.component.html',
   styleUrl: './details-faq.component.scss',
 })
-export class DetailsFAQComponent {}
+export class DetailsFAQComponent {
+  currentLang: string = 'DE';
+
+  toggleLanguage() {
+    this.currentLang = this.currentLang === 'DE' ? 'EN' : 'DE';
+  }
+}

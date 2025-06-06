@@ -1,39 +1,5 @@
-<div class="container" style="margin-top: 2rem">
-  <div class="card">
-    <div class="card-content">
-      <span class="card-title">🧠🌿 Welcome to the LifeFlow-Test!</span>
-    </div>
+<main class="container">
+  <router-outlet></router-outlet>
+</main>
 
-    <div style="border-bottom: 1px solid #1e6f5c; margin: 0 50px"></div>
-
-    <!-- Your content inside -->
-    <app-neurotransmitter-quiz></app-neurotransmitter-quiz>
-    <div
-      class="card-action"
-      style="display: flex; justify-content: space-between; align-items: center"
-    >
-      <a
-        target="_blank"
-        href="https://lifeflow.now/"
-        style="text-transform: none"
-        >lifeflow.now</a
-      >
-
-      <a
-        class="activator"
-        style="
-          color: #1e6f5c;
-          margin: 0;
-          padding: 0;
-          text-transform: none;
-          cursor: pointer;
-        "
-      >
-        👉 Details & FAQ
-      </a>
-    </div>
-    <div class="card-reveal">
-      <app-details-faq></app-details-faq>
-    </div>
-  </div>
-</div>
+<app-footer></app-footer>

@@ -1,59 +1,204 @@
 <div>
   <span class="card-title grey-text text-darken-4"
-    >👉 Details & FAQ<i class="material-icons right">close</i></span
+    >👉 Details & FAQ <i class="material-icons right">close</i></span
   >
-  <a class="btn-floating btn-large waves-effect waves-light red"
-    ><i class="material-icons">add</i>
-    <a class="btn-floating btn-large waves-effect waves-light red"
-      ><i class="material-icons">add</i></a
-    ></a
-  >
-  <h5>Disclaimer</h5>
-  <p>
-    This app is intended for informational and self-reflection purposes only. It
-    is not a medical or psychological diagnostic tool and does not replace
-    professional advice, diagnosis, or treatment. The insights provided are
-    based on general coaching principles and neuroscience-informed models (e.g.
-    dopamine, serotonin, oxytocin, endorphins), and are not a substitute for
-    therapy, counseling, or medical care. If you are experiencing high levels of
-    stress, emotional distress, or health-related concerns, please consult a
-    qualified healthcare professional. By using this app, you agree that the
-    developer and associated parties are not liable for any decisions, actions,
-    or outcomes resulting from the use of this application. Use of this app is
-    voluntary and at your own risk.
-  </p>
-  <h5>Terms of Use</h5>
+  <div style="position: fixed; top: 80px; right: 30px; z-index: 1000">
+    <a
+      class="btn-floating btn-small waves-effect waves-light teal"
+      (click)="toggleLanguage()"
+    >
+      <span style="font-weight: bold">{{ currentLang }}</span>
+    </a>
+  </div>
+  <div style="margin-top: 50px; padding: 40px">
+    @if (currentLang === "DE") {
+      <div>
+        <h5>🌿 Willkommen</h5>
+        <p>
+          Schön, dass du da bist. Diese App unterstützt dich dabei, dich selbst
+          besser zu verstehen – auf emotionaler, mentaler und energetischer
+          Ebene. Sie lädt dich ein, dein eigenes Muster rund um Stress,
+          Motivation, Antrieb und innere Balance zu erforschen – basierend auf
+          biologischen Grundlagen. Durch einen kurzen Fragebogen erhältst du
+          persönliche Impulse zu deinem aktuellen Gleichgewicht im Leben –
+          kombiniert mit praktischen Tipps und sanften Anregungen, die dir
+          helfen können, dich verbundener, fokussierter und gelassener zu
+          fühlen. Die Grundlage der Auswertung liegt in der Neurobiologie,
+          Motivationspsychologie und Flow-Forschung – mit Fokus auf die Wirkung
+          von Dopamin, Serotonin, Oxytocin und Endorphinen, sowie Themen wie
+          Zielklarheit, Selbstverantwortung und innere Stärke. All diese
+          Faktoren beeinflussen, wie wir mit Stress umgehen, Energie aufbauen
+          und Erfüllung erleben. Mein Ziel? Dich dabei zu unterstützen, kleine,
+          bedeutungsvolle Schritte in Richtung eines gelasseneren, klareren und
+          erfüllteren Lebens zu gehen. Wenn du Fragen, Feedback oder Ideen hast
+          – schreib mir gerne: 📩 basil.jung&#64;lifeflow.now Herzlich, Basil
+        </p>
+        <h5>Haftungsausschluss</h5>
+        <p>
+          Diese App dient ausschließlich der Information und Selbstreflexion.
+          Sie ist kein medizinisches oder psychologisches Diagnosewerkzeug und
+          ersetzt keine professionelle Beratung, Diagnose oder Behandlung. Die
+          bereitgestellten Einsichten basieren auf allgemeinen
+          Coaching-Prinzipien und neurowissenschaftlich informierten Modellen
+          (z. B. Dopamin, Serotonin, Oxytocin, Endorphine) und stellen keinen
+          Ersatz für Therapie, Beratung oder medizinische Versorgung dar. Bei
+          hohem Stress, emotionaler Belastung oder gesundheitlichen Beschwerden
+          wende dich bitte an eine qualifizierte Fachperson. Mit der Nutzung
+          dieser App erklärst du dich damit einverstanden, dass der Entwickler
+          und verbundene Parteien keine Haftung für Entscheidungen, Handlungen
+          oder Konsequenzen übernehmen, die aus der Nutzung dieser Anwendung
+          resultieren. Die Nutzung erfolgt freiwillig und auf eigenes Risiko.
+        </p>
 
-  <h6>1. Purpose of the App</h6>
-  This app is designed to support self-reflection, stress reduction, and
-  personal development. It offers insights based on your responses to questions
-  related to motivation, neurotransmitters (dopamine, serotonin, oxytocin,
-  endorphins), and life balance. The goal is to help you gain clarity, reduce
-  stress, and find practical tips for improving well-being. It is not a medical
-  or psychological treatment tool.
-  <h6>2. No Medical Advice</h6>
-  The app and its content are for informational and educational purposes only.
-  They are not a substitute for medical, psychological, or therapeutic advice,
-  diagnosis, or treatment. If you are struggling with mental health or
-  well-being beyond the scope of self-reflection, please seek professional help.
-  <h6>3. Use at Your Own Risk</h6>
-  You use this app voluntarily and at your own risk. The creators of the app do
-  not accept liability for any decisions or actions made based on the insights
-  provided.
-  <h6>4. Data Use & Responsibility</h6>
-  This app does not store or analyze your individual survey responses. All
-  answers remain on your device and are only used to provide immediate feedback.
-  If you choose to enter your name and email (e.g. to receive updates or
-  follow-up materials), this information is stored securely and used only for
-  communication related to the app or coaching services. Please see the [Privacy
-  Policy] for more details.
-  <h6>5. Age Requirement</h6>
-  This app is intended for users 16 years and older.
-  <h6>6. Intellectual Property</h6>
-  All content, structure, and logic of this app are protected and may not be
-  copied, duplicated, or reused without written permission.
-  <h6>7. Changes to the Terms</h6>
-  These terms may be updated to reflect improvements, changes in legal
-  requirements, or technical updates. Continued use of the app implies
-  acceptance of the latest version.
+        <h5>Nutzungsbedingungen</h5>
+
+        <h6>1. Zweck der App</h6>
+        <p>
+          Diese App wurde entwickelt, um Selbstreflexion, Stressreduktion und
+          persönliche Entwicklung zu unterstützen. Sie bietet Einsichten
+          basierend auf deinen Antworten zu Fragen rund um Motivation,
+          Neurotransmitter (Dopamin, Serotonin, Oxytocin, Endorphine) und
+          Lebensbalance. Ziel ist es, dir Klarheit zu verschaffen, Stress zu
+          reduzieren und praktische Tipps zur Verbesserung des Wohlbefindens zu
+          geben. Sie ist kein medizinisches oder psychologisches
+          Behandlungsinstrument.
+        </p>
+
+        <h6>2. Keine medizinische Beratung</h6>
+        <p>
+          Die App und ihre Inhalte dienen ausschließlich der Information und
+          Bildung. Sie ersetzen keine medizinische, psychologische oder
+          therapeutische Beratung, Diagnose oder Behandlung. Wenn du unter
+          psychischen Belastungen leidest, die über den Rahmen von
+          Selbstreflexion hinausgehen, suche bitte professionelle Hilfe.
+        </p>
+
+        <h6>3. Nutzung auf eigenes Risiko</h6>
+        <p>
+          Die Nutzung dieser App erfolgt freiwillig und auf eigenes Risiko. Die
+          Entwickler übernehmen keine Haftung für Entscheidungen oder
+          Handlungen, die auf Grundlage der bereitgestellten Einsichten
+          getroffen werden.
+        </p>
+
+        <h6>4. Datennutzung & Verantwortung</h6>
+        <p>
+          Diese App speichert oder analysiert deine individuellen Antworten
+          nicht. Alle Angaben verbleiben auf deinem Gerät und dienen
+          ausschließlich der unmittelbaren Rückmeldung. Wenn du optional Name
+          und E-Mail angibst (z. B. für Updates oder ergänzendes Material),
+          werden diese Daten sicher gespeichert und ausschließlich für die
+          Kommunikation im Zusammenhang mit der App oder
+          Coaching-Dienstleistungen verwendet. Siehe dazu die
+          [Datenschutzerklärung] für weitere Informationen.
+        </p>
+
+        <h6>5. Altersvorgabe</h6>
+        <p>Die App ist für Nutzerinnen und Nutzer ab 16 Jahren gedacht.</p>
+
+        <h6>6. Geistiges Eigentum</h6>
+        <p>
+          Alle Inhalte, die Struktur und die Logik dieser App sind
+          urheberrechtlich geschützt und dürfen nicht ohne schriftliche
+          Genehmigung kopiert, dupliziert oder wiederverwendet werden.
+        </p>
+
+        <h6>7. Änderungen der Bedingungen</h6>
+        <p>
+          Diese Bedingungen können aktualisiert werden, um Verbesserungen,
+          rechtliche Anforderungen oder technische Anpassungen zu
+          berücksichtigen. Die fortgesetzte Nutzung der App gilt als Zustimmung
+          zur jeweils aktuellen Version.
+        </p>
+      </div>
+    } @else {
+      <div>
+        <h5>🌿 Welcome</h5>
+        <p>
+          Hey, I’m really glad you’re here. This app was created to help you
+          better understand yourself – emotionally, mentally, and energetically.
+          It invites you to explore your own patterns around stress, motivation,
+          drive, and inner balance – all grounded in your biology. Through a
+          short survey, you’ll receive personalized insights into your current
+          life balance, along with practical tips and gentle nudges to help you
+          feel more focused, connected, and calm. The foundation of this survey
+          lies in neuroscience, motivation theory, and flow psychology – drawing
+          on the roles of dopamine, serotonin, oxytocin, endorphins, as well as
+          goal setting, clarity, and self-empowerment. These elements shape how
+          you manage stress, find energy, and create meaning in life. My goal?
+          To support you in discovering small, meaningful steps toward a more
+          balanced, fulfilling, and joyful life. If you have any questions,
+          feedback, or ideas – I’d love to hear from you: 📩
+          basil.jung&#64;lifeflow.now Warmly, Basil
+        </p>
+        <h5>Disclaimer</h5>
+        <p>
+          This app is intended for informational and self-reflection purposes
+          only. It is not a medical or psychological diagnostic tool and does
+          not replace professional advice, diagnosis, or treatment. The insights
+          provided are based on general coaching principles and
+          neuroscience-informed models (e.g. dopamine, serotonin, oxytocin,
+          endorphins), and are not a substitute for therapy, counseling, or
+          medical care. If you are experiencing high levels of stress, emotional
+          distress, or health-related concerns, please consult a qualified
+          healthcare professional. By using this app, you agree that the
+          developer and associated parties are not liable for any decisions,
+          actions, or outcomes resulting from the use of this application. Use
+          of this app is voluntary and at your own risk.
+        </p>
+        <h5>Terms of Use</h5>
+
+        <h6>1. Purpose of the App</h6>
+        <p>
+          This app is designed to support self-reflection, stress reduction, and
+          personal development. It offers insights based on your responses to
+          questions related to motivation, neurotransmitters (dopamine,
+          serotonin, oxytocin, endorphins), and life balance. The goal is to
+          help you gain clarity, reduce stress, and find practical tips for
+          improving well-being. It is not a medical or psychological treatment
+          tool.
+        </p>
+        <h6>2. No Medical Advice</h6>
+        <p>
+          The app and its content are for informational and educational purposes
+          only. They are not a substitute for medical, psychological, or
+          therapeutic advice, diagnosis, or treatment. If you are struggling
+          with mental health or well-being beyond the scope of self-reflection,
+          please seek professional help.
+        </p>
+
+        <h6>3. Use at Your Own Risk</h6>
+        <p>
+          You use this app voluntarily and at your own risk. The creators of the
+          app do not accept liability for any decisions or actions made based on
+          the insights provided.
+        </p>
+
+        <h6>4. Data Use & Responsibility</h6>
+        <p>
+          This app does not store or analyze your individual survey responses.
+          All answers remain on your device and are only used to provide
+          immediate feedback. If you choose to enter your name and email (e.g.
+          to receive updates or follow-up materials), this information is stored
+          securely and used only for communication related to the app or
+          coaching services. Please see the [Privacy Policy] for more details.
+        </p>
+
+        <h6>5. Age Requirement</h6>
+        <p>This app is intended for users 16 years and older.</p>
+
+        <h6>6. Intellectual Property</h6>
+        <p>
+          All content, structure, and logic of this app are protected and may
+          not be copied, duplicated, or reused without written permission.
+        </p>
+        <h6>7. Changes to the Terms</h6>
+        <p>
+          These terms may be updated to reflect improvements, changes in legal
+          requirements, or technical updates. Continued use of the app implies
+          acceptance of the latest version.
+        </p>
+      </div>
+    }
+  </div>
 </div>

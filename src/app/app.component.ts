@@ -1,12 +1,11 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { DetailsFAQComponent } from './details-faq/details-faq.component';
-import { NeurotransmitterQuizComponent } from './neurotransmitter-quiz/neurotransmitter-quiz.component';
+import { FooterComponent } from './footer/footer.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, DetailsFAQComponent, NeurotransmitterQuizComponent],
+  imports: [RouterOutlet, FooterComponent],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
