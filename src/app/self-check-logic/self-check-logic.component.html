@@ -1,7 +1,31 @@
 <div class="quiz-container">
+  @if (showLanguageBtn) {
+    <div style="margin-bottom: 5rem">
+      <h5>Choose the language and let's go:</h5>
+      <div>
+        <a
+          class="btn-floating btn-large waves-effect waves-light teal"
+          style="margin: 1rem"
+          (click)="toggleLanguageSelfcheck('EN')"
+        >
+          <span style="font-weight: bold">EN</span>
+        </a>
+        <a
+          class="btn-floating btn-large waves-effect waves-light teal"
+          (click)="toggleLanguageSelfcheck('DE')"
+        >
+          <span style="font-weight: bold">DE</span>
+        </a>
+      </div>
+    </div>
+  }
+
   <div>
     @if (showQuestions) {
-      <h5 class="question-container">
+      <h5
+        class="question-container"
+        [ngStyle]="{ opacity: showLanguageBtn ? '0.5' : '1' }"
+      >
         {{ questions[currentQuestionIndex].text }}
       </h5>
       @for (
@@ -10,6 +34,7 @@
       ) {
         <button
           style="cursor: pointer"
+          [disabled]="showLanguageBtn"
           #btn
           (click)="selectAnswer(answer.effects); btn.blur()"
         >

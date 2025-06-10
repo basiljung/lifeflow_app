@@ -14,12 +14,12 @@ declare var M: any;
   templateUrl: './self-check-logic.component.html',
   styleUrls: ['./self-check-logic.component.scss'],
 })
-export class SelfcheckLogicComponent implements AfterViewInit, OnInit {
+export class SelfcheckLogicComponent implements AfterViewInit {
   currentQuestionIndex = 0;
-  currentLang: string = 'DE';
+  currentLangSelfCheck: string = 'EN';
+  showLanguageBtn = true;
 
-  questions = QUESTIONS_DE;
-  questions_en = QUESTIONS_EN;
+  questions = QUESTIONS_EN;
   resultData = RESULTDATA;
   showResult = false;
   showQuestions = true;
@@ -55,12 +55,14 @@ export class SelfcheckLogicComponent implements AfterViewInit, OnInit {
     M.Collapsible.init(document.querySelectorAll('.collapsible'), {});
   }
 
-  ngOnInit(): void {
-    this.toggleLanguage();
-  }
-
-  toggleLanguage() {
-    this.currentLang = this.currentLang === 'DE' ? 'EN' : 'DE';
+  toggleLanguageSelfcheck(lang: string) {
+    this.currentLangSelfCheck = lang;
+    if (this.currentLangSelfCheck === 'DE') {
+      this.questions = QUESTIONS_DE;
+    } else {
+      this.questions = QUESTIONS_EN;
+    }
+    this.showLanguageBtn = false;
   }
 
   selectAnswer(effects: any) {
