@@ -24,40 +24,43 @@
   @if (showResult) {
     <h4>🧠🌿 Your Results:</h4>
     <p>Du hast potentiell wenig...</p>
-    <ul
-      class="collapsible"
-      style="border-radius: 12px"
-      *ngIf="resultDataSet | keyvalue as resultEntries"
-    >
-      <ng-container *ngFor="let entry of resultEntries">
-        <li>
-          <div class="collapsible-header" style="border-radius: 12px">
-            <i class="material-icons">psychology</i>
-            {{ entry.key | titlecase }}
-            <span class="badge" style="color: #1e6f5c">
-              👉 Click for details</span
-            >
-          </div>
-          <div class="collapsible-body">
-            <h5><strong>Reason:</strong></h5>
-            <ul>
-              <li *ngFor="let reason of entry.value.reasons">
-                🔍 {{ reason }}
-              </li>
-            </ul>
 
-            <h5><strong>Tipp:</strong></h5>
-            <ul>
-              <li *ngFor="let tip of entry.value.tips">
-                <strong>{{ tip.title }}</strong
-                ><br />
-                {{ tip.text }}
-              </li>
-            </ul>
-          </div>
-        </li>
-      </ng-container>
-    </ul>
+    <div class="container">
+      <ul
+        class="collapsible"
+        style="border-radius: 12px"
+        *ngIf="resultDataSet | keyvalue as resultEntries"
+      >
+        <ng-container *ngFor="let entry of resultEntries">
+          <li>
+            <div class="collapsible-header" style="border-radius: 12px">
+              <i class="material-icons">psychology</i>
+              {{ entry.key | titlecase }}
+              <span class="badge" style="color: #1e6f5c">
+                👉 Click for details</span
+              >
+            </div>
+            <div class="collapsible-body">
+              <h5><strong>Reason:</strong></h5>
+              <ul>
+                <li *ngFor="let reason of entry.value.reasons">
+                  🔍 {{ reason }}
+                </li>
+              </ul>
+
+              <h5><strong>Tipp:</strong></h5>
+              <ul>
+                <li *ngFor="let tip of entry.value.tips">
+                  <strong>{{ tip.title }}</strong
+                  ><br />
+                  {{ tip.text }}
+                </li>
+              </ul>
+            </div>
+          </li>
+        </ng-container>
+      </ul>
+    </div>
 
     <p *ngIf="!(resultDataSet | keyvalue)?.length">
       Deine Leben scheint in Balance zu sein.

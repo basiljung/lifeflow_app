@@ -1,33 +1,35 @@
-export const QUESTIONS = [
+import { Question } from './questions-de';
+
+export const QUESTIONS_EN: Question[] = [
   {
-    text: 'Ich habe ein klares Gefühl dafür, was mir im Leben wichtig ist.',
+    text: 'I have a clear sense of what matters most to me in life.',
     answers: [
       {
-        text: '5 – trifft voll zu',
+        text: '5 – Applies completely',
         effects: {
           clarity: 2,
         },
       },
       {
-        text: '4 – trifft eher zu',
+        text: '4 – Applies somewhat',
         effects: {
           clarity: 1,
         },
       },
       {
-        text: '3 – teils-teils',
+        text: '3 – Neutral / Mixed',
         effects: {
           clarity: 0,
         },
       },
       {
-        text: '2 – trifft wenig zu',
+        text: '2 – Applies slightly',
         effects: {
           clarity: -1,
         },
       },
       {
-        text: '1 – trifft gar nicht zu',
+        text: '1 – Does not apply at all',
         effects: {
           clarity: -2,
         },
@@ -35,34 +37,69 @@ export const QUESTIONS = [
     ],
   },
   {
-    text: 'Ich bin oft unsicher, was meine innere Ausrichtung betrifft.',
+    text: 'I often feel unsure about my inner direction.',
     answers: [
       {
-        text: '5 – trifft voll zu',
+        text: '5 – Applies completely',
         effects: {
-          clarity: 2,
+          clarity: -2,
         },
       },
       {
-        text: '4 – trifft eher zu',
-        effects: {
-          clarity: 1,
-        },
-      },
-      {
-        text: '3 – teils-teils',
-        effects: {
-          clarity: 0,
-        },
-      },
-      {
-        text: '2 – trifft wenig zu',
+        text: '4 – Applies somewhat',
         effects: {
           clarity: -1,
         },
       },
       {
-        text: '1 – trifft gar nicht zu',
+        text: '3 – Neutral / Mixed',
+        effects: {
+          clarity: 0,
+        },
+      },
+      {
+        text: '2 – Applies slightly',
+        effects: {
+          clarity: 1,
+        },
+      },
+      {
+        text: '1 – Does not apply at all',
+        effects: {
+          clarity: 2,
+        },
+      },
+    ],
+  },
+  {
+    text: 'My thoughts are organized and focused.',
+    answers: [
+      {
+        text: '5 – Applies completely',
+        effects: {
+          clarity: 2,
+        },
+      },
+      {
+        text: '4 – Applies somewhat',
+        effects: {
+          clarity: 1,
+        },
+      },
+      {
+        text: '3 – Neutral / Mixed',
+        effects: {
+          clarity: 0,
+        },
+      },
+      {
+        text: '2 – Applies slightly',
+        effects: {
+          clarity: -1,
+        },
+      },
+      {
+        text: '1 – Does not apply at all',
         effects: {
           clarity: -2,
         },
@@ -70,69 +107,34 @@ export const QUESTIONS = [
     ],
   },
   {
-    text: 'Meine Gedanken sind geordnet und zielgerichtet.',
+    text: 'I feel adequately challenged at the moment.',
     answers: [
       {
-        text: '5 – trifft voll zu',
-        effects: {
-          clarity: 2,
-        },
-      },
-      {
-        text: '4 – trifft eher zu',
-        effects: {
-          clarity: 1,
-        },
-      },
-      {
-        text: '3 – teils-teils',
-        effects: {
-          clarity: 0,
-        },
-      },
-      {
-        text: '2 – trifft wenig zu',
-        effects: {
-          clarity: -1,
-        },
-      },
-      {
-        text: '1 – trifft gar nicht zu',
-        effects: {
-          clarity: -2,
-        },
-      },
-    ],
-  },
-  {
-    text: 'Ich fühle mich gerade genau richtig gefordert.',
-    answers: [
-      {
-        text: '5 – trifft voll zu',
+        text: '5 – Applies completely',
         effects: {
           challenge: 2,
         },
       },
       {
-        text: '4 – trifft eher zu',
+        text: '4 – Applies somewhat',
         effects: {
           challenge: 1,
         },
       },
       {
-        text: '3 – teils-teils',
+        text: '3 – Neutral / Mixed',
         effects: {
           challenge: 0,
         },
       },
       {
-        text: '2 – trifft wenig zu',
+        text: '2 – Applies slightly',
         effects: {
           challenge: -1,
         },
       },
       {
-        text: '1 – trifft gar nicht zu',
+        text: '1 – Does not apply at all',
         effects: {
           challenge: -2,
         },
@@ -140,104 +142,139 @@ export const QUESTIONS = [
     ],
   },
   {
-    text: 'Meine Aufgaben überfordern mich regelmäßig.',
+    text: 'I regularly feel overwhelmed by my tasks.',
     answers: [
       {
-        text: '5 – trifft voll zu',
+        text: '5 – Applies completely',
         effects: {
-          challenge: 2,
+          challenge: -2,
         },
       },
       {
-        text: '4 – trifft eher zu',
-        effects: {
-          challenge: 1,
-        },
-      },
-      {
-        text: '3 – teils-teils',
-        effects: {
-          challenge: 0,
-        },
-      },
-      {
-        text: '2 – trifft wenig zu',
+        text: '4 – Applies somewhat',
         effects: {
           challenge: -1,
         },
       },
       {
-        text: '1 – trifft gar nicht zu',
-        effects: {
-          challenge: -2,
-        },
-      },
-    ],
-  },
-  {
-    text: 'Ich langweile mich häufig, weil meine Aufgaben zu leicht sind.',
-    answers: [
-      {
-        text: '5 – trifft voll zu',
-        effects: {
-          challenge: 2,
-        },
-      },
-      {
-        text: '4 – trifft eher zu',
-        effects: {
-          challenge: 1,
-        },
-      },
-      {
-        text: '3 – teils-teils',
+        text: '3 – Neutral / Mixed',
         effects: {
           challenge: 0,
         },
       },
       {
-        text: '2 – trifft wenig zu',
+        text: '2 – Applies slightly',
+        effects: {
+          challenge: 1,
+        },
+      },
+      {
+        text: '1 – Does not apply at all',
+        effects: {
+          challenge: 2,
+        },
+      },
+    ],
+  },
+  {
+    text: 'I often feel bored because my tasks are too easy.',
+    answers: [
+      {
+        text: '5 – Applies completely',
+        effects: {
+          challenge: -2,
+        },
+      },
+      {
+        text: '4 – Applies somewhat',
         effects: {
           challenge: -1,
         },
       },
       {
-        text: '1 – trifft gar nicht zu',
+        text: '3 – Neutral / Mixed',
         effects: {
-          challenge: -2,
+          challenge: 0,
+        },
+      },
+      {
+        text: '2 – Applies slightly',
+        effects: {
+          challenge: 1,
+        },
+      },
+      {
+        text: '1 – Does not apply at all',
+        effects: {
+          challenge: 2,
         },
       },
     ],
   },
   {
-    text: 'Ich fühle mich innerlich eng oder emotional blockiert.',
+    text: 'I feel emotionally blocked or constricted inside.',
     answers: [
       {
-        text: '5 – trifft voll zu',
+        text: '5 – Applies completely',
         effects: {
-          space: 2,
+          space: -2,
         },
       },
       {
-        text: '4 – trifft eher zu',
-        effects: {
-          space: 1,
-        },
-      },
-      {
-        text: '3 – teils-teils',
-        effects: {
-          space: 0,
-        },
-      },
-      {
-        text: '2 – trifft wenig zu',
+        text: '4 – Applies somewhat',
         effects: {
           space: -1,
         },
       },
       {
-        text: '1 – trifft gar nicht zu',
+        text: '3 – Neutral / Mixed',
+        effects: {
+          space: 0,
+        },
+      },
+      {
+        text: '2 – Applies slightly',
+        effects: {
+          space: 1,
+        },
+      },
+      {
+        text: '1 – Does not apply at all',
+        effects: {
+          space: 2,
+        },
+      },
+    ],
+  },
+  {
+    text: 'I have enough space for myself and my feelings.',
+    answers: [
+      {
+        text: '5 – Applies completely',
+        effects: {
+          space: 2,
+        },
+      },
+      {
+        text: '4 – Applies somewhat',
+        effects: {
+          space: 1,
+        },
+      },
+      {
+        text: '3 – Neutral / Mixed',
+        effects: {
+          space: 0,
+        },
+      },
+      {
+        text: '2 – Applies slightly',
+        effects: {
+          space: -1,
+        },
+      },
+      {
+        text: '1 – Does not apply at all',
         effects: {
           space: -2,
         },
@@ -245,34 +282,34 @@ export const QUESTIONS = [
     ],
   },
   {
-    text: 'Ich habe genug Raum für mich selbst und meine Gefühle.',
+    text: 'I handle inner pressure well.',
     answers: [
       {
-        text: '5 – trifft voll zu',
+        text: '5 – Applies completely',
         effects: {
           space: 2,
         },
       },
       {
-        text: '4 – trifft eher zu',
+        text: '4 – Applies somewhat',
         effects: {
           space: 1,
         },
       },
       {
-        text: '3 – teils-teils',
+        text: '3 – Neutral / Mixed',
         effects: {
           space: 0,
         },
       },
       {
-        text: '2 – trifft wenig zu',
+        text: '2 – Applies slightly',
         effects: {
           space: -1,
         },
       },
       {
-        text: '1 – trifft gar nicht zu',
+        text: '1 – Does not apply at all',
         effects: {
           space: -2,
         },
@@ -280,69 +317,34 @@ export const QUESTIONS = [
     ],
   },
   {
-    text: 'Ich kann gut mit innerem Druck umgehen.',
+    text: 'I have consistent routines or rituals that guide me.',
     answers: [
       {
-        text: '5 – trifft voll zu',
-        effects: {
-          space: 2,
-        },
-      },
-      {
-        text: '4 – trifft eher zu',
-        effects: {
-          space: 1,
-        },
-      },
-      {
-        text: '3 – teils-teils',
-        effects: {
-          space: 0,
-        },
-      },
-      {
-        text: '2 – trifft wenig zu',
-        effects: {
-          space: -1,
-        },
-      },
-      {
-        text: '1 – trifft gar nicht zu',
-        effects: {
-          space: -2,
-        },
-      },
-    ],
-  },
-  {
-    text: 'Ich habe feste Rituale oder Routinen, die mir Orientierung geben.',
-    answers: [
-      {
-        text: '5 – trifft voll zu',
+        text: '5 – Applies completely',
         effects: {
           structure: 2,
         },
       },
       {
-        text: '4 – trifft eher zu',
+        text: '4 – Applies somewhat',
         effects: {
           structure: 1,
         },
       },
       {
-        text: '3 – teils-teils',
+        text: '3 – Neutral / Mixed',
         effects: {
           structure: 0,
         },
       },
       {
-        text: '2 – trifft wenig zu',
+        text: '2 – Applies slightly',
         effects: {
           structure: -1,
         },
       },
       {
-        text: '1 – trifft gar nicht zu',
+        text: '1 – Does not apply at all',
         effects: {
           structure: -2,
         },
@@ -350,34 +352,69 @@ export const QUESTIONS = [
     ],
   },
   {
-    text: 'Mein Alltag verläuft oft chaotisch oder unstrukturiert.',
+    text: 'My daily life is often chaotic or unstructured.',
     answers: [
       {
-        text: '5 – trifft voll zu',
+        text: '5 – Applies completely',
         effects: {
-          structure: 2,
+          structure: -2,
         },
       },
       {
-        text: '4 – trifft eher zu',
-        effects: {
-          structure: 1,
-        },
-      },
-      {
-        text: '3 – teils-teils',
-        effects: {
-          structure: 0,
-        },
-      },
-      {
-        text: '2 – trifft wenig zu',
+        text: '4 – Applies somewhat',
         effects: {
           structure: -1,
         },
       },
       {
-        text: '1 – trifft gar nicht zu',
+        text: '3 – Neutral / Mixed',
+        effects: {
+          structure: 0,
+        },
+      },
+      {
+        text: '2 – Applies slightly',
+        effects: {
+          structure: 1,
+        },
+      },
+      {
+        text: '1 – Does not apply at all',
+        effects: {
+          structure: 2,
+        },
+      },
+    ],
+  },
+  {
+    text: 'I design my daily routine consciously and with clarity.',
+    answers: [
+      {
+        text: '5 – Applies completely',
+        effects: {
+          structure: 2,
+        },
+      },
+      {
+        text: '4 – Applies somewhat',
+        effects: {
+          structure: 1,
+        },
+      },
+      {
+        text: '3 – Neutral / Mixed',
+        effects: {
+          structure: 0,
+        },
+      },
+      {
+        text: '2 – Applies slightly',
+        effects: {
+          structure: -1,
+        },
+      },
+      {
+        text: '1 – Does not apply at all',
         effects: {
           structure: -2,
         },
@@ -385,69 +422,34 @@ export const QUESTIONS = [
     ],
   },
   {
-    text: 'Ich gestalte meinen Tagesablauf bewusst und mit Klarheit.',
+    text: 'I am usually fully engaged in my tasks.',
     answers: [
       {
-        text: '5 – trifft voll zu',
-        effects: {
-          structure: 2,
-        },
-      },
-      {
-        text: '4 – trifft eher zu',
-        effects: {
-          structure: 1,
-        },
-      },
-      {
-        text: '3 – teils-teils',
-        effects: {
-          structure: 0,
-        },
-      },
-      {
-        text: '2 – trifft wenig zu',
-        effects: {
-          structure: -1,
-        },
-      },
-      {
-        text: '1 – trifft gar nicht zu',
-        effects: {
-          structure: -2,
-        },
-      },
-    ],
-  },
-  {
-    text: 'Ich bin bei meinen Aufgaben meist voll bei der Sache.',
-    answers: [
-      {
-        text: '5 – trifft voll zu',
+        text: '5 – Applies completely',
         effects: {
           focus: 2,
         },
       },
       {
-        text: '4 – trifft eher zu',
+        text: '4 – Applies somewhat',
         effects: {
           focus: 1,
         },
       },
       {
-        text: '3 – teils-teils',
+        text: '3 – Neutral / Mixed',
         effects: {
           focus: 0,
         },
       },
       {
-        text: '2 – trifft wenig zu',
+        text: '2 – Applies slightly',
         effects: {
           focus: -1,
         },
       },
       {
-        text: '1 – trifft gar nicht zu',
+        text: '1 – Does not apply at all',
         effects: {
           focus: -2,
         },
@@ -455,34 +457,69 @@ export const QUESTIONS = [
     ],
   },
   {
-    text: 'Ich lasse mich leicht ablenken.',
+    text: 'I get distracted easily.',
     answers: [
       {
-        text: '5 – trifft voll zu',
+        text: '5 – Applies completely',
         effects: {
-          focus: 2,
+          focus: -2,
         },
       },
       {
-        text: '4 – trifft eher zu',
-        effects: {
-          focus: 1,
-        },
-      },
-      {
-        text: '3 – teils-teils',
-        effects: {
-          focus: 0,
-        },
-      },
-      {
-        text: '2 – trifft wenig zu',
+        text: '4 – Applies somewhat',
         effects: {
           focus: -1,
         },
       },
       {
-        text: '1 – trifft gar nicht zu',
+        text: '3 – Neutral / Mixed',
+        effects: {
+          focus: 0,
+        },
+      },
+      {
+        text: '2 – Applies slightly',
+        effects: {
+          focus: 1,
+        },
+      },
+      {
+        text: '1 – Does not apply at all',
+        effects: {
+          focus: 2,
+        },
+      },
+    ],
+  },
+  {
+    text: 'I consciously experience the present moment.',
+    answers: [
+      {
+        text: '5 – Applies completely',
+        effects: {
+          focus: 2,
+        },
+      },
+      {
+        text: '4 – Applies somewhat',
+        effects: {
+          focus: 1,
+        },
+      },
+      {
+        text: '3 – Neutral / Mixed',
+        effects: {
+          focus: 0,
+        },
+      },
+      {
+        text: '2 – Applies slightly',
+        effects: {
+          focus: -1,
+        },
+      },
+      {
+        text: '1 – Does not apply at all',
         effects: {
           focus: -2,
         },
@@ -490,69 +527,34 @@ export const QUESTIONS = [
     ],
   },
   {
-    text: 'Ich nehme den gegenwärtigen Moment bewusst wahr.',
+    text: 'I feel capable of handling my tasks.',
     answers: [
       {
-        text: '5 – trifft voll zu',
-        effects: {
-          focus: 2,
-        },
-      },
-      {
-        text: '4 – trifft eher zu',
-        effects: {
-          focus: 1,
-        },
-      },
-      {
-        text: '3 – teils-teils',
-        effects: {
-          focus: 0,
-        },
-      },
-      {
-        text: '2 – trifft wenig zu',
-        effects: {
-          focus: -1,
-        },
-      },
-      {
-        text: '1 – trifft gar nicht zu',
-        effects: {
-          focus: -2,
-        },
-      },
-    ],
-  },
-  {
-    text: 'Ich fühle mich meinen Aufgaben gewachsen.',
-    answers: [
-      {
-        text: '5 – trifft voll zu',
+        text: '5 – Applies completely',
         effects: {
           feasibility: 2,
         },
       },
       {
-        text: '4 – trifft eher zu',
+        text: '4 – Applies somewhat',
         effects: {
           feasibility: 1,
         },
       },
       {
-        text: '3 – teils-teils',
+        text: '3 – Neutral / Mixed',
         effects: {
           feasibility: 0,
         },
       },
       {
-        text: '2 – trifft wenig zu',
+        text: '2 – Applies slightly',
         effects: {
           feasibility: -1,
         },
       },
       {
-        text: '1 – trifft gar nicht zu',
+        text: '1 – Does not apply at all',
         effects: {
           feasibility: -2,
         },
@@ -560,34 +562,34 @@ export const QUESTIONS = [
     ],
   },
   {
-    text: 'Ich weiß, wie ich meine Ziele in konkrete Schritte umsetze.',
+    text: 'I know how to break my goals into actionable steps.',
     answers: [
       {
-        text: '5 – trifft voll zu',
+        text: '5 – Applies completely',
         effects: {
           feasibility: 2,
         },
       },
       {
-        text: '4 – trifft eher zu',
+        text: '4 – Applies somewhat',
         effects: {
           feasibility: 1,
         },
       },
       {
-        text: '3 – teils-teils',
+        text: '3 – Neutral / Mixed',
         effects: {
           feasibility: 0,
         },
       },
       {
-        text: '2 – trifft wenig zu',
+        text: '2 – Applies slightly',
         effects: {
           feasibility: -1,
         },
       },
       {
-        text: '1 – trifft gar nicht zu',
+        text: '1 – Does not apply at all',
         effects: {
           feasibility: -2,
         },
@@ -595,69 +597,69 @@ export const QUESTIONS = [
     ],
   },
   {
-    text: 'Ich bin oft blockiert und komme nicht in die Umsetzung.',
+    text: 'I often feel stuck and struggle to take action.',
     answers: [
       {
-        text: '5 – trifft voll zu',
+        text: '5 – Applies completely',
         effects: {
-          feasibility: 2,
+          feasibility: -2,
         },
       },
       {
-        text: '4 – trifft eher zu',
-        effects: {
-          feasibility: 1,
-        },
-      },
-      {
-        text: '3 – teils-teils',
-        effects: {
-          feasibility: 0,
-        },
-      },
-      {
-        text: '2 – trifft wenig zu',
+        text: '4 – Applies somewhat',
         effects: {
           feasibility: -1,
         },
       },
       {
-        text: '1 – trifft gar nicht zu',
+        text: '3 – Neutral / Mixed',
         effects: {
-          feasibility: -2,
+          feasibility: 0,
+        },
+      },
+      {
+        text: '2 – Applies slightly',
+        effects: {
+          feasibility: 1,
+        },
+      },
+      {
+        text: '1 – Does not apply at all',
+        effects: {
+          feasibility: 2,
         },
       },
     ],
   },
   {
-    text: 'Ich habe konkrete Ziele, auf die ich hinarbeite.',
+    text: 'I have concrete goals that I’m actively working toward.',
     answers: [
       {
-        text: '5 – trifft voll zu',
+        text: '5 – Applies completely',
         effects: {
           goal: 2,
         },
       },
       {
-        text: '4 – trifft eher zu',
+        text: '4 – Applies somewhat',
         effects: {
           goal: 1,
         },
       },
       {
-        text: '3 – teils-teils',
+        text: '3 – Neutral / Mixed',
         effects: {
           goal: 0,
         },
       },
       {
-        text: '2 – trifft wenig zu',
+        text: '2 – Applies slightly',
         effects: {
           goal: -1,
         },
       },
       {
-        text: '1 – trifft gar nicht zu',
+        text: '1 – Does not apply at all',
         effects: {
           goal: -2,
         },
@@ -665,34 +667,69 @@ export const QUESTIONS = [
     ],
   },
   {
-    text: 'Mir fehlt eine klare Richtung für meine nächsten Schritte.',
+    text: 'I lack a clear direction for my next steps.',
     answers: [
       {
-        text: '5 – trifft voll zu',
+        text: '5 – Applies completely',
         effects: {
-          goal: 2,
+          goal: -2,
         },
       },
       {
-        text: '4 – trifft eher zu',
-        effects: {
-          goal: 1,
-        },
-      },
-      {
-        text: '3 – teils-teils',
-        effects: {
-          goal: 0,
-        },
-      },
-      {
-        text: '2 – trifft wenig zu',
+        text: '4 – Applies somewhat',
         effects: {
           goal: -1,
         },
       },
       {
-        text: '1 – trifft gar nicht zu',
+        text: '3 – Neutral / Mixed',
+        effects: {
+          goal: 0,
+        },
+      },
+      {
+        text: '2 – Applies slightly',
+        effects: {
+          goal: 1,
+        },
+      },
+      {
+        text: '1 – Does not apply at all',
+        effects: {
+          goal: 2,
+        },
+      },
+    ],
+  },
+  {
+    text: 'I’m confident in what I want to achieve.',
+    answers: [
+      {
+        text: '5 – Applies completely',
+        effects: {
+          goal: 2,
+        },
+      },
+      {
+        text: '4 – Applies somewhat',
+        effects: {
+          goal: 1,
+        },
+      },
+      {
+        text: '3 – Neutral / Mixed',
+        effects: {
+          goal: 0,
+        },
+      },
+      {
+        text: '2 – Applies slightly',
+        effects: {
+          goal: -1,
+        },
+      },
+      {
+        text: '1 – Does not apply at all',
         effects: {
           goal: -2,
         },
@@ -700,69 +737,34 @@ export const QUESTIONS = [
     ],
   },
   {
-    text: 'Ich bin mir sicher, was ich erreichen will.',
+    text: 'What I do feels deeply meaningful to me.',
     answers: [
       {
-        text: '5 – trifft voll zu',
-        effects: {
-          goal: 2,
-        },
-      },
-      {
-        text: '4 – trifft eher zu',
-        effects: {
-          goal: 1,
-        },
-      },
-      {
-        text: '3 – teils-teils',
-        effects: {
-          goal: 0,
-        },
-      },
-      {
-        text: '2 – trifft wenig zu',
-        effects: {
-          goal: -1,
-        },
-      },
-      {
-        text: '1 – trifft gar nicht zu',
-        effects: {
-          goal: -2,
-        },
-      },
-    ],
-  },
-  {
-    text: 'Das, was ich tue, hat für mich persönlich eine tiefe Bedeutung.',
-    answers: [
-      {
-        text: '5 – trifft voll zu',
+        text: '5 – Applies completely',
         effects: {
           meaning: 2,
         },
       },
       {
-        text: '4 – trifft eher zu',
+        text: '4 – Applies somewhat',
         effects: {
           meaning: 1,
         },
       },
       {
-        text: '3 – teils-teils',
+        text: '3 – Neutral / Mixed',
         effects: {
           meaning: 0,
         },
       },
       {
-        text: '2 – trifft wenig zu',
+        text: '2 – Applies slightly',
         effects: {
           meaning: -1,
         },
       },
       {
-        text: '1 – trifft gar nicht zu',
+        text: '1 – Does not apply at all',
         effects: {
           meaning: -2,
         },
@@ -770,34 +772,69 @@ export const QUESTIONS = [
     ],
   },
   {
-    text: 'Ich frage mich oft, ob das alles überhaupt Sinn macht.',
+    text: 'I often question whether any of this makes sense.',
     answers: [
       {
-        text: '5 – trifft voll zu',
+        text: '5 – Applies completely',
         effects: {
-          meaning: 2,
+          meaning: -2,
         },
       },
       {
-        text: '4 – trifft eher zu',
-        effects: {
-          meaning: 1,
-        },
-      },
-      {
-        text: '3 – teils-teils',
-        effects: {
-          meaning: 0,
-        },
-      },
-      {
-        text: '2 – trifft wenig zu',
+        text: '4 – Applies somewhat',
         effects: {
           meaning: -1,
         },
       },
       {
-        text: '1 – trifft gar nicht zu',
+        text: '3 – Neutral / Mixed',
+        effects: {
+          meaning: 0,
+        },
+      },
+      {
+        text: '2 – Applies slightly',
+        effects: {
+          meaning: 1,
+        },
+      },
+      {
+        text: '1 – Does not apply at all',
+        effects: {
+          meaning: 2,
+        },
+      },
+    ],
+  },
+  {
+    text: 'I feel a connection between my actions and my values.',
+    answers: [
+      {
+        text: '5 – Applies completely',
+        effects: {
+          meaning: 2,
+        },
+      },
+      {
+        text: '4 – Applies somewhat',
+        effects: {
+          meaning: 1,
+        },
+      },
+      {
+        text: '3 – Neutral / Mixed',
+        effects: {
+          meaning: 0,
+        },
+      },
+      {
+        text: '2 – Applies slightly',
+        effects: {
+          meaning: -1,
+        },
+      },
+      {
+        text: '1 – Does not apply at all',
         effects: {
           meaning: -2,
         },
@@ -805,69 +842,34 @@ export const QUESTIONS = [
     ],
   },
   {
-    text: 'Ich spüre einen Zusammenhang zwischen meinem Handeln und meinen Werten.',
+    text: 'I feel connected to other people.',
     answers: [
       {
-        text: '5 – trifft voll zu',
-        effects: {
-          meaning: 2,
-        },
-      },
-      {
-        text: '4 – trifft eher zu',
-        effects: {
-          meaning: 1,
-        },
-      },
-      {
-        text: '3 – teils-teils',
-        effects: {
-          meaning: 0,
-        },
-      },
-      {
-        text: '2 – trifft wenig zu',
-        effects: {
-          meaning: -1,
-        },
-      },
-      {
-        text: '1 – trifft gar nicht zu',
-        effects: {
-          meaning: -2,
-        },
-      },
-    ],
-  },
-  {
-    text: 'Ich fühle mich mit anderen Menschen verbunden.',
-    answers: [
-      {
-        text: '5 – trifft voll zu',
+        text: '5 – Applies completely',
         effects: {
           oxytocin: 2,
         },
       },
       {
-        text: '4 – trifft eher zu',
+        text: '4 – Applies somewhat',
         effects: {
           oxytocin: 1,
         },
       },
       {
-        text: '3 – teils-teils',
+        text: '3 – Neutral / Mixed',
         effects: {
           oxytocin: 0,
         },
       },
       {
-        text: '2 – trifft wenig zu',
+        text: '2 – Applies slightly',
         effects: {
           oxytocin: -1,
         },
       },
       {
-        text: '1 – trifft gar nicht zu',
+        text: '1 – Does not apply at all',
         effects: {
           oxytocin: -2,
         },
@@ -875,34 +877,69 @@ export const QUESTIONS = [
     ],
   },
   {
-    text: 'Ich finde es schwer, mich emotional auf andere einzulassen.',
+    text: 'I find it hard to open up emotionally to others.',
     answers: [
       {
-        text: '5 – trifft voll zu',
+        text: '5 – Applies completely',
         effects: {
-          oxytocin: 2,
+          oxytocin: -2,
         },
       },
       {
-        text: '4 – trifft eher zu',
-        effects: {
-          oxytocin: 1,
-        },
-      },
-      {
-        text: '3 – teils-teils',
-        effects: {
-          oxytocin: 0,
-        },
-      },
-      {
-        text: '2 – trifft wenig zu',
+        text: '4 – Applies somewhat',
         effects: {
           oxytocin: -1,
         },
       },
       {
-        text: '1 – trifft gar nicht zu',
+        text: '3 – Neutral / Mixed',
+        effects: {
+          oxytocin: 0,
+        },
+      },
+      {
+        text: '2 – Applies slightly',
+        effects: {
+          oxytocin: 1,
+        },
+      },
+      {
+        text: '1 – Does not apply at all',
+        effects: {
+          oxytocin: 2,
+        },
+      },
+    ],
+  },
+  {
+    text: 'I regularly experience moments of trust and emotional closeness.',
+    answers: [
+      {
+        text: '5 – Applies completely',
+        effects: {
+          oxytocin: 2,
+        },
+      },
+      {
+        text: '4 – Applies somewhat',
+        effects: {
+          oxytocin: 1,
+        },
+      },
+      {
+        text: '3 – Neutral / Mixed',
+        effects: {
+          oxytocin: 0,
+        },
+      },
+      {
+        text: '2 – Applies slightly',
+        effects: {
+          oxytocin: -1,
+        },
+      },
+      {
+        text: '1 – Does not apply at all',
         effects: {
           oxytocin: -2,
         },
@@ -910,69 +947,34 @@ export const QUESTIONS = [
     ],
   },
   {
-    text: 'Ich erlebe regelmäßig Momente von Vertrauen und Herzensnähe.',
+    text: 'I’m excited to pursue new ideas.',
     answers: [
       {
-        text: '5 – trifft voll zu',
-        effects: {
-          oxytocin: 2,
-        },
-      },
-      {
-        text: '4 – trifft eher zu',
-        effects: {
-          oxytocin: 1,
-        },
-      },
-      {
-        text: '3 – teils-teils',
-        effects: {
-          oxytocin: 0,
-        },
-      },
-      {
-        text: '2 – trifft wenig zu',
-        effects: {
-          oxytocin: -1,
-        },
-      },
-      {
-        text: '1 – trifft gar nicht zu',
-        effects: {
-          oxytocin: -2,
-        },
-      },
-    ],
-  },
-  {
-    text: 'Ich habe Lust, neue Ideen umzusetzen.',
-    answers: [
-      {
-        text: '5 – trifft voll zu',
+        text: '5 – Applies completely',
         effects: {
           dopamine: 2,
         },
       },
       {
-        text: '4 – trifft eher zu',
+        text: '4 – Applies somewhat',
         effects: {
           dopamine: 1,
         },
       },
       {
-        text: '3 – teils-teils',
+        text: '3 – Neutral / Mixed',
         effects: {
           dopamine: 0,
         },
       },
       {
-        text: '2 – trifft wenig zu',
+        text: '2 – Applies slightly',
         effects: {
           dopamine: -1,
         },
       },
       {
-        text: '1 – trifft gar nicht zu',
+        text: '1 – Does not apply at all',
         effects: {
           dopamine: -2,
         },
@@ -980,34 +982,69 @@ export const QUESTIONS = [
     ],
   },
   {
-    text: 'Ich fühle mich oft antriebslos oder unmotiviert.',
+    text: 'I often feel unmotivated or low in drive.',
     answers: [
       {
-        text: '5 – trifft voll zu',
+        text: '5 – Applies completely',
         effects: {
-          dopamine: 2,
+          dopamine: -2,
         },
       },
       {
-        text: '4 – trifft eher zu',
-        effects: {
-          dopamine: 1,
-        },
-      },
-      {
-        text: '3 – teils-teils',
-        effects: {
-          dopamine: 0,
-        },
-      },
-      {
-        text: '2 – trifft wenig zu',
+        text: '4 – Applies somewhat',
         effects: {
           dopamine: -1,
         },
       },
       {
-        text: '1 – trifft gar nicht zu',
+        text: '3 – Neutral / Mixed',
+        effects: {
+          dopamine: 0,
+        },
+      },
+      {
+        text: '2 – Applies slightly',
+        effects: {
+          dopamine: 1,
+        },
+      },
+      {
+        text: '1 – Does not apply at all',
+        effects: {
+          dopamine: 2,
+        },
+      },
+    ],
+  },
+  {
+    text: 'I look forward to getting things done.',
+    answers: [
+      {
+        text: '5 – Applies completely',
+        effects: {
+          dopamine: 2,
+        },
+      },
+      {
+        text: '4 – Applies somewhat',
+        effects: {
+          dopamine: 1,
+        },
+      },
+      {
+        text: '3 – Neutral / Mixed',
+        effects: {
+          dopamine: 0,
+        },
+      },
+      {
+        text: '2 – Applies slightly',
+        effects: {
+          dopamine: -1,
+        },
+      },
+      {
+        text: '1 – Does not apply at all',
         effects: {
           dopamine: -2,
         },
@@ -1015,69 +1052,34 @@ export const QUESTIONS = [
     ],
   },
   {
-    text: 'Ich freue mich darauf, Dinge anzugehen.',
+    text: 'I feel calm, stable, and balanced inside.',
     answers: [
       {
-        text: '5 – trifft voll zu',
-        effects: {
-          dopamine: 2,
-        },
-      },
-      {
-        text: '4 – trifft eher zu',
-        effects: {
-          dopamine: 1,
-        },
-      },
-      {
-        text: '3 – teils-teils',
-        effects: {
-          dopamine: 0,
-        },
-      },
-      {
-        text: '2 – trifft wenig zu',
-        effects: {
-          dopamine: -1,
-        },
-      },
-      {
-        text: '1 – trifft gar nicht zu',
-        effects: {
-          dopamine: -2,
-        },
-      },
-    ],
-  },
-  {
-    text: 'Ich fühle mich innerlich ruhig und stabil.',
-    answers: [
-      {
-        text: '5 – trifft voll zu',
+        text: '5 – Applies completely',
         effects: {
           serotonin: 2,
         },
       },
       {
-        text: '4 – trifft eher zu',
+        text: '4 – Applies somewhat',
         effects: {
           serotonin: 1,
         },
       },
       {
-        text: '3 – teils-teils',
+        text: '3 – Neutral / Mixed',
         effects: {
           serotonin: 0,
         },
       },
       {
-        text: '2 – trifft wenig zu',
+        text: '2 – Applies slightly',
         effects: {
           serotonin: -1,
         },
       },
       {
-        text: '1 – trifft gar nicht zu',
+        text: '1 – Does not apply at all',
         effects: {
           serotonin: -2,
         },
@@ -1085,34 +1087,69 @@ export const QUESTIONS = [
     ],
   },
   {
-    text: 'Ich reagiere schnell gereizt oder unruhig.',
+    text: 'I get irritated or restless quickly.',
     answers: [
       {
-        text: '5 – trifft voll zu',
+        text: '5 – Applies completely',
         effects: {
-          serotonin: 2,
+          serotonin: -2,
         },
       },
       {
-        text: '4 – trifft eher zu',
-        effects: {
-          serotonin: 1,
-        },
-      },
-      {
-        text: '3 – teils-teils',
-        effects: {
-          serotonin: 0,
-        },
-      },
-      {
-        text: '2 – trifft wenig zu',
+        text: '4 – Applies somewhat',
         effects: {
           serotonin: -1,
         },
       },
       {
-        text: '1 – trifft gar nicht zu',
+        text: '3 – Neutral / Mixed',
+        effects: {
+          serotonin: 0,
+        },
+      },
+      {
+        text: '2 – Applies slightly',
+        effects: {
+          serotonin: 1,
+        },
+      },
+      {
+        text: '1 – Does not apply at all',
+        effects: {
+          serotonin: 2,
+        },
+      },
+    ],
+  },
+  {
+    text: 'I trust that things will unfold in their own time.',
+    answers: [
+      {
+        text: '5 – Applies completely',
+        effects: {
+          serotonin: 2,
+        },
+      },
+      {
+        text: '4 – Applies somewhat',
+        effects: {
+          serotonin: 1,
+        },
+      },
+      {
+        text: '3 – Neutral / Mixed',
+        effects: {
+          serotonin: 0,
+        },
+      },
+      {
+        text: '2 – Applies slightly',
+        effects: {
+          serotonin: -1,
+        },
+      },
+      {
+        text: '1 – Does not apply at all',
         effects: {
           serotonin: -2,
         },
@@ -1120,69 +1157,34 @@ export const QUESTIONS = [
     ],
   },
   {
-    text: 'Ich vertraue darauf, dass sich die Dinge entwickeln dürfen.',
+    text: 'I can consciously enjoy moments of joy.',
     answers: [
       {
-        text: '5 – trifft voll zu',
-        effects: {
-          serotonin: 2,
-        },
-      },
-      {
-        text: '4 – trifft eher zu',
-        effects: {
-          serotonin: 1,
-        },
-      },
-      {
-        text: '3 – teils-teils',
-        effects: {
-          serotonin: 0,
-        },
-      },
-      {
-        text: '2 – trifft wenig zu',
-        effects: {
-          serotonin: -1,
-        },
-      },
-      {
-        text: '1 – trifft gar nicht zu',
-        effects: {
-          serotonin: -2,
-        },
-      },
-    ],
-  },
-  {
-    text: 'Ich kann Momente der Freude bewusst wahrnehmen.',
-    answers: [
-      {
-        text: '5 – trifft voll zu',
+        text: '5 – Applies completely',
         effects: {
           endorphins: 2,
         },
       },
       {
-        text: '4 – trifft eher zu',
+        text: '4 – Applies somewhat',
         effects: {
           endorphins: 1,
         },
       },
       {
-        text: '3 – teils-teils',
+        text: '3 – Neutral / Mixed',
         effects: {
           endorphins: 0,
         },
       },
       {
-        text: '2 – trifft wenig zu',
+        text: '2 – Applies slightly',
         effects: {
           endorphins: -1,
         },
       },
       {
-        text: '1 – trifft gar nicht zu',
+        text: '1 – Does not apply at all',
         effects: {
           endorphins: -2,
         },
@@ -1190,69 +1192,69 @@ export const QUESTIONS = [
     ],
   },
   {
-    text: 'In meinem Alltag fehlt mir oft die Leichtigkeit.',
+    text: 'I often feel a lack of lightness in my daily life.',
     answers: [
       {
-        text: '5 – trifft voll zu',
+        text: '5 – Applies completely',
         effects: {
-          endorphins: 2,
+          endorphins: -2,
         },
       },
       {
-        text: '4 – trifft eher zu',
-        effects: {
-          endorphins: 1,
-        },
-      },
-      {
-        text: '3 – teils-teils',
-        effects: {
-          endorphins: 0,
-        },
-      },
-      {
-        text: '2 – trifft wenig zu',
+        text: '4 – Applies somewhat',
         effects: {
           endorphins: -1,
         },
       },
       {
-        text: '1 – trifft gar nicht zu',
+        text: '3 – Neutral / Mixed',
         effects: {
-          endorphins: -2,
+          endorphins: 0,
+        },
+      },
+      {
+        text: '2 – Applies slightly',
+        effects: {
+          endorphins: 1,
+        },
+      },
+      {
+        text: '1 – Does not apply at all',
+        effects: {
+          endorphins: 2,
         },
       },
     ],
   },
   {
-    text: 'Ich finde regelmäßig kleine Dinge, über die ich mich freuen kann.',
+    text: 'I regularly find small things to be happy about.',
     answers: [
       {
-        text: '5 – trifft voll zu',
+        text: '5 – Applies completely',
         effects: {
           endorphins: 2,
         },
       },
       {
-        text: '4 – trifft eher zu',
+        text: '4 – Applies somewhat',
         effects: {
           endorphins: 1,
         },
       },
       {
-        text: '3 – teils-teils',
+        text: '3 – Neutral / Mixed',
         effects: {
           endorphins: 0,
         },
       },
       {
-        text: '2 – trifft wenig zu',
+        text: '2 – Applies slightly',
         effects: {
           endorphins: -1,
         },
       },
       {
-        text: '1 – trifft gar nicht zu',
+        text: '1 – Does not apply at all',
         effects: {
           endorphins: -2,
         },

@@ -1,8 +1,9 @@
-import { AfterViewInit, Component } from '@angular/core';
-import { QUESTIONS } from '../data/questions';
+import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { RESULTDATA } from '../data/resultData';
 import { SelfcheckTopics } from '../data/resultData';
 import { CommonModule } from '@angular/common';
+import { QUESTIONS_DE } from '../data/questions-de';
+import { QUESTIONS_EN } from '../data/questions-en';
 
 declare var M: any;
 
@@ -13,10 +14,12 @@ declare var M: any;
   templateUrl: './self-check-logic.component.html',
   styleUrls: ['./self-check-logic.component.scss'],
 })
-export class SelfcheckLogicComponent implements AfterViewInit {
+export class SelfcheckLogicComponent implements AfterViewInit, OnInit {
   currentQuestionIndex = 0;
+  currentLang: string = 'DE';
 
-  questions = QUESTIONS;
+  questions = QUESTIONS_DE;
+  questions_en = QUESTIONS_EN;
   resultData = RESULTDATA;
   showResult = false;
   showQuestions = true;
@@ -50,6 +53,14 @@ export class SelfcheckLogicComponent implements AfterViewInit {
 
   ngAfterViewInit() {
     M.Collapsible.init(document.querySelectorAll('.collapsible'), {});
+  }
+
+  ngOnInit(): void {
+    this.toggleLanguage();
+  }
+
+  toggleLanguage() {
+    this.currentLang = this.currentLang === 'DE' ? 'EN' : 'DE';
   }
 
   selectAnswer(effects: any) {
