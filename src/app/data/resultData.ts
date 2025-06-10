@@ -1,11 +1,16 @@
 export type Neurotransmitter =
+  | 'clarity'
+  | 'challenge'
+  | 'space'
+  | 'structure'
+  | 'focus'
+  | 'feasibility'
+  | 'goal'
+  | 'meaning'
   | 'oxytocin'
-  | 'serotonin'
   | 'dopamine'
-  | 'endorphins'
-  | 'sinn'
-  | 'machbarkeit'
-  | 'ziel';
+  | 'serotonin'
+  | 'endorphins';
 
 export const RESULTDATA: {
   [key in Neurotransmitter]: {
@@ -46,51 +51,111 @@ export const RESULTDATA: {
   serotonin: {
     tips: [
       {
-        title: '1. ...',
-        text: '👉 ...',
+        title: '1. Sonnenlicht tanken',
+        text: '👉 Tägliches Licht (besonders morgens) hilft deinem Gehirn, Serotonin zu produzieren – für mehr innere Stabilität.',
       },
     ],
-    reasons: ['Mood instability', 'Lack of structure and sunlight'],
-    input: 'blabla',
+    reasons: ['🕶️ Zu wenig Tageslicht', '🌪️ Stimmungsschwankungen'],
+    input:
+      'Serotonin ist entscheidend für deine emotionale Stabilität, deinen Schlaf-Wach-Rhythmus und dein Wohlbefinden. Es hilft dir, gelassener zu bleiben und hebt die Stimmung.',
   },
   endorphins: {
     tips: [
       {
-        title: '1. ...',
-        text: '👉 ....',
+        title: '1. Bewege deinen Körper',
+        text: '👉 Sport, Tanz oder ein Spaziergang können Endorphine freisetzen – natürliche Glücksbooster!',
       },
     ],
-    reasons: ['Mood instability', 'Lack of structure and sunlight'],
-    input: 'blabla',
+    reasons: ['🏠 Bewegungsmangel', '📉 Niedriges Energielevel'],
+    input:
+      'Endorphine sind körpereigene Schmerzmittel und Stimmungsaufheller. Sie werden vor allem bei Bewegung, Lachen oder Musik freigesetzt und helfen, Stress abzubauen.',
   },
-  ziel: {
+  goal: {
     tips: [
       {
-        title: '1. ....',
-        text: '👉 ',
+        title: '1. Klarheit schaffen',
+        text: '👉 Formuliere dein Ziel konkret und positiv – was genau willst du erreichen, und warum?',
       },
     ],
-    reasons: ['Mood instability', 'Lack of structure and sunlight'],
-    input: 'zielzielziele',
+    reasons: ['🎯 Fehlende Zieldefinition', '🌀 Unklare Prioritäten'],
+    input:
+      'Ein klares Ziel gibt dir Richtung, Motivation und Orientierung. Es hilft deinem Gehirn, Energie zu fokussieren und Fortschritt bewusst wahrzunehmen.',
   },
-  machbarkeit: {
+  feasibility: {
     tips: [
       {
-        title: '1. ....',
-        text: '👉......u regulieren.',
+        title: '1. Realistische Schritte planen',
+        text: '👉 Teile große Ziele in kleine, machbare Schritte – das macht sie greifbarer und motivierender.',
       },
     ],
-    reasons: ['llll', 'l'],
-    input: 'machbarkeit',
+    reasons: ['🧱 Zu hohe Ansprüche', '😵‍💫 Überforderung durch Komplexität'],
+    input:
+      'Machbarkeit gibt deinem Gehirn Sicherheit: Wenn ein Ziel erreichbar erscheint, steigt die Motivation, ins Handeln zu kommen.',
   },
-  sinn: {
+  meaning: {
     tips: [
       {
-        title: '1. ....',
-        text: '👉 L ohne Bildscm, sich neu zu regulieren.',
+        title: '1. Verbinde dein Handeln mit Sinn',
+        text: '👉 Frage dich: Warum ist mir das wichtig? Was steckt tiefer dahinter?',
       },
     ],
-    reasons: ['Mood instability', 'Lack of structure and sunlight'],
-    input: 'sinn',
+    reasons: ['🪫 Gefühl der Leere', '❓ Fehlende Sinnverbindung im Alltag'],
+    input:
+      'Sinnerleben aktiviert tiefe emotionale Systeme im Gehirn. Wenn du weißt, wofür du etwas tust, entsteht innere Kraft und Ausdauer.',
+  },
+  clarity: {
+    tips: [
+      {
+        title: '1. Gedanken ordnen',
+        text: '👉 Nutze Journaling oder Mindmaps, um deine inneren Themen sichtbar zu machen.',
+      },
+    ],
+    reasons: ['🌫️ Inneres Chaos', '⏳ Keine Zeit zur Reflexion'],
+    input:
+      'Klarheit bedeutet, dich selbst besser zu verstehen – deine Werte, Bedürfnisse und Ziele. Sie entsteht durch innere Ordnung und bewusste Reflexion.',
+  },
+  challenge: {
+    tips: [
+      {
+        title: '1. Raus aus der Komfortzone',
+        text: '👉 Such dir eine kleine Herausforderung, die dich kitzelt – aber nicht überfordert.',
+      },
+    ],
+    reasons: ['😐 Unterforderung', '😖 Überforderung'],
+    input:
+      'Die richtige Balance aus Herausforderung und Können bringt dich in den Flow. Zu wenig reizt dich nicht – zu viel blockiert dich.',
+  },
+  space: {
+    tips: [
+      {
+        title: '1. Inneren Raum schaffen',
+        text: '👉 Plane bewusste Pausen ohne Input – kein Handy, keine To-dos, nur du mit dir.',
+      },
+    ],
+    reasons: ['📵 Dauerinput', '⏰ Keine Zeit für Stille'],
+    input:
+      'Innerer Raum ist die Grundlage für emotionale Verarbeitung und Kreativität. Ohne ihn fehlt dir Tiefe und Ruhe.',
+  },
+  structure: {
+    tips: [
+      {
+        title: '1. Feste Routinen etablieren',
+        text: '👉 Nutze Morgen- oder Abendroutinen, um deinem Tag eine klare Struktur zu geben.',
+      },
+    ],
+    reasons: ['🌀 Chaos im Alltag', '📆 Fehlende Planung'],
+    input:
+      'Struktur gibt deinem Nervensystem Sicherheit und deinem Tag Halt. Sie hilft dir, besser mit Stress umzugehen und fokussierter zu arbeiten.',
+  },
+  focus: {
+    tips: [
+      {
+        title: '1. Ablenkungen reduzieren',
+        text: '👉 Schalte unnötige Benachrichtigungen aus und arbeite in Fokusblöcken.',
+      },
+    ],
+    reasons: ['📲 Reizüberflutung', '🧠 Keine Konzentrationsstrategie'],
+    input:
+      'Fokus entsteht, wenn dein Gehirn nicht ständig umschaltet. Mit bewusster Aufmerksamkeit kannst du tiefer arbeiten und mehr erreichen.',
   },
 };

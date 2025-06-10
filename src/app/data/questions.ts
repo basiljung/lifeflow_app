@@ -5,31 +5,31 @@ export const QUESTIONS = [
       {
         text: '5 – trifft voll zu',
         effects: {
-          klarheit: -2,
+          clarity: 2,
         },
       },
       {
         text: '4 – trifft eher zu',
         effects: {
-          klarheit: -1,
+          clarity: 1,
         },
       },
       {
         text: '3 – teils-teils',
         effects: {
-          klarheit: 0,
+          clarity: 0,
         },
       },
       {
         text: '2 – trifft wenig zu',
         effects: {
-          klarheit: 1,
+          clarity: -1,
         },
       },
       {
         text: '1 – trifft gar nicht zu',
         effects: {
-          klarheit: 2,
+          clarity: -2,
         },
       },
     ],
@@ -40,31 +40,31 @@ export const QUESTIONS = [
       {
         text: '5 – trifft voll zu',
         effects: {
-          klarheit: 2,
+          clarity: 2,
         },
       },
       {
         text: '4 – trifft eher zu',
         effects: {
-          klarheit: 1,
+          clarity: 1,
         },
       },
       {
         text: '3 – teils-teils',
         effects: {
-          klarheit: 0,
+          clarity: 0,
         },
       },
       {
         text: '2 – trifft wenig zu',
         effects: {
-          klarheit: -1,
+          clarity: -1,
         },
       },
       {
         text: '1 – trifft gar nicht zu',
         effects: {
-          klarheit: -2,
+          clarity: -2,
         },
       },
     ],
@@ -75,31 +75,31 @@ export const QUESTIONS = [
       {
         text: '5 – trifft voll zu',
         effects: {
-          klarheit: -2,
+          clarity: 2,
         },
       },
       {
         text: '4 – trifft eher zu',
         effects: {
-          klarheit: -1,
+          clarity: 1,
         },
       },
       {
         text: '3 – teils-teils',
         effects: {
-          klarheit: 0,
+          clarity: 0,
         },
       },
       {
         text: '2 – trifft wenig zu',
         effects: {
-          klarheit: 1,
+          clarity: -1,
         },
       },
       {
         text: '1 – trifft gar nicht zu',
         effects: {
-          klarheit: 2,
+          clarity: -2,
         },
       },
     ],
@@ -110,13 +110,13 @@ export const QUESTIONS = [
       {
         text: '5 – trifft voll zu',
         effects: {
-          challenge: -2,
+          challenge: 2,
         },
       },
       {
         text: '4 – trifft eher zu',
         effects: {
-          challenge: -1,
+          challenge: 1,
         },
       },
       {
@@ -128,13 +128,13 @@ export const QUESTIONS = [
       {
         text: '2 – trifft wenig zu',
         effects: {
-          challenge: 1,
+          challenge: -1,
         },
       },
       {
         text: '1 – trifft gar nicht zu',
         effects: {
-          challenge: 2,
+          challenge: -2,
         },
       },
     ],
@@ -215,31 +215,31 @@ export const QUESTIONS = [
       {
         text: '5 – trifft voll zu',
         effects: {
-          raum: 2,
+          space: 2,
         },
       },
       {
         text: '4 – trifft eher zu',
         effects: {
-          raum: 1,
+          space: 1,
         },
       },
       {
         text: '3 – teils-teils',
         effects: {
-          raum: 0,
+          space: 0,
         },
       },
       {
         text: '2 – trifft wenig zu',
         effects: {
-          raum: -1,
+          space: -1,
         },
       },
       {
         text: '1 – trifft gar nicht zu',
         effects: {
-          raum: -2,
+          space: -2,
         },
       },
     ],
@@ -250,31 +250,31 @@ export const QUESTIONS = [
       {
         text: '5 – trifft voll zu',
         effects: {
-          raum: -2,
+          space: 2,
         },
       },
       {
         text: '4 – trifft eher zu',
         effects: {
-          raum: -1,
+          space: 1,
         },
       },
       {
         text: '3 – teils-teils',
         effects: {
-          raum: 0,
+          space: 0,
         },
       },
       {
         text: '2 – trifft wenig zu',
         effects: {
-          raum: 1,
+          space: -1,
         },
       },
       {
         text: '1 – trifft gar nicht zu',
         effects: {
-          raum: 2,
+          space: -2,
         },
       },
     ],
@@ -285,31 +285,31 @@ export const QUESTIONS = [
       {
         text: '5 – trifft voll zu',
         effects: {
-          raum: -2,
+          space: 2,
         },
       },
       {
         text: '4 – trifft eher zu',
         effects: {
-          raum: -1,
+          space: 1,
         },
       },
       {
         text: '3 – teils-teils',
         effects: {
-          raum: 0,
+          space: 0,
         },
       },
       {
         text: '2 – trifft wenig zu',
         effects: {
-          raum: 1,
+          space: -1,
         },
       },
       {
         text: '1 – trifft gar nicht zu',
         effects: {
-          raum: 2,
+          space: -2,
         },
       },
     ],
@@ -320,31 +320,31 @@ export const QUESTIONS = [
       {
         text: '5 – trifft voll zu',
         effects: {
-          struktur: -2,
+          structure: 2,
         },
       },
       {
         text: '4 – trifft eher zu',
         effects: {
-          struktur: -1,
+          structure: 1,
         },
       },
       {
         text: '3 – teils-teils',
         effects: {
-          struktur: 0,
+          structure: 0,
         },
       },
       {
         text: '2 – trifft wenig zu',
         effects: {
-          struktur: 1,
+          structure: -1,
         },
       },
       {
         text: '1 – trifft gar nicht zu',
         effects: {
-          struktur: 2,
+          structure: -2,
         },
       },
     ],
@@ -355,31 +355,31 @@ export const QUESTIONS = [
       {
         text: '5 – trifft voll zu',
         effects: {
-          struktur: 2,
+          structure: 2,
         },
       },
       {
         text: '4 – trifft eher zu',
         effects: {
-          struktur: 1,
+          structure: 1,
         },
       },
       {
         text: '3 – teils-teils',
         effects: {
-          struktur: 0,
+          structure: 0,
         },
       },
       {
         text: '2 – trifft wenig zu',
         effects: {
-          struktur: -1,
+          structure: -1,
         },
       },
       {
         text: '1 – trifft gar nicht zu',
         effects: {
-          struktur: -2,
+          structure: -2,
         },
       },
     ],
@@ -390,31 +390,31 @@ export const QUESTIONS = [
       {
         text: '5 – trifft voll zu',
         effects: {
-          struktur: -2,
+          structure: 2,
         },
       },
       {
         text: '4 – trifft eher zu',
         effects: {
-          struktur: -1,
+          structure: 1,
         },
       },
       {
         text: '3 – teils-teils',
         effects: {
-          struktur: 0,
+          structure: 0,
         },
       },
       {
         text: '2 – trifft wenig zu',
         effects: {
-          struktur: 1,
+          structure: -1,
         },
       },
       {
         text: '1 – trifft gar nicht zu',
         effects: {
-          struktur: 2,
+          structure: -2,
         },
       },
     ],
@@ -425,31 +425,31 @@ export const QUESTIONS = [
       {
         text: '5 – trifft voll zu',
         effects: {
-          fokus: -2,
+          focus: 2,
         },
       },
       {
         text: '4 – trifft eher zu',
         effects: {
-          fokus: -1,
+          focus: 1,
         },
       },
       {
         text: '3 – teils-teils',
         effects: {
-          fokus: 0,
+          focus: 0,
         },
       },
       {
         text: '2 – trifft wenig zu',
         effects: {
-          fokus: 1,
+          focus: -1,
         },
       },
       {
         text: '1 – trifft gar nicht zu',
         effects: {
-          fokus: 2,
+          focus: -2,
         },
       },
     ],
@@ -460,31 +460,31 @@ export const QUESTIONS = [
       {
         text: '5 – trifft voll zu',
         effects: {
-          fokus: 2,
+          focus: 2,
         },
       },
       {
         text: '4 – trifft eher zu',
         effects: {
-          fokus: 1,
+          focus: 1,
         },
       },
       {
         text: '3 – teils-teils',
         effects: {
-          fokus: 0,
+          focus: 0,
         },
       },
       {
         text: '2 – trifft wenig zu',
         effects: {
-          fokus: -1,
+          focus: -1,
         },
       },
       {
         text: '1 – trifft gar nicht zu',
         effects: {
-          fokus: -2,
+          focus: -2,
         },
       },
     ],
@@ -495,31 +495,31 @@ export const QUESTIONS = [
       {
         text: '5 – trifft voll zu',
         effects: {
-          fokus: -2,
+          focus: 2,
         },
       },
       {
         text: '4 – trifft eher zu',
         effects: {
-          fokus: -1,
+          focus: 1,
         },
       },
       {
         text: '3 – teils-teils',
         effects: {
-          fokus: 0,
+          focus: 0,
         },
       },
       {
         text: '2 – trifft wenig zu',
         effects: {
-          fokus: 1,
+          focus: -1,
         },
       },
       {
         text: '1 – trifft gar nicht zu',
         effects: {
-          fokus: 2,
+          focus: -2,
         },
       },
     ],
@@ -530,31 +530,31 @@ export const QUESTIONS = [
       {
         text: '5 – trifft voll zu',
         effects: {
-          machbarkeit: -2,
+          feasibility: 2,
         },
       },
       {
         text: '4 – trifft eher zu',
         effects: {
-          machbarkeit: -1,
+          feasibility: 1,
         },
       },
       {
         text: '3 – teils-teils',
         effects: {
-          machbarkeit: 0,
+          feasibility: 0,
         },
       },
       {
         text: '2 – trifft wenig zu',
         effects: {
-          machbarkeit: 1,
+          feasibility: -1,
         },
       },
       {
         text: '1 – trifft gar nicht zu',
         effects: {
-          machbarkeit: 2,
+          feasibility: -2,
         },
       },
     ],
@@ -565,31 +565,31 @@ export const QUESTIONS = [
       {
         text: '5 – trifft voll zu',
         effects: {
-          machbarkeit: -2,
+          feasibility: 2,
         },
       },
       {
         text: '4 – trifft eher zu',
         effects: {
-          machbarkeit: -1,
+          feasibility: 1,
         },
       },
       {
         text: '3 – teils-teils',
         effects: {
-          machbarkeit: 0,
+          feasibility: 0,
         },
       },
       {
         text: '2 – trifft wenig zu',
         effects: {
-          machbarkeit: 1,
+          feasibility: -1,
         },
       },
       {
         text: '1 – trifft gar nicht zu',
         effects: {
-          machbarkeit: 2,
+          feasibility: -2,
         },
       },
     ],
@@ -600,31 +600,31 @@ export const QUESTIONS = [
       {
         text: '5 – trifft voll zu',
         effects: {
-          machbarkeit: 2,
+          feasibility: 2,
         },
       },
       {
         text: '4 – trifft eher zu',
         effects: {
-          machbarkeit: 1,
+          feasibility: 1,
         },
       },
       {
         text: '3 – teils-teils',
         effects: {
-          machbarkeit: 0,
+          feasibility: 0,
         },
       },
       {
         text: '2 – trifft wenig zu',
         effects: {
-          machbarkeit: -1,
+          feasibility: -1,
         },
       },
       {
         text: '1 – trifft gar nicht zu',
         effects: {
-          machbarkeit: -2,
+          feasibility: -2,
         },
       },
     ],
@@ -635,31 +635,31 @@ export const QUESTIONS = [
       {
         text: '5 – trifft voll zu',
         effects: {
-          ziel: -2,
+          goal: 2,
         },
       },
       {
         text: '4 – trifft eher zu',
         effects: {
-          ziel: -1,
+          goal: 1,
         },
       },
       {
         text: '3 – teils-teils',
         effects: {
-          ziel: 0,
+          goal: 0,
         },
       },
       {
         text: '2 – trifft wenig zu',
         effects: {
-          ziel: 1,
+          goal: -1,
         },
       },
       {
         text: '1 – trifft gar nicht zu',
         effects: {
-          ziel: 2,
+          goal: -2,
         },
       },
     ],
@@ -670,31 +670,31 @@ export const QUESTIONS = [
       {
         text: '5 – trifft voll zu',
         effects: {
-          ziel: 2,
+          goal: 2,
         },
       },
       {
         text: '4 – trifft eher zu',
         effects: {
-          ziel: 1,
+          goal: 1,
         },
       },
       {
         text: '3 – teils-teils',
         effects: {
-          ziel: 0,
+          goal: 0,
         },
       },
       {
         text: '2 – trifft wenig zu',
         effects: {
-          ziel: -1,
+          goal: -1,
         },
       },
       {
         text: '1 – trifft gar nicht zu',
         effects: {
-          ziel: -2,
+          goal: -2,
         },
       },
     ],
@@ -705,31 +705,31 @@ export const QUESTIONS = [
       {
         text: '5 – trifft voll zu',
         effects: {
-          ziel: -2,
+          goal: 2,
         },
       },
       {
         text: '4 – trifft eher zu',
         effects: {
-          ziel: -1,
+          goal: 1,
         },
       },
       {
         text: '3 – teils-teils',
         effects: {
-          ziel: 0,
+          goal: 0,
         },
       },
       {
         text: '2 – trifft wenig zu',
         effects: {
-          ziel: 1,
+          goal: -1,
         },
       },
       {
         text: '1 – trifft gar nicht zu',
         effects: {
-          ziel: 2,
+          goal: -2,
         },
       },
     ],
@@ -740,31 +740,31 @@ export const QUESTIONS = [
       {
         text: '5 – trifft voll zu',
         effects: {
-          sinn: -2,
+          meaning: 2,
         },
       },
       {
         text: '4 – trifft eher zu',
         effects: {
-          sinn: -1,
+          meaning: 1,
         },
       },
       {
         text: '3 – teils-teils',
         effects: {
-          sinn: 0,
+          meaning: 0,
         },
       },
       {
         text: '2 – trifft wenig zu',
         effects: {
-          sinn: 1,
+          meaning: -1,
         },
       },
       {
         text: '1 – trifft gar nicht zu',
         effects: {
-          sinn: 2,
+          meaning: -2,
         },
       },
     ],
@@ -775,31 +775,31 @@ export const QUESTIONS = [
       {
         text: '5 – trifft voll zu',
         effects: {
-          sinn: 2,
+          meaning: 2,
         },
       },
       {
         text: '4 – trifft eher zu',
         effects: {
-          sinn: 1,
+          meaning: 1,
         },
       },
       {
         text: '3 – teils-teils',
         effects: {
-          sinn: 0,
+          meaning: 0,
         },
       },
       {
         text: '2 – trifft wenig zu',
         effects: {
-          sinn: -1,
+          meaning: -1,
         },
       },
       {
         text: '1 – trifft gar nicht zu',
         effects: {
-          sinn: -2,
+          meaning: -2,
         },
       },
     ],
@@ -810,31 +810,31 @@ export const QUESTIONS = [
       {
         text: '5 – trifft voll zu',
         effects: {
-          sinn: -2,
+          meaning: 2,
         },
       },
       {
         text: '4 – trifft eher zu',
         effects: {
-          sinn: -1,
+          meaning: 1,
         },
       },
       {
         text: '3 – teils-teils',
         effects: {
-          sinn: 0,
+          meaning: 0,
         },
       },
       {
         text: '2 – trifft wenig zu',
         effects: {
-          sinn: 1,
+          meaning: -1,
         },
       },
       {
         text: '1 – trifft gar nicht zu',
         effects: {
-          sinn: 2,
+          meaning: -2,
         },
       },
     ],
@@ -845,13 +845,13 @@ export const QUESTIONS = [
       {
         text: '5 – trifft voll zu',
         effects: {
-          oxytocin: -2,
+          oxytocin: 2,
         },
       },
       {
         text: '4 – trifft eher zu',
         effects: {
-          oxytocin: -1,
+          oxytocin: 1,
         },
       },
       {
@@ -863,13 +863,13 @@ export const QUESTIONS = [
       {
         text: '2 – trifft wenig zu',
         effects: {
-          oxytocin: 1,
+          oxytocin: -1,
         },
       },
       {
         text: '1 – trifft gar nicht zu',
         effects: {
-          oxytocin: 2,
+          oxytocin: -2,
         },
       },
     ],
@@ -915,13 +915,13 @@ export const QUESTIONS = [
       {
         text: '5 – trifft voll zu',
         effects: {
-          oxytocin: -2,
+          oxytocin: 2,
         },
       },
       {
         text: '4 – trifft eher zu',
         effects: {
-          oxytocin: -1,
+          oxytocin: 1,
         },
       },
       {
@@ -933,13 +933,13 @@ export const QUESTIONS = [
       {
         text: '2 – trifft wenig zu',
         effects: {
-          oxytocin: 1,
+          oxytocin: -1,
         },
       },
       {
         text: '1 – trifft gar nicht zu',
         effects: {
-          oxytocin: 2,
+          oxytocin: -2,
         },
       },
     ],
@@ -950,31 +950,31 @@ export const QUESTIONS = [
       {
         text: '5 – trifft voll zu',
         effects: {
-          dopamin: -2,
+          dopamine: 2,
         },
       },
       {
         text: '4 – trifft eher zu',
         effects: {
-          dopamin: -1,
+          dopamine: 1,
         },
       },
       {
         text: '3 – teils-teils',
         effects: {
-          dopamin: 0,
+          dopamine: 0,
         },
       },
       {
         text: '2 – trifft wenig zu',
         effects: {
-          dopamin: 1,
+          dopamine: -1,
         },
       },
       {
         text: '1 – trifft gar nicht zu',
         effects: {
-          dopamin: 2,
+          dopamine: -2,
         },
       },
     ],
@@ -985,31 +985,31 @@ export const QUESTIONS = [
       {
         text: '5 – trifft voll zu',
         effects: {
-          dopamin: 2,
+          dopamine: 2,
         },
       },
       {
         text: '4 – trifft eher zu',
         effects: {
-          dopamin: 1,
+          dopamine: 1,
         },
       },
       {
         text: '3 – teils-teils',
         effects: {
-          dopamin: 0,
+          dopamine: 0,
         },
       },
       {
         text: '2 – trifft wenig zu',
         effects: {
-          dopamin: -1,
+          dopamine: -1,
         },
       },
       {
         text: '1 – trifft gar nicht zu',
         effects: {
-          dopamin: -2,
+          dopamine: -2,
         },
       },
     ],
@@ -1020,31 +1020,31 @@ export const QUESTIONS = [
       {
         text: '5 – trifft voll zu',
         effects: {
-          dopamin: -2,
+          dopamine: 2,
         },
       },
       {
         text: '4 – trifft eher zu',
         effects: {
-          dopamin: -1,
+          dopamine: 1,
         },
       },
       {
         text: '3 – teils-teils',
         effects: {
-          dopamin: 0,
+          dopamine: 0,
         },
       },
       {
         text: '2 – trifft wenig zu',
         effects: {
-          dopamin: 1,
+          dopamine: -1,
         },
       },
       {
         text: '1 – trifft gar nicht zu',
         effects: {
-          dopamin: 2,
+          dopamine: -2,
         },
       },
     ],
@@ -1055,13 +1055,13 @@ export const QUESTIONS = [
       {
         text: '5 – trifft voll zu',
         effects: {
-          serotonin: -2,
+          serotonin: 2,
         },
       },
       {
         text: '4 – trifft eher zu',
         effects: {
-          serotonin: -1,
+          serotonin: 1,
         },
       },
       {
@@ -1073,13 +1073,13 @@ export const QUESTIONS = [
       {
         text: '2 – trifft wenig zu',
         effects: {
-          serotonin: 1,
+          serotonin: -1,
         },
       },
       {
         text: '1 – trifft gar nicht zu',
         effects: {
-          serotonin: 2,
+          serotonin: -2,
         },
       },
     ],
@@ -1125,13 +1125,13 @@ export const QUESTIONS = [
       {
         text: '5 – trifft voll zu',
         effects: {
-          serotonin: -2,
+          serotonin: 2,
         },
       },
       {
         text: '4 – trifft eher zu',
         effects: {
-          serotonin: -1,
+          serotonin: 1,
         },
       },
       {
@@ -1143,13 +1143,13 @@ export const QUESTIONS = [
       {
         text: '2 – trifft wenig zu',
         effects: {
-          serotonin: 1,
+          serotonin: -1,
         },
       },
       {
         text: '1 – trifft gar nicht zu',
         effects: {
-          serotonin: 2,
+          serotonin: -2,
         },
       },
     ],
@@ -1160,13 +1160,13 @@ export const QUESTIONS = [
       {
         text: '5 – trifft voll zu',
         effects: {
-          endorphins: -2,
+          endorphins: 2,
         },
       },
       {
         text: '4 – trifft eher zu',
         effects: {
-          endorphins: -1,
+          endorphins: 1,
         },
       },
       {
@@ -1178,13 +1178,13 @@ export const QUESTIONS = [
       {
         text: '2 – trifft wenig zu',
         effects: {
-          endorphins: 1,
+          endorphins: -1,
         },
       },
       {
         text: '1 – trifft gar nicht zu',
         effects: {
-          endorphins: 2,
+          endorphins: -2,
         },
       },
     ],
@@ -1230,13 +1230,13 @@ export const QUESTIONS = [
       {
         text: '5 – trifft voll zu',
         effects: {
-          endorphins: -2,
+          endorphins: 2,
         },
       },
       {
         text: '4 – trifft eher zu',
         effects: {
-          endorphins: -1,
+          endorphins: 1,
         },
       },
       {
@@ -1248,13 +1248,13 @@ export const QUESTIONS = [
       {
         text: '2 – trifft wenig zu',
         effects: {
-          endorphins: 1,
+          endorphins: -1,
         },
       },
       {
         text: '1 – trifft gar nicht zu',
         effects: {
-          endorphins: 2,
+          endorphins: -2,
         },
       },
     ],

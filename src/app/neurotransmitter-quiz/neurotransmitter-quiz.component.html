@@ -63,11 +63,17 @@
       Deine Leben scheint in Balance zu sein.
     </p>
   }
+  <button *ngIf="currentQuestionIndex > 0" (click)="goBack()">⬅️ Zurück</button>
+  <p>{{ scores.clarity }}</p>
+  <p>{{ scores.challenge }}</p>
+  <p>{{ scores.space }}</p>
+  <p>{{ scores.structure }}</p>
+  <p>{{ scores.focus }}</p>
+  <p>{{ scores.feasibility }}</p>
+  <p>{{ scores.goal }}</p>
+  <p>{{ scores.meaning }}</p>
   <p>{{ scores.oxytocin }}</p>
-  <p>{{ scores.serotonin }}</p>
   <p>{{ scores.dopamine }}</p>
+  <p>{{ scores.serotonin }}</p>
   <p>{{ scores.endorphins }}</p>
-  <p>{{ scores.ziel }}</p>
-  <p>{{ scores.machbarkeit }}</p>
-  <p>{{ scores.sinn }}</p>
 </div>
