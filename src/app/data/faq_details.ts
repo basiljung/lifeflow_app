@@ -29,7 +29,7 @@ export const FAQDETAILSDATA_DE: {
     text: `...`,
   },
   {
-    title: 'Haftungsausschluss',
+    title: '📃 Haftungsausschluss',
     text: `Diese App dient ausschließlich der Information und Selbstreflexion.
     Sie ist kein medizinisches oder psychologisches Diagnosewerkzeug und
     ersetzt keine professionelle Beratung, Diagnose oder Behandlung. Die
@@ -45,7 +45,7 @@ export const FAQDETAILSDATA_DE: {
     resultieren. Die Nutzung erfolgt freiwillig und auf eigenes Risiko.`,
   },
   {
-    title: 'Nutzungsbedingungen',
+    title: '📑 Nutzungsbedingungen',
     text: `<h6>1. Zweck der App</h6>
     <p>
       Diese App wurde entwickelt, um Selbstreflexion, Stressreduktion und

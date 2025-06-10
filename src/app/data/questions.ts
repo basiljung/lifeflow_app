@@ -1,143 +1,1262 @@
 export const QUESTIONS = [
   {
-    text: 'Wie oft fühlst du dich in letzter Zeit antriebslos oder unmotiviert, selbst bei Aufgaben, die dir eigentlich wichtig sind?',
+    text: 'Ich habe ein klares Gefühl dafür, was mir im Leben wichtig ist.',
     answers: [
-      { text: 'Selten', effects: { dopamine: 2 } },
-      { text: 'Manchmal', effects: { dopamine: 1 } },
-      { text: 'Weiss nicht', effects: { dopamine: 0 } },
-      { text: 'Oft', effects: { dopamine: -1 } },
-      { text: 'Sehr oft', effects: { dopamine: -2 } },
+      {
+        text: '5 – trifft voll zu',
+        effects: {
+          klarheit: -2,
+        },
+      },
+      {
+        text: '4 – trifft eher zu',
+        effects: {
+          klarheit: -1,
+        },
+      },
+      {
+        text: '3 – teils-teils',
+        effects: {
+          klarheit: 0,
+        },
+      },
+      {
+        text: '2 – trifft wenig zu',
+        effects: {
+          klarheit: 1,
+        },
+      },
+      {
+        text: '1 – trifft gar nicht zu',
+        effects: {
+          klarheit: 2,
+        },
+      },
     ],
   },
   {
-    text: 'Wie oft suchst du gezielt nach schnellen Belohnungen oder Ablenkungen (z.B. Social Media, Snacks, Serien), obwohl du eigentlich etwas anderes tun wolltest?',
+    text: 'Ich bin oft unsicher, was meine innere Ausrichtung betrifft.',
     answers: [
-      { text: 'Selten', effects: { dopamine: 2 } },
-      { text: 'Manchmal', effects: { dopamine: 1 } },
-      { text: 'Weiss nicht', effects: { dopamine: 0 } },
-      { text: 'Oft', effects: { dopamine: -1 } },
-      { text: 'Sehr oft', effects: { dopamine: -2 } },
+      {
+        text: '5 – trifft voll zu',
+        effects: {
+          klarheit: 2,
+        },
+      },
+      {
+        text: '4 – trifft eher zu',
+        effects: {
+          klarheit: 1,
+        },
+      },
+      {
+        text: '3 – teils-teils',
+        effects: {
+          klarheit: 0,
+        },
+      },
+      {
+        text: '2 – trifft wenig zu',
+        effects: {
+          klarheit: -1,
+        },
+      },
+      {
+        text: '1 – trifft gar nicht zu',
+        effects: {
+          klarheit: -2,
+        },
+      },
     ],
   },
   {
-    text: 'Wie oft erlebst du im Alltag Momente echter Nähe und Verbindung – sei es privat oder beruflich?',
+    text: 'Meine Gedanken sind geordnet und zielgerichtet.',
     answers: [
-      { text: 'Selten', effects: { oxytocin: 2 } },
-      { text: 'Manchmal', effects: { oxytocin: 1 } },
-      { text: 'Weiss nicht', effects: { oxytocin: 0 } },
-      { text: 'Oft', effects: { oxytocin: -1 } },
-      { text: 'Sehr oft', effects: { oxytocin: -2 } },
+      {
+        text: '5 – trifft voll zu',
+        effects: {
+          klarheit: -2,
+        },
+      },
+      {
+        text: '4 – trifft eher zu',
+        effects: {
+          klarheit: -1,
+        },
+      },
+      {
+        text: '3 – teils-teils',
+        effects: {
+          klarheit: 0,
+        },
+      },
+      {
+        text: '2 – trifft wenig zu',
+        effects: {
+          klarheit: 1,
+        },
+      },
+      {
+        text: '1 – trifft gar nicht zu',
+        effects: {
+          klarheit: 2,
+        },
+      },
     ],
   },
   {
-    text: 'Wie oft nimmst du dir Zeit für echte Präsenz – ohne Ablenkung – im Kontakt mit anderen oder mit dir selbst?',
+    text: 'Ich fühle mich gerade genau richtig gefordert.',
     answers: [
-      { text: 'Selten', effects: { oxytocin: 2 } },
-      { text: 'Manchmal', effects: { oxytocin: 1 } },
-      { text: 'Weiss nicht', effects: { oxytocin: 0 } },
-      { text: 'Oft', effects: { oxytocin: -1 } },
-      { text: 'Sehr oft', effects: { oxytocin: -2 } },
+      {
+        text: '5 – trifft voll zu',
+        effects: {
+          challenge: -2,
+        },
+      },
+      {
+        text: '4 – trifft eher zu',
+        effects: {
+          challenge: -1,
+        },
+      },
+      {
+        text: '3 – teils-teils',
+        effects: {
+          challenge: 0,
+        },
+      },
+      {
+        text: '2 – trifft wenig zu',
+        effects: {
+          challenge: 1,
+        },
+      },
+      {
+        text: '1 – trifft gar nicht zu',
+        effects: {
+          challenge: 2,
+        },
+      },
     ],
   },
   {
-    text: 'Wie oft erlebst du in deinem Alltag Momente, in denen du laut lachst oder dich richtig lebendig fühlst?',
+    text: 'Meine Aufgaben überfordern mich regelmäßig.',
     answers: [
-      { text: 'Selten', effects: { endorphins: 2 } },
-      { text: 'Manchmal', effects: { endorphins: 1 } },
-      { text: 'Weiss nicht', effects: { endorphins: 0 } },
-      { text: 'Oft', effects: { endorphins: -1 } },
-      { text: 'Sehr oft', effects: { endorphins: -2 } },
+      {
+        text: '5 – trifft voll zu',
+        effects: {
+          challenge: 2,
+        },
+      },
+      {
+        text: '4 – trifft eher zu',
+        effects: {
+          challenge: 1,
+        },
+      },
+      {
+        text: '3 – teils-teils',
+        effects: {
+          challenge: 0,
+        },
+      },
+      {
+        text: '2 – trifft wenig zu',
+        effects: {
+          challenge: -1,
+        },
+      },
+      {
+        text: '1 – trifft gar nicht zu',
+        effects: {
+          challenge: -2,
+        },
+      },
     ],
   },
   {
-    text: 'Hast du regelmäßig körperliche Bewegung, bei der du ins Schwitzen kommst, dein Herz richtig schlägt oder dich auspowerst?',
+    text: 'Ich langweile mich häufig, weil meine Aufgaben zu leicht sind.',
     answers: [
-      { text: 'Selten', effects: { endorphins: 2 } },
-      { text: 'Manchmal', effects: { endorphins: 1 } },
-      { text: 'Weiss nicht', effects: { endorphins: 0 } },
-      { text: 'Oft', effects: { endorphins: -1 } },
-      { text: 'Sehr oft', effects: { endorphins: -2 } },
+      {
+        text: '5 – trifft voll zu',
+        effects: {
+          challenge: 2,
+        },
+      },
+      {
+        text: '4 – trifft eher zu',
+        effects: {
+          challenge: 1,
+        },
+      },
+      {
+        text: '3 – teils-teils',
+        effects: {
+          challenge: 0,
+        },
+      },
+      {
+        text: '2 – trifft wenig zu',
+        effects: {
+          challenge: -1,
+        },
+      },
+      {
+        text: '1 – trifft gar nicht zu',
+        effects: {
+          challenge: -2,
+        },
+      },
     ],
   },
   {
-    text: 'Fühlst du dich in deinem Alltag überwiegend ruhig, stabil und innerlich ausgeglichen?',
+    text: 'Ich fühle mich innerlich eng oder emotional blockiert.',
     answers: [
-      { text: 'Selten', effects: { serotonin: 2 } },
-      { text: 'Manchmal', effects: { serotonin: 1 } },
-      { text: 'Weiss nicht', effects: { serotonin: 0 } },
-      { text: 'Oft', effects: { serotonin: -1 } },
-      { text: 'Sehr oft', effects: { serotonin: -2 } },
+      {
+        text: '5 – trifft voll zu',
+        effects: {
+          raum: 2,
+        },
+      },
+      {
+        text: '4 – trifft eher zu',
+        effects: {
+          raum: 1,
+        },
+      },
+      {
+        text: '3 – teils-teils',
+        effects: {
+          raum: 0,
+        },
+      },
+      {
+        text: '2 – trifft wenig zu',
+        effects: {
+          raum: -1,
+        },
+      },
+      {
+        text: '1 – trifft gar nicht zu',
+        effects: {
+          raum: -2,
+        },
+      },
     ],
   },
   {
-    text: 'Wie oft bist du in der Natur & bewegst dich an der frischen Luft?',
+    text: 'Ich habe genug Raum für mich selbst und meine Gefühle.',
     answers: [
-      { text: 'Selten', effects: { serotonin: 2 } },
-      { text: 'Manchmal', effects: { serotonin: 1 } },
-      { text: 'Weiss nicht', effects: { serotonin: 0 } },
-      { text: 'Oft', effects: { serotonin: -1 } },
-      { text: 'Sehr oft', effects: { serotonin: -2 } },
+      {
+        text: '5 – trifft voll zu',
+        effects: {
+          raum: -2,
+        },
+      },
+      {
+        text: '4 – trifft eher zu',
+        effects: {
+          raum: -1,
+        },
+      },
+      {
+        text: '3 – teils-teils',
+        effects: {
+          raum: 0,
+        },
+      },
+      {
+        text: '2 – trifft wenig zu',
+        effects: {
+          raum: 1,
+        },
+      },
+      {
+        text: '1 – trifft gar nicht zu',
+        effects: {
+          raum: 2,
+        },
+      },
     ],
   },
   {
-    text: 'Wie oft erlebst du Klarheit über den Zweck oder das „Warum“ hinter deinen täglichen Aktivitäten?',
+    text: 'Ich kann gut mit innerem Druck umgehen.',
     answers: [
-      { text: 'Selten', effects: { sinn: 2 } },
-      { text: 'Manchmal', effects: { sinn: 1 } },
-      { text: 'Weiss nicht', effects: { sinn: 0 } },
-      { text: 'Oft', effects: { sinn: -1 } },
-      { text: 'Sehr oft', effects: { sinn: -2 } },
+      {
+        text: '5 – trifft voll zu',
+        effects: {
+          raum: -2,
+        },
+      },
+      {
+        text: '4 – trifft eher zu',
+        effects: {
+          raum: -1,
+        },
+      },
+      {
+        text: '3 – teils-teils',
+        effects: {
+          raum: 0,
+        },
+      },
+      {
+        text: '2 – trifft wenig zu',
+        effects: {
+          raum: 1,
+        },
+      },
+      {
+        text: '1 – trifft gar nicht zu',
+        effects: {
+          raum: 2,
+        },
+      },
     ],
   },
   {
-    text: 'Fühlst du dich mit dem, was du im Alltag tust, innerlich verbunden oder erfüllt?',
+    text: 'Ich habe feste Rituale oder Routinen, die mir Orientierung geben.',
     answers: [
-      { text: 'Selten', effects: { sinn: 2 } },
-      { text: 'Manchmal', effects: { sinn: 1 } },
-      { text: 'Weiss nicht', effects: { sinn: 0 } },
-      { text: 'Oft', effects: { sinn: -1 } },
-      { text: 'Sehr oft', effects: { sinn: -2 } },
+      {
+        text: '5 – trifft voll zu',
+        effects: {
+          struktur: -2,
+        },
+      },
+      {
+        text: '4 – trifft eher zu',
+        effects: {
+          struktur: -1,
+        },
+      },
+      {
+        text: '3 – teils-teils',
+        effects: {
+          struktur: 0,
+        },
+      },
+      {
+        text: '2 – trifft wenig zu',
+        effects: {
+          struktur: 1,
+        },
+      },
+      {
+        text: '1 – trifft gar nicht zu',
+        effects: {
+          struktur: 2,
+        },
+      },
     ],
   },
   {
-    text: 'Wie klar ist dir aktuell, was du konkret als Nächstes tun musst, um deine Ziele zu erreichen?',
+    text: 'Mein Alltag verläuft oft chaotisch oder unstrukturiert.',
     answers: [
-      { text: 'Unklar', effects: { machbarkeit: 2 } },
-      { text: 'So so', effects: { machbarkeit: 1 } },
-      { text: 'Weiss nicht', effects: { machbarkeit: 0 } },
-      { text: 'Klar', effects: { machbarkeit: -1 } },
-      { text: 'Sehr klar', effects: { machbarkeit: -2 } },
+      {
+        text: '5 – trifft voll zu',
+        effects: {
+          struktur: 2,
+        },
+      },
+      {
+        text: '4 – trifft eher zu',
+        effects: {
+          struktur: 1,
+        },
+      },
+      {
+        text: '3 – teils-teils',
+        effects: {
+          struktur: 0,
+        },
+      },
+      {
+        text: '2 – trifft wenig zu',
+        effects: {
+          struktur: -1,
+        },
+      },
+      {
+        text: '1 – trifft gar nicht zu',
+        effects: {
+          struktur: -2,
+        },
+      },
     ],
   },
   {
-    text: 'Kannst du Prioritäten setzen und unterscheiden, was wirklich wichtig ist?',
+    text: 'Ich gestalte meinen Tagesablauf bewusst und mit Klarheit.',
     answers: [
-      { text: 'Selten', effects: { machbarkeit: 2 } },
-      { text: 'Manchmal', effects: { machbarkeit: 1 } },
-      { text: 'Weiss nicht', effects: { machbarkeit: 0 } },
-      { text: 'Oft', effects: { machbarkeit: -1 } },
-      { text: 'Sehr oft', effects: { machbarkeit: -2 } },
+      {
+        text: '5 – trifft voll zu',
+        effects: {
+          struktur: -2,
+        },
+      },
+      {
+        text: '4 – trifft eher zu',
+        effects: {
+          struktur: -1,
+        },
+      },
+      {
+        text: '3 – teils-teils',
+        effects: {
+          struktur: 0,
+        },
+      },
+      {
+        text: '2 – trifft wenig zu',
+        effects: {
+          struktur: 1,
+        },
+      },
+      {
+        text: '1 – trifft gar nicht zu',
+        effects: {
+          struktur: 2,
+        },
+      },
     ],
   },
   {
-    text: 'Hast du konkrete Ziele, auf die du aktiv hinarbeitest?',
+    text: 'Ich bin bei meinen Aufgaben meist voll bei der Sache.',
     answers: [
-      { text: 'Nein', effects: { ziel: 2 } },
-      { text: 'Nicht wirklich', effects: { ziel: 1 } },
-      { text: 'Weiss nicht', effects: { ziel: 0 } },
-      { text: 'Unklare Ziele', effects: { ziel: -1 } },
-      { text: 'Ja', effects: { ziel: -2 } },
+      {
+        text: '5 – trifft voll zu',
+        effects: {
+          fokus: -2,
+        },
+      },
+      {
+        text: '4 – trifft eher zu',
+        effects: {
+          fokus: -1,
+        },
+      },
+      {
+        text: '3 – teils-teils',
+        effects: {
+          fokus: 0,
+        },
+      },
+      {
+        text: '2 – trifft wenig zu',
+        effects: {
+          fokus: 1,
+        },
+      },
+      {
+        text: '1 – trifft gar nicht zu',
+        effects: {
+          fokus: 2,
+        },
+      },
     ],
   },
   {
-    text: 'Wie klar ist dir aktuell, was du im Leben oder im Beruf wirklich erreichen willst?',
+    text: 'Ich lasse mich leicht ablenken.',
     answers: [
-      { text: 'Unklar', effects: { ziel: 2 } },
-      { text: 'So so', effects: { ziel: 1 } },
-      { text: 'Weiss nicht', effects: { ziel: 0 } },
-      { text: 'Klar', effects: { ziel: -1 } },
-      { text: 'Sehr klar', effects: { ziel: -2 } },
+      {
+        text: '5 – trifft voll zu',
+        effects: {
+          fokus: 2,
+        },
+      },
+      {
+        text: '4 – trifft eher zu',
+        effects: {
+          fokus: 1,
+        },
+      },
+      {
+        text: '3 – teils-teils',
+        effects: {
+          fokus: 0,
+        },
+      },
+      {
+        text: '2 – trifft wenig zu',
+        effects: {
+          fokus: -1,
+        },
+      },
+      {
+        text: '1 – trifft gar nicht zu',
+        effects: {
+          fokus: -2,
+        },
+      },
     ],
   },
-  // Add more questions here as needed
+  {
+    text: 'Ich nehme den gegenwärtigen Moment bewusst wahr.',
+    answers: [
+      {
+        text: '5 – trifft voll zu',
+        effects: {
+          fokus: -2,
+        },
+      },
+      {
+        text: '4 – trifft eher zu',
+        effects: {
+          fokus: -1,
+        },
+      },
+      {
+        text: '3 – teils-teils',
+        effects: {
+          fokus: 0,
+        },
+      },
+      {
+        text: '2 – trifft wenig zu',
+        effects: {
+          fokus: 1,
+        },
+      },
+      {
+        text: '1 – trifft gar nicht zu',
+        effects: {
+          fokus: 2,
+        },
+      },
+    ],
+  },
+  {
+    text: 'Ich fühle mich meinen Aufgaben gewachsen.',
+    answers: [
+      {
+        text: '5 – trifft voll zu',
+        effects: {
+          machbarkeit: -2,
+        },
+      },
+      {
+        text: '4 – trifft eher zu',
+        effects: {
+          machbarkeit: -1,
+        },
+      },
+      {
+        text: '3 – teils-teils',
+        effects: {
+          machbarkeit: 0,
+        },
+      },
+      {
+        text: '2 – trifft wenig zu',
+        effects: {
+          machbarkeit: 1,
+        },
+      },
+      {
+        text: '1 – trifft gar nicht zu',
+        effects: {
+          machbarkeit: 2,
+        },
+      },
+    ],
+  },
+  {
+    text: 'Ich weiß, wie ich meine Ziele in konkrete Schritte umsetze.',
+    answers: [
+      {
+        text: '5 – trifft voll zu',
+        effects: {
+          machbarkeit: -2,
+        },
+      },
+      {
+        text: '4 – trifft eher zu',
+        effects: {
+          machbarkeit: -1,
+        },
+      },
+      {
+        text: '3 – teils-teils',
+        effects: {
+          machbarkeit: 0,
+        },
+      },
+      {
+        text: '2 – trifft wenig zu',
+        effects: {
+          machbarkeit: 1,
+        },
+      },
+      {
+        text: '1 – trifft gar nicht zu',
+        effects: {
+          machbarkeit: 2,
+        },
+      },
+    ],
+  },
+  {
+    text: 'Ich bin oft blockiert und komme nicht in die Umsetzung.',
+    answers: [
+      {
+        text: '5 – trifft voll zu',
+        effects: {
+          machbarkeit: 2,
+        },
+      },
+      {
+        text: '4 – trifft eher zu',
+        effects: {
+          machbarkeit: 1,
+        },
+      },
+      {
+        text: '3 – teils-teils',
+        effects: {
+          machbarkeit: 0,
+        },
+      },
+      {
+        text: '2 – trifft wenig zu',
+        effects: {
+          machbarkeit: -1,
+        },
+      },
+      {
+        text: '1 – trifft gar nicht zu',
+        effects: {
+          machbarkeit: -2,
+        },
+      },
+    ],
+  },
+  {
+    text: 'Ich habe konkrete Ziele, auf die ich hinarbeite.',
+    answers: [
+      {
+        text: '5 – trifft voll zu',
+        effects: {
+          ziel: -2,
+        },
+      },
+      {
+        text: '4 – trifft eher zu',
+        effects: {
+          ziel: -1,
+        },
+      },
+      {
+        text: '3 – teils-teils',
+        effects: {
+          ziel: 0,
+        },
+      },
+      {
+        text: '2 – trifft wenig zu',
+        effects: {
+          ziel: 1,
+        },
+      },
+      {
+        text: '1 – trifft gar nicht zu',
+        effects: {
+          ziel: 2,
+        },
+      },
+    ],
+  },
+  {
+    text: 'Mir fehlt eine klare Richtung für meine nächsten Schritte.',
+    answers: [
+      {
+        text: '5 – trifft voll zu',
+        effects: {
+          ziel: 2,
+        },
+      },
+      {
+        text: '4 – trifft eher zu',
+        effects: {
+          ziel: 1,
+        },
+      },
+      {
+        text: '3 – teils-teils',
+        effects: {
+          ziel: 0,
+        },
+      },
+      {
+        text: '2 – trifft wenig zu',
+        effects: {
+          ziel: -1,
+        },
+      },
+      {
+        text: '1 – trifft gar nicht zu',
+        effects: {
+          ziel: -2,
+        },
+      },
+    ],
+  },
+  {
+    text: 'Ich bin mir sicher, was ich erreichen will.',
+    answers: [
+      {
+        text: '5 – trifft voll zu',
+        effects: {
+          ziel: -2,
+        },
+      },
+      {
+        text: '4 – trifft eher zu',
+        effects: {
+          ziel: -1,
+        },
+      },
+      {
+        text: '3 – teils-teils',
+        effects: {
+          ziel: 0,
+        },
+      },
+      {
+        text: '2 – trifft wenig zu',
+        effects: {
+          ziel: 1,
+        },
+      },
+      {
+        text: '1 – trifft gar nicht zu',
+        effects: {
+          ziel: 2,
+        },
+      },
+    ],
+  },
+  {
+    text: 'Das, was ich tue, hat für mich persönlich eine tiefe Bedeutung.',
+    answers: [
+      {
+        text: '5 – trifft voll zu',
+        effects: {
+          sinn: -2,
+        },
+      },
+      {
+        text: '4 – trifft eher zu',
+        effects: {
+          sinn: -1,
+        },
+      },
+      {
+        text: '3 – teils-teils',
+        effects: {
+          sinn: 0,
+        },
+      },
+      {
+        text: '2 – trifft wenig zu',
+        effects: {
+          sinn: 1,
+        },
+      },
+      {
+        text: '1 – trifft gar nicht zu',
+        effects: {
+          sinn: 2,
+        },
+      },
+    ],
+  },
+  {
+    text: 'Ich frage mich oft, ob das alles überhaupt Sinn macht.',
+    answers: [
+      {
+        text: '5 – trifft voll zu',
+        effects: {
+          sinn: 2,
+        },
+      },
+      {
+        text: '4 – trifft eher zu',
+        effects: {
+          sinn: 1,
+        },
+      },
+      {
+        text: '3 – teils-teils',
+        effects: {
+          sinn: 0,
+        },
+      },
+      {
+        text: '2 – trifft wenig zu',
+        effects: {
+          sinn: -1,
+        },
+      },
+      {
+        text: '1 – trifft gar nicht zu',
+        effects: {
+          sinn: -2,
+        },
+      },
+    ],
+  },
+  {
+    text: 'Ich spüre einen Zusammenhang zwischen meinem Handeln und meinen Werten.',
+    answers: [
+      {
+        text: '5 – trifft voll zu',
+        effects: {
+          sinn: -2,
+        },
+      },
+      {
+        text: '4 – trifft eher zu',
+        effects: {
+          sinn: -1,
+        },
+      },
+      {
+        text: '3 – teils-teils',
+        effects: {
+          sinn: 0,
+        },
+      },
+      {
+        text: '2 – trifft wenig zu',
+        effects: {
+          sinn: 1,
+        },
+      },
+      {
+        text: '1 – trifft gar nicht zu',
+        effects: {
+          sinn: 2,
+        },
+      },
+    ],
+  },
+  {
+    text: 'Ich fühle mich mit anderen Menschen verbunden.',
+    answers: [
+      {
+        text: '5 – trifft voll zu',
+        effects: {
+          oxytocin: -2,
+        },
+      },
+      {
+        text: '4 – trifft eher zu',
+        effects: {
+          oxytocin: -1,
+        },
+      },
+      {
+        text: '3 – teils-teils',
+        effects: {
+          oxytocin: 0,
+        },
+      },
+      {
+        text: '2 – trifft wenig zu',
+        effects: {
+          oxytocin: 1,
+        },
+      },
+      {
+        text: '1 – trifft gar nicht zu',
+        effects: {
+          oxytocin: 2,
+        },
+      },
+    ],
+  },
+  {
+    text: 'Ich finde es schwer, mich emotional auf andere einzulassen.',
+    answers: [
+      {
+        text: '5 – trifft voll zu',
+        effects: {
+          oxytocin: 2,
+        },
+      },
+      {
+        text: '4 – trifft eher zu',
+        effects: {
+          oxytocin: 1,
+        },
+      },
+      {
+        text: '3 – teils-teils',
+        effects: {
+          oxytocin: 0,
+        },
+      },
+      {
+        text: '2 – trifft wenig zu',
+        effects: {
+          oxytocin: -1,
+        },
+      },
+      {
+        text: '1 – trifft gar nicht zu',
+        effects: {
+          oxytocin: -2,
+        },
+      },
+    ],
+  },
+  {
+    text: 'Ich erlebe regelmäßig Momente von Vertrauen und Herzensnähe.',
+    answers: [
+      {
+        text: '5 – trifft voll zu',
+        effects: {
+          oxytocin: -2,
+        },
+      },
+      {
+        text: '4 – trifft eher zu',
+        effects: {
+          oxytocin: -1,
+        },
+      },
+      {
+        text: '3 – teils-teils',
+        effects: {
+          oxytocin: 0,
+        },
+      },
+      {
+        text: '2 – trifft wenig zu',
+        effects: {
+          oxytocin: 1,
+        },
+      },
+      {
+        text: '1 – trifft gar nicht zu',
+        effects: {
+          oxytocin: 2,
+        },
+      },
+    ],
+  },
+  {
+    text: 'Ich habe Lust, neue Ideen umzusetzen.',
+    answers: [
+      {
+        text: '5 – trifft voll zu',
+        effects: {
+          dopamin: -2,
+        },
+      },
+      {
+        text: '4 – trifft eher zu',
+        effects: {
+          dopamin: -1,
+        },
+      },
+      {
+        text: '3 – teils-teils',
+        effects: {
+          dopamin: 0,
+        },
+      },
+      {
+        text: '2 – trifft wenig zu',
+        effects: {
+          dopamin: 1,
+        },
+      },
+      {
+        text: '1 – trifft gar nicht zu',
+        effects: {
+          dopamin: 2,
+        },
+      },
+    ],
+  },
+  {
+    text: 'Ich fühle mich oft antriebslos oder unmotiviert.',
+    answers: [
+      {
+        text: '5 – trifft voll zu',
+        effects: {
+          dopamin: 2,
+        },
+      },
+      {
+        text: '4 – trifft eher zu',
+        effects: {
+          dopamin: 1,
+        },
+      },
+      {
+        text: '3 – teils-teils',
+        effects: {
+          dopamin: 0,
+        },
+      },
+      {
+        text: '2 – trifft wenig zu',
+        effects: {
+          dopamin: -1,
+        },
+      },
+      {
+        text: '1 – trifft gar nicht zu',
+        effects: {
+          dopamin: -2,
+        },
+      },
+    ],
+  },
+  {
+    text: 'Ich freue mich darauf, Dinge anzugehen.',
+    answers: [
+      {
+        text: '5 – trifft voll zu',
+        effects: {
+          dopamin: -2,
+        },
+      },
+      {
+        text: '4 – trifft eher zu',
+        effects: {
+          dopamin: -1,
+        },
+      },
+      {
+        text: '3 – teils-teils',
+        effects: {
+          dopamin: 0,
+        },
+      },
+      {
+        text: '2 – trifft wenig zu',
+        effects: {
+          dopamin: 1,
+        },
+      },
+      {
+        text: '1 – trifft gar nicht zu',
+        effects: {
+          dopamin: 2,
+        },
+      },
+    ],
+  },
+  {
+    text: 'Ich fühle mich innerlich ruhig und stabil.',
+    answers: [
+      {
+        text: '5 – trifft voll zu',
+        effects: {
+          serotonin: -2,
+        },
+      },
+      {
+        text: '4 – trifft eher zu',
+        effects: {
+          serotonin: -1,
+        },
+      },
+      {
+        text: '3 – teils-teils',
+        effects: {
+          serotonin: 0,
+        },
+      },
+      {
+        text: '2 – trifft wenig zu',
+        effects: {
+          serotonin: 1,
+        },
+      },
+      {
+        text: '1 – trifft gar nicht zu',
+        effects: {
+          serotonin: 2,
+        },
+      },
+    ],
+  },
+  {
+    text: 'Ich reagiere schnell gereizt oder unruhig.',
+    answers: [
+      {
+        text: '5 – trifft voll zu',
+        effects: {
+          serotonin: 2,
+        },
+      },
+      {
+        text: '4 – trifft eher zu',
+        effects: {
+          serotonin: 1,
+        },
+      },
+      {
+        text: '3 – teils-teils',
+        effects: {
+          serotonin: 0,
+        },
+      },
+      {
+        text: '2 – trifft wenig zu',
+        effects: {
+          serotonin: -1,
+        },
+      },
+      {
+        text: '1 – trifft gar nicht zu',
+        effects: {
+          serotonin: -2,
+        },
+      },
+    ],
+  },
+  {
+    text: 'Ich vertraue darauf, dass sich die Dinge entwickeln dürfen.',
+    answers: [
+      {
+        text: '5 – trifft voll zu',
+        effects: {
+          serotonin: -2,
+        },
+      },
+      {
+        text: '4 – trifft eher zu',
+        effects: {
+          serotonin: -1,
+        },
+      },
+      {
+        text: '3 – teils-teils',
+        effects: {
+          serotonin: 0,
+        },
+      },
+      {
+        text: '2 – trifft wenig zu',
+        effects: {
+          serotonin: 1,
+        },
+      },
+      {
+        text: '1 – trifft gar nicht zu',
+        effects: {
+          serotonin: 2,
+        },
+      },
+    ],
+  },
+  {
+    text: 'Ich kann Momente der Freude bewusst wahrnehmen.',
+    answers: [
+      {
+        text: '5 – trifft voll zu',
+        effects: {
+          endorphins: -2,
+        },
+      },
+      {
+        text: '4 – trifft eher zu',
+        effects: {
+          endorphins: -1,
+        },
+      },
+      {
+        text: '3 – teils-teils',
+        effects: {
+          endorphins: 0,
+        },
+      },
+      {
+        text: '2 – trifft wenig zu',
+        effects: {
+          endorphins: 1,
+        },
+      },
+      {
+        text: '1 – trifft gar nicht zu',
+        effects: {
+          endorphins: 2,
+        },
+      },
+    ],
+  },
+  {
+    text: 'In meinem Alltag fehlt mir oft die Leichtigkeit.',
+    answers: [
+      {
+        text: '5 – trifft voll zu',
+        effects: {
+          endorphins: 2,
+        },
+      },
+      {
+        text: '4 – trifft eher zu',
+        effects: {
+          endorphins: 1,
+        },
+      },
+      {
+        text: '3 – teils-teils',
+        effects: {
+          endorphins: 0,
+        },
+      },
+      {
+        text: '2 – trifft wenig zu',
+        effects: {
+          endorphins: -1,
+        },
+      },
+      {
+        text: '1 – trifft gar nicht zu',
+        effects: {
+          endorphins: -2,
+        },
+      },
+    ],
+  },
+  {
+    text: 'Ich finde regelmäßig kleine Dinge, über die ich mich freuen kann.',
+    answers: [
+      {
+        text: '5 – trifft voll zu',
+        effects: {
+          endorphins: -2,
+        },
+      },
+      {
+        text: '4 – trifft eher zu',
+        effects: {
+          endorphins: -1,
+        },
+      },
+      {
+        text: '3 – teils-teils',
+        effects: {
+          endorphins: 0,
+        },
+      },
+      {
+        text: '2 – trifft wenig zu',
+        effects: {
+          endorphins: 1,
+        },
+      },
+      {
+        text: '1 – trifft gar nicht zu',
+        effects: {
+          endorphins: 2,
+        },
+      },
+    ],
+  },
 ];

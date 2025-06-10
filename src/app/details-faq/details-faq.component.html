@@ -7,7 +7,9 @@
       class="btn-floating btn-small waves-effect waves-light teal"
       (click)="toggleLanguage()"
     >
-      <span style="font-weight: bold">{{ currentLang }}</span>
+      <span style="font-weight: bold">{{
+        currentLang === "DE" ? "EN" : "DE"
+      }}</span>
     </a>
   </div>
   <div style="margin-top: 50px; padding: 40px">

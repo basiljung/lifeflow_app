@@ -1,25 +1,25 @@
 <div class="quiz-container">
-  <p>{{ scores.oxytocin }}</p>
-  <p>{{ scores.serotonin }}</p>
-  <p>{{ scores.dopamine }}</p>
-  <p>{{ scores.endorphins }}</p>
-  <p>{{ scores.ziel }}</p>
-  <p>{{ scores.machbarkeit }}</p>
-  <p>{{ scores.sinn }}</p>
-
-  @if (showQuestions) {
-    <p>{{ questions[currentQuestionIndex].text }}</p>
-    @for (
-      answer of questions[currentQuestionIndex].answers;
-      track answer.text
-    ) {
-      <button #btn (click)="selectAnswer(answer.effects); btn.blur()">
-        {{ answer.text }}
-      </button>
-    } @empty {
-      <li>There are no items.</li>
+  <div>
+    @if (showQuestions) {
+      <h5 class="question-container">
+        {{ questions[currentQuestionIndex].text }}
+      </h5>
+      @for (
+        answer of questions[currentQuestionIndex].answers;
+        track answer.text
+      ) {
+        <button
+          style="cursor: pointer"
+          #btn
+          (click)="selectAnswer(answer.effects); btn.blur()"
+        >
+          {{ answer.text }}
+        </button>
+      } @empty {
+        <li>There are no items.</li>
+      }
     }
-  }
+  </div>
 
   @if (showResult) {
     <h4>🧠🌿 Your Results:</h4>
@@ -63,4 +63,11 @@
       Deine Leben scheint in Balance zu sein.
     </p>
   }
+  <p>{{ scores.oxytocin }}</p>
+  <p>{{ scores.serotonin }}</p>
+  <p>{{ scores.dopamine }}</p>
+  <p>{{ scores.endorphins }}</p>
+  <p>{{ scores.ziel }}</p>
+  <p>{{ scores.machbarkeit }}</p>
+  <p>{{ scores.sinn }}</p>
 </div>
