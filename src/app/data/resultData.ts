@@ -1,4 +1,4 @@
-export type Neurotransmitter =
+export type SelfcheckTopics =
   | 'clarity'
   | 'challenge'
   | 'space'
@@ -13,7 +13,7 @@ export type Neurotransmitter =
   | 'endorphins';
 
 export const RESULTDATA: {
-  [key in Neurotransmitter]: {
+  [key in SelfcheckTopics]: {
     tips: { title: string; text: string }[];
     reasons: string[];
     input: string;

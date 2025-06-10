@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { NeurotransmitterQuizComponent } from './neurotransmitter-quiz.component';
+import { NeurotransmitterQuizComponent } from './self-check-logic.component';
 
 describe('NeurotransmitterQuizComponent', () => {
   let component: NeurotransmitterQuizComponent;

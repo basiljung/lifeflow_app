@@ -1,7 +1,7 @@
 import { AfterViewInit, Component } from '@angular/core';
 import { QUESTIONS } from '../data/questions';
 import { RESULTDATA } from '../data/resultData';
-import { Neurotransmitter } from '../data/resultData';
+import { SelfcheckTopics } from '../data/resultData';
 import { CommonModule } from '@angular/common';
 
 declare var M: any;
@@ -9,11 +9,11 @@ declare var M: any;
 @Component({
   standalone: true,
   imports: [CommonModule],
-  selector: 'app-neurotransmitter-quiz',
-  templateUrl: './neurotransmitter-quiz.component.html',
-  styleUrls: ['./neurotransmitter-quiz.component.scss'],
+  selector: 'app-self-check-logic',
+  templateUrl: './self-check-logic.component.html',
+  styleUrls: ['./self-check-logic.component.scss'],
 })
-export class NeurotransmitterQuizComponent implements AfterViewInit {
+export class SelfcheckLogicComponent implements AfterViewInit {
   currentQuestionIndex = 0;
 
   questions = QUESTIONS;
@@ -21,7 +21,7 @@ export class NeurotransmitterQuizComponent implements AfterViewInit {
   showResult = false;
   showQuestions = true;
 
-  scores: Record<Neurotransmitter, number> = {
+  scores: Record<SelfcheckTopics, number> = {
     clarity: 0,
     challenge: 0,
     space: 0,
@@ -35,6 +35,7 @@ export class NeurotransmitterQuizComponent implements AfterViewInit {
     serotonin: 0,
     endorphins: 0,
   };
+
   resultDataSet: {
     [key: string]: {
       tips: { title: string; text: string }[];
@@ -44,7 +45,7 @@ export class NeurotransmitterQuizComponent implements AfterViewInit {
 
   answerHistory: {
     index: number;
-    effects: Record<Neurotransmitter, number>;
+    effects: Record<SelfcheckTopics, number>;
   }[] = [];
 
   ngAfterViewInit() {
@@ -58,7 +59,7 @@ export class NeurotransmitterQuizComponent implements AfterViewInit {
     });
 
     for (let key in effects) {
-      this.scores[key as Neurotransmitter] += effects[key];
+      this.scores[key as SelfcheckTopics] += effects[key];
     }
 
     this.currentQuestionIndex++;
@@ -78,7 +79,7 @@ export class NeurotransmitterQuizComponent implements AfterViewInit {
 
     for (let key in lastAnswer.effects) {
       if (key in this.scores) {
-        const ntKey = key as Neurotransmitter;
+        const ntKey = key as SelfcheckTopics;
         this.scores[ntKey] -= lastAnswer.effects[ntKey];
       }
     }
@@ -94,11 +95,11 @@ export class NeurotransmitterQuizComponent implements AfterViewInit {
   }
 
   getTestResults() {
-    const results: Neurotransmitter[] = [];
+    const results: SelfcheckTopics[] = [];
     for (let key in this.scores) {
-      const score = this.scores[key as Neurotransmitter];
+      const score = this.scores[key as SelfcheckTopics];
       if (score >= 3) {
-        results.push(key as Neurotransmitter);
+        results.push(key as SelfcheckTopics);
       }
     }
     this.resultDataSet = results.reduce(
