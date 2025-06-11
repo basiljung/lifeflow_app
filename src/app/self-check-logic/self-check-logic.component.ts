@@ -4,12 +4,20 @@ import { SelfcheckTopics } from '../data/resultData';
 import { CommonModule } from '@angular/common';
 import { QUESTIONS_DE } from '../data/questions-de';
 import { QUESTIONS_EN } from '../data/questions-en';
+import { DisplayResultComponent } from './display-result/display-result.component';
 
 declare var M: any;
 
+export type ResultData = {
+  [key: string]: {
+    tips: { title: string; text: string }[];
+    reasons: string[];
+  };
+};
+
 @Component({
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, DisplayResultComponent],
   selector: 'app-self-check-logic',
   templateUrl: './self-check-logic.component.html',
   styleUrls: ['./self-check-logic.component.scss'],
@@ -39,12 +47,7 @@ export class SelfcheckLogicComponent implements AfterViewInit {
     endorphins: 0,
   };
 
-  resultsOutOfBalance: {
-    [key: string]: {
-      tips: { title: string; text: string }[];
-      reasons: string[];
-    };
-  } = {};
+  resultsOutOfBalance: ResultData = {};
 
   answerHistory: {
     index: number;
