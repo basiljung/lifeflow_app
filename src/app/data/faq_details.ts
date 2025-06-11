@@ -26,7 +26,184 @@ export const FAQDETAILSDATA_DE: {
   },
   {
     title: '🧠 Erklärung',
-    text: `...`,
+    text: `<section>
+  <h5>🧠 Über den LifeFlow Selfcheck</h5>
+<p>
+  Der <strong>LifeFlow Selfcheck</strong> ist ein Reflexionstool, das dir hilft, dein aktuelles inneres Gleichgewicht besser zu verstehen – emotional, mental, körperlich und energetisch.
+</p>
+<p>
+  Du erhältst eine Momentaufnahme in 12 Lebensbereichen, die für deinen Flow im Leben und in deiner Tätigkeit entscheidend sind. Die Ergebnisse zeigen dir, wo aktuell Blockaden bestehen oder etwas aus der Balance geraten ist – und laden dich ein, gezielt daran zu arbeiten, um mehr Flow zu kultivieren.
+  <em>Diese Momentaufnahme spiegelt im Kern das Ergebnis deiner alltäglichen Gewohnheiten wider.</em>
+</p>
+
+  <hr />
+
+  <h5>🧩 Aufbau & Methodik</h5>
+  <ul>
+    <p> - <strong>36 Fragen</strong></p>
+    <p> - <strong>12 Themenbereiche</strong> mit je <strong>3 Fragen</strong></p>
+    <p> - Antwortskala: <strong>Likert-Skala von -2 bis +2</strong></p>
+    <p>
+       - Berücksichtigt <strong>positive und kritische Aussagen</strong> (inkl.
+      invertierter Fragen)
+    </p>
+  </ul>
+
+  <blockquote>
+    <p>-2 – trifft gar nicht zu</p>
+    <p>-1 – trifft wenig zu</p>
+    <p>0 – teils-teils</p>
+    <p>1 – trifft eher zu</p>
+    <p>2 – trifft voll zu</p>
+  </blockquote>
+  <p>
+    Diese 5-stufige Skala erlaubt eine fein abgestufte Selbsteinschätzung und
+    basiert auf etablierten Methoden der psychologischen Selbsterhebung.
+  </p>
+
+  <hr />
+
+  <h5>🔢 Auswertung & Scoring</h5>
+  <ul>
+    <li>
+      Jeder Themenbereich ergibt eine
+      <strong>Gesamtsumme zwischen -6 und +6</strong>
+    </li>
+  </ul>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Punktebereich</th>
+        <th>Bedeutung</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>+5 bis +6</strong></td>
+        <td>
+          🌟 <strong>Exzellent</strong> – Du bist in diesem Bereich richtig gut
+          aufgestellt
+        </td>
+      </tr>
+      <tr>
+        <td><strong>+2 bis +4</strong></td>
+        <td>
+          ✅ <strong>Ausgeglichen</strong> – Es läuft gut, kleinere Anpassungen
+          reichen
+        </td>
+      </tr>
+      <tr>
+        <td><strong>-1 bis +1</strong></td>
+        <td>⚖️ <strong>Neutral</strong> – Hier ist Entwicklungspotenzial für mehr Flow</td>
+      </tr>
+      <tr>
+        <td><strong>-4 bis -2</strong></td>
+        <td>
+          🚧 <strong>Blockiert</strong> – Wahrscheinlich erlebst du hier inneren
+          Druck oder Stress, du bist nicht im Flow hier
+        </td>
+      </tr>
+      <tr>
+        <td><strong>-6 bis -5</strong></td>
+        <td>
+          ⛔️ <strong>Stark gestört</strong> – Dieser Bereich ist wahrscheinlich
+          aus dem Gleichgewicht geraten, du bist nicht im Flow hier
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h5>🌊 Die 12 Themenbereiche im Überblick</h5>
+  <blockquote>  
+    <p>
+      1. <strong>Klarheit & Ausrichtung</strong> --> <em
+        >Weißt du, wo du hin willst?</em
+      >
+    </p>
+    <p>
+      2. <strong>Challenge–Skill–Balance</strong> --> <em
+        >Bist du angenehm gefordert – oder über- oder unterfordert?</em
+      >
+    </p>
+    <p>
+      3. <strong>Innerer Raum & emotionale Kapazität</strong> --> <em
+        >Hast du mentalen & emotionalen Freiraum – oder fühlst du dich
+        überlastet und blockiert?</em
+      >
+    </p>
+    <p>
+      4. <strong>Struktur & Rituale</strong> --> <em
+        >Gibt dein Alltag dir Stabiptät und Flow – oder herrscht Chaos und
+        Reaktivität?</em
+      >
+    </p>
+    <p>
+      4. <strong>Fokus & Präsenz</strong> --> <em
+        >Bist du im Moment – oder oft abgelenkt und zerstreut?</em
+      >
+    </p>
+    <p>
+      5. <strong>Machbarkeit & Umsetzungskraft</strong> --> <em
+        >Ist dein Alltag umsetzbar – kennst du deinen nächsten Schritt?</em
+      >
+    </p>
+    <p>6. <strong>Zielklarheit</strong> --> <em>Kennst du dein Ziel?</em></p>
+    <p>
+      7. <strong>Sinn & Bedeutung</strong> --> <em
+        >Hat dein Tun für dich eine tiefere Bedeutung – oder fehlt dir der
+        Sinn?</em
+      >
+    </p>
+    <p>
+      8. <strong>Oxytocin – Verbundenheit & Vertrauen</strong> --> <em
+        >Fühlst du dich verbunden mit dir, anderen und dem Leben?</em
+      >
+    </p>
+    <p>
+      9. <strong>Dopamin – Antrieb & Motivation</strong> --> <em
+        >Wie neugierig und motiviert fühlst du dich?</em
+      >
+    </p>
+    <p>
+      10. <strong>Serotonin – Ruhe & Stabilität</strong> --> <em
+        >Erlebst du innere Ruhe, Sicherheit und Selbstwert?</em
+      >
+    </p>
+    <p>
+      11. <strong>Endorphine – Leichtigkeit & Freude</strong> --> <em
+        >Wie viel Freude, Genuss und Lachen ist in deinem Alltag präsent?</em
+      >
+    </p>
+  </blockquote>
+  <hr />
+
+  <h5>🧭 Was du daraus mitnehmen kannst</h5>
+  <p>
+    Dieser Test ist kein Urteil, sondern eine Einladung zur
+    <strong>Selbstbeobachtung</strong> und ein Zugang zu tieferer Selbsterkenntnis.
+  </p>
+    📌 Hinweis: Der Selfcheck ersetzt keine psychologische oder medizinische
+    Diagnose.
+</section>
+`,
+  },
+  {
+    title: '🚀 lifeflow.now',
+    text: `<section>
+  <h5>🌟 Vision</h5>
+  <p>
+    Eine Welt, in der Menschen sich selbst treu sind, ihren Körper-Geist-Systemen verstehen und ihr Leben authentisch gestalten – frei, klar und im Flow.
+  </p>
+
+  <h5>🎯 Mission</h5>
+  <p>
+    Ich begleite viel beschäftigte, ambitionierte Menschen auf ihrem Weg zu mehr Umsetzungskraft, Sinn und Energie.
+  </p>
+  <p>
+    Mit tiefgehender Selbstkenntnis, neuen Perspektiven, modernen Tools & Wissen unterstütze ich sie dabei, ihren eigenen Weg zu finden, mutige Entscheidungen zu treffen und mit Leichtigkeit und Freude umzusetzen – persönlich, beruflich und spirituell.
+  </p>
+</section>`,
   },
   {
     title: '📃 Haftungsausschluss',
@@ -135,7 +312,152 @@ export const FAQDETAILSDATA_EN: {
   },
   {
     title: '🧠 Explanation',
-    text: `...`,
+    text: `<section>
+  <h5>🧠 About the LifeFlow Selfcheck</h5>
+  <p>
+    The <strong>LifeFlow Selfcheck</strong> is a reflection tool that helps you better understand your current inner balance – emotionally, mentally, physically, and energetically.
+  </p>
+  <p>
+    It gives you a snapshot of 12 key areas of life that are essential for flow – both in your personal life and your work. The results show where things may be blocked or out of balance – and invite you to consciously work on those areas to cultivate more flow.
+    <em>This snapshot essentially reflects the result of your daily habits.</em>
+  </p>
+
+  <hr />
+
+  <h5>🧩 Structure & Methodology</h5>
+  <ul>
+    <p> - <strong>36 questions</strong></p>
+    <p> - <strong>12 topics</strong>, each with <strong>3 questions</strong></p>
+    <p> - Rating scale: <strong>Likert scale from -2 to +2</strong></p>
+    <p>
+      - Includes <strong>positive and critical statements</strong> (incl. inverted items)
+    </p>
+  </ul>
+
+  <blockquote>
+    <p>-2 – does not apply at all</p>
+    <p>-1 – applies slightly</p>
+    <p>0 – neutral</p>
+    <p>1 – mostly applies</p>
+    <p>2 – fully applies</p>
+  </blockquote>
+  <p>
+    This 5-point scale allows for nuanced self-assessment and is based on established psychological methods.
+  </p>
+
+  <hr />
+
+  <h5>🔢 Evaluation & Scoring</h5>
+  <ul>
+    <li>
+      Each topic results in a <strong>total score between -6 and +6</strong>
+    </li>
+  </ul>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Score Range</th>
+        <th>Meaning</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>+5 to +6</strong></td>
+        <td>
+          🌟 <strong>Excellent</strong> – You are well-balanced in this area
+        </td>
+      </tr>
+      <tr>
+        <td><strong>+2 to +4</strong></td>
+        <td>
+          ✅ <strong>Balanced</strong> – Things are going well; minor tweaks are enough
+        </td>
+      </tr>
+      <tr>
+        <td><strong>-1 to +1</strong></td>
+        <td>⚖️ <strong>Neutral</strong> – There’s potential for more flow here</td>
+      </tr>
+      <tr>
+        <td><strong>-4 to -2</strong></td>
+        <td>
+          🚧 <strong>Blocked</strong> – You may feel tension or stress here; not in flow
+        </td>
+      </tr>
+      <tr>
+        <td><strong>-6 to -5</strong></td>
+        <td>
+          ⛔️ <strong>Highly Disrupted</strong> – This area is likely out of balance
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h5>🌊 Overview of the 12 Topics</h5>
+  <blockquote>
+    <p>
+      1. <strong>Clarity & Alignment</strong> → <em>Do you know where you want to go?</em>
+    </p>
+    <p>
+      2. <strong>Challenge–Skill Balance</strong> → <em>Do you feel positively challenged – or over/underwhelmed?</em>
+    </p>
+    <p>
+      3. <strong>Inner Space & Emotional Capacity</strong> → <em>Do you have mental and emotional space – or do you feel overwhelmed?</em>
+    </p>
+    <p>
+      4. <strong>Structure & Rituals</strong> → <em>Does your daily routine provide stability and flow – or is it chaotic and reactive?</em>
+    </p>
+    <p>
+      5. <strong>Focus & Presence</strong> → <em>Are you present – or often distracted and scattered?</em>
+    </p>
+    <p>
+      6. <strong>Feasibility & Execution</strong> → <em>Is your day manageable – do you know your next step?</em>
+    </p>
+    <p>7. <strong>Goal Clarity</strong> → <em>Do you know your goals?</em></p>
+    <p>
+      8. <strong>Meaning & Purpose</strong> → <em>Does your work hold deeper meaning – or does it feel aimless?</em>
+    </p>
+    <p>
+      9. <strong>Oxytocin – Connection & Trust</strong> → <em>Do you feel connected – to yourself, others, and life?</em>
+    </p>
+    <p>
+      10. <strong>Dopamine – Drive & Motivation</strong> → <em>How curious and motivated do you feel?</em>
+    </p>
+    <p>
+      11. <strong>Serotonin – Calm & Stability</strong> → <em>Do you experience inner peace, confidence, and security?</em>
+    </p>
+    <p>
+      12. <strong>Endorphins – Joy & Lightness</strong> → <em>How much joy, pleasure, and laughter is present in your daily life?</em>
+    </p>
+  </blockquote>
+
+  <hr />
+
+  <h5>🧭 What You Can Take Away</h5>
+  <p>
+    This test is not a judgment, but an invitation for <strong>self-observation</strong> – and a doorway to deeper self-awareness.
+  </p>
+  <p>
+    📌 Note: The Selfcheck is not a psychological or medical diagnosis.
+  </p>
+</section>`,
+  },
+  {
+    title: '🚀 lifeflow.now',
+    text: `<section>
+  <h5>🌟 Vision</h5>
+  <p>
+    A world where people stay true to themselves, understand their body-mind system, and shape their lives authentically – free, clear, and in flow.
+  </p>
+
+  <h5>🎯 Mission</h5>
+  <p>
+    I support busy, ambitious individuals on their path to greater drive, purpose, and energy.
+  </p>
+  <p>
+    Through deep self-understanding, fresh perspectives, modern tools, and knowledge, I help them find their own path, make bold decisions, and take action with ease and joy – personally, professionally, and spiritually.
+  </p>
+</section>`,
   },
   {
     title: 'Disclaimer',

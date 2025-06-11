@@ -109,12 +109,28 @@ export class SelfcheckLogicComponent implements AfterViewInit {
 
   getTestResults() {
     const results: SelfcheckTopics[] = [];
+    const topAreas: SelfcheckTopics[] = [];
+    let maxScore = -Infinity;
+
+    // Step 1: Filter for score >= -3 and find max score
     for (let key in this.scores) {
       const score = this.scores[key as SelfcheckTopics];
-      if (score >= 3) {
+      if (-3 >= score) {
         results.push(key as SelfcheckTopics);
+        if (score > maxScore) {
+          maxScore = score;
+        }
       }
     }
+
+    // Step 2: Find top scoring areas (may be more than one)
+    for (let key of results) {
+      if (this.scores[key] === maxScore) {
+        topAreas.push(key);
+      }
+    }
+
+    // Step 3: Build resultDataSet as before
     this.resultDataSet = results.reduce(
       (acc, key) => {
         if (this.resultData[key]) {
@@ -130,10 +146,10 @@ export class SelfcheckLogicComponent implements AfterViewInit {
       },
     );
 
+    // Step 4: Initialize collapsible UI (as before)
     setTimeout(() => {
       const elems = document.querySelectorAll('.collapsible');
       M.Collapsible.init(elems);
     }, 0);
-    return this.resultDataSet;
   }
 }
