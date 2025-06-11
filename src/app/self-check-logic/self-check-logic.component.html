@@ -20,8 +20,8 @@
     </div>
   }
 
-  <div>
-    @if (showQuestions) {
+  @if (showQuestions) {
+    <div>
       <h5
         class="question-container"
         [ngStyle]="{ opacity: showLanguageBtn ? '0.5' : '1' }"
@@ -43,53 +43,63 @@
       } @empty {
         <li>There are no items.</li>
       }
-    }
-  </div>
+    </div>
+  }
 
   @if (showResult) {
-    <h4>🧠🌿 Your Results:</h4>
-    <p>Du hast potentiell wenig...</p>
+    @if (currentLangSelfCheck === "EN") {
+      <h5>Your Results:</h5>
+    } @else {
+      <h5>Dein Resultat:</h5>
+    }
 
-    <div class="container">
-      <ul
-        class="collapsible"
-        style="border-radius: 12px"
-        *ngIf="resultDataSet | keyvalue as resultEntries"
-      >
-        <ng-container *ngFor="let entry of resultEntries">
-          <li>
-            <div class="collapsible-header" style="border-radius: 12px">
-              <i class="material-icons">psychology</i>
-              {{ entry.key | titlecase }}
-              <span class="badge" style="color: #1e6f5c">
-                👉 Click for details</span
-              >
-            </div>
-            <div class="collapsible-body">
-              <h5><strong>Reason:</strong></h5>
-              <ul>
-                <li *ngFor="let reason of entry.value.reasons">
-                  🔍 {{ reason }}
-                </li>
-              </ul>
+    @if (resultsOutOfBalance | keyvalue; as resultEntries) {
+      @if (resultEntries.length > 0) {
+        @if (currentLangSelfCheck === "EN") {
+          <p>🌿 Your potential for more flow lies here...</p>
+        } @else {
+          <p>🌿 Dein Potenzial für mehr Flow liegt hier...</p>
+        }
+        <div class="container">
+          <ul class="collapsible" style="border-radius: 12px">
+            <ng-container *ngFor="let entry of resultEntries">
+              <li>
+                <div class="collapsible-header" style="border-radius: 12px">
+                  <i class="material-icons">psychology</i>
+                  {{ entry.key | titlecase }}
+                  <span class="badge" style="color: #1e6f5c">
+                    👉 Click for details</span
+                  >
+                </div>
+                <div class="collapsible-body">
+                  <h5><strong>Reason:</strong></h5>
+                  <ul>
+                    <li *ngFor="let reason of entry.value.reasons">
+                      🔍 {{ reason }}
+                    </li>
+                  </ul>
 
-              <h5><strong>Tipp:</strong></h5>
-              <ul>
-                <li *ngFor="let tip of entry.value.tips">
-                  <strong>{{ tip.title }}</strong
-                  ><br />
-                  {{ tip.text }}
-                </li>
-              </ul>
-            </div>
-          </li>
-        </ng-container>
-      </ul>
-    </div>
-
-    <p *ngIf="!(resultDataSet | keyvalue)?.length">
-      Deine Leben scheint in Balance zu sein.
-    </p>
+                  <h5><strong>Tipp:</strong></h5>
+                  <ul>
+                    <li *ngFor="let tip of entry.value.tips">
+                      <strong>{{ tip.title }}</strong
+                      ><br />
+                      {{ tip.text }}
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ng-container>
+          </ul>
+        </div>
+      } @else {
+        @if (currentLangSelfCheck === "EN") {
+          <p>You are totally in the flow.</p>
+        } @else {
+          <p>Du bist total im Flow.</p>
+        }
+      }
+    }
   }
   <button *ngIf="currentQuestionIndex > 0" (click)="goBack()">⬅️ Zurück</button>
   <p>{{ scores.clarity }}</p>

@@ -39,7 +39,7 @@ export class SelfcheckLogicComponent implements AfterViewInit {
     endorphins: 0,
   };
 
-  resultDataSet: {
+  resultsOutOfBalance: {
     [key: string]: {
       tips: { title: string; text: string }[];
       reasons: string[];
@@ -97,7 +97,6 @@ export class SelfcheckLogicComponent implements AfterViewInit {
       }
     }
 
-    // Zurück zur letzten Frage
     this.currentQuestionIndex = lastAnswer.index;
     this.showQuestions = true;
     this.showResult = false;
@@ -108,30 +107,28 @@ export class SelfcheckLogicComponent implements AfterViewInit {
   }
 
   getTestResults() {
-    const results: SelfcheckTopics[] = [];
-    const topAreas: SelfcheckTopics[] = [];
-    let maxScore = -Infinity;
+    const resultsOutOfBalanceKeys: SelfcheckTopics[] = [];
+    const topAreasKeys: SelfcheckTopics[] = [];
+    let currentMaxScore = Number.NEGATIVE_INFINITY;
 
-    // Step 1: Filter for score >= -3 and find max score
+    //Filter for score >= -3 and find max score
     for (let key in this.scores) {
       const score = this.scores[key as SelfcheckTopics];
       if (-3 >= score) {
-        results.push(key as SelfcheckTopics);
-        if (score > maxScore) {
-          maxScore = score;
+        resultsOutOfBalanceKeys.push(key as SelfcheckTopics);
+        if (score >= 4) {
+          if (score > currentMaxScore) {
+            currentMaxScore = score;
+            topAreasKeys.length = 0;
+            topAreasKeys.push(key as SelfcheckTopics);
+          } else if (score === currentMaxScore) {
+            topAreasKeys.push(key as SelfcheckTopics);
+          }
         }
       }
     }
 
-    // Step 2: Find top scoring areas (may be more than one)
-    for (let key of results) {
-      if (this.scores[key] === maxScore) {
-        topAreas.push(key);
-      }
-    }
-
-    // Step 3: Build resultDataSet as before
-    this.resultDataSet = results.reduce(
+    this.resultsOutOfBalance = resultsOutOfBalanceKeys.reduce(
       (acc, key) => {
         if (this.resultData[key]) {
           acc[key] = this.resultData[key];
@@ -146,7 +143,6 @@ export class SelfcheckLogicComponent implements AfterViewInit {
       },
     );
 
-    // Step 4: Initialize collapsible UI (as before)
     setTimeout(() => {
       const elems = document.querySelectorAll('.collapsible');
       M.Collapsible.init(elems);
