@@ -9,9 +9,11 @@ import { DisplayResultComponent } from './display-result/display-result.componen
 declare var M: any;
 
 export type ResultData = {
-  [key: string]: {
+  [key in SelfcheckTopics]: {
+    area: string;
     tips: { title: string; text: string }[];
     reasons: string[];
+    input: string;
   };
 };
 
@@ -51,6 +53,7 @@ export class SelfcheckLogicComponent implements AfterViewInit {
     index: number;
     effects: Record<SelfcheckTopics, number>;
   }[] = [];
+
   resultDataSet: {
     outOfBalance: ResultData;
     lowestAreaPotential: ResultData;
@@ -58,11 +61,11 @@ export class SelfcheckLogicComponent implements AfterViewInit {
     goodFlow: ResultData;
     topAreas: ResultData;
   } = {
-    outOfBalance: {},
-    lowestAreaPotential: {},
-    easyWins: {},
-    goodFlow: {},
-    topAreas: {},
+    outOfBalance: {} as ResultData,
+    lowestAreaPotential: {} as ResultData,
+    easyWins: {} as ResultData,
+    goodFlow: {} as ResultData,
+    topAreas: {} as ResultData,
   };
   //dummy
   /*   {
@@ -178,20 +181,12 @@ export class SelfcheckLogicComponent implements AfterViewInit {
     }
 
     const reduceToResultData = (keys: SelfcheckTopics[]) => {
-      return keys.reduce(
-        (acc, key) => {
-          if (this.resultData[key]) {
-            acc[key] = this.resultData[key];
-          }
-          return acc;
-        },
-        {} as {
-          [key: string]: {
-            tips: { title: string; text: string }[];
-            reasons: string[];
-          };
-        },
-      );
+      return keys.reduce((acc, key) => {
+        if (this.resultData[key]) {
+          acc[key] = this.resultData[key];
+        }
+        return acc;
+      }, {} as ResultData);
     };
 
     // Assign categorized results -- comment for dummy

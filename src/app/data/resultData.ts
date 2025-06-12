@@ -1,3 +1,5 @@
+import { ResultData } from '../self-check-logic/self-check-logic.component';
+
 export type SelfcheckTopics =
   | 'clarity'
   | 'challenge'
@@ -12,14 +14,9 @@ export type SelfcheckTopics =
   | 'serotonin'
   | 'endorphins';
 
-export const RESULTDATA: {
-  [key in SelfcheckTopics]: {
-    tips: { title: string; text: string }[];
-    reasons: string[];
-    input: string;
-  };
-} = {
+export const RESULTDATA: ResultData = {
   dopamine: {
+    area: 'Dopamin',
     tips: [
       {
         title: '💪 1. Herausforderungen meistern',
@@ -38,6 +35,7 @@ export const RESULTDATA: {
       'Dopamin sorgt dafür, dass du motiviert bist, etwas zu tun und Herausforderungen anzugehen. Es macht dich neugierig, fokussiert und zielgerichtet. Ohne ausreichend Dopamin fehlt dir der Antrieb – du schiebst Dinge auf, lässt dich leicht ablenken und suchst nach schnellen Belohnungen. Ein stabiles Dopamin-System hilft dir, dranzubleiben, deinen Weg zu gehen, und die Aufgaben und Ideen umzusetzen, die dir wichtig sind und dich erfüllen.',
   },
   oxytocin: {
+    area: 'Oxytocin',
     tips: [
       {
         title: '1. Echte Nähe suchen',
@@ -49,6 +47,7 @@ export const RESULTDATA: {
       'Oxytocin ist ein Hormon und Neurotransmitter, das für Vertrauen, Nähe und soziale Bindung sorgt. Es wird z. B. beim Kuscheln, Umarmen oder in tiefen Gesprächen ausgeschüttet und stärkt das Gefühl von Verbundenheit und Sicherheit.',
   },
   serotonin: {
+    area: 'Serotonin',
     tips: [
       {
         title: '1. Sonnenlicht tanken',
@@ -60,6 +59,7 @@ export const RESULTDATA: {
       'Serotonin ist entscheidend für deine emotionale Stabilität, deinen Schlaf-Wach-Rhythmus und dein Wohlbefinden. Es hilft dir, gelassener zu bleiben und hebt die Stimmung.',
   },
   endorphins: {
+    area: 'Endorphine',
     tips: [
       {
         title: '1. Bewege deinen Körper',
@@ -71,6 +71,7 @@ export const RESULTDATA: {
       'Endorphine sind körpereigene Schmerzmittel und Stimmungsaufheller. Sie werden vor allem bei Bewegung, Lachen oder Musik freigesetzt und helfen, Stress abzubauen.',
   },
   goal: {
+    area: 'Ziel',
     tips: [
       {
         title: '1. Klarheit schaffen',
@@ -82,6 +83,7 @@ export const RESULTDATA: {
       'Ein klares Ziel gibt dir Richtung, Motivation und Orientierung. Es hilft deinem Gehirn, Energie zu fokussieren und Fortschritt bewusst wahrzunehmen.',
   },
   feasibility: {
+    area: 'Machbarkeit',
     tips: [
       {
         title: '1. Realistische Schritte planen',
@@ -93,6 +95,7 @@ export const RESULTDATA: {
       'Machbarkeit gibt deinem Gehirn Sicherheit: Wenn ein Ziel erreichbar erscheint, steigt die Motivation, ins Handeln zu kommen.',
   },
   meaning: {
+    area: 'Sinn',
     tips: [
       {
         title: '1. Verbinde dein Handeln mit Sinn',
@@ -104,6 +107,7 @@ export const RESULTDATA: {
       'Sinnerleben aktiviert tiefe emotionale Systeme im Gehirn. Wenn du weißt, wofür du etwas tust, entsteht innere Kraft und Ausdauer.',
   },
   clarity: {
+    area: 'Klarheit',
     tips: [
       {
         title: '1. Gedanken ordnen',
@@ -115,6 +119,7 @@ export const RESULTDATA: {
       'Klarheit bedeutet, dich selbst besser zu verstehen – deine Werte, Bedürfnisse und Ziele. Sie entsteht durch innere Ordnung und bewusste Reflexion.',
   },
   challenge: {
+    area: 'Herausforderung',
     tips: [
       {
         title: '1. Raus aus der Komfortzone',
@@ -126,6 +131,7 @@ export const RESULTDATA: {
       'Die richtige Balance aus Herausforderung und Können bringt dich in den Flow. Zu wenig reizt dich nicht – zu viel blockiert dich.',
   },
   space: {
+    area: 'Raum',
     tips: [
       {
         title: '1. Inneren Raum schaffen',
@@ -137,6 +143,7 @@ export const RESULTDATA: {
       'Innerer Raum ist die Grundlage für emotionale Verarbeitung und Kreativität. Ohne ihn fehlt dir Tiefe und Ruhe.',
   },
   structure: {
+    area: 'Struktur',
     tips: [
       {
         title: '1. Feste Routinen etablieren',
@@ -148,6 +155,7 @@ export const RESULTDATA: {
       'Struktur gibt deinem Nervensystem Sicherheit und deinem Tag Halt. Sie hilft dir, besser mit Stress umzugehen und fokussierter zu arbeiten.',
   },
   focus: {
+    area: 'Fokus',
     tips: [
       {
         title: '1. Ablenkungen reduzieren',

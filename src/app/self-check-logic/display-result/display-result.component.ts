@@ -10,4 +10,5 @@ import { ResultData } from '../self-check-logic.component';
 })
 export class DisplayResultComponent {
   results = input<ResultData>();
+  lang = input<string>();
 }
