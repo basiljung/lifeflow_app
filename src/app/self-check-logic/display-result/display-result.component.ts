@@ -9,5 +9,5 @@ import { ResultData } from '../self-check-logic.component';
   styleUrl: './display-result.component.scss',
 })
 export class DisplayResultComponent {
-  resultsOutOfBalance = input<ResultData>();
+  results = input<ResultData>();
 }

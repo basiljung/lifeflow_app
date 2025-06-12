@@ -48,7 +48,7 @@
 
   @if (showResult) {
     @if (currentLangSelfCheck === "EN") {
-      <app-display-result [resultsOutOfBalance]="resultsOutOfBalance">
+      <app-display-result [results]="resultsOutOfBalance">
         <h5 style="margin-bottom: 2rem" slot="top">
           🌿 Your potential for more flow lies here...
         </h5>
@@ -59,8 +59,13 @@
           <h5 style="margin: 2rem">Tell me your secret...</h5>
         </div>
       </app-display-result>
+      <app-display-result [results]="resultsTopArea">
+        <h5 style="margin-bottom: 2rem" slot="top">
+          Das ist oder sind dein(e) Top-Bereich(e) – stimmst du zu?
+        </h5>
+      </app-display-result>
     } @else {
-      <app-display-result [resultsOutOfBalance]="resultsOutOfBalance">
+      <app-display-result [results]="resultsOutOfBalance">
         <h5 style="margin-bottom: 2rem" slot="top">
           🌿 Dein Potenzial für mehr Flow liegt hier...
         </h5>
@@ -70,6 +75,11 @@
           </h5>
           <h5 style="margin: 2rem">Verrate mir dein Geheimnis...</h5>
         </div>
+      </app-display-result>
+      <app-display-result [results]="resultsTopArea">
+        <h5 style="margin-bottom: 2rem" slot="top">
+          Your strongest area(s) – would you say that’s true?
+        </h5>
       </app-display-result>
     }
   }

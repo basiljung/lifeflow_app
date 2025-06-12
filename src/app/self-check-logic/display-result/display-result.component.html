@@ -1,4 +1,4 @@
-@if (resultsOutOfBalance(); as data) {
+@if (results(); as data) {
   @if (data | keyvalue; as resultEntries) {
     @if (resultEntries.length > 0) {
       <ng-content select="[slot=top]"></ng-content>

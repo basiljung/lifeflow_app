@@ -48,6 +48,7 @@ export class SelfcheckLogicComponent implements AfterViewInit {
   };
 
   resultsOutOfBalance: ResultData = {};
+  resultsTopArea: ResultData = {};
 
   answerHistory: {
     index: number;
@@ -117,21 +118,47 @@ export class SelfcheckLogicComponent implements AfterViewInit {
     //Filter for score >= -3 and find max score
     for (let key in this.scores) {
       const score = this.scores[key as SelfcheckTopics];
+
+      // 1) score less than 0 - outof balance
       if (-3 >= score) {
         resultsOutOfBalanceKeys.push(key as SelfcheckTopics);
-        if (score >= 4) {
-          if (score > currentMaxScore) {
-            currentMaxScore = score;
-            topAreasKeys.length = 0;
-            topAreasKeys.push(key as SelfcheckTopics);
-          } else if (score === currentMaxScore) {
-            topAreasKeys.push(key as SelfcheckTopics);
-          }
+      }
+
+      // 2) most potential - lowest score (can be more than one but then with the same score)
+
+      // 3) score from 0 - 3 -  already good but easy wins
+
+      // 4) score from 4 - 6 - good flow already
+
+      // 5) best flow - higest scroe (can be more than one but then with the same score)
+
+      if (score >= 4) {
+        if (score > currentMaxScore) {
+          currentMaxScore = score;
+          topAreasKeys.length = 0;
+          topAreasKeys.push(key as SelfcheckTopics);
+        } else if (score === currentMaxScore) {
+          topAreasKeys.push(key as SelfcheckTopics);
         }
       }
     }
 
     this.resultsOutOfBalance = resultsOutOfBalanceKeys.reduce(
+      (acc, key) => {
+        if (this.resultData[key]) {
+          acc[key] = this.resultData[key];
+        }
+        return acc;
+      },
+      {} as {
+        [key: string]: {
+          tips: { title: string; text: string }[];
+          reasons: string[];
+        };
+      },
+    );
+
+    this.resultsTopArea = topAreasKeys.reduce(
       (acc, key) => {
         if (this.resultData[key]) {
           acc[key] = this.resultData[key];
