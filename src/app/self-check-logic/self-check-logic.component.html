@@ -80,6 +80,14 @@
           🚀 Your strongest area(s) – would you say that’s true?
         </h5>
       </app-display-result>
+      <h5>I am very happy to receive feedback.</h5>
+      <button
+        onclick="window.open('https://forms.gle/dL4LqC9ZxZ2sybog7', '_blank')"
+        style="cursor: pointer"
+      >
+        💡 Feedback
+      </button>
+      <br />
     } @else {
       <app-display-result [results]="resultDataSet.outOfBalance">
         <h5 slot="top">🌿 Dein Potenzial für mehr Flow liegt hier...</h5>
@@ -107,9 +115,23 @@
           🚀 Das ist oder sind dein(e) Top-Bereich(e) – stimmst du zu?
         </h5>
       </app-display-result>
+      <h5>Ich freue mich über dein Feedback.</h5>
+      <button
+        onclick="window.open('https://forms.gle/dL4LqC9ZxZ2sybog7', '_blank')"
+        style="cursor: pointer"
+      >
+        💡 Feedback
+      </button>
+      <br />
     }
   }
-  <button *ngIf="currentQuestionIndex > 0" (click)="goBack()">⬅️ Zurück</button>
+  <button
+    style="cursor: pointer; margin: 3rem"
+    *ngIf="currentQuestionIndex > 0"
+    (click)="goBack()"
+  >
+    ⬅️ Zurück
+  </button>
   <p>{{ scores.clarity }}</p>
   <p>{{ scores.challenge }}</p>
   <p>{{ scores.space }}</p>
