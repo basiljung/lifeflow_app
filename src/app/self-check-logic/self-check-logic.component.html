@@ -48,17 +48,29 @@
 
   @if (showResult) {
     @if (currentLangSelfCheck === "EN") {
-      <h5>Your Results:</h5>
       <app-display-result [resultsOutOfBalance]="resultsOutOfBalance">
-        <p slot="top">🌿 Your potential for more flow lies here...</p>
-        <p slot="bottom">You are totally in flow.</p></app-display-result
-      >
+        <h5 style="margin-bottom: 2rem" slot="top">
+          🌿 Your potential for more flow lies here...
+        </h5>
+        <div slot="bottom">
+          <h5 style="margin: 2rem">
+            🚀 Congratulation. You already experience a lot of flow.
+          </h5>
+          <h5 style="margin: 2rem">Tell me your secret...</h5>
+        </div>
+      </app-display-result>
     } @else {
-      <h5>Dein Resultat:</h5>
       <app-display-result [resultsOutOfBalance]="resultsOutOfBalance">
-        <p slot="top">🌿 Dein Potenzial für mehr Flow liegt hier...</p>
-        <p slot="bottom">Du bist total im Flow.</p></app-display-result
-      >
+        <h5 style="margin-bottom: 2rem" slot="top">
+          🌿 Dein Potenzial für mehr Flow liegt hier...
+        </h5>
+        <div slot="bottom">
+          <h5 style="margin: 2rem">
+            🚀 Gratulation. Du lebst bereits viel Flow.
+          </h5>
+          <h5 style="margin: 2rem">Verrate mir dein Geheimnis...</h5>
+        </div>
+      </app-display-result>
     }
   }
   <button *ngIf="currentQuestionIndex > 0" (click)="goBack()">⬅️ Zurück</button>

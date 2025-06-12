@@ -460,7 +460,7 @@ export const FAQDETAILSDATA_EN: {
 </section>`,
   },
   {
-    title: 'Disclaimer',
+    title: '📃 Disclaimer',
     text: `This app is intended for informational and self-reflection purposes
           only. It is not a medical or psychological diagnostic tool and does
           not replace professional advice, diagnosis, or treatment. The insights
@@ -475,7 +475,7 @@ export const FAQDETAILSDATA_EN: {
           of this app is voluntary and at your own risk.`,
   },
   {
-    title: 'Terms of Use',
+    title: '📑 Terms of Use',
     text: ` <h6>1. Purpose of the App</h6>
         <p>
           This app is designed to support self-reflection, stress reduction, and
