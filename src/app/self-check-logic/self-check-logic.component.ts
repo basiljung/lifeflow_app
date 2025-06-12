@@ -28,7 +28,7 @@ export class SelfcheckLogicComponent implements AfterViewInit {
   showLanguageBtn = true;
 
   questions = QUESTIONS_EN;
-  resultData = RESULTDATA;
+  resultData: ResultData = RESULTDATA;
   showResult = false;
   showQuestions = true;
 
@@ -47,13 +47,31 @@ export class SelfcheckLogicComponent implements AfterViewInit {
     endorphins: 0,
   };
 
-  resultsOutOfBalance: ResultData = {};
-  resultsTopArea: ResultData = {};
-
   answerHistory: {
     index: number;
     effects: Record<SelfcheckTopics, number>;
   }[] = [];
+  resultDataSet: {
+    outOfBalance: ResultData;
+    lowestAreaPotential: ResultData;
+    easyWins: ResultData;
+    goodFlow: ResultData;
+    topAreas: ResultData;
+  } = {
+    outOfBalance: {},
+    lowestAreaPotential: {},
+    easyWins: {},
+    goodFlow: {},
+    topAreas: {},
+  };
+  //dummy
+  /*   {
+    outOfBalance: {},
+    lowestAreaPotential: this.resultData,
+    easyWins: this.resultData,
+    goodFlow: this.resultData,
+    topAreas: this.resultData,
+  }; */
 
   ngAfterViewInit() {
     M.Collapsible.init(document.querySelectorAll('.collapsible'), {});
@@ -111,27 +129,43 @@ export class SelfcheckLogicComponent implements AfterViewInit {
   }
 
   getTestResults() {
-    const resultsOutOfBalanceKeys: SelfcheckTopics[] = [];
-    const topAreasKeys: SelfcheckTopics[] = [];
+    const outOfBalanceKeys: SelfcheckTopics[] = []; // 1) score < 0
+    const lowestAreaKeys: SelfcheckTopics[] = []; // 2) lowest score(s)
+    const easyWinsKeys: SelfcheckTopics[] = []; // 3) score 0–3
+    const goodFlowKeys: SelfcheckTopics[] = []; // 4) score 4–6
+    const topAreasKeys: SelfcheckTopics[] = []; // 5) highest score(s)
+
+    let currentMinScore = Number.POSITIVE_INFINITY;
     let currentMaxScore = Number.NEGATIVE_INFINITY;
 
-    //Filter for score >= -3 and find max score
     for (let key in this.scores) {
       const score = this.scores[key as SelfcheckTopics];
 
-      // 1) score less than 0 - outof balance
-      if (-3 >= score) {
-        resultsOutOfBalanceKeys.push(key as SelfcheckTopics);
+      // 1) Out of balance
+      if (score < 0) {
+        outOfBalanceKeys.push(key as SelfcheckTopics);
       }
 
-      // 2) most potential - lowest score (can be more than one but then with the same score)
+      // 2) Most potential
+      if (score < currentMinScore) {
+        currentMinScore = score;
+        lowestAreaKeys.length = 0;
+        lowestAreaKeys.push(key as SelfcheckTopics);
+      } else if (score === currentMinScore) {
+        lowestAreaKeys.push(key as SelfcheckTopics);
+      }
 
-      // 3) score from 0 - 3 -  already good but easy wins
+      // 3) Easy wins
+      if (score >= 0 && score <= 3) {
+        easyWinsKeys.push(key as SelfcheckTopics);
+      }
 
-      // 4) score from 4 - 6 - good flow already
+      // 4) Good flow
+      if (score >= 4 && score <= 6) {
+        goodFlowKeys.push(key as SelfcheckTopics);
+      }
 
-      // 5) best flow - higest scroe (can be more than one but then with the same score)
-
+      // 5) Top areas
       if (score >= 4) {
         if (score > currentMaxScore) {
           currentMaxScore = score;
@@ -143,35 +177,31 @@ export class SelfcheckLogicComponent implements AfterViewInit {
       }
     }
 
-    this.resultsOutOfBalance = resultsOutOfBalanceKeys.reduce(
-      (acc, key) => {
-        if (this.resultData[key]) {
-          acc[key] = this.resultData[key];
-        }
-        return acc;
-      },
-      {} as {
-        [key: string]: {
-          tips: { title: string; text: string }[];
-          reasons: string[];
-        };
-      },
-    );
+    const reduceToResultData = (keys: SelfcheckTopics[]) => {
+      return keys.reduce(
+        (acc, key) => {
+          if (this.resultData[key]) {
+            acc[key] = this.resultData[key];
+          }
+          return acc;
+        },
+        {} as {
+          [key: string]: {
+            tips: { title: string; text: string }[];
+            reasons: string[];
+          };
+        },
+      );
+    };
 
-    this.resultsTopArea = topAreasKeys.reduce(
-      (acc, key) => {
-        if (this.resultData[key]) {
-          acc[key] = this.resultData[key];
-        }
-        return acc;
-      },
-      {} as {
-        [key: string]: {
-          tips: { title: string; text: string }[];
-          reasons: string[];
-        };
-      },
-    );
+    // Assign categorized results -- comment for dummy
+    this.resultDataSet = {
+      outOfBalance: reduceToResultData(outOfBalanceKeys),
+      lowestAreaPotential: reduceToResultData(lowestAreaKeys),
+      easyWins: reduceToResultData(easyWinsKeys),
+      goodFlow: reduceToResultData(goodFlowKeys),
+      topAreas: reduceToResultData(topAreasKeys),
+    };
 
     setTimeout(() => {
       const elems = document.querySelectorAll('.collapsible');

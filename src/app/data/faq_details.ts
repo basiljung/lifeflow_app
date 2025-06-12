@@ -80,25 +80,21 @@ export const FAQDETAILSDATA_DE: {
     </thead>
     <tbody>
       <tr>
-        <td><strong>+5 bis +6</strong></td>
+        <td><strong>+4 bis +6</strong></td>
         <td>
           🌟 <strong>Exzellent</strong> – Du bist in diesem Bereich richtig gut
           aufgestellt
         </td>
       </tr>
       <tr>
-        <td><strong>+2 bis +4</strong></td>
+        <td><strong>0 bis +3</strong></td>
         <td>
-          ✅ <strong>Ausgeglichen</strong> – Es läuft gut, kleinere Anpassungen
+          ⚖️ <strong>Ausgeglichen</strong> – Hier ist Entwicklungspotenzial für mehr Flow, kleinere Anpassungen
           reichen
         </td>
       </tr>
       <tr>
-        <td><strong>-1 bis +1</strong></td>
-        <td>⚖️ <strong>Neutral</strong> – Hier ist Entwicklungspotenzial für mehr Flow</td>
-      </tr>
-      <tr>
-        <td><strong>-4 bis -2</strong></td>
+        <td><strong>-4 bis -1</strong></td>
         <td>
           🚧 <strong>Blockiert</strong> – Wahrscheinlich erlebst du hier inneren
           Druck oder Stress, du bist nicht im Flow hier
@@ -363,23 +359,19 @@ export const FAQDETAILSDATA_EN: {
     </thead>
     <tbody>
       <tr>
-        <td><strong>+5 to +6</strong></td>
+        <td><strong>+4 to +6</strong></td>
         <td>
           🌟 <strong>Excellent</strong> – You are well-balanced in this area
         </td>
       </tr>
       <tr>
-        <td><strong>+2 to +4</strong></td>
+        <td><strong>0 to +3</strong></td>
         <td>
-          ✅ <strong>Balanced</strong> – Things are going well; minor tweaks are enough
+          ⚖️ <strong>Balanced</strong> – There’s potential for more flow here, minor tweaks are enough
         </td>
       </tr>
       <tr>
-        <td><strong>-1 to +1</strong></td>
-        <td>⚖️ <strong>Neutral</strong> – There’s potential for more flow here</td>
-      </tr>
-      <tr>
-        <td><strong>-4 to -2</strong></td>
+        <td><strong>-4 to -1</strong></td>
         <td>
           🚧 <strong>Blocked</strong> – You may feel tension or stress here; not in flow
         </td>

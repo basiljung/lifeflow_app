@@ -48,37 +48,56 @@
 
   @if (showResult) {
     @if (currentLangSelfCheck === "EN") {
-      <app-display-result [results]="resultsOutOfBalance">
-        <h5 style="margin-bottom: 2rem" slot="top">
-          🌿 Your potential for more flow lies here...
-        </h5>
+      <app-display-result [results]="resultDataSet.outOfBalance">
+        <h5 slot="top">🌿 Your potential for more flow lies here...</h5>
         <div slot="bottom">
-          <h5 style="margin: 2rem">
-            🚀 Congratulation. You already experience a lot of flow.
-          </h5>
-          <h5 style="margin: 2rem">Tell me your secret...</h5>
+          <h6>👏 Great job – no strongly unbalanced areas detected!</h6>
+          <h6>Tell me your secret...</h6>
         </div>
       </app-display-result>
-      <app-display-result [results]="resultsTopArea">
-        <h5 style="margin-bottom: 2rem" slot="top">
-          Das ist oder sind dein(e) Top-Bereich(e) – stimmst du zu?
+      <app-display-result [results]="resultDataSet.easyWins">
+        <h5 slot="top">
+          ⚖️ There’s potential for more flow here, minor tweaks are enough
+        </h5>
+      </app-display-result>
+      <app-display-result [results]="resultDataSet.lowestAreaPotential">
+        <h5 slot="top">⛔️ This area shows the least flow. Do you know why?</h5>
+      </app-display-result>
+      <app-display-result [results]="resultDataSet.goodFlow">
+        <h5 slot="top">
+          🌟 Congratulation. You're pretty much in the flow here
+        </h5>
+      </app-display-result>
+      <app-display-result [results]="resultDataSet.topAreas">
+        <h5 slot="top">
+          🚀 Your strongest area(s) – would you say that’s true?
         </h5>
       </app-display-result>
     } @else {
-      <app-display-result [results]="resultsOutOfBalance">
-        <h5 style="margin-bottom: 2rem" slot="top">
-          🌿 Dein Potenzial für mehr Flow liegt hier...
-        </h5>
+      <app-display-result [results]="resultDataSet.outOfBalance">
+        <h5 slot="top">🌿 Dein Potenzial für mehr Flow liegt hier...</h5>
         <div slot="bottom">
-          <h5 style="margin: 2rem">
-            🚀 Gratulation. Du lebst bereits viel Flow.
-          </h5>
-          <h5 style="margin: 2rem">Verrate mir dein Geheimnis...</h5>
+          <h6>👏 Sehr gut – keine stark unausgeglichenen Bereiche erkannt!</h6>
+          <h6>Verrate mir dein Geheimnis...</h6>
         </div>
       </app-display-result>
-      <app-display-result [results]="resultsTopArea">
-        <h5 style="margin-bottom: 2rem" slot="top">
-          Your strongest area(s) – would you say that’s true?
+      <app-display-result [results]="resultDataSet.easyWins">
+        <h5 slot="top">
+          ⚖️ Hier ist Entwicklungspotenzial für mehr Flow, kleinere Anpassungen
+          reichen
+        </h5>
+      </app-display-result>
+      <app-display-result [results]="resultDataSet.lowestAreaPotential">
+        <h5 slot="top">
+          ⛔️ In diesem Bereich ist dein Flow am geringsten. Weisst du warum?
+        </h5>
+      </app-display-result>
+      <app-display-result [results]="resultDataSet.goodFlow">
+        <h5 slot="top">🌟 Gratulation. Du bist ziemlich im flow hier</h5>
+      </app-display-result>
+      <app-display-result [results]="resultDataSet.topAreas">
+        <h5 slot="top">
+          🚀 Das ist oder sind dein(e) Top-Bereich(e) – stimmst du zu?
         </h5>
       </app-display-result>
     }

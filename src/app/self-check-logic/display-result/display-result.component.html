@@ -1,8 +1,10 @@
 @if (results(); as data) {
   @if (data | keyvalue; as resultEntries) {
     @if (resultEntries.length > 0) {
-      <ng-content select="[slot=top]"></ng-content>
       <div class="container">
+        <div style="margin: 2rem">
+          <ng-content select="[slot=top]"></ng-content>
+        </div>
         <ul class="collapsible" style="border-radius: 12px">
           <ng-container *ngFor="let entry of resultEntries">
             <li>
@@ -35,7 +37,14 @@
         </ul>
       </div>
     } @else {
-      <ng-content select="[slot=bottom]"></ng-content>
+      <div style="margin: 2rem">
+        <em>
+          <ng-content style="margin: rem" select="[slot=bottom]"></ng-content
+        ></em>
+      </div>
     }
+    <div
+      style="border-bottom: 3px solid #1e6f5c; margin: 3rem auto; width: 20rem"
+    ></div>
   }
 }
