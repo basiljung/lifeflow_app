@@ -17,7 +17,10 @@
                   }}</span>
                 </span>
               </div>
-              <div class="collapsible-body">
+              <div
+                class="collapsible-body left-align"
+                style="margin: 2rem; padding: 2rem"
+              >
                 <h5>
                   <span>{{
                     lang() === "EN" ? "🔍  Reason" : "🔍  Ursache"
@@ -25,9 +28,17 @@
                 </h5>
                 <ul>
                   <li *ngFor="let reason of entry.value.reasons">
-                    🔍 {{ reason }}
+                    ⬩ {{ reason }}
                   </li>
                 </ul>
+                <div
+                  style="
+                    border-bottom: 1.5px solid #1e6f5c;
+                    margin-top: 2rem;
+                    margin-bottom: 2rem;
+                    width: 10rem;
+                  "
+                ></div>
 
                 <h5>
                   <span>{{ lang() === "EN" ? "💡 Tip" : "💡 Tipp" }}</span>
@@ -39,6 +50,19 @@
                     {{ tip.text }}
                   </li>
                 </ul>
+                <div
+                  style="
+                    border-bottom: 1.5px solid #1e6f5c;
+                    margin-top: 2rem;
+                    margin-bottom: 2rem;
+                    width: 10rem;
+                  "
+                ></div>
+
+                <h5>
+                  <span>{{ lang() === "EN" ? "✚ Details" : "✚ Details" }}</span>
+                </h5>
+                <p>{{ entry.value?.input | titlecase }}</p>
               </div>
             </li>
           </ng-container>
