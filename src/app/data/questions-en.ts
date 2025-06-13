@@ -7,31 +7,31 @@ export const QUESTIONS_EN: Question[] = [
       {
         text: '5 – Applies completely',
         effects: {
-          clarity: 2,
+          clarity_goal: 2,
         },
       },
       {
         text: '4 – Applies somewhat',
         effects: {
-          clarity: 1,
+          clarity_goal: 1,
         },
       },
       {
         text: '3 – Neutral / Mixed',
         effects: {
-          clarity: 0,
+          clarity_goal: 0,
         },
       },
       {
         text: '2 – Applies slightly',
         effects: {
-          clarity: -1,
+          clarity_goal: -1,
         },
       },
       {
         text: '1 – Does not apply at all',
         effects: {
-          clarity: -2,
+          clarity_goal: -2,
         },
       },
     ],
@@ -42,31 +42,31 @@ export const QUESTIONS_EN: Question[] = [
       {
         text: '5 – Applies completely',
         effects: {
-          clarity: -2,
+          clarity_goal: -2,
         },
       },
       {
         text: '4 – Applies somewhat',
         effects: {
-          clarity: -1,
+          clarity_goal: -1,
         },
       },
       {
         text: '3 – Neutral / Mixed',
         effects: {
-          clarity: 0,
+          clarity_goal: 0,
         },
       },
       {
         text: '2 – Applies slightly',
         effects: {
-          clarity: 1,
+          clarity_goal: 1,
         },
       },
       {
         text: '1 – Does not apply at all',
         effects: {
-          clarity: 2,
+          clarity_goal: 2,
         },
       },
     ],
@@ -77,31 +77,31 @@ export const QUESTIONS_EN: Question[] = [
       {
         text: '5 – Applies completely',
         effects: {
-          clarity: 2,
+          clarity_goal: 2,
         },
       },
       {
         text: '4 – Applies somewhat',
         effects: {
-          clarity: 1,
+          clarity_goal: 1,
         },
       },
       {
         text: '3 – Neutral / Mixed',
         effects: {
-          clarity: 0,
+          clarity_goal: 0,
         },
       },
       {
         text: '2 – Applies slightly',
         effects: {
-          clarity: -1,
+          clarity_goal: -1,
         },
       },
       {
         text: '1 – Does not apply at all',
         effects: {
-          clarity: -2,
+          clarity_goal: -2,
         },
       },
     ],
@@ -387,7 +387,7 @@ export const QUESTIONS_EN: Question[] = [
     ],
   },
   {
-    text: 'I design my daily routine consciously and with clarity.',
+    text: 'I design my daily routine consciously and with clarity_goal.',
     answers: [
       {
         text: '5 – Applies completely',

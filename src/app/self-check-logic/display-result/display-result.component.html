@@ -10,7 +10,7 @@
             <li>
               <div class="collapsible-header" style="border-radius: 12px">
                 <i class="material-icons">psychology</i>
-                {{ entry.value?.area | titlecase }}
+                {{ entry.value.area | titlecase }}
                 <span class="badge" style="color: #1e6f5c"
                   ><span>{{
                     lang() === "EN" ? "👉 View details" : "👉 Details ansehen"
@@ -62,7 +62,7 @@
                 <h5>
                   <span>{{ lang() === "EN" ? "✚ Details" : "✚ Details" }}</span>
                 </h5>
-                <p>{{ entry.value?.input | titlecase }}</p>
+                <p>{{ entry.value.input | titlecase }}</p>
               </div>
             </li>
           </ng-container>

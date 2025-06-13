@@ -35,7 +35,7 @@ export class SelfcheckLogicComponent implements AfterViewInit {
   showQuestions = true;
 
   scores: Record<SelfcheckTopics, number> = {
-    clarity: 0,
+    clarity_goal: 0,
     challenge: 0,
     space: 0,
     structure: 0,
