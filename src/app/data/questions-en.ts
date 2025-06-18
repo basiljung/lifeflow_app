@@ -37,42 +37,7 @@ export const QUESTIONS_EN: Question[] = [
     ],
   },
   {
-    text: 'I often feel unsure about my inner direction.',
-    answers: [
-      {
-        text: '5 – Applies completely',
-        effects: {
-          clarity_goal: -2,
-        },
-      },
-      {
-        text: '4 – Applies somewhat',
-        effects: {
-          clarity_goal: -1,
-        },
-      },
-      {
-        text: '3 – Neutral / Mixed',
-        effects: {
-          clarity_goal: 0,
-        },
-      },
-      {
-        text: '2 – Applies slightly',
-        effects: {
-          clarity_goal: 1,
-        },
-      },
-      {
-        text: '1 – Does not apply at all',
-        effects: {
-          clarity_goal: 2,
-        },
-      },
-    ],
-  },
-  {
-    text: 'My thoughts are organized and focused.',
+    text: 'I have concrete goals that I’m actively working toward.',
     answers: [
       {
         text: '5 – Applies completely',
@@ -107,456 +72,106 @@ export const QUESTIONS_EN: Question[] = [
     ],
   },
   {
-    text: 'I feel adequately challenged at the moment.',
+    text: 'I often feel unsure about my direction & my next steps.',
     answers: [
       {
         text: '5 – Applies completely',
         effects: {
-          challenge: 2,
+          clarity_goal: -2,
         },
       },
       {
         text: '4 – Applies somewhat',
         effects: {
-          challenge: 1,
+          clarity_goal: -1,
         },
       },
       {
         text: '3 – Neutral / Mixed',
         effects: {
-          challenge: 0,
+          clarity_goal: 0,
         },
       },
       {
         text: '2 – Applies slightly',
         effects: {
-          challenge: -1,
+          clarity_goal: 1,
         },
       },
       {
         text: '1 – Does not apply at all',
         effects: {
-          challenge: -2,
+          clarity_goal: 2,
         },
       },
     ],
   },
   {
-    text: 'I regularly feel overwhelmed by my tasks.',
+    text: 'I regularly feel overwhelmed by my tasks or day.',
     answers: [
       {
         text: '5 – Applies completely',
         effects: {
-          challenge: -2,
+          feasibility_challenge: -2,
         },
       },
       {
         text: '4 – Applies somewhat',
         effects: {
-          challenge: -1,
+          feasibility_challenge: -1,
         },
       },
       {
         text: '3 – Neutral / Mixed',
         effects: {
-          challenge: 0,
+          feasibility_challenge: 0,
         },
       },
       {
         text: '2 – Applies slightly',
         effects: {
-          challenge: 1,
+          feasibility_challenge: 1,
         },
       },
       {
         text: '1 – Does not apply at all',
         effects: {
-          challenge: 2,
+          feasibility_challenge: 2,
         },
       },
     ],
   },
   {
-    text: 'I often feel bored because my tasks are too easy.',
+    text: 'I often get bored because I am not challenged enough.',
     answers: [
       {
         text: '5 – Applies completely',
         effects: {
-          challenge: -2,
+          feasibility_challenge: -2,
         },
       },
       {
         text: '4 – Applies somewhat',
         effects: {
-          challenge: -1,
+          feasibility_challenge: -1,
         },
       },
       {
         text: '3 – Neutral / Mixed',
         effects: {
-          challenge: 0,
+          feasibility_challenge: 0,
         },
       },
       {
         text: '2 – Applies slightly',
         effects: {
-          challenge: 1,
+          feasibility_challenge: 1,
         },
       },
       {
         text: '1 – Does not apply at all',
         effects: {
-          challenge: 2,
-        },
-      },
-    ],
-  },
-  {
-    text: 'I feel emotionally blocked or constricted inside.',
-    answers: [
-      {
-        text: '5 – Applies completely',
-        effects: {
-          space: -2,
-        },
-      },
-      {
-        text: '4 – Applies somewhat',
-        effects: {
-          space: -1,
-        },
-      },
-      {
-        text: '3 – Neutral / Mixed',
-        effects: {
-          space: 0,
-        },
-      },
-      {
-        text: '2 – Applies slightly',
-        effects: {
-          space: 1,
-        },
-      },
-      {
-        text: '1 – Does not apply at all',
-        effects: {
-          space: 2,
-        },
-      },
-    ],
-  },
-  {
-    text: 'I have enough space for myself and my feelings.',
-    answers: [
-      {
-        text: '5 – Applies completely',
-        effects: {
-          space: 2,
-        },
-      },
-      {
-        text: '4 – Applies somewhat',
-        effects: {
-          space: 1,
-        },
-      },
-      {
-        text: '3 – Neutral / Mixed',
-        effects: {
-          space: 0,
-        },
-      },
-      {
-        text: '2 – Applies slightly',
-        effects: {
-          space: -1,
-        },
-      },
-      {
-        text: '1 – Does not apply at all',
-        effects: {
-          space: -2,
-        },
-      },
-    ],
-  },
-  {
-    text: 'I handle inner pressure well.',
-    answers: [
-      {
-        text: '5 – Applies completely',
-        effects: {
-          space: 2,
-        },
-      },
-      {
-        text: '4 – Applies somewhat',
-        effects: {
-          space: 1,
-        },
-      },
-      {
-        text: '3 – Neutral / Mixed',
-        effects: {
-          space: 0,
-        },
-      },
-      {
-        text: '2 – Applies slightly',
-        effects: {
-          space: -1,
-        },
-      },
-      {
-        text: '1 – Does not apply at all',
-        effects: {
-          space: -2,
-        },
-      },
-    ],
-  },
-  {
-    text: 'I have consistent routines or rituals that guide me.',
-    answers: [
-      {
-        text: '5 – Applies completely',
-        effects: {
-          structure: 2,
-        },
-      },
-      {
-        text: '4 – Applies somewhat',
-        effects: {
-          structure: 1,
-        },
-      },
-      {
-        text: '3 – Neutral / Mixed',
-        effects: {
-          structure: 0,
-        },
-      },
-      {
-        text: '2 – Applies slightly',
-        effects: {
-          structure: -1,
-        },
-      },
-      {
-        text: '1 – Does not apply at all',
-        effects: {
-          structure: -2,
-        },
-      },
-    ],
-  },
-  {
-    text: 'My daily life is often chaotic or unstructured.',
-    answers: [
-      {
-        text: '5 – Applies completely',
-        effects: {
-          structure: -2,
-        },
-      },
-      {
-        text: '4 – Applies somewhat',
-        effects: {
-          structure: -1,
-        },
-      },
-      {
-        text: '3 – Neutral / Mixed',
-        effects: {
-          structure: 0,
-        },
-      },
-      {
-        text: '2 – Applies slightly',
-        effects: {
-          structure: 1,
-        },
-      },
-      {
-        text: '1 – Does not apply at all',
-        effects: {
-          structure: 2,
-        },
-      },
-    ],
-  },
-  {
-    text: 'I design my daily routine consciously and with clarity_goal.',
-    answers: [
-      {
-        text: '5 – Applies completely',
-        effects: {
-          structure: 2,
-        },
-      },
-      {
-        text: '4 – Applies somewhat',
-        effects: {
-          structure: 1,
-        },
-      },
-      {
-        text: '3 – Neutral / Mixed',
-        effects: {
-          structure: 0,
-        },
-      },
-      {
-        text: '2 – Applies slightly',
-        effects: {
-          structure: -1,
-        },
-      },
-      {
-        text: '1 – Does not apply at all',
-        effects: {
-          structure: -2,
-        },
-      },
-    ],
-  },
-  {
-    text: 'I am usually fully engaged in my tasks.',
-    answers: [
-      {
-        text: '5 – Applies completely',
-        effects: {
-          focus: 2,
-        },
-      },
-      {
-        text: '4 – Applies somewhat',
-        effects: {
-          focus: 1,
-        },
-      },
-      {
-        text: '3 – Neutral / Mixed',
-        effects: {
-          focus: 0,
-        },
-      },
-      {
-        text: '2 – Applies slightly',
-        effects: {
-          focus: -1,
-        },
-      },
-      {
-        text: '1 – Does not apply at all',
-        effects: {
-          focus: -2,
-        },
-      },
-    ],
-  },
-  {
-    text: 'I get distracted easily.',
-    answers: [
-      {
-        text: '5 – Applies completely',
-        effects: {
-          focus: -2,
-        },
-      },
-      {
-        text: '4 – Applies somewhat',
-        effects: {
-          focus: -1,
-        },
-      },
-      {
-        text: '3 – Neutral / Mixed',
-        effects: {
-          focus: 0,
-        },
-      },
-      {
-        text: '2 – Applies slightly',
-        effects: {
-          focus: 1,
-        },
-      },
-      {
-        text: '1 – Does not apply at all',
-        effects: {
-          focus: 2,
-        },
-      },
-    ],
-  },
-  {
-    text: 'I consciously experience the present moment.',
-    answers: [
-      {
-        text: '5 – Applies completely',
-        effects: {
-          focus: 2,
-        },
-      },
-      {
-        text: '4 – Applies somewhat',
-        effects: {
-          focus: 1,
-        },
-      },
-      {
-        text: '3 – Neutral / Mixed',
-        effects: {
-          focus: 0,
-        },
-      },
-      {
-        text: '2 – Applies slightly',
-        effects: {
-          focus: -1,
-        },
-      },
-      {
-        text: '1 – Does not apply at all',
-        effects: {
-          focus: -2,
-        },
-      },
-    ],
-  },
-  {
-    text: 'I feel capable of handling my tasks.',
-    answers: [
-      {
-        text: '5 – Applies completely',
-        effects: {
-          feasibility: 2,
-        },
-      },
-      {
-        text: '4 – Applies somewhat',
-        effects: {
-          feasibility: 1,
-        },
-      },
-      {
-        text: '3 – Neutral / Mixed',
-        effects: {
-          feasibility: 0,
-        },
-      },
-      {
-        text: '2 – Applies slightly',
-        effects: {
-          feasibility: -1,
-        },
-      },
-      {
-        text: '1 – Does not apply at all',
-        effects: {
-          feasibility: -2,
+          feasibility_challenge: 2,
         },
       },
     ],
@@ -567,171 +182,241 @@ export const QUESTIONS_EN: Question[] = [
       {
         text: '5 – Applies completely',
         effects: {
-          feasibility: 2,
+          feasibility_challenge: 2,
         },
       },
       {
         text: '4 – Applies somewhat',
         effects: {
-          feasibility: 1,
+          feasibility_challenge: 1,
         },
       },
       {
         text: '3 – Neutral / Mixed',
         effects: {
-          feasibility: 0,
+          feasibility_challenge: 0,
         },
       },
       {
         text: '2 – Applies slightly',
         effects: {
-          feasibility: -1,
+          feasibility_challenge: -1,
         },
       },
       {
         text: '1 – Does not apply at all',
         effects: {
-          feasibility: -2,
+          feasibility_challenge: -2,
         },
       },
     ],
   },
   {
-    text: 'I often feel stuck and struggle to take action.',
+    text: 'I feel emotionally blocked or constricted inside.',
     answers: [
       {
         text: '5 – Applies completely',
         effects: {
-          feasibility: -2,
+          emotional_space: -2,
         },
       },
       {
         text: '4 – Applies somewhat',
         effects: {
-          feasibility: -1,
+          emotional_space: -1,
         },
       },
       {
         text: '3 – Neutral / Mixed',
         effects: {
-          feasibility: 0,
+          emotional_space: 0,
         },
       },
       {
         text: '2 – Applies slightly',
         effects: {
-          feasibility: 1,
+          emotional_space: 1,
         },
       },
       {
         text: '1 – Does not apply at all',
         effects: {
-          feasibility: 2,
+          emotional_space: 2,
         },
       },
     ],
   },
   {
-    text: 'I have concrete goals that I’m actively working toward.',
+    text: 'I have enough space for myself and my feelings.',
     answers: [
       {
         text: '5 – Applies completely',
         effects: {
-          goal: 2,
+          emotional_space: 2,
         },
       },
       {
         text: '4 – Applies somewhat',
         effects: {
-          goal: 1,
+          emotional_space: 1,
         },
       },
       {
         text: '3 – Neutral / Mixed',
         effects: {
-          goal: 0,
+          emotional_space: 0,
         },
       },
       {
         text: '2 – Applies slightly',
         effects: {
-          goal: -1,
+          emotional_space: -1,
         },
       },
       {
         text: '1 – Does not apply at all',
         effects: {
-          goal: -2,
+          emotional_space: -2,
         },
       },
     ],
   },
   {
-    text: 'I lack a clear direction for my next steps.',
+    text: 'I handle inner pressure well.',
     answers: [
       {
         text: '5 – Applies completely',
         effects: {
-          goal: -2,
+          emotional_space: 2,
         },
       },
       {
         text: '4 – Applies somewhat',
         effects: {
-          goal: -1,
+          emotional_space: 1,
         },
       },
       {
         text: '3 – Neutral / Mixed',
         effects: {
-          goal: 0,
+          emotional_space: 0,
         },
       },
       {
         text: '2 – Applies slightly',
         effects: {
-          goal: 1,
+          emotional_space: -1,
         },
       },
       {
         text: '1 – Does not apply at all',
         effects: {
-          goal: 2,
+          emotional_space: -2,
         },
       },
     ],
   },
   {
-    text: 'I’m confident in what I want to achieve.',
+    text: 'I have consistent routines or time blocks that guide me.',
     answers: [
       {
         text: '5 – Applies completely',
         effects: {
-          goal: 2,
+          structure_focus: 2,
         },
       },
       {
         text: '4 – Applies somewhat',
         effects: {
-          goal: 1,
+          structure_focus: 1,
         },
       },
       {
         text: '3 – Neutral / Mixed',
         effects: {
-          goal: 0,
+          structure_focus: 0,
         },
       },
       {
         text: '2 – Applies slightly',
         effects: {
-          goal: -1,
+          structure_focus: -1,
         },
       },
       {
         text: '1 – Does not apply at all',
         effects: {
-          goal: -2,
+          structure_focus: -2,
+        },
+      },
+    ],
+  },
+  {
+    text: 'My daily life is often chaotic or unstructured.',
+    answers: [
+      {
+        text: '5 – Applies completely',
+        effects: {
+          structure_focus: -2,
+        },
+      },
+      {
+        text: '4 – Applies somewhat',
+        effects: {
+          structure_focus: -1,
+        },
+      },
+      {
+        text: '3 – Neutral / Mixed',
+        effects: {
+          structure_focus: 0,
+        },
+      },
+      {
+        text: '2 – Applies slightly',
+        effects: {
+          structure_focus: 1,
+        },
+      },
+      {
+        text: '1 – Does not apply at all',
+        effects: {
+          structure_focus: 2,
+        },
+      },
+    ],
+  },
+  {
+    text: 'I usually give my full attention to my tasks or activities.',
+    answers: [
+      {
+        text: '5 – Applies completely',
+        effects: {
+          structure_focus: 2,
+        },
+      },
+      {
+        text: '4 – Applies somewhat',
+        effects: {
+          structure_focus: 1,
+        },
+      },
+      {
+        text: '3 – Neutral / Mixed',
+        effects: {
+          structure_focus: 0,
+        },
+      },
+      {
+        text: '2 – Applies slightly',
+        effects: {
+          structure_focus: -1,
+        },
+      },
+      {
+        text: '1 – Does not apply at all',
+        effects: {
+          structure_focus: -2,
         },
       },
     ],

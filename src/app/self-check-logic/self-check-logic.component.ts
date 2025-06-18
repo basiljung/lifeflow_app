@@ -36,12 +36,9 @@ export class SelfcheckLogicComponent implements AfterViewInit {
 
   scores: Record<SelfcheckTopics, number> = {
     clarity_goal: 0,
-    challenge: 0,
-    space: 0,
-    structure: 0,
-    focus: 0,
-    feasibility: 0,
-    goal: 0,
+    feasibility_challenge: 0,
+    emotional_space: 0,
+    structure_focus: 0,
     meaning: 0,
     oxytocin: 0,
     dopamine: 0,

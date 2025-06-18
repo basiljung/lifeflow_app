@@ -1,7 +1,7 @@
 import { ResultData } from '../self-check-logic/self-check-logic.component';
 
 export type SelfcheckTopics =
-  | 'space'
+  | 'emotional_space'
   | 'structure_focus'
   | 'feasibility_challenge'
   | 'clarity_goal'
@@ -109,7 +109,7 @@ export const RESULTDATA: ResultData = {
     input:
       'Endorphine sind wie ein innerer Freund, der dich sowohl stärkt als auch beruhigt. In stressigen oder anstrengenden Momenten sagen sie: „Du schaffst das.“– sie lindern Schmerzen, stabilisieren dein Nervensystem und helfen dir durchzuhalten. In Momenten der Entspannung, des Lachens oder Loslassens sagen sie:„Es ist okay.“ – sie schenken Leichtigkeit, Erleichterung und innere Freude. Deshalb werden Endorphine sowohl beim Sport als auch beim Tanzen, Lachen oder Weinen ausgeschüttet – sie begleiten dich durch Anspannung **und** Entladung.',
   },
-  clarity_goal_goal: {
+  clarity_goal: {
     area: 'Ziel & Klarheit',
     input:
       'Klarheit bedeutet, zu wissen, wohin du willst – und was in dir vorgeht. Sie entsteht durch innere Ordnung und bewusste Reflexion. Ein klares Ziel gibt dir Richtung, Orientierung und Antrieb. Es hilft deinem Gehirn, Energie gezielt zu bündeln und Fortschritt bewusst wahrzunehmen. So kannst du erkennen, ob sich der Weg lohnt – und ob du und dein Gehirn bereit sind, deine Motivation dafür einzusetzen.',
