@@ -469,18 +469,18 @@ export const QUESTIONS_DE: Question[] = [
     ],
   },
   {
-    text: 'Ich frage mich oft, ob das alles überhaupt Sinn macht.',
+    text: 'Ich schöpfe viel Kraft und Motivation aus dem Sinn meiner Tätigkeit oder meines Lebens.',
     answers: [
       {
         text: '5 – trifft voll zu',
         effects: {
-          meaning: -2,
+          meaning: 2,
         },
       },
       {
         text: '4 – trifft eher zu',
         effects: {
-          meaning: -1,
+          meaning: 1,
         },
       },
       {
@@ -492,13 +492,13 @@ export const QUESTIONS_DE: Question[] = [
       {
         text: '2 – trifft wenig zu',
         effects: {
-          meaning: 1,
+          meaning: -1,
         },
       },
       {
         text: '1 – trifft gar nicht zu',
         effects: {
-          meaning: 2,
+          meaning: -2,
         },
       },
     ],
@@ -609,7 +609,7 @@ export const QUESTIONS_DE: Question[] = [
     ],
   },
   {
-    text: 'Ich erlebe regelmäßig Momente von Vertrauen und Herzensnähe.',
+    text: 'Ich erlebe regelmäßig Momente von Vertrauen und emotionaler Nähe.',
     answers: [
       {
         text: '5 – trifft voll zu',
@@ -644,7 +644,7 @@ export const QUESTIONS_DE: Question[] = [
     ],
   },
   {
-    text: 'Ich habe Lust, neue Ideen umzusetzen.',
+    text: 'Es fällt mir leicht, mich auf etwas zu konzentrieren und zielorientiert zu sein.',
     answers: [
       {
         text: '5 – trifft voll zu',
@@ -714,7 +714,7 @@ export const QUESTIONS_DE: Question[] = [
     ],
   },
   {
-    text: 'Ich freue mich darauf, Dinge anzugehen.',
+    text: 'Ich bin oft motiviert Dinge anzugehen und umzusetzen.',
     answers: [
       {
         text: '5 – trifft voll zu',

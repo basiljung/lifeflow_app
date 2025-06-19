@@ -457,18 +457,18 @@ export const QUESTIONS_EN: Question[] = [
     ],
   },
   {
-    text: 'I often question whether any of this makes sense.',
+    text: 'I get a lot of strength and motivation from the meaning of my work or my life.',
     answers: [
       {
         text: '5 – Applies completely',
         effects: {
-          meaning: -2,
+          meaning: 2,
         },
       },
       {
         text: '4 – Applies somewhat',
         effects: {
-          meaning: -1,
+          meaning: 1,
         },
       },
       {
@@ -480,13 +480,13 @@ export const QUESTIONS_EN: Question[] = [
       {
         text: '2 – Applies slightly',
         effects: {
-          meaning: 1,
+          meaning: -1,
         },
       },
       {
         text: '1 – Does not apply at all',
         effects: {
-          meaning: 2,
+          meaning: -2,
         },
       },
     ],
@@ -632,7 +632,7 @@ export const QUESTIONS_EN: Question[] = [
     ],
   },
   {
-    text: 'I’m excited to pursue new ideas.',
+    text: 'It is easy for me to focus on something and be goal-oriented.',
     answers: [
       {
         text: '5 – Applies completely',
@@ -702,7 +702,7 @@ export const QUESTIONS_EN: Question[] = [
     ],
   },
   {
-    text: 'I look forward to getting things done.',
+    text: 'I am often motivated to tackle and implement things.',
     answers: [
       {
         text: '5 – Applies completely',
