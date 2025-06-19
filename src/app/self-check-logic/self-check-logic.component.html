@@ -56,13 +56,39 @@
         [results]="resultDataSet.outOfBalance"
         [lang]="currentLangSelfCheck"
       >
-        <h5 slot="top">🌿 Your potential for more flow lies here...</h5>
+        <div slot="top" class="row" style="margin: 0px">
+          <div
+            class="card"
+            style="
+              font-weight: 600;
+              font-size: large;
+              padding: 0.2rem;
+              margin: 0px;
+            "
+          >
+            <span> 🌿 Your potential for more flow lies here... </span>
+          </div>
+        </div>
         <div slot="bottom">
-          <h6>👏 Great job – no strongly unbalanced areas detected!</h6>
-          <h6>Tell me your secret...</h6>
+          <div class="row" style="margin: 0px">
+            <div
+              class="card"
+              style="
+                font-weight: 600;
+                font-size: large;
+                padding: 0.2rem;
+                margin: 0px;
+              "
+            >
+              <span>
+                👏 Great job – no strongly unbalanced areas detected!
+              </span>
+              <span>Tell me your secret...</span>
+            </div>
+          </div>
           <div
             style="
-              border-bottom: 3px solid #1e6f5c;
+              border-bottom: 1px solid #1e6f5c;
               margin: 3rem auto;
               width: 20rem;
             "
@@ -73,31 +99,77 @@
         [results]="resultDataSet.easyWins"
         [lang]="currentLangSelfCheck"
       >
-        <h5 slot="top">
-          ⚖️ There’s potential for more flow here, minor tweaks are enough!
-        </h5>
+        <div slot="top" class="row" style="margin: 0px">
+          <div
+            class="card"
+            style="
+              font-weight: 600;
+              font-size: large;
+              padding: 0.2rem;
+              margin: 0px;
+            "
+          >
+            <span>
+              ⚖️ There’s potential for more flow here, minor tweaks are enough!
+            </span>
+          </div>
+        </div>
       </app-display-result>
       <app-display-result
         [results]="resultDataSet.lowestAreaPotential"
         [lang]="currentLangSelfCheck"
       >
-        <h5 slot="top">⛔️ This area shows the least flow. Do you know why?</h5>
+        <div slot="top" class="row" style="margin: 0px">
+          <div
+            class="card"
+            style="
+              font-weight: 600;
+              font-size: large;
+              padding: 0.2rem;
+              margin: 0px;
+            "
+          >
+            <span> ⛔️ This area shows the least flow. Do you know why? </span>
+          </div>
+        </div>
       </app-display-result>
       <app-display-result
         [results]="resultDataSet.goodFlow"
         [lang]="currentLangSelfCheck"
       >
-        <h5 slot="top">🌟 Congratulation. You're pretty much in flow here!</h5>
+        <div slot="top" class="row" style="margin: 0px">
+          <div
+            class="card"
+            style="
+              font-weight: 600;
+              font-size: large;
+              padding: 0.2rem;
+              margin: 0px;
+            "
+          >
+            <span>🌟 Congratulation. You're pretty much in flow here!</span>
+          </div>
+        </div>
       </app-display-result>
       <app-display-result
         [results]="resultDataSet.topAreas"
         [lang]="currentLangSelfCheck"
       >
-        <h5 slot="top">
-          🚀 Your strongest area(s) – Would you say that’s true?
-        </h5>
+        <div slot="top" class="row" style="margin: 0px">
+          <div
+            class="card"
+            style="
+              font-weight: 600;
+              font-size: large;
+              padding: 0.2rem;
+              margin: 0px;
+            "
+          >
+            <span>🚀 Your strongest area(s) – Would you say that’s true?</span>
+          </div>
+        </div>
       </app-display-result>
-      <h5>I am very happy to receive feedback.</h5>
+      <h6>I am very happy to receive feedback.</h6>
       <button
         onclick="window.open('https://forms.gle/dL4LqC9ZxZ2sybog7', '_blank')"
         style="cursor: pointer"
@@ -110,44 +182,121 @@
         [results]="resultDataSet.outOfBalance"
         [lang]="currentLangSelfCheck"
       >
-        <h5 slot="top">🌿 Dein Potenzial für mehr Flow liegt hier...</h5>
+        <div slot="top" class="row" style="margin: 0px">
+          <div
+            class="card"
+            style="
+              font-weight: 600;
+              font-size: large;
+              padding: 0.2rem;
+              margin: 0px;
+            "
+          >
+            <span>🌿 Dein Potenzial für mehr Flow liegt hier...</span>
+          </div>
+        </div>
         <div slot="bottom">
-          <h6>👏 Sehr gut – keine stark unausgeglichenen Bereiche erkannt!</h6>
-          <h6>Verrate mir dein Geheimnis...</h6>
+          <div class="row" style="margin: 0px">
+            <div
+              class="card"
+              style="
+                font-weight: 600;
+                font-size: large;
+                padding: 0.2rem;
+                margin: 0px;
+              "
+            >
+              <span
+                >👏 Sehr gut – keine stark unausgeglichenen Bereiche
+                erkannt!</span
+              >
+              <span>Verrate mir dein Geheimnis...</span>
+            </div>
+          </div>
         </div>
       </app-display-result>
       <app-display-result
         [results]="resultDataSet.easyWins"
         [lang]="currentLangSelfCheck"
       >
-        <h5 slot="top">
-          ⚖️ Hier steckt Entwicklungspotenzial für mehr Flow, kleinere
-          Anpassungen reichen.
-        </h5>
+        <div slot="top" class="row" style="margin: 0px">
+          <div
+            class="card"
+            style="
+              font-weight: 600;
+              font-size: large;
+              padding: 0.2rem;
+              margin: 0px;
+            "
+          >
+            <span
+              >⚖️ Hier steckt Entwicklungspotenzial für mehr Flow, kleinere
+              Anpassungen reichen.</span
+            >
+          </div>
+        </div>
       </app-display-result>
       <app-display-result
         [results]="resultDataSet.lowestAreaPotential"
         [lang]="currentLangSelfCheck"
       >
-        <h5 slot="top">
-          ⛔️ In diesem Bereich ist dein Flow am geringsten. Weisst du warum?
-        </h5>
+        <div slot="top" class="row" style="margin: 0px">
+          <div
+            class="card"
+            style="
+              font-weight: 600;
+              font-size: large;
+              padding: 0.2rem;
+              margin: 0px;
+            "
+          >
+            <span
+              >⛔️ In diesem Bereich ist dein Flow am geringsten. Weisst du
+              warum?</span
+            >
+          </div>
+        </div>
       </app-display-result>
       <app-display-result
         [results]="resultDataSet.goodFlow"
         [lang]="currentLangSelfCheck"
       >
-        <h5 slot="top">🌟 Gratulation. Du bist ziemlich im Flow hier!</h5>
+        <div slot="top" class="row" style="margin: 0px">
+          <div
+            class="card"
+            style="
+              font-weight: 600;
+              font-size: large;
+              padding: 0.2rem;
+              margin: 0px;
+            "
+          >
+            <span>🌟 Gratulation. Du bist ziemlich im Flow hier!</span>
+          </div>
+        </div>
       </app-display-result>
       <app-display-result
         [results]="resultDataSet.topAreas"
         [lang]="currentLangSelfCheck"
       >
-        <h5 slot="top">
-          🚀 Das ist oder sind dein(e) Top-Bereich(e) – stimmst du zu?
-        </h5>
+        <div slot="top" class="row" style="margin: 0px">
+          <div
+            class="card"
+            style="
+              font-weight: 600;
+              font-size: large;
+              padding: 0.2rem;
+              margin: 0px;
+            "
+          >
+            <span
+              >🚀 Das ist oder sind dein(e) Top-Bereich(e) – stimmst du
+              zu?</span
+            >
+          </div>
+        </div>
       </app-display-result>
-      <h5>Ich freue mich über dein Feedback.</h5>
+      <h6>Ich freue mich über dein Feedback.</h6>
       <button
         onclick="window.open('https://forms.gle/dL4LqC9ZxZ2sybog7', '_blank')"
         style="cursor: pointer"
@@ -156,21 +305,13 @@
       </button>
       <br />
     }
+  } @else {
+    <button
+      style="cursor: pointer; margin: 3rem"
+      *ngIf="currentQuestionIndex > 0"
+      (click)="goBack()"
+    >
+      ⬅️ Zurück
+    </button>
   }
-  <button
-    style="cursor: pointer; margin: 3rem"
-    *ngIf="currentQuestionIndex > 0"
-    (click)="goBack()"
-  >
-    ⬅️ Zurück
-  </button>
-  <p>{{ scores.clarity_goal }}</p>
-  <p>{{ scores.emotional_space }}</p>
-  <p>{{ scores.structure_focus }}</p>
-  <p>{{ scores.feasibility_challenge }}</p>
-  <p>{{ scores.meaning }}</p>
-  <p>{{ scores.oxytocin }}</p>
-  <p>{{ scores.dopamine }}</p>
-  <p>{{ scores.serotonin }}</p>
-  <p>{{ scores.endorphins }}</p>
 </div>

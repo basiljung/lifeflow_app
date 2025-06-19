@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component } from '@angular/core';
 import { RESULTDATA } from '../data/resultData';
 import { SelfcheckTopics } from '../data/resultData';
 import { CommonModule } from '@angular/common';
@@ -76,7 +76,6 @@ export class SelfcheckLogicComponent implements AfterViewInit {
   ngAfterViewInit() {
     M.Collapsible.init(document.querySelectorAll('.collapsible'), {});
   }
-
   toggleLanguageSelfcheck(lang: string) {
     this.currentLangSelfCheck = lang;
     if (this.currentLangSelfCheck === 'DE') {
