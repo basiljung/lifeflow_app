@@ -40,8 +40,8 @@ export const FAQDETAILSDATA_DE: {
 
   <h5>🧩 Aufbau & Methodik</h5>
   <ul>
-    <p> - <strong>36 Fragen</strong></p>
-    <p> - <strong>12 Themenbereiche</strong> mit je <strong>3 Fragen</strong></p>
+    <p> - <strong>27 Fragen</strong></p>
+    <p> - <strong>9 Themenbereiche</strong> mit je <strong>3 Fragen</strong></p>
     <p> - Antwortskala: <strong>Likert-Skala von -2 bis +2</strong></p>
     <p>
        - Berücksichtigt <strong>positive und kritische Aussagen</strong> (inkl.
@@ -110,16 +110,16 @@ export const FAQDETAILSDATA_DE: {
     </tbody>
   </table>
 
-  <h5>🌊 Die 12 Themenbereiche im Überblick</h5>
+  <h5>🌊 Die 9 Themenbereiche im Überblick</h5>
   <blockquote>  
     <p>
-      1. <strong>Klarheit & Ausrichtung</strong> --> <em
-        >Weißt du, wo du hin willst?</em
+      1. <strong>Klarheit, Ausrichtung & Ziel</strong> --> <em
+        >Weißt du, wo du hin willst? Kennst du dein Ziel?</em
       >
     </p>
     <p>
-      2. <strong>Challenge–Skill–Balance</strong> --> <em
-        >Bist du angenehm gefordert – oder über- oder unterfordert?</em
+      2. <strong>Herausforderung & Machbarkeit</strong> --> <em
+        >Bist du angenehm gefordert – oder über- oder unterfordert? Ist dein Alltag & deine Aufgaben darin umsetzbar – kennst du deinen nächsten Schritt?</em
       >
     </p>
     <p>
@@ -129,45 +129,34 @@ export const FAQDETAILSDATA_DE: {
       >
     </p>
     <p>
-      4. <strong>Struktur & Rituale</strong> --> <em
+      4. <strong>Struktur, Rituale, Fokus & Präsenz</strong> --> <em
         >Gibt dein Alltag dir Stabiptät und Flow – oder herrscht Chaos und
-        Reaktivität?</em
+        Reaktivität? Bist du im Moment – oder oft abgelenkt und zerstreut?</em
       >
     </p>
     <p>
-      4. <strong>Fokus & Präsenz</strong> --> <em
-        >Bist du im Moment – oder oft abgelenkt und zerstreut?</em
-      >
-    </p>
-    <p>
-      5. <strong>Machbarkeit & Umsetzungskraft</strong> --> <em
-        >Ist dein Alltag umsetzbar – kennst du deinen nächsten Schritt?</em
-      >
-    </p>
-    <p>6. <strong>Zielklarheit</strong> --> <em>Kennst du dein Ziel?</em></p>
-    <p>
-      7. <strong>Sinn & Bedeutung</strong> --> <em
+      5. <strong>Sinn & Bedeutung</strong> --> <em
         >Hat dein Tun für dich eine tiefere Bedeutung – oder fehlt dir der
         Sinn?</em
       >
     </p>
     <p>
-      8. <strong>Oxytocin – Verbundenheit & Vertrauen</strong> --> <em
+      6. <strong>Oxytocin – Verbundenheit & Vertrauen</strong> --> <em
         >Fühlst du dich verbunden mit dir, anderen und dem Leben?</em
       >
     </p>
     <p>
-      9. <strong>Dopamin – Antrieb & Motivation</strong> --> <em
+      7. <strong>Dopamin – Antrieb & Motivation</strong> --> <em
         >Wie neugierig und motiviert fühlst du dich?</em
       >
     </p>
     <p>
-      10. <strong>Serotonin – Ruhe & Stabilität</strong> --> <em
+      8. <strong>Serotonin – Ruhe & Stabilität</strong> --> <em
         >Erlebst du innere Ruhe, Sicherheit und Selbstwert?</em
       >
     </p>
     <p>
-      11. <strong>Endorphine – Leichtigkeit & Freude</strong> --> <em
+      9. <strong>Endorphine – Leichtigkeit & Freude</strong> --> <em
         >Wie viel Freude, Genuss und Lachen ist in deinem Alltag präsent?</em
       >
     </p>
@@ -322,8 +311,8 @@ export const FAQDETAILSDATA_EN: {
 
   <h5>🧩 Structure & Methodology</h5>
   <ul>
-    <p> - <strong>36 questions</strong></p>
-    <p> - <strong>12 topics</strong>, each with <strong>3 questions</strong></p>
+    <p> - <strong>27 questions</strong></p>
+    <p> - <strong>9 topics</strong>, each with <strong>3 questions</strong></p>
     <p> - Rating scale: <strong>Likert scale from -2 to +2</strong></p>
     <p>
       - Includes <strong>positive and critical statements</strong> (incl. inverted items)
@@ -385,41 +374,34 @@ export const FAQDETAILSDATA_EN: {
     </tbody>
   </table>
 
-  <h5>🌊 Overview of the 12 Topics</h5>
+  <h5>🌊 Overview of the 9 Topics</h5>
   <blockquote>
     <p>
-      1. <strong>Clarity & Alignment</strong> → <em>Do you know where you want to go?</em>
+      1. <strong>Clarity & Goal</strong> → <em>Do you know where you want to go? Do you know your goals?</em>
     </p>
     <p>
-      2. <strong>Challenge–Skill Balance</strong> → <em>Do you feel positively challenged – or over/underwhelmed?</em>
+      2. <strong>Challenge & Feasibility–Skill Balance</strong> → <em>Do you feel positively challenged – or over/underwhelmed? Is your day manageable – do you know your next step?S</em>
     </p>
     <p>
       3. <strong>Inner Space & Emotional Capacity</strong> → <em>Do you have mental and emotional space – or do you feel overwhelmed?</em>
     </p>
     <p>
-      4. <strong>Structure & Rituals</strong> → <em>Does your daily routine provide stability and flow – or is it chaotic and reactive?</em>
+      4. <strong>Structure, Routines, Presence & Focus</strong> → <em>Does your daily routine provide stability and flow – or is it chaotic and reactive? Are you present – or often distracted and scattered?</em>
     </p>
     <p>
-      5. <strong>Focus & Presence</strong> → <em>Are you present – or often distracted and scattered?</em>
+      5. <strong>Meaning & Purpose</strong> → <em>Does your work hold deeper meaning – or does it feel aimless?</em>
     </p>
     <p>
-      6. <strong>Feasibility & Execution</strong> → <em>Is your day manageable – do you know your next step?</em>
-    </p>
-    <p>7. <strong>Goal Clarity</strong> → <em>Do you know your goals?</em></p>
-    <p>
-      8. <strong>Meaning & Purpose</strong> → <em>Does your work hold deeper meaning – or does it feel aimless?</em>
+      6. <strong>Oxytocin – Connection & Trust</strong> → <em>Do you feel connected – to yourself, others, and life?</em>
     </p>
     <p>
-      9. <strong>Oxytocin – Connection & Trust</strong> → <em>Do you feel connected – to yourself, others, and life?</em>
+      7. <strong>Dopamine – Drive & Motivation</strong> → <em>How curious and motivated do you feel?</em>
     </p>
     <p>
-      10. <strong>Dopamine – Drive & Motivation</strong> → <em>How curious and motivated do you feel?</em>
+      8. <strong>Serotonin – Calm & Stability</strong> → <em>Do you experience inner peace, confidence, and security?</em>
     </p>
     <p>
-      11. <strong>Serotonin – Calm & Stability</strong> → <em>Do you experience inner peace, confidence, and security?</em>
-    </p>
-    <p>
-      12. <strong>Endorphins – Joy & Lightness</strong> → <em>How much joy, pleasure, and laughter is present in your daily life?</em>
+      9. <strong>Endorphins – Joy & Lightness</strong> → <em>How much joy, pleasure, and laughter is present in your daily life?</em>
     </p>
   </blockquote>
 
