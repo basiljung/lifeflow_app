@@ -1,6 +1,7 @@
 import { AfterViewInit, Component } from '@angular/core';
-import { RESULTDATA } from '../data/resultData';
-import { SelfcheckTopics } from '../data/resultData';
+import { RESULTDATA_DE } from '../data/resultData-de';
+import { RESULTDATA_EN } from '../data/resultData-en';
+import { SelfcheckTopics } from '../data/resultData-en';
 import { CommonModule } from '@angular/common';
 import { QUESTIONS_DE } from '../data/questions-de';
 import { QUESTIONS_EN } from '../data/questions-en';
@@ -30,7 +31,7 @@ export class SelfcheckLogicComponent implements AfterViewInit {
   showLanguageBtn = true;
 
   questions = QUESTIONS_EN;
-  resultData: ResultData = RESULTDATA;
+  resultData: ResultData = RESULTDATA_EN;
   showResult = false;
   showQuestions = true;
 
@@ -80,8 +81,10 @@ export class SelfcheckLogicComponent implements AfterViewInit {
     this.currentLangSelfCheck = lang;
     if (this.currentLangSelfCheck === 'DE') {
       this.questions = QUESTIONS_DE;
+      this.resultData = RESULTDATA_DE;
     } else {
       this.questions = QUESTIONS_EN;
+      this.resultData = RESULTDATA_EN;
     }
     this.showLanguageBtn = false;
   }

@@ -1,4 +1,4 @@
-import { SelfcheckTopics } from './resultData';
+import { SelfcheckTopics } from './resultData-en';
 
 export type AnswerOption = {
   text: string;
