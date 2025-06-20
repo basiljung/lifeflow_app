@@ -1,10 +1,65 @@
 /* You can add global styles to this file, and also import other style files */
-.card {
-  border-radius: 12px;
+//@import "./styles/typography";
+
+/* ====== Import Materialize nach Overrides ====== */
+@import "materialize-css/sass/materialize";
+
+/* ====== Lifeflow Coaching Branding ====== */
+
+/* 🎨 Farbpalette */
+$color-primary: #0d1b2a; // Dunkelblau – Fokus & Vertrauen
+$color-secondary: #1e6f5c; // Tiefes Grün – Wachstum & Ruhe
+$color-accent: #4a90e2; // Klarblau – Innovation & Struktur
+$color-highlight: #d3af37; // Warmes Gold – Sinn & Motivation
+$color-contrast: #222222; // Fast-Schwarz – Klarheit & Kraft
+$color-neutral: #e0c097; // Sand – Wärme & Menschlichkeit
+$color-light: #f5f5f5; // Hellgrau – Leichtigkeit & Struktur
+
+/* ====== Schriftarten ====== */
+$font-heading: "Manrope", sans-serif;
+$font-body: "Inter", sans-serif;
+
+/* Materialize Override */
+$font-stack: $font-body; // Basis-Schrift für Materialize
+
+/* ====== Materialize Overrides ====== */
+
+/* ⚙️ Farben für Materialize-Komponenten */
+$primary-color: $color-primary;
+$secondary-color: $color-secondary;
+$success-color: $color-highlight;
+$error-color: #ff5252;
+$link-color: $color-accent;
+$font-stack: $font-body;
+
+/* ====== Utility-Klassen (optional) ====== */
+.text-primary {
+  color: $color-primary !important;
+}
+.text-secondary {
+  color: $color-secondary !important;
+}
+.text-accent {
+  color: $color-accent !important;
+}
+.text-highlight {
+  color: $color-highlight !important;
 }
 
-.card .card-action {
-  border-radius: 12px;
+.bg-primary {
+  background-color: $color-primary !important;
+}
+.bg-secondary {
+  background-color: $color-secondary !important;
+}
+.bg-accent {
+  background-color: $color-accent !important;
+}
+.bg-highlight {
+  background-color: $color-highlight !important;
+}
+.bg-light {
+  background-color: $color-light !important;
 }
 
 html,
@@ -13,6 +68,21 @@ body {
   padding: 0;
   min-height: 100%;
   height: auto;
+}
+
+body,
+p,
+li,
+span {
+  font-family: $font-body;
+  font-weight: 400;
+}
+
+h1,
+h2,
+h3 {
+  font-family: $font-heading;
+  font-weight: 400;
 }
 
 html {
@@ -28,4 +98,34 @@ app-root {
 
 main {
   flex: 1 0 auto;
+}
+
+.card {
+  border-radius: 12px;
+}
+
+.card .card-action {
+  border-radius: 12px;
+}
+
+/* Zitate */
+.quote {
+  font-family: $font-body;
+  font-style: italic;
+  color: #1e6f5c; // Tiefes Grün
+}
+
+/* Buttons */
+.btn,
+.button {
+  font-family: $font-heading;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05rem;
+}
+
+/* Kleiner Text */
+.caption {
+  font-size: 0.875rem;
+  color: #4a90e2; // Klarblau für techigen Akzent
 }
