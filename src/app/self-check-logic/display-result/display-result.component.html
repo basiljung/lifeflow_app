@@ -2,7 +2,7 @@
   @if (data | keyvalue; as resultEntries) {
     @if (resultEntries.length > 0) {
       <div class="container">
-        <div style="margin: 2rem">
+        <div>
           <ng-content select="[slot=top]"></ng-content>
         </div>
         <ul class="collapsible" style="border-radius: 12px">
