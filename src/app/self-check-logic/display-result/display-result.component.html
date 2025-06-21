@@ -10,11 +10,13 @@
             <li>
               <div class="collapsible-header" style="border-radius: 12px">
                 <i class="material-icons">psychology</i>
-                {{ entry.value.area | titlecase }}
-                <span class="badge text-secondary"
-                  ><span>{{
+                <span class="left-align">{{
+                  entry.value.area | titlecase
+                }}</span>
+                <span class="badge text-secondary right-align"
+                  >{{
                     lang() === "EN" ? "👉 View details" : "👉 Details ansehen"
-                  }}</span>
+                  }}
                 </span>
               </div>
               <div
