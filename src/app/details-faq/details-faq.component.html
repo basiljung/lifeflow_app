@@ -18,9 +18,12 @@
         <ul class="collapsible" style="border-radius: 12px">
           <ng-container *ngFor="let entry of faqDetailsData_de">
             <li>
-              <div class="collapsible-header" style="border-radius: 12px">
+              <div
+                class="collapsible-header left-align"
+                style="border-radius: 12px"
+              >
                 {{ entry.title | titlecase }}
-                <span class="badge text-secondary">
+                <span class="badge text-secondary right-align">
                   👉 Klick für die Details</span
                 >
               </div>
@@ -36,9 +39,14 @@
         <ul class="collapsible" style="border-radius: 12px">
           <ng-container *ngFor="let entry of faqDetailsData_en">
             <li>
-              <div class="collapsible-header" style="border-radius: 12px">
+              <div
+                class="collapsible-header left-align"
+                style="border-radius: 12px"
+              >
                 {{ entry.title | titlecase }}
-                <span class="badge text-secondary"> 👉 Click for details</span>
+                <span class="badge text-secondary right-align">
+                  👉 Click for details</span
+                >
               </div>
               <div class="collapsible-body">
                 <div [innerHTML]="entry.text"></div>
