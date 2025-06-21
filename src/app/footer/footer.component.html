@@ -18,11 +18,9 @@
         </a>
       </div>
       <div class="col s12">
-        <span
-          class="white-text"
-          style="display: inline-block; margin-top: 0.3rem"
-        >
-          Simple & clear for you and your mind. 🧠🌿 – lifeflow.now
+        <span style="display: inline-block; margin-top: 0.3rem">
+          Simple & clear for you and your mind. 🧠🌿 –
+          <a class="text-light" [routerLink]="'/'">lifeflow.now</a>
         </span>
       </div>
     </div>
@@ -36,11 +34,15 @@
       <div>
         <a
           class="grey-text text-lighten-4 right"
-          href="#!"
+          [routerLink]="'/impressum'"
           style="margin-left: 20px"
           >Impressum</a
         >
-        <a class="grey-text text-lighten-4 right" href="#!">Datenschutz</a>
+        <a
+          class="grey-text text-lighten-4 right"
+          [routerLink]="'/privacy-policy'"
+          >Datenschutz</a
+        >
       </div>
     </div>
   </div>

@@ -11,19 +11,20 @@
               <div class="collapsible-header" style="border-radius: 12px">
                 <i class="material-icons">psychology</i>
                 {{ entry.value.area | titlecase }}
-                <span class="badge" style="color: #1e6f5c"
+                <span class="badge text-secondary"
                   ><span>{{
                     lang() === "EN" ? "👉 View details" : "👉 Details ansehen"
                   }}</span>
                 </span>
               </div>
-              <div class="collapsible-body left-align">
+              <div
+                class="collapsible-body left-align"
+                style="text-align: justify"
+              >
                 <h6>
-                  <span>{{
-                    lang() === "EN" ? "🔍  Reason" : "🔍  Ursache"
-                  }}</span>
+                  <b> {{ lang() === "EN" ? "🔍  Reason" : "🔍  Ursache" }}</b>
                 </h6>
-                <div style="padding: 1rem">
+                <div>
                   <ul>
                     <li
                       *ngFor="
@@ -32,21 +33,14 @@
                       "
                       style="margin-bottom: 1rem"
                     >
-                      <span
-                        style="font-weight: 400; font-size: medium"
-                        [ngStyle]="{
-                          color: even ? 'black' : 'darkslategray',
-                        }"
-                      >
-                        ⬩ {{ reason }}</span
-                      >
+                      <span> ⬩ {{ reason }}</span>
                     </li>
                   </ul>
                 </div>
 
                 <div
                   style="
-                    border-bottom: 1.5px solid #1e6f5c;
+                    border-bottom: 1.5px solid text-secondary;
                     margin-top: 2rem;
                     margin-bottom: 2rem;
                     width: 10rem;
@@ -54,36 +48,24 @@
                 ></div>
 
                 <h6>
-                  <span>{{ lang() === "EN" ? "💡 Tip" : "💡 Tipp" }}</span>
+                  <b>{{ lang() === "EN" ? "💡 Tip" : "💡 Tipp" }}</b>
                 </h6>
-                <div style="padding: 1rem">
+                <div>
                   <ul>
                     <li
                       *ngFor="let tip of entry.value.tips; let even = even"
                       style="margin-bottom: 1rem"
                     >
-                      <span
-                        style="font-weight: 500; font-size: medium"
-                        [ngStyle]="{
-                          color: even ? 'black' : 'darkslategray',
-                        }"
-                      >
-                        {{ tip.title }}</span
+                      <span>
+                        <b>{{ tip.title }}</b> </span
                       ><br />
-                      <span
-                        style="font-weight: 400; font-size: medium"
-                        [ngStyle]="{
-                          color: even ? 'black' : 'darkslategray',
-                        }"
-                      >
-                        {{ tip.text }}</span
-                      >
+                      <span> {{ tip.text }}</span>
                     </li>
                   </ul>
                 </div>
                 <div
                   style="
-                    border-bottom: 1.5px solid #1e6f5c;
+                    border-bottom: 1.5px solid text-secondary;
                     margin-top: 2rem;
                     margin-bottom: 2rem;
                     width: 10rem;
@@ -91,10 +73,10 @@
                 ></div>
 
                 <h6>
-                  <span>{{ lang() === "EN" ? "✚ Details" : "✚ Details" }}</span>
+                  <b>{{ lang() === "EN" ? "✚ Details" : "✚ Details" }}</b>
                 </h6>
-                <div style="padding: 1rem">
-                  <p style="font-weight: 400; font-size: medium">
+                <div>
+                  <p class="block-text">
                     {{ entry.value.input }}
                   </p>
                 </div>
@@ -105,16 +87,14 @@
       </div>
       <div
         style="
-          border-bottom: 1px solid #1e6f5c;
+          border-bottom: 1px solid text-secondary;
           margin: 3rem auto;
           width: 20rem;
         "
       ></div>
     } @else {
-      <div style="margin: 2rem">
-        <em>
-          <ng-content style="margin: rem" select="[slot=bottom]"></ng-content
-        ></em>
+      <div>
+        <em> <ng-content select="[slot=bottom]"></ng-content></em>
       </div>
     }
   }

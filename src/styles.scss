@@ -45,6 +45,9 @@ $font-stack: $font-body;
 .text-highlight {
   color: $color-highlight !important;
 }
+.text-light {
+  color: $color-light !important;
+}
 
 .bg-primary {
   background-color: $color-primary !important;
@@ -76,6 +79,11 @@ li,
 span {
   font-family: $font-body;
   font-weight: 400;
+}
+
+block-text {
+  text-align: justify;
+  display: block;
 }
 
 h1,
