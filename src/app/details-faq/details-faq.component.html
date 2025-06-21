@@ -12,7 +12,7 @@
       }}</span>
     </a>
   </div>
-  <div style="margin-top: 50px; padding: 40px">
+  <div style="margin-top: 80px">
     @if (currentLang === "DE") {
       <div>
         <ul class="collapsible" style="border-radius: 12px">
@@ -20,7 +20,7 @@
             <li>
               <div class="collapsible-header" style="border-radius: 12px">
                 {{ entry.title | titlecase }}
-                <span class="badge" style="color: #1e6f5c">
+                <span class="badge text-secondary">
                   👉 Klick für die Details</span
                 >
               </div>
@@ -38,9 +38,7 @@
             <li>
               <div class="collapsible-header" style="border-radius: 12px">
                 {{ entry.title | titlecase }}
-                <span class="badge" style="color: #1e6f5c">
-                  👉 Click for details</span
-                >
+                <span class="badge text-secondary"> 👉 Click for details</span>
               </div>
               <div class="collapsible-body">
                 <div [innerHTML]="entry.text"></div>
