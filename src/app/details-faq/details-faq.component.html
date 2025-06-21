@@ -12,49 +12,51 @@
       }}</span>
     </a>
   </div>
-  <div style="margin-top: 80px">
-    @if (currentLang === "DE") {
-      <div>
-        <ul class="collapsible" style="border-radius: 12px">
-          <ng-container *ngFor="let entry of faqDetailsData_de">
-            <li>
-              <div
-                class="collapsible-header left-align"
-                style="border-radius: 12px"
-              >
-                {{ entry.title | titlecase }}
-                <span class="badge text-secondary right-align">
-                  👉 Klick für die Details</span
+  <div class="container">
+    <div style="margin-top: 80px">
+      @if (currentLang === "DE") {
+        <div>
+          <ul class="collapsible" style="border-radius: 12px">
+            <ng-container *ngFor="let entry of faqDetailsData_de">
+              <li>
+                <div
+                  class="collapsible-header left-align"
+                  style="border-radius: 12px"
                 >
-              </div>
-              <div class="collapsible-body">
-                <div [innerHTML]="entry.text"></div>
-              </div>
-            </li>
-          </ng-container>
-        </ul>
-      </div>
-    } @else {
-      <div>
-        <ul class="collapsible" style="border-radius: 12px">
-          <ng-container *ngFor="let entry of faqDetailsData_en">
-            <li>
-              <div
-                class="collapsible-header left-align"
-                style="border-radius: 12px"
-              >
-                {{ entry.title | titlecase }}
-                <span class="badge text-secondary right-align">
-                  👉 Click for details</span
+                  {{ entry.title | titlecase }}
+                  <span class="badge text-secondary right-align">
+                    👉 Klick für die Details</span
+                  >
+                </div>
+                <div class="collapsible-body">
+                  <div [innerHTML]="entry.text"></div>
+                </div>
+              </li>
+            </ng-container>
+          </ul>
+        </div>
+      } @else {
+        <div>
+          <ul class="collapsible" style="border-radius: 12px">
+            <ng-container *ngFor="let entry of faqDetailsData_en">
+              <li>
+                <div
+                  class="collapsible-header left-align"
+                  style="border-radius: 12px"
                 >
-              </div>
-              <div class="collapsible-body">
-                <div [innerHTML]="entry.text"></div>
-              </div>
-            </li>
-          </ng-container>
-        </ul>
-      </div>
-    }
+                  {{ entry.title | titlecase }}
+                  <span class="badge text-secondary right-align">
+                    👉 Click for details</span
+                  >
+                </div>
+                <div class="collapsible-body">
+                  <div [innerHTML]="entry.text"></div>
+                </div>
+              </li>
+            </ng-container>
+          </ul>
+        </div>
+      }
+    </div>
   </div>
 </div>
