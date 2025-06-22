@@ -1,4 +1,4 @@
-import { ResultData } from '../../self-check-logic/self-check-logic.component';
+import { ResultData } from '../self-check-logic/self-check-logic.component';
 
 export const RESULTDATA_DE: ResultData = {
   dopamine: {

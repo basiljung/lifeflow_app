@@ -1,11 +1,10 @@
 import { AfterViewInit, Component } from '@angular/core';
-import { RESULTDATA_DE } from '../selfcheck-app/data/resultData-de';
-import { RESULTDATA_EN } from '../selfcheck-app/data/resultData-en';
-import { SelfcheckTopics } from '../selfcheck-app/data/resultData-en';
 import { CommonModule } from '@angular/common';
-import { QUESTIONS_DE } from '../selfcheck-app/data/questions-de';
-import { QUESTIONS_EN } from '../selfcheck-app/data/questions-en';
 import { DisplayResultComponent } from './display-result/display-result.component';
+import { RESULTDATA_EN, SelfcheckTopics } from '../data/resultData-en';
+import { QUESTIONS_EN } from '../data/questions-en';
+import { QUESTIONS_DE } from '../data/questions-de';
+import { RESULTDATA_DE } from '../data/resultData-de';
 
 declare var M: any;
 
