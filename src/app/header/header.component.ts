@@ -24,8 +24,6 @@ export class HeaderComponent implements AfterViewInit {
   toggleLanguage() {
     this.currentLang = this.currentLang === 'en' ? 'de' : 'en';
 
-    console.log(this.router.url);
-
     const segments = this.router.url.split('/').filter(Boolean); // removes empty strings
 
     // Replace the first segment (language) with newLang

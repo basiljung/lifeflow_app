@@ -1,6 +1,8 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { FAQDETAILSDATA_DE, FAQDETAILSDATA_EN } from '../data/faq_details';
+import { filter, Subscription } from 'rxjs';
+import { NavigationEnd, Router } from '@angular/router';
 
 declare const M: any;
 
@@ -12,17 +14,34 @@ declare const M: any;
   styleUrl: './details-faq.component.scss',
 })
 export class DetailsFAQComponent implements OnInit {
-  currentLang: string = 'DE';
+  private routerSubscription!: Subscription;
+  currentLang: string | null = null;
   faqDetailsData_de = FAQDETAILSDATA_DE;
   faqDetailsData_en = FAQDETAILSDATA_EN;
 
+  constructor(private router: Router) {}
+
   ngOnInit(): void {
-    this.toggleLanguage();
+    console.log('init');
+    this.setLang();
+    this.routerSubscription = this.router.events
+      .pipe(filter((event) => event instanceof NavigationEnd))
+      .subscribe(() => {
+        this.setLang();
+      });
   }
 
-  toggleLanguage() {
-    this.currentLang = this.currentLang === 'DE' ? 'EN' : 'DE';
+  setLang() {
+    const path = this.router.url;
+    const lang = path.split('/')[1];
+    if (lang !== this.currentLang) {
+      this.currentLang = lang;
+      console.log('Language changed to:', lang);
+      this.changeLanguage();
+    }
+  }
 
+  changeLanguage() {
     setTimeout(() => {
       const elems = document.querySelectorAll('.collapsible');
       M.Collapsible.init(elems);

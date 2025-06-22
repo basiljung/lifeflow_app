@@ -2,19 +2,9 @@
   <span class="card-title grey-text text-darken-4"
     >👉 Details & FAQ <i class="material-icons right">close</i></span
   >
-  <div style="position: fixed; top: 80px; right: 30px; z-index: 1000">
-    <a
-      class="btn-floating btn-small waves-effect waves-light teal"
-      (click)="toggleLanguage()"
-    >
-      <span style="font-weight: bold">{{
-        currentLang === "DE" ? "EN" : "DE"
-      }}</span>
-    </a>
-  </div>
   <div class="container">
     <div style="margin-top: 80px">
-      @if (currentLang === "DE") {
+      @if (currentLang === "de") {
         <div>
           <ul class="collapsible" style="border-radius: 12px">
             <ng-container *ngFor="let entry of faqDetailsData_de">
