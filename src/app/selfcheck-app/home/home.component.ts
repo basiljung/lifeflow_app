@@ -1,7 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DetailsFAQComponent } from '../details-faq/details-faq.component';
 import { SelfcheckLogicComponent } from '../self-check-logic/self-check-logic.component';
+import { NavigationEnd, Router } from '@angular/router';
+import { filter, Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-home',
@@ -9,4 +11,25 @@ import { SelfcheckLogicComponent } from '../self-check-logic/self-check-logic.co
   imports: [CommonModule, DetailsFAQComponent, SelfcheckLogicComponent],
   templateUrl: './home.component.html',
 })
-export class HomeComponent {}
+export class HomeComponent implements OnInit {
+  private routerSubscription!: Subscription;
+  currentLang: string | null = null;
+  constructor(private router: Router) {}
+
+  ngOnInit(): void {
+    this.setLang();
+    this.routerSubscription = this.router.events
+      .pipe(filter((event) => event instanceof NavigationEnd))
+      .subscribe(() => {
+        this.setLang();
+      });
+  }
+
+  setLang() {
+    const path = this.router.url;
+    const lang = path.split('/')[1];
+    if (lang !== this.currentLang) {
+      this.currentLang = lang;
+    }
+  }
+}

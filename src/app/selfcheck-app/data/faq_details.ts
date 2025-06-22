@@ -32,7 +32,7 @@ export const FAQDETAILSDATA_DE: {
   Der <strong>LifeFlow Selfcheck</strong> ist ein Reflexionstool, das dir hilft, dein aktuelles inneres Gleichgewicht besser zu verstehen – emotional, mental, körperlich und energetisch.
 </p>
 <p>
-  Du erhältst eine Momentaufnahme in 12 Lebensbereichen, die für deinen Flow im Leben und in deiner Tätigkeit entscheidend sind. Die Ergebnisse zeigen dir, wo aktuell Blockaden bestehen oder etwas aus der Balance geraten ist – und laden dich ein, gezielt daran zu arbeiten, um mehr Flow zu kultivieren.
+  Du erhältst eine Momentaufnahme in 9 Lebensbereichen, die für deinen Flow im Leben und in deiner Tätigkeit entscheidend sind. Die Ergebnisse zeigen dir, wo aktuell Blockaden bestehen oder etwas aus der Balance geraten ist – und laden dich ein, gezielt daran zu arbeiten, um mehr Flow zu kultivieren.
   <em>Diese Momentaufnahme spiegelt im Kern das Ergebnis deiner alltäglichen Gewohnheiten wider.</em>
 </p>
 

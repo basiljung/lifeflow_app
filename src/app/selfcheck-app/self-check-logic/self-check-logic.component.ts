@@ -5,6 +5,9 @@ import { RESULTDATA_EN, SelfcheckTopics } from '../data/resultData-en';
 import { QUESTIONS_EN } from '../data/questions-en';
 import { QUESTIONS_DE } from '../data/questions-de';
 import { RESULTDATA_DE } from '../data/resultData-de';
+import { NavigationEnd, Router } from '@angular/router';
+import { filter, Subscription } from 'rxjs';
+import { LanguageService } from '../../language.service';
 
 declare var M: any;
 
@@ -28,6 +31,8 @@ export class SelfcheckLogicComponent implements AfterViewInit {
   currentQuestionIndex = 0;
   currentLangSelfCheck: string = 'EN';
   showLanguageBtn = true;
+  private routerSubscription!: Subscription;
+  currentLang: string | null = null;
 
   questions = QUESTIONS_EN;
   resultData: ResultData = RESULTDATA_EN;
@@ -73,11 +78,27 @@ export class SelfcheckLogicComponent implements AfterViewInit {
     topAreas: this.resultData,
   }; */
 
+  constructor(
+    private router: Router,
+    private langService: LanguageService,
+  ) {}
+
+  ngOnInit(): void {
+    this.setLang();
+    this.routerSubscription = this.router.events
+      .pipe(filter((event) => event instanceof NavigationEnd))
+      .subscribe(() => {
+        this.setLang();
+      });
+  }
+
   ngAfterViewInit() {
     M.Collapsible.init(document.querySelectorAll('.collapsible'), {});
   }
+
   toggleLanguageSelfcheck(lang: string) {
     this.currentLangSelfCheck = lang;
+    this.langService.triggerToggle(lang);
     if (this.currentLangSelfCheck === 'DE') {
       this.questions = QUESTIONS_DE;
       this.resultData = RESULTDATA_DE;
@@ -86,6 +107,22 @@ export class SelfcheckLogicComponent implements AfterViewInit {
       this.resultData = RESULTDATA_EN;
     }
     this.showLanguageBtn = false;
+  }
+
+  setLang() {
+    const path = this.router.url;
+    const lang = path.split('/')[1];
+    if (lang !== this.currentLang) {
+      this.currentLang = lang;
+      this.changeLanguage();
+    }
+  }
+
+  changeLanguage() {
+    setTimeout(() => {
+      const elems = document.querySelectorAll('.collapsible');
+      M.Collapsible.init(elems);
+    }, 0);
   }
 
   selectAnswer(effects: any) {

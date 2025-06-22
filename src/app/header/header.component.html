@@ -16,11 +16,11 @@
       <li>
         <a
           class="btn-floating btn-small waves-effect waves-light teal"
-          (click)="toggleLanguage()"
+          (click)="toggleLanguage(currentLang === 'en' ? 'de' : 'en')"
         >
-          <span style="font-weight: bold">{{
-            currentLang === "en" ? "DE" : "EN"
-          }}</span>
+          <span style="font-weight: bold">
+            {{ currentLang === "en" ? "DE" : "EN" }}
+          </span>
         </a>
       </li>
     </ul>
@@ -31,7 +31,7 @@
   <li>
     <a
       class="btn-small waves-effect waves-light teal"
-      (click)="toggleLanguage()"
+      (click)="toggleLanguage(currentLang === 'en' ? 'de' : 'en')"
     >
       <span style="font-weight: bold">{{
         currentLang === "en" ? "DE" : "EN"
