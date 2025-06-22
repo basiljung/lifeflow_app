@@ -22,7 +22,6 @@ export class DetailsFAQComponent implements OnInit {
   constructor(private router: Router) {}
 
   ngOnInit(): void {
-    console.log('init');
     this.setLang();
     this.routerSubscription = this.router.events
       .pipe(filter((event) => event instanceof NavigationEnd))
@@ -36,7 +35,6 @@ export class DetailsFAQComponent implements OnInit {
     const lang = path.split('/')[1];
     if (lang !== this.currentLang) {
       this.currentLang = lang;
-      console.log('Language changed to:', lang);
       this.changeLanguage();
     }
   }
