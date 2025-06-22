@@ -24,19 +24,19 @@ export class HeaderComponent implements AfterViewInit {
   toggleLanguage() {
     this.currentLang = this.currentLang === 'en' ? 'de' : 'en';
 
-    // Current URL segments as an array
-    const currentSegments = this.route.snapshot.url.map(
-      (segment) => segment.path,
-    );
+    console.log(this.router.url);
 
-    // Replace the first segment (language) with the new language
-    if (currentSegments.length > 0) {
-      currentSegments[0] = this.currentLang;
+    const segments = this.router.url.split('/').filter(Boolean); // removes empty strings
+
+    // Replace the first segment (language) with newLang
+    if (segments.length > 0) {
+      segments[0] = this.currentLang;
     } else {
-      currentSegments.unshift(this.currentLang); // fallback if somehow empty
+      segments.unshift(this.currentLang); // fallback for just "/"
     }
 
-    this.router.navigate(currentSegments);
+    // Navigate to the updated path
+    this.router.navigate(['/', ...segments]);
 
     setTimeout(() => {
       const elems = document.querySelectorAll('.collapsible');
