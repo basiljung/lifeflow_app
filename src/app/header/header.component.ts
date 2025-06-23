@@ -1,6 +1,7 @@
 import { AfterViewInit, Component, OnInit } from '@angular/core';
-import { Router, RouterModule } from '@angular/router';
+import { RouterModule } from '@angular/router';
 import { LanguageService } from '../language.service';
+import { Subject, takeUntil } from 'rxjs';
 
 declare var M: any;
 
@@ -11,16 +12,14 @@ declare var M: any;
   styleUrl: './header.component.scss',
 })
 export class HeaderComponent implements AfterViewInit, OnInit {
-  currentLang: string = 'en';
+  private destroy$ = new Subject<void>();
+  currentLang: string | null = null;
 
-  constructor(
-    private router: Router,
-    private langService: LanguageService,
-  ) {}
+  constructor(private langService: LanguageService) {}
 
   ngOnInit(): void {
-    this.langService.toggleLang$.subscribe((lang) => {
-      this.toggleLanguage(lang);
+    this.langService.lang$.pipe(takeUntil(this.destroy$)).subscribe((lang) => {
+      this.currentLang = lang;
     });
   }
 
@@ -30,18 +29,6 @@ export class HeaderComponent implements AfterViewInit, OnInit {
   }
 
   toggleLanguage(lang: string) {
-    const newLang = lang;
-
-    this.currentLang = newLang;
-    this.langService.setLanguage(newLang);
-
-    const segments = this.router.url.split('/').filter(Boolean);
-    segments[0] = newLang;
-    this.router.navigate(['/', ...segments]);
-
-    setTimeout(() => {
-      const elems = document.querySelectorAll('.collapsible');
-      M.Collapsible.init(elems);
-    }, 0);
+    this.langService.switchLanguage(lang);
   }
 }

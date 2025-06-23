@@ -1,12 +1,11 @@
-import { AfterViewInit, Component, OnDestroy } from '@angular/core';
+import { AfterViewInit, Component, OnDestroy, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DisplayResultComponent } from './display-result/display-result.component';
 import { RESULTDATA_EN, SelfcheckTopics } from '../data/resultData-en';
 import { QUESTIONS_EN } from '../data/questions-en';
 import { QUESTIONS_DE } from '../data/questions-de';
 import { RESULTDATA_DE } from '../data/resultData-de';
-import { NavigationEnd, Router } from '@angular/router';
-import { filter, Subscription } from 'rxjs';
+import { Subject, takeUntil } from 'rxjs';
 import { LanguageService } from '../../language.service';
 
 declare var M: any;
@@ -27,12 +26,14 @@ export type ResultData = {
   templateUrl: './self-check-logic.component.html',
   styleUrls: ['./self-check-logic.component.scss'],
 })
-export class SelfcheckLogicComponent implements AfterViewInit, OnDestroy {
+export class SelfcheckLogicComponent
+  implements AfterViewInit, OnInit, OnDestroy
+{
   currentQuestionIndex = 0;
-  currentLangSelfCheck: string = 'EN';
+  currentLangSelfCheck: string = 'en';
   showLanguageBtn = true;
-  private routerSubscription!: Subscription;
   currentLang: string | null = null;
+  private destroy$ = new Subject<void>();
 
   questions = QUESTIONS_EN;
   resultData: ResultData = RESULTDATA_EN;
@@ -78,18 +79,12 @@ export class SelfcheckLogicComponent implements AfterViewInit, OnDestroy {
     topAreas: this.resultData,
   }; */
 
-  constructor(
-    private router: Router,
-    private langService: LanguageService,
-  ) {}
+  constructor(private langService: LanguageService) {}
 
   ngOnInit(): void {
-    this.setLang();
-    this.routerSubscription = this.router.events
-      .pipe(filter((event) => event instanceof NavigationEnd))
-      .subscribe(() => {
-        this.setLang();
-      });
+    this.langService.lang$.pipe(takeUntil(this.destroy$)).subscribe((lang) => {
+      this.currentLang = lang;
+    });
   }
 
   ngAfterViewInit() {
@@ -98,8 +93,8 @@ export class SelfcheckLogicComponent implements AfterViewInit, OnDestroy {
 
   toggleLanguageSelfcheck(lang: string) {
     this.currentLangSelfCheck = lang;
-    this.langService.triggerToggle(lang);
-    if (this.currentLangSelfCheck === 'DE') {
+    this.langService.switchLanguage(lang);
+    if (this.currentLangSelfCheck === 'de') {
       this.questions = QUESTIONS_DE;
       this.resultData = RESULTDATA_DE;
     } else {
@@ -107,22 +102,6 @@ export class SelfcheckLogicComponent implements AfterViewInit, OnDestroy {
       this.resultData = RESULTDATA_EN;
     }
     this.showLanguageBtn = false;
-  }
-
-  setLang() {
-    const path = this.router.url;
-    const lang = path.split('/')[1];
-    if (lang !== this.currentLang) {
-      this.currentLang = lang;
-      this.changeLanguage();
-    }
-  }
-
-  changeLanguage() {
-    setTimeout(() => {
-      const elems = document.querySelectorAll('.collapsible');
-      M.Collapsible.init(elems);
-    }, 0);
   }
 
   selectAnswer(effects: any) {
@@ -240,8 +219,7 @@ export class SelfcheckLogicComponent implements AfterViewInit, OnDestroy {
   }
 
   ngOnDestroy(): void {
-    if (this.routerSubscription) {
-      this.routerSubscription.unsubscribe();
-    }
+    this.destroy$.next();
+    this.destroy$.complete();
   }
 }

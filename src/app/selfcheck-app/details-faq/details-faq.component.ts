@@ -1,8 +1,8 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FAQDETAILSDATA_DE, FAQDETAILSDATA_EN } from '../data/faq_details';
-import { filter, Subscription } from 'rxjs';
-import { NavigationEnd, Router } from '@angular/router';
+import { Subject, takeUntil } from 'rxjs';
+import { LanguageService } from '../../language.service';
 
 declare const M: any;
 
@@ -14,41 +14,25 @@ declare const M: any;
   styleUrl: './details-faq.component.scss',
 })
 export class DetailsFAQComponent implements OnInit, OnDestroy {
-  private routerSubscription!: Subscription;
   currentLang: string | null = null;
   faqDetailsData_de = FAQDETAILSDATA_DE;
   faqDetailsData_en = FAQDETAILSDATA_EN;
+  private destroy$ = new Subject<void>();
 
-  constructor(private router: Router) {}
+  constructor(private langService: LanguageService) {}
 
   ngOnInit(): void {
-    this.setLang();
-    this.routerSubscription = this.router.events
-      .pipe(filter((event) => event instanceof NavigationEnd))
-      .subscribe(() => {
-        this.setLang();
-      });
-  }
-
-  setLang() {
-    const path = this.router.url;
-    const lang = path.split('/')[1];
-    if (lang !== this.currentLang) {
+    this.langService.lang$.pipe(takeUntil(this.destroy$)).subscribe((lang) => {
       this.currentLang = lang;
-      this.changeLanguage();
-    }
-  }
-
-  changeLanguage() {
-    setTimeout(() => {
-      const elems = document.querySelectorAll('.collapsible');
-      M.Collapsible.init(elems);
-    }, 0);
+      setTimeout(() => {
+        const elems = document.querySelectorAll('.collapsible');
+        M.Collapsible.init(elems);
+      }, 0);
+    });
   }
 
   ngOnDestroy(): void {
-    if (this.routerSubscription) {
-      this.routerSubscription.unsubscribe();
-    }
+    this.destroy$.next();
+    this.destroy$.complete();
   }
 }
