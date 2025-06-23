@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DetailsFAQComponent } from '../details-faq/details-faq.component';
 import { SelfcheckLogicComponent } from '../self-check-logic/self-check-logic.component';
@@ -11,7 +11,7 @@ import { filter, Subscription } from 'rxjs';
   imports: [CommonModule, DetailsFAQComponent, SelfcheckLogicComponent],
   templateUrl: './home.component.html',
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent implements OnInit, OnDestroy {
   private routerSubscription!: Subscription;
   currentLang: string | null = null;
   constructor(private router: Router) {}
@@ -30,6 +30,12 @@ export class HomeComponent implements OnInit {
     const lang = path.split('/')[1];
     if (lang !== this.currentLang) {
       this.currentLang = lang;
+    }
+  }
+
+  ngOnDestroy(): void {
+    if (this.routerSubscription) {
+      this.routerSubscription.unsubscribe();
     }
   }
 }

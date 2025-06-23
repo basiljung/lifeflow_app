@@ -1,4 +1,4 @@
-import { AfterViewInit, Component } from '@angular/core';
+import { AfterViewInit, Component, OnDestroy } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DisplayResultComponent } from './display-result/display-result.component';
 import { RESULTDATA_EN, SelfcheckTopics } from '../data/resultData-en';
@@ -27,7 +27,7 @@ export type ResultData = {
   templateUrl: './self-check-logic.component.html',
   styleUrls: ['./self-check-logic.component.scss'],
 })
-export class SelfcheckLogicComponent implements AfterViewInit {
+export class SelfcheckLogicComponent implements AfterViewInit, OnDestroy {
   currentQuestionIndex = 0;
   currentLangSelfCheck: string = 'EN';
   showLanguageBtn = true;
@@ -237,5 +237,11 @@ export class SelfcheckLogicComponent implements AfterViewInit {
       const elems = document.querySelectorAll('.collapsible');
       M.Collapsible.init(elems);
     }, 0);
+  }
+
+  ngOnDestroy(): void {
+    if (this.routerSubscription) {
+      this.routerSubscription.unsubscribe();
+    }
   }
 }

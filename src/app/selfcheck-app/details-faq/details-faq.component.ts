@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FAQDETAILSDATA_DE, FAQDETAILSDATA_EN } from '../data/faq_details';
 import { filter, Subscription } from 'rxjs';
 import { NavigationEnd, Router } from '@angular/router';
@@ -13,7 +13,7 @@ declare const M: any;
   templateUrl: './details-faq.component.html',
   styleUrl: './details-faq.component.scss',
 })
-export class DetailsFAQComponent implements OnInit {
+export class DetailsFAQComponent implements OnInit, OnDestroy {
   private routerSubscription!: Subscription;
   currentLang: string | null = null;
   faqDetailsData_de = FAQDETAILSDATA_DE;
@@ -44,5 +44,11 @@ export class DetailsFAQComponent implements OnInit {
       const elems = document.querySelectorAll('.collapsible');
       M.Collapsible.init(elems);
     }, 0);
+  }
+
+  ngOnDestroy(): void {
+    if (this.routerSubscription) {
+      this.routerSubscription.unsubscribe();
+    }
   }
 }
