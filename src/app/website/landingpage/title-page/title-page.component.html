@@ -6,8 +6,12 @@
         : "Flow – wenn Biologie, Geist und Ziel im Einklang sind."
     }}
   </h4>
-  <h1 class="gradient-title">
-    Performance with meaning & inner peace – Achieve without constant stress.
+  <h1 class="gradient-title" style="margin-top: 8rem; margin-bottom: 12rem">
+    {{
+      currentLang === "en"
+        ? "Performance with meaning & inner peace"
+        : "Performance mit Sinn & Gelassenheit"
+    }}
   </h1>
   <div class="center-elements">
     <img
@@ -16,8 +20,12 @@
       height="150"
       style="border-radius: 50%"
     />
-    <h4>Let's have a look.</h4>
-    <a class="btn-floating btn-large waves-effect waves-light bg-highlight"
+    <h4>
+      {{ currentLang === "en" ? "Let's have a look." : "Los geht's." }}
+    </h4>
+    <a
+      href="#topic-selector"
+      class="btn-floating btn-large waves-effect waves-light bg-highlight"
       ><i class="material-icons">keyboard_arrow_down</i></a
     >
   </div>

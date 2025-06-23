@@ -1,6 +1,100 @@
 <app-title-page></app-title-page>
 
-<app-section-default></app-section-default>
+@if (topic === "inner-peace") {
+  <app-section-default>
+    <h1 class="gradient-title" slot="title">
+      {{
+        currentLang === "en"
+          ? "💫 Life is rushing by — and you feel like you’re missing it"
+          : "💫 Das Leben rast vorbei – und du hast das Gefühl, es zu verpassen"
+      }}
+    </h1>
+    <ul slot="list">
+      <li>You’re doing a lot — but feel unfulfilled</li>
+      <li>That inner restlessness won’t go away</li>
+      <li>You feel often frustrated</li>
+      <li>It feels like an endless circle</li>
+    </ul>
+    <img
+      slot="image"
+      src="assets/rush.png"
+      width="200"
+      height="250"
+      style="border-radius: 12px; box-shadow: 0 20px 40px #0d1b2a"
+    />
+  </app-section-default>
+  <app-section-default>
+    <h1 class="gradient-title" slot="title">
+      {{
+        currentLang === "en"
+          ? "💫 Find more inner peace"
+          : "💫 Finde mehr Gelassenheit"
+      }}
+    </h1>
+    <ul slot="list">
+      <li>You stay grounded** — stand for what truly matters.</li>
+      <li>Act with clarity and intention.</li>
+      <li>Enjoy the journey — **without losing your drive.**</li>
+      <li>You stay calm in chaos.</li>
+      <li>Bonus: You **explore the neuroscience behind it all**</li>
+    </ul>
+    <img
+      slot="image"
+      src="assets/inner-peace.jpg"
+      width="200"
+      height="250"
+      style="border-radius: 12px; box-shadow: 0 20px 40px #0d1b2a"
+    />
+  </app-section-default>
+} @else {
+  <app-section-default>
+    <h1 class="gradient-title" slot="title">
+      {{
+        currentLang === "en"
+          ? "💫 You are unmotivated or procrastinating"
+          : "💫 Du bist unmotiviert und kommst nicht voran"
+      }}
+    </h1>
+    <ul slot="list">
+      <li>So many ideas — but lots of doubts and overthinking.</li>
+      <li>You lose yourself in small tasks and can’t focus.</li>
+      <li>You lack the energy for what truly matters.</li>
+      <li>Frustrated, you feel like you’re not in control.</li>
+      <li>You don't see the meaning.</li>
+      <li>It feels like the engine isn't running.</li>
+    </ul>
+    <img
+      slot="image"
+      src="assets/unmotivated.png"
+      width="200"
+      height="250"
+      style="border-radius: 12px; box-shadow: 0 20px 40px #0d1b2a"
+    />
+  </app-section-default>
+  <app-section-default>
+    <h1 class="gradient-title" slot="title">
+      {{
+        currentLang === "en"
+          ? "💫 Live with more drive & energy"
+          : "💫 Lebe mit mehr Antrieb & Energie"
+      }}
+    </h1>
+    <ul slot="list">
+      <li>You reconnect with your inner drive.</li>
+      <li>**You move forward — with energy, clarity, and purpose.**</li>
+      <li>You know what truly matters.</li>
+      <li>You learn how to spark momentum and **stay motivated.**</li>
+      <li>Bonus: You **understand the neuroscience** behind it all.</li>
+    </ul>
+    <img
+      slot="image"
+      src="assets/drive.png"
+      width="200"
+      height="250"
+      style="border-radius: 12px; box-shadow: 0 20px 40px #0d1b2a"
+    />
+  </app-section-default>
+}
 
 <div style="background-color: aliceblue">
   <h1>this is a test text</h1>

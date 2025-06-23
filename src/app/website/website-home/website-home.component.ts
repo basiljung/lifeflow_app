@@ -4,7 +4,7 @@ import { SectionDefaultComponent } from '../section-default/section-default.comp
 import { MailerliteformComponent } from '../mailerliteform/mailerliteform.component';
 import { NavigationEnd, Router } from '@angular/router';
 import { LanguageService } from '../../language.service';
-import { filter } from 'rxjs';
+import { filter, Subject, takeUntil } from 'rxjs';
 import { CommonModule } from '@angular/common';
 import { TitlePageComponent } from '../landingpage/title-page/title-page.component';
 
@@ -21,30 +21,26 @@ import { TitlePageComponent } from '../landingpage/title-page/title-page.compone
   styleUrl: './website-home.component.scss',
 })
 export class WebsiteHomeComponent implements OnInit, OnDestroy {
-  routerSubscription: any;
-  showTopicSelection: boolean = true;
+  private destroy$ = new Subject<void>();
+  currentLang: string | null = null;
+  topic: string | undefined;
+
   constructor(
-    private router: Router,
     private langService: LanguageService,
+    private router: Router,
   ) {}
 
   ngOnInit(): void {
-    this.routerSubscription = this.router.events
-      .pipe(filter((event) => event instanceof NavigationEnd))
-      .subscribe(() => {
-        debugger;
-        const segments = this.router.url.split('/').filter(Boolean);
-        if (segments.length > 1) {
-          this.showTopicSelection = false;
-        } else {
-          this.showTopicSelection = true;
-        }
-      });
+    const segments = this.router.url.split('/').filter(Boolean);
+
+    this.topic = segments[1];
+    this.langService.lang$.pipe(takeUntil(this.destroy$)).subscribe((lang) => {
+      this.currentLang = lang;
+    });
   }
 
   ngOnDestroy(): void {
-    if (this.routerSubscription) {
-      this.routerSubscription.unsubscribe();
-    }
+    this.destroy$.next();
+    this.destroy$.complete();
   }
 }
