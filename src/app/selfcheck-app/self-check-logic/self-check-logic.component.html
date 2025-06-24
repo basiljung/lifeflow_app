@@ -69,7 +69,7 @@
 
   @if (showResult) {
     @if (currentLangSelfCheck === "en") {
-      <h4>Your Results:</h4>
+      <h5>Your Results:</h5>
       <app-display-result
         [results]="resultDataSet.outOfBalance"
         [lang]="currentLangSelfCheck"
@@ -81,17 +81,8 @@
         </div>
         <div slot="bottom">
           <div class="row" style="margin: 0px">
-            <div
-              class="card title-card-result"
-              style="
-                font-weight: 600;
-                font-size: large;
-                padding: 0.2rem;
-                margin: 0px;
-              "
-            >
+            <div class="card title-card-result">
               👏 Great job – no strongly unbalanced areas detected!
-
               <span>Tell me your secret...</span>
             </div>
           </div>
@@ -153,6 +144,7 @@
       </button>
       <br />
     } @else {
+      <h5>Dein Resultat:</h5>
       <app-display-result
         [results]="resultDataSet.outOfBalance"
         [lang]="currentLangSelfCheck"
@@ -165,10 +157,17 @@
         <div slot="bottom">
           <div class="row" style="margin: 0px">
             <div class="card title-card-result">
-              >👏 Sehr gut – keine stark unausgeglichenen Bereiche erkannt!
+              👏 Sehr gut – keine stark unausgeglichenen Bereiche erkannt!
               <span>Verrate mir dein Geheimnis...</span>
             </div>
           </div>
+          <div
+            style="
+              border-bottom: 1px solid #1e6f5c;
+              margin: 3rem auto;
+              width: 20rem;
+            "
+          ></div>
         </div>
       </app-display-result>
       <app-display-result
@@ -229,7 +228,9 @@
       onclick="ml('show', 'CX9x9O', true)"
       style="border-radius: 15px"
       ><i class="material-icons right">mail</i>
-      {{ currentLang === "en" ? "Sign up for more" : "Jezt, mehr erfahren" }}</a
+      {{
+        currentLang === "en" ? "Sign up for more" : "Jetzt, mehr erfahren"
+      }}</a
     >
   } @else {
     <button
