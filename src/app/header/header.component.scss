@@ -26,6 +26,11 @@
   }
 }
 
+a:hover {
+  border-top: 1px solid #ffffff;
+  font-weight: bold;
+}
+
 @media screen and (max-width: 600px) {
   .topnav.responsive {
     position: relative;
