@@ -1,0 +1,12 @@
+<div>
+  <div class="center-align">
+    <ng-content select="[slot=title]"></ng-content>
+  </div>
+
+  <div class="center-align">
+    <div class="col s12 m10">
+      <ng-content select="[slot=text]"></ng-content>
+      <ng-content select="[slot=bottom]"></ng-content>
+    </div>
+  </div>
+</div>

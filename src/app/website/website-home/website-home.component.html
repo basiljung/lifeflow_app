@@ -285,8 +285,8 @@
   />
 </app-section-default-2col>
 
-<div class="align-center">
-  <p>
+<app-section-default>
+  <p slot="text">
     🌀 **Das Lifeflow-System bringt dich Schritt für Schritt zu mehr
     Selbstkenntnis, Klarheit und innerer Ruhe.** Gemeinsam erkunden wir deine
     aktuelle Situation, Bedürfnisse, Werte, Stärken und inneren Antreiber. Du
@@ -314,34 +314,102 @@
     wachst wieder mit Sinn und Energie auf. Du kennst deine Ecken und Kanten –
     und findest den Mut, dich so zu zeigen, wie du wirklich bist.
   </p>
-</div>
+</app-section-default>
 
-<app-section-default-2col>
+<app-section-default>
   <h1 class="gradient-title" slot="title">
     {{
       currentLang === "en"
-        ? "WHY is it relevant – AND WHY NOW?"
-        : "WARUM ist es relevant – UND WARUM JETZT?"
+        ? "IS LifeFlow A PATH FOR YOU?"
+        : "IST LifeFlow EIN WEG FÜR DICH?"
     }}
   </h1>
+  <p slot="text">
+    Wenn du neugierig geworden bist und wissen willst, ob ich dir wirklich
+    helfen kann, dann nimm dir einen Moment Zeit und spüre in diese Fragen
+    hinein: Bist du aufrichtig daran interessiert, nachhaltigen inneren Frieden,
+    Freiheit und schöpferischen Flow zu erleben – unabhängig davon, was im Außen
+    geschieht? Fühlst du dich oft gestresst, erschöpft oder innerlich unruhig?
+    Hast du das Gefühl, dich selbst und deine wahre Ausrichtung aus den Augen
+    verloren zu haben? Funktionierst du im Alltag – aber fühlst dich dabei
+    innerlich leer oder getrieben? Wünschst du dir mehr Klarheit inmitten der
+    Unsicherheiten und Herausforderungen dieser Zeit? Fehlt dir manchmal die
+    Energie, um deine Ziele mit Leichtigkeit und Freude zu verfolgen? Möchtest
+    du dich selbst besser verstehen und ein Leben führen, das wirklich zu dir
+    passt? Willst du dich tief mit dir selbst und den Menschen in deinem Leben
+    verbunden fühlen? Wenn du innerlich bei diesen Fragen genickt hast – dann
+    kann ich dir helfen.
+  </p>
+  <div slot="bottom">
+    <table
+      style="
+        width: 100%;
+        border-collapse: collapse;
+        font-family: Arial, sans-serif;
+      "
+    >
+      <thead>
+        <tr style="border-bottom: 2px solid #1e6f5c">
+          <th style="text-align: left; padding: 12px; color: #1e6f5c">
+            💚 YES THIS IS FOR YOU
+          </th>
+          <th style="text-align: left; padding: 12px; color: #1e6f5c">
+            ❌ SORRY IT'S NOT FOR YOU
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="border-bottom: 1px solid #ddd">
+          <td style="padding: 12px">Open, curious, growth-oriented</td>
+          <td style="padding: 12px">Unwilling to look deeper</td>
+        </tr>
+        <tr style="border-bottom: 1px solid #ddd">
+          <td style="padding: 12px">Self-responsible</td>
+          <td style="padding: 12px">Unreliable</td>
+        </tr>
+        <tr style="border-bottom: 1px solid #ddd">
+          <td style="padding: 12px">Ambitious</td>
+          <td style="padding: 12px">Only driven by status or ego</td>
+        </tr>
+        <tr>
+          <td style="padding: 12px">Willing to invest time & energy</td>
+          <td style="padding: 12px">No real commitment</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</app-section-default>
+
+<app-section-default-2col>
+  <div slot="title">
+    <h1 class="gradient-title">
+      {{
+        currentLang === "en"
+          ? "Gestalte dein Leben – bewusst und im Flow"
+          : "WARUM ist es relevant – UND WARUM JETZT?"
+      }}
+    </h1>
+    <p>
+      Klar Denken, gelassen Handeln und im Flow leben - Produktiv & Glücklich
+    </p>
+  </div>
   <p slot="list">
-    Hi, ich bin Basil ich habe software entwicklung stduiert und asl software
-    entwickler gearbeiet bereits seit klein auf bin ich interessiert und
-    neugierig. Ich habe mich schon immer mit Computer trends und digitalem
-    beschäftig. alles was neu ist hat mich faszinniert. Nun aktueller könnte das
-    Thema bewusst sein ja nicht sein darum beschaftige ich mich auch beretis
-    seit pber 5jahren damit. Ich durch persönliche herauforderunge bin habe ich
-    erkannt das ich etwas an mir ändern kann. nach dieser persönlcihen
-    optmierung phase kam ich immer tiefer mit mir inder kontakt und habe erkannt
-    das es nicht darum geht mich zu ändern sondern mich besser zuverstehen und
-    alle seite anzuerkennen. - Auch die mit der Sinnfrage habe ich bin oft
-    befasst und antowrten gefunden. Ich wollte immer der Beste sein und habe mir
-    darum auch viel wissen im bereich performance und produktivität angeeingent
-    trotzdem war es für mich immer wichtig mich gut zu fühlen und gesund zu sein
-    darum bin ichheute meister in Perfmormance mit Tiefe und Frieden. Denn wer
-    will schon rennen wie ein beloppter wenn er sich danach nicht gut fühlt.
-    Heute gehe ich voller freude durchs Leben und nutze Flow und andere
-    Prinzipien um im Fluss des leben zu sein und bleiben.
+    Hi, ich bin Basil. Ich habe Softwareentwicklung studiert und als Entwickler
+    gearbeitet – meine Begeisterung für Technologie begleitet mich seit meiner
+    Kindheit. Alles Digitale, Neue und Innovative hat mich schon immer
+    fasziniert. Vor über fünf Jahren begann ich mich intensiv mit dem Thema
+    Bewusstsein zu beschäftigen – aus einem persönlichen Bedürfnis heraus. Durch
+    eigene Herausforderungen habe ich erkannt: Ich kann mich verändern. Doch je
+    tiefer ich ging, desto klarer wurde mir – es geht nicht darum, mich zu
+    ändern, sondern mich selbst besser zu verstehen und alle Seiten in mir
+    anzuerkennen. Auch die Sinnfrage hat mich oft beschäftigt – und ich habe
+    viele Antworten gefunden. Ich wollte früher immer der Beste sein und habe
+    mir deshalb viel Wissen rund um Performance und Produktivität angeeignet.
+    Gleichzeitig war mir mein Wohlbefinden und meine mentale Gesundheit immer
+    wichtig. Heute verbinde ich beides: Performance mit Tiefe, Klarheit und
+    innerem Frieden. Denn was bringt es, schneller zu rennen, wenn es sich nicht
+    gut anfühlt? Ich lebe heute mit Freude, Bewusstsein und Fokus – und nutze
+    Prinzipien wie Flow, um im Fluss des Lebens zu sein und zu bleiben.
   </p>
   <img
     slot="image"
@@ -350,3 +418,32 @@
     class="img-setting"
   />
 </app-section-default-2col>
+
+<app-section-default>
+  <div slot="text">
+    <h3>Sign up for more</h3>
+    <h4>
+      If you want to get weekly inputs about motivation, purpose & flow. Sign
+      up.
+    </h4>
+    <a
+      class="waves-effect waves-light btn bg-highlight"
+      onclick="ml('show', 'CX9x9O', true)"
+      style="border-radius: 15px"
+      ><i class="material-icons right">mail</i>
+      {{
+        currentLang === "en" ? "Sign up for more" : "Jetzt, mehr erfahren"
+      }}</a
+    >
+    <h3>You know this is exactly what you need – Here's how to proceed:</h3>
+    <a
+      class="btn-floating btn-large waves-effect waves-light btn-gradient pulse-btn"
+      href="https://forms.gle/yZuFjDN52hTdjNHLA"
+      ><i class="material-icons">crop_square</i></a
+    >
+    <p>
+      If there is a question, text me:
+      <a href="mailto:basil.jung@lifeflow.now">basil.jung&#64;lifeflow.now</a>
+    </p>
+  </div>
+</app-section-default>
