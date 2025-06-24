@@ -1,5 +1,4 @@
 import { AfterViewInit, Component, OnDestroy, OnInit } from '@angular/core';
-import { LandingpageComponent } from '../landingpage/landingpage.component';
 import { MailerliteformComponent } from '../mailerliteform/mailerliteform.component';
 import { Router, RouterModule } from '@angular/router';
 import { LanguageService } from '../../language.service';

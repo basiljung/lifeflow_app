@@ -2,18 +2,20 @@ import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { LanguageService } from '../language.service';
 import { Subject, takeUntil } from 'rxjs';
+import { CommonModule } from '@angular/common';
 
 declare var M: any;
 
 @Component({
   selector: 'app-header',
-  imports: [RouterModule],
+  imports: [RouterModule, CommonModule],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
 })
 export class HeaderComponent implements AfterViewInit, OnInit {
   private destroy$ = new Subject<void>();
   currentLang: string | null = null;
+  isMenuOpen = false;
 
   constructor(private langService: LanguageService) {}
 
@@ -30,5 +32,9 @@ export class HeaderComponent implements AfterViewInit, OnInit {
 
   toggleLanguage(lang: string) {
     this.langService.switchLanguage(lang);
+  }
+
+  toggleMenu() {
+    this.isMenuOpen = !this.isMenuOpen;
   }
 }

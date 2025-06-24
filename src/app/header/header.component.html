@@ -1,47 +1,24 @@
-<nav class="page-header">
-  <div class="nav-wrapper">
-    <a style="margin-left: 2rem">lifeflow.now</a>
-    <a href="#" data-target="mobile-demo" class="sidenav-trigger"
-      ><i class="material-icons">menu</i></a
-    >
-    <ul class="right hide-on-med-and-down" style="margin-right: 1.5rem">
-      <li>
-        <a
-          class="waves-effect waves-light btn bg-highlight"
-          onclick="ml('show', 'CX9x9O', true)"
-          style="border-radius: 15px"
-          ><i class="material-icons right">mail</i>
-          {{
-            currentLang === "en" ? "Sign up for more" : "Jetzt, mehr erfahren"
-          }}</a
-        >
-      </li>
-      <li>
-        <a
-          class="btn-floating btn-small waves-effect waves-light teal"
-          (click)="toggleLanguage(currentLang === 'en' ? 'de' : 'en')"
-        >
-          <span style="font-weight: bold">
-            {{ currentLang === "en" ? "DE" : "EN" }}
-          </span>
-        </a>
-      </li>
-    </ul>
-  </div>
-</nav>
+<div class="topnav" [ngClass]="{ topnav: true, responsive: isMenuOpen }">
+  <a href="/" class="brand-logo" style="margin-left: 2rem">lifeflow.now</a>
+  <a
+    class="waves-effect waves-light"
+    style="float: right; margin-right: 2rem"
+    (click)="toggleLanguage(currentLang === 'en' ? 'de' : 'en'); toggleMenu()"
+  >
+    <span style="font-weight: bold">
+      {{ currentLang === "en" ? "DE" : "EN" }}
+    </span>
+  </a>
 
-<ul class="sidenav" id="mobile-demo">
-  <li>
-    <a
-      class="btn-small waves-effect waves-light teal"
-      (click)="toggleLanguage(currentLang === 'en' ? 'de' : 'en')"
-    >
-      <span style="font-weight: bold">{{
-        currentLang === "en" ? "DE" : "EN"
-      }}</span>
-    </a>
-  </li>
-  <!--   <li><a href="badges.html">Components</a></li>
-  <li><a href="collapsible.html">Javascript</a></li>
-  <li><a href="mobile.html">Mobile</a></li> -->
-</ul>
+  <a
+    style="float: right; cursor: pointer; margin-right: 2rem"
+    onclick="ml('show', 'CX9x9O', true)"
+  >
+    <i class="material-icons right align-center">mail</i>
+    {{ currentLang === "en" ? "Sign up for more" : "Jetzt, mehr erfahren" }}
+  </a>
+
+  <a (click)="toggleMenu()" class="icon" style="margin-right: 2rem">
+    <i class="material-icons">menu</i>
+  </a>
+</div>
