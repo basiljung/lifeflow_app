@@ -1,12 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { TopicSelectorComponent } from '../topic-selector/topic-selector.component';
 import { Subject, takeUntil } from 'rxjs';
 import { LanguageService } from '../../../language.service';
 
 @Component({
   selector: 'app-title-page',
-  imports: [CommonModule, TopicSelectorComponent],
+  imports: [CommonModule],
   templateUrl: './title-page.component.html',
   styleUrl: './title-page.component.scss',
 })

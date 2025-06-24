@@ -1,12 +1,12 @@
 import { AfterViewInit, Component, OnDestroy, OnInit } from '@angular/core';
 import { LandingpageComponent } from '../landingpage/landingpage.component';
-import { SectionDefaultComponent } from '../section-default/section-default.component';
 import { MailerliteformComponent } from '../mailerliteform/mailerliteform.component';
-import { NavigationEnd, Router } from '@angular/router';
+import { Router } from '@angular/router';
 import { LanguageService } from '../../language.service';
-import { filter, Subject, takeUntil } from 'rxjs';
+import { Subject, takeUntil } from 'rxjs';
 import { CommonModule } from '@angular/common';
 import { TitlePageComponent } from '../landingpage/title-page/title-page.component';
+import { SectionDefault2ColComponent } from '../section-default-2col/section-default-2col.component';
 
 declare var M: any;
 
@@ -14,7 +14,7 @@ declare var M: any;
   selector: 'app-website-home',
   imports: [
     LandingpageComponent,
-    SectionDefaultComponent,
+    SectionDefault2ColComponent,
     MailerliteformComponent,
     TitlePageComponent,
     CommonModule,

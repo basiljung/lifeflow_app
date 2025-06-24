@@ -1,7 +1,7 @@
 <app-title-page></app-title-page>
 
 @if (topic === "inner-peace") {
-  <app-section-default>
+  <app-section-default-2col>
     <h1 class="gradient-title" slot="title">
       {{
         currentLang === "en"
@@ -16,8 +16,8 @@
       <li>It feels like an endless circle</li>
     </ul>
     <img slot="image" src="assets/rush.png" width="200" class="img-setting" />
-  </app-section-default>
-  <app-section-default>
+  </app-section-default-2col>
+  <app-section-default-2col>
     <h1 class="gradient-title" slot="title">
       {{
         currentLang === "en"
@@ -38,9 +38,9 @@
       width="200"
       class="img-setting"
     />
-  </app-section-default>
+  </app-section-default-2col>
 } @else {
-  <app-section-default>
+  <app-section-default-2col>
     <h1 class="gradient-title" slot="title">
       {{
         currentLang === "en"
@@ -62,8 +62,8 @@
       width="200"
       class="img-setting"
     />
-  </app-section-default>
-  <app-section-default>
+  </app-section-default-2col>
+  <app-section-default-2col>
     <h1 class="gradient-title" slot="title">
       {{
         currentLang === "en"
@@ -79,7 +79,7 @@
       <li>Bonus: You **understand the neuroscience** behind it all.</li>
     </ul>
     <img slot="image" src="assets/drive.png" width="200" class="img-setting" />
-  </app-section-default>
+  </app-section-default-2col>
 }
 
 <div>
@@ -210,7 +210,7 @@
   </div>
 </div>
 
-<app-section-default>
+<app-section-default-2col>
   <h1 class="gradient-title" slot="title">
     {{
       currentLang === "en"
@@ -239,9 +239,9 @@
     width="200"
     class="img-setting"
   />
-</app-section-default>
+</app-section-default-2col>
 
-<app-section-default>
+<app-section-default-2col>
   <h1 class="gradient-title" slot="title">
     {{
       currentLang === "en"
@@ -262,9 +262,9 @@
     width="200"
     class="img-setting"
   />
-</app-section-default>
+</app-section-default-2col>
 
-<app-section-default>
+<app-section-default-2col>
   <h1 class="gradient-title" slot="title">
     {{ currentLang === "en" ? "WHAT IS LIFEFLOW?" : "WAS IST LIFEFLOW?" }}
   </h1>
@@ -283,7 +283,7 @@
     width="200"
     class="img-setting"
   />
-</app-section-default>
+</app-section-default-2col>
 
 <div class="align-center">
   <p>
@@ -316,7 +316,7 @@
   </p>
 </div>
 
-<app-section-default>
+<app-section-default-2col>
   <h1 class="gradient-title" slot="title">
     {{
       currentLang === "en"
@@ -349,4 +349,4 @@
     width="200"
     class="img-setting"
   />
-</app-section-default>
+</app-section-default-2col>

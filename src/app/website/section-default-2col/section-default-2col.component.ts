@@ -4,12 +4,12 @@ import { Subject, takeUntil } from 'rxjs';
 import { LanguageService } from '../../language.service';
 
 @Component({
-  selector: 'app-section-default',
+  selector: 'app-section-default-2col',
   imports: [CommonModule],
-  templateUrl: './section-default.component.html',
-  styleUrl: './section-default.component.scss',
+  templateUrl: './section-default-2col.component.html',
+  styleUrl: './section-default-2col.component.scss',
 })
-export class SectionDefaultComponent implements OnInit {
+export class SectionDefault2ColComponent implements OnInit {
   private destroy$ = new Subject<void>();
   currentLang: string | null = null;
 
