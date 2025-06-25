@@ -9,12 +9,22 @@
           : "💫 Das Leben rast vorbei – und du hast das Gefühl, es zu verpassen"
       }}
     </h1>
-    <ul slot="list">
-      <li>You’re doing a lot — but feel unfulfilled</li>
-      <li><b>That inner restlessness won’t go away</b></li>
-      <li>You feel often frustrated</li>
-      <li>It feels like an endless circle</li>
-    </ul>
+    @if (currentLang === "en") {
+      <ul slot="list">
+        <li>You’re doing a lot — but feel unfulfilled</li>
+        <li><b>That inner restlessness won’t go away</b></li>
+        <li>You feel often frustrated</li>
+        <li>It feels like an endless circle</li>
+      </ul>
+    } @else {
+      <ul slot="list">
+        <li>Du machst viel – aber fühlst dich nicht erfüllt.</li>
+        <li><b>Diese innere Unruhe will einfach nicht verschwinden.</b></li>
+        <li>Du bist oft frustriert.</li>
+        <li>Es fühlt sich an wie ein endloser Kreislauf.</li>
+      </ul>
+    }
+
     <img slot="image" src="assets/rush.png" width="200" class="img-setting" />
   </app-section-default-2col>
   <app-section-default-2col>
@@ -25,13 +35,29 @@
           : "💫 Finde mehr Gelassenheit"
       }}
     </h1>
-    <ul slot="list">
-      <li><b>You stay grounded — stand for what truly matters.</b></li>
-      <li>Act with clarity and intention.</li>
-      <li><b>Enjoy the journey</b> — without losing your drive.</li>
-      <li>You stay calm in chaos.</li>
-      <li>Bonus: You explore the neuroscience behind it all</li>
-    </ul>
+    @if (currentLang === "en") {
+      <ul slot="list">
+        <li><b>You stay grounded — stand for what truly matters.</b></li>
+        <li>Act with clarity and intention.</li>
+        <li><b>Enjoy the journey</b> — without losing your drive.</li>
+        <li>You stay calm in chaos.</li>
+        <li>Bonus: You explore the neuroscience behind it all</li>
+      </ul>
+    } @else {
+      <ul slot="list">
+        <li>
+          <b
+            >Du bleibst geerdet – und stehst für das, was dir wirklich wichtig
+            ist.</b
+          >
+        </li>
+        <li>Du handelst mit Klarheit und Intention.</li>
+        <li><b>Du genießt den Weg</b> – ohne deinen Antrieb zu verlieren.</li>
+        <li>Du bleibst ruhig im Chaos.</li>
+        <li>Bonus: Du erforschst die Neurobiologie hinter alldem.</li>
+      </ul>
+    }
+
     <img
       slot="image"
       src="assets/inner-peace.jpg"
@@ -48,14 +74,29 @@
           : "💫 Du bist unmotiviert und kommst nicht voran"
       }}
     </h1>
-    <ul slot="list">
-      <li>So many ideas — but lots of doubts and overthinking.</li>
-      <li>You lose yourself in small tasks and can’t focus.</li>
-      <li><b>You lack the energy for what truly matters.</b></li>
-      <li><b>Frustrated, you feel like you’re not in control.</b></li>
-      <li>You don't see the meaning.</li>
-      <li>It feels like the engine isn't running.</li>
-    </ul>
+    @if (currentLang === "en") {
+      <ul slot="list">
+        <li>So many ideas — but lots of doubts and overthinking.</li>
+        <li>You lose yourself in small tasks and can’t focus.</li>
+        <li><b>You lack the energy for what truly matters.</b></li>
+        <li><b>Frustrated, you feel like you’re not in control.</b></li>
+        <li>You don't see the meaning.</li>
+        <li>It feels like the engine isn't running.</li>
+      </ul>
+    } @else {
+      <ul slot="list">
+        <li>So viele Ideen – aber auch viele Zweifel und Grübeleien.</li>
+        <li>
+          Du verlierst dich in Kleinkram und kannst dich nicht konzentrieren.
+        </li>
+        <li><b>Dir fehlt die Energie für das, was wirklich zählt.</b></li>
+        <li>
+          <b>Frustriert hast du das Gefühl, die Kontrolle zu verlieren.</b>
+        </li>
+        <li>Du siehst keinen Sinn.</li>
+        <li>Es fühlt sich an, als würde der Motor nicht anspringen.</li>
+      </ul>
+    }
     <img
       slot="image"
       src="assets/unmotivated.png"
@@ -71,13 +112,23 @@
           : "💫 Lebe mit mehr Antrieb & Energie"
       }}
     </h1>
-    <ul slot="list">
-      <li>You reconnect with your inner drive.</li>
-      <li><b>You move forward — with energy, clarity, and purpose.</b></li>
-      <li>You know what truly matters.</li>
-      <li>You learn how to spark momentum and <b>stay motivated.</b></li>
-      <li>Bonus: You <b>understand the neuroscience</b> behind it all.</li>
-    </ul>
+    @if (currentLang === "en") {
+      <ul slot="list">
+        <li>You reconnect with your inner drive.</li>
+        <li><b>You move forward — with energy, clarity, and purpose.</b></li>
+        <li>You know what truly matters.</li>
+        <li>You learn how to spark momentum and <b>stay motivated.</b></li>
+        <li>Bonus: You <b>understand the neuroscience</b> behind it all.</li>
+      </ul>
+    } @else {
+      <ul slot="list">
+        <li>Du kommst wieder in Kontakt mit deinem inneren Antrieb.</li>
+        <li><b>Du gehst deinen Weg – mit Energie, Klarheit und Sinn.</b></li>
+        <li>Du weißt, was dir wirklich wichtig ist.</li>
+        <li>Du lernst, wie du Momentum aufbaust und <b>dranbleibst.</b></li>
+        <li>Bonus: Du <b>verstehst die Neurobiologie</b> hinter alldem.</li>
+      </ul>
+    }
     <img slot="image" src="assets/drive.png" width="200" class="img-setting" />
   </app-section-default-2col>
 }
@@ -87,8 +138,12 @@
     class="text-highlight center-align"
     style="padding: 2rem; text-shadow: 0 20px 40px #0d1b2a"
   >
-    Without understanding yourself and your system, you’re moving – but not in
-    flow and in a way that fulfills you.
+    {{
+      currentLang === "en"
+        ? "Without understanding yourself and your system, you’re moving – but not in
+    flow and in a way that fulfills you."
+        : "Ohne dich selbst und dein System zu verstehen, bewegst du dich zwar – aber nicht im Flow und nicht auf eine Weise, die dich erfüllt."
+    }}
   </h3>
 </div>
 
@@ -98,10 +153,18 @@
 >
   <app-section-default>
     <h1 class="gradient-title" slot="title" style="padding-top: 1rem">
-      Want to know how “in FLOW” you really are? Try the app I developed.
+      {{
+        currentLang === "en"
+          ? "Want to know how “in FLOW” you really are? Use the app I developed."
+          : "Möchtest du wissen, wie „im FLOW“ du wirklich bist? Nutz die von mir entwickelte App."
+      }}
     </h1>
     <p slot="text" class="text-highlight" style="font-size: 1.4rem">
-      Click and do the LifeFlow-Selfcheck
+      {{
+        currentLang === "en"
+          ? "      Click and do the LifeFlow-Selfcheck"
+          : "Klick hier und mach den LifeFlow-Selbstcheck"
+      }}
     </p>
     <div style="padding: 2rem" slot="bottom">
       <a
@@ -128,7 +191,9 @@
 
   <!-- Carousel rechts -->
   <div class="carousel-box">
-    <h4>Clients Feedback</h4>
+    <h4>
+      {{ currentLang === "en" ? "Client feedback" : "Kundenfeedback" }}
+    </h4>
     <div class="carousel">
       <a class="carousel-item">
         <img src="assets/feedback_text/David_Feedback_lines.png" />

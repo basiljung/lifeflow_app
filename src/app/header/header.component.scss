@@ -1,4 +1,8 @@
 .topnav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000; /* Sicherstellen, dass es über anderen Elementen liegt */
   overflow: hidden;
   background-color: #1e6f5c;
 }
