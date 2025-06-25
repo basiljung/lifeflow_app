@@ -26,11 +26,11 @@
       }}
     </h1>
     <ul slot="list">
-      <li>You stay grounded** — stand for what truly matters.</li>
+      <li>You stay grounded — stand for what truly matters.</li>
       <li>Act with clarity and intention.</li>
-      <li>Enjoy the journey — **without losing your drive.**</li>
+      <li>Enjoy the journey — without losing your drive.**</li>
       <li>You stay calm in chaos.</li>
-      <li>Bonus: You **explore the neuroscience behind it all**</li>
+      <li>Bonus: You explore the neuroscience behind it all**</li>
     </ul>
     <img
       slot="image"
@@ -234,19 +234,11 @@
     }}
   </h1>
   <p slot="list">
-    The world is accelerating. We all feel it: digital overload, uncertainty,
-    pressure, the creeping sense that something essential is missing. And yet –
-    the desire for true calm, deep joy, and meaningful growth is stronger than
-    ever. Now is not the time to tense up or lose ourselves in distraction. Now
-    is the time to return to understand ourselves and build a fundament that
-    strengthens us. LIFEFLOW offers a powerful response to the big questions of
-    our time: Who am I – really? What gives my life meaning? How can I find
-    peace in the midst of this high pace? How do I live consciously – with
-    others, AI and digital tools. This isn’t just another online course.
-    LifeFlow Coaching System is a proven transformational path that bridges
-    practical exercises, personal refection and professional coaching. – and
-    helps you embody it in everyday life. It includes modern science, digital
-    tools and personal assistance for more performance with depth and peace.
+    {{
+      currentLang === "en"
+        ? "The world is accelerating. We all feel it: digital overload, uncertainty, pressure. Running faster isn't the answer anymore. At the same time, the desire for clarity, calm, connection, and meaning is growing. For me, escaping, distracting myself, or blocking out reality is not the solution. What can we do? Now is the time to understand who we are, how we function and how we want to live – build an inner foundation that grounds us in a fast-moving world: mentally, emotionally, physically, and spiritually. LIFEFLOW offers a clear response to the questions many are asking: Who am I – really? What gives my life meaning? How can I stay grounded in this high-speed world? How do I live consciously – with myself, others, AI, and digital tools? This isn't just another online course. LifeFlow Coaching System is a proven transformational path that bridges theoretical knowledge, practical exercises, deep reflection, and professional coaching – and helps you embody it in everyday life. It includes modern science, integral theory, EQ, spiral dynamics, digital tools, and personal assistance for more self-confidence and performance with meaning and peace."
+        : "Die Welt beschleunigt sich. Wir alle spüren es: digitale Überlastung, Unsicherheit, Druck. Schneller zu laufen ist nicht mehr die Antwort. Gleichzeitig wächst das Verlangen nach Klarheit, Ruhe, Verbindung und Sinn. Für mich ist Flucht, Ablenkung oder das Ausblenden der Realität keine Lösung. Was können wir tun? Jetzt ist die Zeit, zu verstehen, wer wir sind, wie wir funktionieren und wie wir leben wollen – eine innere Grundlage aufbauen, die uns in einer sich schnell bewegenden Welt halt gibt: mental, emotional, körperlich und spirituell. LIFEFLOW bietet eine klare Antwort auf die Fragen: Wer bin ich – wirklich? Was gibt meinem Leben Bedeutung? Wie kann ich in dieser Hochgeschwindigkeitswelt geerdet bleiben? Wie lebe ich bewusst – mit mir selbst, anderen, KI und digitalen Werkzeugen? Dies ist nicht nur ein weiterer Online-Kurs. Das LifeFlow Coaching System ist ein bewährter Transformationsweg, der theoretisches Wissen, praktische Übungen, tiefe Reflexion und professionelles Coaching miteinander verbindet – und dir hilft, es im Alltag zu verkörpern. Es umfasst moderne Wissenschaft, integrale Theorie, EQ, Spiral Dynamics, digitale Werkzeuge und persönliche Unterstützung für mehr Selbstvertrauen und Wirksamkeit mit Sinn und Frieden."
+    }}
   </p>
   <img
     slot="image"
@@ -301,34 +293,65 @@
 </app-section-default-2col>
 
 <app-section-default>
-  <p slot="text">
-    🌀 **Das Lifeflow-System bringt dich Schritt für Schritt zu mehr
-    Selbstkenntnis, Klarheit und innerer Ruhe.** Gemeinsam erkunden wir deine
-    aktuelle Situation, Bedürfnisse, Werte, Stärken und inneren Antreiber. Du
-    lernst, deine Gedanken und Gefühle bewusster wahrzunehmen – und erkennst,
-    was dir wirklich wichtig ist. Was dir Freude macht. Was dich antreibt.
-    Welche Ziele Sinn für dich ergeben. **✨Diese Klarheit ist die Basis für ein
-    selbstbestimmtes Leben – im Einklang mit deinen Werten und deiner
-    Biologie.** Denn echte Veränderung beginnt nicht im Außen. Sondern in dir.
-    **🚀 Entscheidend ist die Umsetzung – und genau dabei begleite ich dich.**
-    Du verstehst, wie dein System funktioniert und wie du bewusst mit
-    Herausforderungen umgehen kannst. Das **Lifeflow-System** kombiniert moderne
-    Neurowissenschaft mit Flow-Forschung nach Mihaly Csikszentmihalyi: **🎯
-    Klare Ziele, die dich motivieren 🌱 Sinnvolle Tätigkeiten, die dir Freude
-    geben 🎧 Fokus & bewusste Aufmerksamkeit 🔁 Direktes Feedback auf dein
-    Handeln 🧩 Herausforderungen, die dich wachsen lassen 🧠 Neuro-Balance:
-    Dopamin, Serotonin, Oxytocin, Endorphine 🧘♀️ Achtsamkeit &
-    Bewusstseinserweiterung** 💡 Wenn du weißt, was du willst, entsteht Kraft.
-    So gestaltest du dein Leben von innen heraus – klar, ausgeglichen und im
-    Flow. **Im 1:1-Coaching decken wir unbewusste Muster auf, stärken dein
-    Selbstbewusstsein und schaffen Raum für echte Transformation.** Wir arbeiten
-    eng zusammen – mit wöchentlichen Calls, Austausch über WhatsApp und
-    strukturierter Reflexion und Übung in Notion. 📲 Alle Inhalte stehen dir
-    auch nach dem Coaching digital zur Verfügung. 🤝 Das ist keine Einbahnstraße
-    – sondern echte Co-Creation zwischen dir und mir. 🔆 Stell dir vor: Du
-    wachst wieder mit Sinn und Energie auf. Du kennst deine Ecken und Kanten –
-    und findest den Mut, dich so zu zeigen, wie du wirklich bist.
-  </p>
+  @if (currentLang === "en") {
+    <p slot="text">
+      🌀 The Lifeflow System guides you step by step to greater self-knowledge,
+      clarity, and inner peace. Together we explore your current situation,
+      needs, values, strengths, and inner drivers. You learn to perceive your
+      thoughts and feelings more consciously – and recognize what truly matters
+      to you. What brings you joy. What motivates you. Which goals make sense
+      for you. ✨This clarity is the foundation for a self-determined life – in
+      harmony with your values and your biology. Because real change doesn't
+      begin externally. But within you. 🚀 Implementation is crucial – and
+      that's exactly where I guide you. You understand how your system works and
+      how to consciously deal with challenges. The Lifeflow System combines
+      modern neuroscience with flow research by Mihaly Csikszentmihalyi: 🎯
+      Clear goals that motivate you 🌱 Meaningful activities that bring you joy
+      🎧 Focus & conscious attention 🔁 Direct feedback on your actions 🧩
+      Challenges that help you grow 🧠 Neuro-Balance: Dopamine, Serotonin,
+      Oxytocin, Endorphins 🧘♀️ Mindfulness & expanded consciousness 💡 When you
+      know what you want, what you're missing, or what you need, power emerges.
+      This allows you to shape your life from within – clear, balanced, and in
+      flow. In 1:1 coaching, we uncover unconscious patterns, strengthen your
+      self-confidence, create space for emotion, and effect real transformation.
+      We work closely together – with weekly calls, communication via WhatsApp,
+      and structured reflection and practice in Notion. 📲 All content remains
+      digitally available to you even after coaching ends. 🤝 This isn't a
+      one-way street – but true co-creation between you and me. 🔆 Imagine: You
+      wake up with purpose and energy again. You know your edges and corners –
+      and find the courage to show yourself as you truly are.
+    </p>
+  } @else {
+    <p slot="text">
+      🌀 **Das Lifeflow-System bringt dich Schritt für Schritt zu mehr
+      Selbstkenntnis, Klarheit und innerer Ruhe.** Gemeinsam erkunden wir deine
+      aktuelle Situation, Bedürfnisse, Werte, Stärken und inneren Antreiber. Du
+      lernst, deine Gedanken und Gefühle bewusster wahrzunehmen – und erkennst,
+      was dir wirklich wichtig ist. Was dir Freude macht. Was dich antreibt.
+      Welche Ziele Sinn für dich ergeben. **✨Diese Klarheit ist die Basis für
+      ein selbstbestimmtes Leben – im Einklang mit deinen Werten und deiner
+      Biologie.** Denn echte Veränderung beginnt nicht im Außen. Sondern in dir.
+      **🚀 Entscheidend ist die Umsetzung – und genau dabei begleite ich dich.**
+      Du verstehst, wie dein System funktioniert und wie du bewusst mit
+      Herausforderungen umgehen kannst. Das **Lifeflow-System** kombiniert
+      moderne Neurowissenschaft mit Flow-Forschung nach Mihaly Csikszentmihalyi:
+      **🎯 Klare Ziele, die dich motivieren 🌱 Sinnvolle Tätigkeiten, die dir
+      Freude geben 🎧 Fokus & bewusste Aufmerksamkeit 🔁 Direktes Feedback auf
+      dein Handeln 🧩 Herausforderungen, die dich wachsen lassen 🧠
+      Neuro-Balance: Dopamin, Serotonin, Oxytocin, Endorphine 🧘♀️ Achtsamkeit &
+      Bewusstseinserweiterung** 💡 Wenn du weißt, was du willst, was dir fehlt
+      oder was du brauchst, entsteht Kraft. So gestaltest du dein Leben von
+      innen heraus – klar, ausgeglichen und im Flow. **Im 1:1-Coaching decken
+      wir unbewusste Muster auf, stärken dein Selbstbewusstsein, schaffen Raum
+      Emotion und bewirken echte Transformation.** Wir arbeiten eng zusammen –
+      mit wöchentlichen Calls, Austausch über WhatsApp und strukturierter
+      Reflexion und Übung in Notion. 📲 Alle Inhalte stehen dir auch nach dem
+      Coaching digital zur Verfügung. 🤝 Das ist keine Einbahnstraße – sondern
+      echte Co-Creation zwischen dir und mir. 🔆 Stell dir vor: Du wachst wieder
+      mit Sinn und Energie auf. Du kennst deine Ecken und Kanten – und findest
+      den Mut, dich so zu zeigen, wie du wirklich bist.
+    </p>
+  }
 </app-section-default>
 
 <app-section-default>
@@ -340,58 +363,88 @@
     }}
   </h1>
   <p slot="text">
-    Wenn du neugierig geworden bist und wissen willst, ob ich dir wirklich
-    helfen kann, dann nimm dir einen Moment Zeit und spüre in diese Fragen
-    hinein: Bist du aufrichtig daran interessiert, nachhaltigen inneren Frieden,
-    Freiheit und schöpferischen Flow zu erleben – unabhängig davon, was im Außen
-    geschieht? Fühlst du dich oft gestresst, erschöpft oder innerlich unruhig?
-    Hast du das Gefühl, dich selbst und deine wahre Ausrichtung aus den Augen
-    verloren zu haben? Funktionierst du im Alltag – aber fühlst dich dabei
-    innerlich leer oder getrieben? Wünschst du dir mehr Klarheit inmitten der
-    Unsicherheiten und Herausforderungen dieser Zeit? Fehlt dir manchmal die
-    Energie, um deine Ziele mit Leichtigkeit und Freude zu verfolgen? Möchtest
-    du dich selbst besser verstehen und ein Leben führen, das wirklich zu dir
-    passt? Willst du dich tief mit dir selbst und den Menschen in deinem Leben
-    verbunden fühlen? Wenn du innerlich bei diesen Fragen genickt hast – dann
-    kann ich dir helfen.
+    {{
+      currentLang === "en"
+        ? "If you've become curious and want to know if I can really help you, take a moment and feel into these questions: Are you genuinely interested in experiencing lasting inner peace, freedom, and joy – regardless of what happens in the outside world? Do you often feel stressed, exhausted, or internally restless? Do you feel like you've lost sight of yourself and your true direction? Are you functioning in everyday life – but feeling internally empty or driven? Do you lack the energy to pursue your goals with ease and joy? Would you like to better understand yourself and lead a life that truly suits you? Do you want to feel deeply connected with yourself and the people in your life? If you nodded internally to these questions – then I can help you"
+        : "Wenn du neugierig geworden bist und wissen willst, ob ich dir wirklich helfen kann, dann nimm dir einen Moment Zeit und spüre in diese Fragen hinein: Bist du aufrichtig daran interessiert, nachhaltigen inneren Frieden, Freiheit und Freude zu erleben – unabhängig davon, was im Außen geschieht? Fühlst du dich oft gestresst, erschöpft oder innerlich unruhig? Hast du das Gefühl, dich selbst und deine wahre Ausrichtung aus den Augen verloren zu haben? Funktionierst du im Alltag – fühlst dich dabei aber innerlich leer oder getrieben? Fehlt dir die Energie, um deine Ziele mit Leichtigkeit und Freude zu verfolgen? Möchtest du dich selbst besser verstehen und ein Leben führen, das wirklich zu dir passt? Willst du dich tief mit dir selbst und den Menschen in deinem Leben verbunden fühlen? Wenn du innerlich bei diesen Fragen genickt hast – dann kann ich dir helfen."
+    }}
   </p>
   <div slot="bottom">
-    <table
-      style="
-        width: 100%;
-        border-collapse: collapse;
-        font-family: Arial, sans-serif;
-      "
-    >
-      <thead>
-        <tr style="border-bottom: 2px solid #1e6f5c">
-          <th style="text-align: left; padding: 12px; color: #1e6f5c">
-            💚 YES THIS IS FOR YOU
-          </th>
-          <th style="text-align: left; padding: 12px; color: #1e6f5c">
-            ❌ SORRY IT'S NOT FOR YOU
-          </th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr style="border-bottom: 1px solid #ddd">
-          <td style="padding: 12px">Open, curious, growth-oriented</td>
-          <td style="padding: 12px">Unwilling to look deeper</td>
-        </tr>
-        <tr style="border-bottom: 1px solid #ddd">
-          <td style="padding: 12px">Self-responsible</td>
-          <td style="padding: 12px">Unreliable</td>
-        </tr>
-        <tr style="border-bottom: 1px solid #ddd">
-          <td style="padding: 12px">Ambitious</td>
-          <td style="padding: 12px">Only driven by status or ego</td>
-        </tr>
-        <tr>
-          <td style="padding: 12px">Willing to invest time & energy</td>
-          <td style="padding: 12px">No real commitment</td>
-        </tr>
-      </tbody>
-    </table>
+    @if (currentLang === "en") {
+      <table
+        style="
+          width: 100%;
+          border-collapse: collapse;
+          font-family: Arial, sans-serif;
+        "
+      >
+        <thead>
+          <tr style="border-bottom: 2px solid #1e6f5c">
+            <th style="text-align: left; padding: 12px; color: #1e6f5c">
+              💚 YES THIS IS FOR YOU
+            </th>
+            <th style="text-align: left; padding: 12px; color: #1e6f5c">
+              ❌ SORRY IT'S NOT FOR YOU
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom: 1px solid #ddd">
+            <td style="padding: 12px">Open, curious, growth-oriented</td>
+            <td style="padding: 12px">Unwilling to look deeper</td>
+          </tr>
+          <tr style="border-bottom: 1px solid #ddd">
+            <td style="padding: 12px">Self-responsible</td>
+            <td style="padding: 12px">Unreliable</td>
+          </tr>
+          <tr style="border-bottom: 1px solid #ddd">
+            <td style="padding: 12px">Ambitious</td>
+            <td style="padding: 12px">Only driven by status or ego</td>
+          </tr>
+          <tr>
+            <td style="padding: 12px">Willing to invest time & energy</td>
+            <td style="padding: 12px">No real commitment</td>
+          </tr>
+        </tbody>
+      </table>
+    } @else {
+      <table
+        style="
+          width: 100%;
+          border-collapse: collapse;
+          font-family: Arial, sans-serif;
+        "
+      >
+        <thead>
+          <tr style="border-bottom: 2px solid #1e6f5c">
+            <th style="text-align: left; padding: 12px; color: #1e6f5c">
+              💚 JA – DAS IST FÜR DICH
+            </th>
+            <th style="text-align: left; padding: 12px; color: #1e6f5c">
+              ❌ NEIN – DAS IST NICHT FÜR DICH
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom: 1px solid #ddd">
+            <td style="padding: 12px">Offen, neugierig, wachstumsorientiert</td>
+            <td style="padding: 12px">Nicht bereit, tiefer zu schauen</td>
+          </tr>
+          <tr style="border-bottom: 1px solid #ddd">
+            <td style="padding: 12px">Selbstverantwortlich</td>
+            <td style="padding: 12px">Unzuverlässig</td>
+          </tr>
+          <tr style="border-bottom: 1px solid #ddd">
+            <td style="padding: 12px">Ambitioniert</td>
+            <td style="padding: 12px">Nur getrieben von Status oder Ego</td>
+          </tr>
+          <tr>
+            <td style="padding: 12px">Bereit, Zeit & Energie zu investieren</td>
+            <td style="padding: 12px">Kein echtes Commitment</td>
+          </tr>
+        </tbody>
+      </table>
+    }
   </div>
 </app-section-default>
 
@@ -408,24 +461,69 @@
       Klar Denken, gelassen Handeln und im Flow leben - Produktiv & Glücklich
     </p>
   </div>
-  <p slot="list">
-    Hi, ich bin Basil. Ich habe Softwareentwicklung studiert und als Entwickler
-    gearbeitet – meine Begeisterung für Technologie begleitet mich seit meiner
-    Kindheit. Alles Digitale, Neue und Innovative hat mich schon immer
-    fasziniert. Vor über fünf Jahren begann ich mich intensiv mit dem Thema
-    Bewusstsein zu beschäftigen – aus einem persönlichen Bedürfnis heraus. Durch
-    eigene Herausforderungen habe ich erkannt: Ich kann mich verändern. Doch je
-    tiefer ich ging, desto klarer wurde mir – es geht nicht darum, mich zu
-    ändern, sondern mich selbst besser zu verstehen und alle Seiten in mir
-    anzuerkennen. Auch die Sinnfrage hat mich oft beschäftigt – und ich habe
-    viele Antworten gefunden. Ich wollte früher immer der Beste sein und habe
-    mir deshalb viel Wissen rund um Performance und Produktivität angeeignet.
-    Gleichzeitig war mir mein Wohlbefinden und meine mentale Gesundheit immer
-    wichtig. Heute verbinde ich beides: Performance mit Tiefe, Klarheit und
-    innerem Frieden. Denn was bringt es, schneller zu rennen, wenn es sich nicht
-    gut anfühlt? Ich lebe heute mit Freude, Bewusstsein und Fokus – und nutze
-    Prinzipien wie Flow, um im Fluss des Lebens zu sein und zu bleiben.
-  </p>
+  @if (currentLang === "en") {
+    <p slot="list">
+      **Hi, I'm Basil.** I've always been curious – asking questions,
+      researching, analyzing. Why is something the way it is? How do things
+      connect? What causes what? These questions accompany me through life and
+      repeatedly create attention and new perspectives – both in my private life
+      and career. I studied systems engineering and later worked as a developer.
+      But beyond technology, I've always been fascinated by people: behavior,
+      emotions, decisions – and what truly drives us. I wanted to make the best
+      of my life. Achieve goals. Develop myself. I focused on performance,
+      motivation, optimization and focus – and accomplished step by step what I
+      had set out to do. But eventually the question arose: *Was that all there
+      is?* For over ten years now, I've been exploring who I am. Why I feel,
+      think, act the way I do. How the mind works. What development means – and
+      what constitutes true fulfillment. I've learned: **It's not about
+      optimizing yourself – but understanding yourself (both the bright and
+      shadow sides). Real power is released when the unknown is discovered,
+      combined with knowledge, and lived.** Today I guide people on their
+      journey from self-optimization to genuine self-knowledge – for better
+      **effectiveness** with inner balance, emotional depth, and healthy
+      relationships. I combine integral systems thinking, values work,
+      mindfulness, coaching tools, neuroscience, and technology into a holistic
+      approach. **Through my training (EASC, LTC), I was able to connect my
+      knowledge, experiences, and all the insights from recent years into a
+      coherent whole.** My own path is now part of my work – not as theory, but
+      as lived practice. I'm convinced: **Only those who have clarity within can
+      act clearly and powerfully on the outside.** **I believe in profound
+      change & effectiveness – not through pressure, but through understanding &
+      clarity.**
+    </p>
+  } @else {
+    <p slot="list">
+      **Hi, ich bin Basil.** Ich war schon immer neugierig – habe gefragt,
+      geforscht, analysiert. Warum ist etwas so, wie es ist? Wie hängen Dinge
+      zusammen? Was bewirkt was? Diese Fragen begleiten mich durchs Leben und
+      sorgen immer wieder für Aufmerksamkeit und neue Perspektiven – im Privaten
+      wie im Beruf. Ich habe Systemtechnik studiert und später als Entwickler
+      gearbeitet. Doch neben der Technik hat mich immer auch der Mensch
+      fasziniert: Verhalten, Emotionen, Entscheidungen – und was uns wirklich
+      antreibt. Ich wollte das Beste aus meinem Leben machen. Ziele erreichen.
+      Mich entfalten. Ich beschäftigte mich mit Performance, Motivation,
+      Optimierung und Fokus – und erreichte Schritt für Schritt, was ich mir
+      vorgenommen hatte. Doch irgendwann kam die Frage: *War das jetzt alles?*
+      Seit über zehn Jahren erforsche ich nun, wer ich bin. Warum ich fühle,
+      denke, handle, wie ich es tue. Wie der Geist funktioniert. Was Entwicklung
+      bedeutet – und was echte Erfüllung ausmacht. Ich habe gelernt: **Es geht
+      nicht darum, sich zu optimieren – sondern sich selbst zu verstehen
+      (Sonnen- wie Schattenseiten). Wirkliche Kraft wird freigesetzt, wenn
+      Unbekanntes entdeckt, mit Wissen kombiniert und gelebt wird.** Heute
+      begleite ich Menschen auf dem Weg von Selbstoptimierung zu echter
+      Selbstkenntnis – für mehr Wirksamkeit mit innerem Gleichgewicht,
+      emotionale Tiefe und gesunde Beziehungen. Ich verbinde integrales
+      Systemdenken, Wertearbeit, Achtsamkeit, Coaching-Tools,
+      Neurowissenschaften und Technologie zu einem ganzheitlichen Ansatz.
+      **Durch meine Ausbildungen (EASC, LTC) konnte ich mein Wissen, meine
+      Erfahrungen und all die Erkenntnisse der letzten Jahre zu einem stimmigen
+      Ganzen verbinden.** Mein eigener Weg ist heute Teil meiner Arbeit – nicht
+      als Theorie, sondern als gelebte Praxis. Ich bin überzeugt: **Nur wer sich
+      im Inneren klar ist, kann im Außen klar und kraftvoll handeln.** **Ich
+      glaube an tiefe Veränderung & Wirksamkeit – nicht durch Druck, sondern
+      durch Verständnis & Klarheit.**
+    </p>
+  }
   <img
     slot="image"
     src="assets/basil-smile.jpg"
