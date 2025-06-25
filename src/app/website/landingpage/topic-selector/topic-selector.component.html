@@ -6,7 +6,13 @@
       [routerLink]="['drive']"
       ><i class="material-icons">grade</i></a
     >
-    <h4>I have goals—but I’m stuck, unmotivated, & can't focus.</h4>
+    <h4>
+      {{
+        currentLang === "en"
+          ? "I have goals—but I’m stuck, unmotivated, & can't focus."
+          : "Ich habe Ziele – aber bin unmotiviert & der Fokus fehlt."
+      }}
+    </h4>
   </div>
 
   <div class="col s12 m6">
@@ -16,6 +22,12 @@
       [routerLink]="['inner-peace']"
       ><i class="material-icons">crop_square</i></a
     >
-    <h4>I feel overwhelmed or mentally restless.</h4>
+    <h4>
+      {{
+        currentLang === "en"
+          ? "I feel overwhelmed or restless."
+          : "Ich fühle mich überfordert oder unruhig"
+      }}
+    </h4>
   </div>
 </div>
