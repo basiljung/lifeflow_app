@@ -24,7 +24,7 @@
       {{ currentLang === "en" ? "Let's have a look." : "Los geht's." }}
     </h4>
     <a
-      href="#topic-selector"
+      (click)="scrollTo('topic-selector')"
       class="btn-floating btn-large waves-effect waves-light bg-highlight"
       ><i class="material-icons">keyboard_arrow_down</i></a
     >

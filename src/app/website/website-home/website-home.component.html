@@ -11,7 +11,7 @@
     </h1>
     <ul slot="list">
       <li>You’re doing a lot — but feel unfulfilled</li>
-      <li>That inner restlessness won’t go away</li>
+      <li><b>That inner restlessness won’t go away</b></li>
       <li>You feel often frustrated</li>
       <li>It feels like an endless circle</li>
     </ul>
@@ -26,11 +26,11 @@
       }}
     </h1>
     <ul slot="list">
-      <li>You stay grounded — stand for what truly matters.</li>
+      <li><b>You stay grounded — stand for what truly matters.</b></li>
       <li>Act with clarity and intention.</li>
-      <li>Enjoy the journey — without losing your drive.**</li>
+      <li><b>Enjoy the journey</b> — without losing your drive.</li>
       <li>You stay calm in chaos.</li>
-      <li>Bonus: You explore the neuroscience behind it all**</li>
+      <li>Bonus: You explore the neuroscience behind it all</li>
     </ul>
     <img
       slot="image"
@@ -51,8 +51,8 @@
     <ul slot="list">
       <li>So many ideas — but lots of doubts and overthinking.</li>
       <li>You lose yourself in small tasks and can’t focus.</li>
-      <li>You lack the energy for what truly matters.</li>
-      <li>Frustrated, you feel like you’re not in control.</li>
+      <li><b>You lack the energy for what truly matters.</b></li>
+      <li><b>Frustrated, you feel like you’re not in control.</b></li>
       <li>You don't see the meaning.</li>
       <li>It feels like the engine isn't running.</li>
     </ul>
@@ -73,36 +73,46 @@
     </h1>
     <ul slot="list">
       <li>You reconnect with your inner drive.</li>
-      <li>**You move forward — with energy, clarity, and purpose.**</li>
+      <li><b>You move forward — with energy, clarity, and purpose.</b></li>
       <li>You know what truly matters.</li>
-      <li>You learn how to spark momentum and **stay motivated.**</li>
-      <li>Bonus: You **understand the neuroscience** behind it all.</li>
+      <li>You learn how to spark momentum and <b>stay motivated.</b></li>
+      <li>Bonus: You <b>understand the neuroscience</b> behind it all.</li>
     </ul>
     <img slot="image" src="assets/drive.png" width="200" class="img-setting" />
   </app-section-default-2col>
 }
 
-<div>
-  <h3 class="text-highlight center-align">
-    Without understanding yourself and your system, you’re moving – but not in a
-    way that fulfills you.
+<div style="margin-top: 3rem; margin-bottom: 7rem">
+  <h3
+    class="text-highlight center-align"
+    style="padding: 2rem; text-shadow: 0 20px 40px #0d1b2a"
+  >
+    Without understanding yourself and your system, you’re moving – but not in
+    flow and in a way that fulfills you.
   </h3>
 </div>
 
-<app-section-default>
-  <h1 slot="title">
-    Want to know how “in FLOW” you really are? Try the app I developed.
-  </h1>
-  <p slot="text">Make the LifeFlow-Selfcheck</p>
-  <div slot="bottom">
-    <a
-      class="btn-floating btn-large waves-effect waves-light btn-gradient pulse-btn"
-      [href]="'/' + currentLang + '/app'"
-      target="_blank"
-      ><i class="material-icons">assessment</i></a
-    >
-  </div>
-</app-section-default>
+<div
+  class="img-setting"
+  style="background-color: #f5f5f5; margin-bottom: 10rem"
+>
+  <app-section-default>
+    <h1 class="gradient-title" slot="title" style="padding-top: 1rem">
+      Want to know how “in FLOW” you really are? Try the app I developed.
+    </h1>
+    <p slot="text" class="text-highlight" style="font-size: 1.4rem">
+      Click and do the LifeFlow-Selfcheck
+    </p>
+    <div style="padding: 2rem" slot="bottom">
+      <a
+        class="btn-floating btn-large waves-effect waves-light btn-gradient pulse-btn"
+        [href]="'/' + currentLang + '/app'"
+        target="_blank"
+        ><i class="material-icons">assessment</i></a
+      >
+    </div>
+  </app-section-default>
+</div>
 
 <div class="feedback-flex-wrapper">
   <!-- Video links -->
@@ -118,6 +128,7 @@
 
   <!-- Carousel rechts -->
   <div class="carousel-box">
+    <h4>Clients Feedback</h4>
     <div class="carousel">
       <a class="carousel-item">
         <img src="assets/feedback_text/David_Feedback_lines.png" />
@@ -141,16 +152,34 @@
   </div>
 </div>
 
-<div class="row center-align">
+<div class="row center-align" style="margin-top: 12rem; margin-bottom: 8rem">
   <div class="col s12 m6">
     <h1 class="gradient-title">
-      I know your challenge is unique, that's why we work 1:1
+      {{
+        currentLang === "en"
+          ? "I know your challenge is unique, that's why we work 1:1"
+          : "Ich weiß, dass deine Herausforderung einzigartig ist, deshalb arbeiten wir 1:1"
+      }}
     </h1>
-    <p>
-      As a zertifizierter EASC (European Association for Supervision and
-      Coaching) coach and advisor, I'm here to systematically guide you through
-      your personal development process.
-    </p>
+    @if (currentLang === "en") {
+      <p>
+        As a certified LTC &
+        <a href="https://www.easc-online.eu/" target="_blank"
+          >EASC (European Association for Supervision and Coaching)</a
+        >
+        coach and mentor, I’m here to guide you systematically – with empathy
+        and awareness you through your personal development process.
+      </p>
+    } @else {
+      <p>
+        Als zertifizierter LTC &
+        <a href="https://www.easc-online.eu/" target="_blank"
+          >EASC (European Association for Supervision and Coaching)</a
+        >
+        Coach und Mentor begleite ich Sie systematisch – mit Empathie und
+        Achtsamkeit – ​​durch Ihren persönlichen Entwicklungsprozess.
+      </p>
+    }
   </div>
 
   <div class="col s12 m6">
@@ -163,6 +192,7 @@
       />
       <a
         style="border-radius: 12px"
+        (click)="scrollTo('aboutme')"
         class="waves-effect waves-light btn bg-highlight"
         >More about me</a
       >
@@ -448,7 +478,7 @@
   </div>
 </app-section-default>
 
-<app-section-default-2col>
+<app-section-default-2col id="aboutme">
   <div slot="title">
     <h1 class="gradient-title">
       {{

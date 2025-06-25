@@ -53,6 +53,13 @@ export class WebsiteHomeComponent implements OnInit, OnDestroy, AfterViewInit {
     });
   }
 
+  scrollTo(id: string) {
+    const el = document.getElementById(id);
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
+
   ngOnDestroy(): void {
     this.destroy$.next();
     this.destroy$.complete();
