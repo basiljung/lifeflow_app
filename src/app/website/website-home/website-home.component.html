@@ -370,7 +370,7 @@
     {{
       currentLang === "en"
         ? "🌟 Imagine your life with clarity, energy & flow."
-        : "🌟 Stellen dir ein Leben mit Klarheit, Energie und Flow vor."
+        : "🌟 Stelle dir ein Leben mit Klarheit, Energie und Flow vor."
     }}
   </h1>
   @if (currentLang === "en") {
@@ -397,6 +397,8 @@
     class="img-setting"
   />
 </app-section-default-2col>
+
+<app-cta></app-cta>
 
 <app-section-default-2col id="aboutlifeflow">
   <h1 class="gradient-title" slot="title">
@@ -689,7 +691,7 @@
 </app-section-default>
 
 <app-section-default id="aboutme">
-  <div slot="title">
+  <!--   <div slot="title">
     <h1 class="gradient-title">
       {{
         currentLang === "en"
@@ -697,14 +699,11 @@
           : "Design your life – consciously and in flow"
       }}
     </h1>
-    <p>
-      Klar Denken, gelassen Handeln und im Flow leben - Produktiv & Glücklich
-    </p>
-  </div>
+  </div> -->
   @if (currentLang === "en") {
     <div slot="text">
       <p>
-        <b>Hi, I'm Basil.</b><br />
+        <b style="font-size: 2.5rem">Hi, I'm Basil.</b><br />
         I've always been curious – asking questions, researching, analyzing. Why
         is something the way it is? How do things connect? What causes what?
         These questions accompany me through life and repeatedly create
@@ -767,7 +766,7 @@
   } @else {
     <div slot="text">
       <p>
-        <b>Hi, ich bin Basil.</b><br />
+        <b style="font-size: 2.5rem">Hi, ich bin Basil.</b><br />
         Ich war schon immer neugierig – habe gefragt, geforscht, analysiert.
         Warum ist etwas so, wie es ist? Wie hängen Dinge zusammen? Was bewirkt
         was? Diese Fragen begleiten mich durchs Leben und sorgen immer wieder
@@ -833,40 +832,16 @@
       </p>
     </div>
   }
-  <img
-    slot="image"
-    slot="bottom"
-    src="assets/basil-smile.jpg"
-    width="200"
-    class="img-setting"
-  />
+  <div slot="bottom">
+    <img
+      slot="image"
+      slot="bottom"
+      src="assets/basil-smile.jpg"
+      width="200"
+      class="img-setting"
+    />
+  </div>
+  x
 </app-section-default>
 
-<app-section-default>
-  <div slot="text">
-    <h3>Sign up for more</h3>
-    <h4>
-      If you want to get weekly inputs about motivation, purpose & flow. Sign
-      up.
-    </h4>
-    <a
-      class="waves-effect waves-light btn bg-highlight"
-      onclick="ml('show', 'CX9x9O', true)"
-      style="border-radius: 15px"
-      ><i class="material-icons right">mail</i>
-      {{
-        currentLang === "en" ? "Sign up for more" : "Jetzt, mehr erfahren"
-      }}</a
-    >
-    <h3>You know this is exactly what you need – Here's how to proceed:</h3>
-    <a
-      class="btn-floating btn-large waves-effect waves-light btn-gradient pulse-btn"
-      href="https://forms.gle/yZuFjDN52hTdjNHLA"
-      ><i class="material-icons">crop_square</i></a
-    >
-    <p>
-      If there is a question, text me:
-      <a href="mailto:basil.jung@lifeflow.now">basil.jung&#64;lifeflow.now</a>
-    </p>
-  </div>
-</app-section-default>
+<app-cta></app-cta>
