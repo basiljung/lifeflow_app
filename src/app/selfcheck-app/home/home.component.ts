@@ -2,13 +2,18 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DetailsFAQComponent } from '../details-faq/details-faq.component';
 import { SelfcheckLogicComponent } from '../self-check-logic/self-check-logic.component';
-import { NavigationEnd, Router } from '@angular/router';
+import { NavigationEnd, Router, RouterModule } from '@angular/router';
 import { filter, Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, DetailsFAQComponent, SelfcheckLogicComponent],
+  imports: [
+    CommonModule,
+    DetailsFAQComponent,
+    SelfcheckLogicComponent,
+    RouterModule,
+  ],
   templateUrl: './home.component.html',
 })
 export class HomeComponent implements OnInit, OnDestroy {

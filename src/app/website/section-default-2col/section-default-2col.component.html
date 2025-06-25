@@ -1,10 +1,17 @@
-<div style="margin-bottom: 10rem">
+<div style="margin-bottom: 12em">
   <div class="center-align">
     <ng-content select="[slot=title]"></ng-content>
   </div>
 
-  <div class="row center-align">
-    <div class="col s12 m6" style="font-size: 1.2rem; line-height: 45px">
+  <div class="flex-row center-align">
+    <div
+      class="col s12 m6"
+      style="
+        font-size: clamp(1rem, 1.5vw + 0.5rem, 1.4rem);
+        color: #ffffff;
+        text-align: justify;
+      "
+    >
       <ng-content select="[slot=list]"></ng-content>
     </div>
 

@@ -133,10 +133,10 @@
   </app-section-default-2col>
 }
 
-<div style="margin-top: 3rem; margin-bottom: 7rem">
+<div style="margin-bottom: 12rem">
   <h3
     class="text-highlight center-align"
-    style="padding: 2rem; text-shadow: 0 20px 40px #0d1b2a"
+    style="font-size: clamp(1.5rem, 1.5vw + 0.5rem, 3rem)"
   >
     {{
       currentLang === "en"
@@ -147,37 +147,32 @@
   </h3>
 </div>
 
-<div
-  class="img-setting"
-  style="background-color: #f5f5f5; margin-bottom: 10rem"
->
-  <app-section-default>
-    <h1 class="gradient-title" slot="title" style="padding-top: 1rem">
-      {{
-        currentLang === "en"
-          ? "Want to know how “in FLOW” you really are? Use the app I developed."
-          : "Möchtest du wissen, wie „im FLOW“ du wirklich bist? Nutz die von mir entwickelte App."
-      }}
-    </h1>
-    <p slot="text" class="text-highlight" style="font-size: 1.4rem">
-      {{
-        currentLang === "en"
-          ? "      Click and do the LifeFlow-Selfcheck"
-          : "Klick hier und mach den LifeFlow-Selbstcheck"
-      }}
-    </p>
-    <div style="padding: 2rem" slot="bottom">
-      <a
-        class="btn-floating btn-large waves-effect waves-light btn-gradient pulse-btn"
-        [href]="'/' + currentLang + '/app'"
-        target="_blank"
-        ><i class="material-icons">assessment</i></a
-      >
-    </div>
-  </app-section-default>
+<div class="cta">
+  <h2 class="text-highlight">
+    {{
+      currentLang === "en"
+        ? "I developed an App! Test how “in FLOW” you really are? "
+        : "Möchtest du wissen, wie „im FLOW“ du wirklich bist? Nutz die von mir entwickelte App."
+    }}
+  </h2>
+  <h4 class="text-primary" style="padding: 1rem">
+    {{
+      currentLang === "en"
+        ? "      Click here"
+        : "Klick hier und mach den LifeFlow-Selbstcheck"
+    }}
+  </h4>
+  <div>
+    <a
+      class="btn-floating btn-large waves-effect waves-light btn-gradient pulse-btn"
+      [href]="'/' + currentLang + '/app'"
+      target="_blank"
+      ><i class="material-icons">assessment</i></a
+    >
+  </div>
 </div>
 
-<div class="feedback-flex-wrapper">
+<div class="feedback-flex-wrapper" style="margin-bottom: 12rem">
   <!-- Video links -->
   <div class="video-box">
     <div class="shorts-video-wrapper">
@@ -217,7 +212,7 @@
   </div>
 </div>
 
-<div class="row center-align" style="margin-top: 12rem; margin-bottom: 8rem">
+<div class="row center-align" style="margin-bottom: 12rem">
   <div class="col s12 m6">
     <h1 class="gradient-title" style="font-size: 3rem">
       {{
@@ -227,7 +222,7 @@
       }}
     </h1>
     @if (currentLang === "en") {
-      <p>
+      <p class="text-light">
         As a certified LTC &
         <a href="https://www.easc-online.eu/" target="_blank"
           >EASC (European Association for Supervision and Coaching)</a
@@ -236,7 +231,7 @@
         and awareness you through your personal development process.
       </p>
     } @else {
-      <p>
+      <p class="text-light">
         Als zertifizierter LTC &
         <a href="https://www.easc-online.eu/" target="_blank"
           >EASC (European Association for Supervision and Coaching)</a
@@ -245,7 +240,7 @@
         Achtsamkeit – ​​durch Ihren persönlichen Entwicklungsprozess.
       </p>
     }
-    <!-- <img src="assets/LTC-siegel.png" width="100" class="img-setting" /> -->
+    <img src="assets/LTC-siegel.png" width="100" class="img-setting" />
   </div>
 
   <div class="col s12 m6">
@@ -266,82 +261,92 @@
   </div>
 </div>
 
-<h1 class="gradient-title" slot="title">
-  {{ currentLang === "en" ? "What's the approach?" : "Wie gehen wir vor?" }}
-</h1>
-<div class="row center-align">
-  <div class="col s12 m4">
-    <h3>{{ currentLang === "en" ? "1# Understand" : "1# Verstehen" }}</h3>
-    <div class="icon">🔍</div>
-    <h4>{{ currentLang === "en" ? "Self-Awareness" : "Selbsterkenntnis" }}</h4>
-    <p>
-      {{
-        currentLang === "en"
-          ? "Truly get to know yourself. Understand your thoughts, emotions, and behaviors — and why you sometimes stand in your own way."
-          : "Lerne dich selbst wirklich kennen. Verstehe deine Gedanken, Emotionen und Verhaltensmuster – und warum du dir manchmal selbst im Weg stehst."
-      }}
-    </p>
-    <p>
-      {{
-        currentLang === "en"
-          ? "We’ll dive into your biology, values, needs, strengths, and patterns."
-          : "Wir tauchen ein in deine Biologie, Werte, Bedürfnisse, Stärken und Muster."
-      }}
-    </p>
-  </div>
+<div style="margin-bottom: 12rem">
+  <h1 class="gradient-title center-align" slot="title">
+    {{ currentLang === "en" ? "What's the approach?" : "Wie gehen wir vor?" }}
+  </h1>
+  <div class="row center-align">
+    <div class="col s12 m4">
+      <h3 class="text-light">
+        {{ currentLang === "en" ? "1# Understand" : "1# Verstehen" }}
+      </h3>
+      <div class="icon">🔍</div>
+      <h4>
+        {{ currentLang === "en" ? "Self-Awareness" : "Selbsterkenntnis" }}
+      </h4>
+      <p class="text-light">
+        {{
+          currentLang === "en"
+            ? "Truly get to know yourself. Understand your thoughts, emotions, and behaviors — and why you sometimes stand in your own way."
+            : "Lerne dich selbst wirklich kennen. Verstehe deine Gedanken, Emotionen und Verhaltensmuster – und warum du dir manchmal selbst im Weg stehst."
+        }}
+      </p>
+      <p class="text-light">
+        {{
+          currentLang === "en"
+            ? "We’ll dive into your biology, values, needs, strengths, and patterns."
+            : "Wir tauchen ein in deine Biologie, Werte, Bedürfnisse, Stärken und Muster."
+        }}
+      </p>
+    </div>
 
-  <div class="col s12 m4">
-    <h3>{{ currentLang === "en" ? "2# Align" : "2# Ausrichten" }}</h3>
-    <div class="icon">🎯</div>
-    <h4>{{ currentLang === "en" ? "Strategy" : "Strategie" }}</h4>
-    <p>
-      {{
-        currentLang === "en"
-          ? "Define what truly matters to you — and align your life with your authentic goals, values, and needs."
-          : "Definiere, was dir wirklich wichtig ist – und richte dein Leben auf deine echten Ziele, Werte und Bedürfnisse aus."
-      }}
-    </p>
-    <p>
-      {{
-        currentLang === "en"
-          ? "Live with intention, awareness and flow, so you can stay motivated and joyful on your path."
-          : "Lebe mit Klarheit, Bewusstsein und Flow – damit du motiviert und mit Freude deinen Weg gehst."
-      }}
-    </p>
-  </div>
+    <div class="col s12 m4">
+      <h3 class="text-light">
+        {{ currentLang === "en" ? "2# Align" : "2# Ausrichten" }}
+      </h3>
+      <div class="icon">🎯</div>
+      <h4>{{ currentLang === "en" ? "Strategy" : "Strategie" }}</h4>
+      <p class="text-light">
+        {{
+          currentLang === "en"
+            ? "Define what truly matters to you — and align your life with your authentic goals, values, and needs."
+            : "Definiere, was dir wirklich wichtig ist – und richte dein Leben auf deine echten Ziele, Werte und Bedürfnisse aus."
+        }}
+      </p>
+      <p class="text-light">
+        {{
+          currentLang === "en"
+            ? "Live with intention, awareness and flow, so you can stay motivated and joyful on your path."
+            : "Lebe mit Klarheit, Bewusstsein und Flow – damit du motiviert und mit Freude deinen Weg gehst."
+        }}
+      </p>
+    </div>
 
-  <div class="col s12 m4">
-    <h3>{{ currentLang === "en" ? "3# Live" : "3# Leben" }}</h3>
-    <div class="icon">▶️</div>
-    <h4>{{ currentLang === "en" ? "Cultivate Flow" : "Flow leben" }}</h4>
-    <p>
-      {{
-        currentLang === "en"
-          ? "You anchor your new self-understanding in everyday life and live by the rules of flow."
-          : "Du verankerst dein neues Selbstverständnis im Alltag und lebst nach den Prinzipien des Flow."
-      }}
-    </p>
-    <p>
-      {{
-        currentLang === "en"
-          ? "Furthermore, you align thinking, feeling, and action — and face challenges with greater awareness and inner strength."
-          : "Du bringst Denken, Fühlen und Handeln in Einklang – und gehst Herausforderungen mit mehr Bewusstsein und innerer Stärke an."
-      }}
-    </p>
-  </div>
+    <div class="col s12 m4">
+      <h3 class="text-light">
+        {{ currentLang === "en" ? "3# Live" : "3# Leben" }}
+      </h3>
+      <div class="icon">▶️</div>
+      <h4>{{ currentLang === "en" ? "Cultivate Flow" : "Flow leben" }}</h4>
+      <p class="text-light">
+        {{
+          currentLang === "en"
+            ? "You anchor your new self-understanding in everyday life and live by the rules of flow."
+            : "Du verankerst dein neues Selbstverständnis im Alltag und lebst nach den Prinzipien des Flow."
+        }}
+      </p>
+      <p class="text-light">
+        {{
+          currentLang === "en"
+            ? "Furthermore, you align thinking, feeling, and action — and face challenges with greater awareness and inner strength."
+            : "Du bringst Denken, Fühlen und Handeln in Einklang – und gehst Herausforderungen mit mehr Bewusstsein und innerer Stärke an."
+        }}
+      </p>
+    </div>
 
-  <div class="col s12 m12" style="margin-top: 3rem; margin-bottom: 3rem">
-    <a
-      style="border-radius: 12px"
-      (click)="scrollTo('aboutlifeflow')"
-      class="waves-effect waves-light btn bg-highlight"
-    >
-      {{
-        currentLang === "en"
-          ? "🔍 I want to know more"
-          : "🔍 Ich möchte mehr erfahren"
-      }}
-    </a>
+    <div class="col s12 m12" style="margin-top: 3rem; margin-bottom: 3rem">
+      <a
+        style="border-radius: 12px"
+        (click)="scrollTo('aboutlifeflow')"
+        class="waves-effect waves-light btn bg-highlight"
+      >
+        {{
+          currentLang === "en"
+            ? "🔍 I want to know more"
+            : "🔍 Ich möchte mehr erfahren"
+        }}
+      </a>
+    </div>
   </div>
 </div>
 
@@ -351,19 +356,13 @@
       currentLang === "en" ? "WHY is it relevant?" : "WARUM ist es relevant?"
     }}
   </h1>
-  <p slot="list" style="line-height: 30px">
+  <p slot="list">
     {{
       currentLang === "en"
         ? "The world is accelerating. We all feel it: digital overload, uncertainty, pressure. Running faster isn't the answer anymore. At the same time, the desire for clarity, calm, connection, and meaning is growing. For me, escaping, distracting myself, or blocking out reality is not the solution. What can we do? Now is the time to understand who we are, how we function and how we want to live – build an inner foundation that grounds us in a fast-moving world: mentally, emotionally, physically, and spiritually. LIFEFLOW offers a clear response to the questions many are asking: Who am I – really? What gives my life meaning? How can I stay grounded in this high-speed world? How do I live consciously – with myself, others, AI, and digital tools? This isn't just another online course. LifeFlow Coaching System is a proven transformational path that bridges theoretical knowledge, practical exercises, deep reflection, and professional coaching – and helps you embody it in everyday life. It includes modern science, integral theory, EQ, spiral dynamics, digital tools, and personal assistance for more self-confidence and performance with meaning and peace."
         : "Die Welt beschleunigt sich. Wir alle spüren es: digitale Überlastung, Unsicherheit, Druck. Schneller zu laufen ist nicht mehr die Antwort. Gleichzeitig wächst das Verlangen nach Klarheit, Ruhe, Verbindung und Sinn. Für mich ist Flucht, Ablenkung oder das Ausblenden der Realität keine Lösung. Was können wir tun? Jetzt ist die Zeit, zu verstehen, wer wir sind, wie wir funktionieren und wie wir leben wollen – eine innere Grundlage aufbauen, die uns in einer sich schnell bewegenden Welt halt gibt: mental, emotional, körperlich und spirituell. LIFEFLOW bietet eine klare Antwort auf die Fragen: Wer bin ich – wirklich? Was gibt meinem Leben Bedeutung? Wie kann ich in dieser Hochgeschwindigkeitswelt geerdet bleiben? Wie lebe ich bewusst – mit mir selbst, anderen, KI und digitalen Werkzeugen? Dies ist nicht nur ein weiterer Online-Kurs. Das LifeFlow Coaching System ist ein bewährter Transformationsweg, der theoretisches Wissen, praktische Übungen, tiefe Reflexion und professionelles Coaching miteinander verbindet – und dir hilft, es im Alltag zu verkörpern. Es umfasst moderne Wissenschaft, integrale Theorie, EQ, Spiral Dynamics, digitale Werkzeuge und persönliche Unterstützung für mehr Selbstvertrauen und Wirksamkeit mit Sinn und Frieden."
     }}
   </p>
-  <img
-    slot="image"
-    src="assets/inner-peace.jpg"
-    width="200"
-    class="img-setting"
-  />
 </app-section-default-2col>
 
 <app-section-default-2col>

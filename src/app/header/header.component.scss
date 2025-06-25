@@ -37,13 +37,15 @@ a:hover {
 
 @media screen and (max-width: 600px) {
   .topnav.responsive {
-    position: relative;
+    /* Lass es fixed – nicht ändern */
   }
+
   .topnav.responsive .icon {
     position: absolute;
     right: 0;
     top: 0;
   }
+
   .topnav.responsive a {
     float: none;
     display: block;

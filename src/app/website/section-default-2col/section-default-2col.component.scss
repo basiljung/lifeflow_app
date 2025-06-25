@@ -1,1 +1,12 @@
+.flex-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6rem; /* control spacing here */
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
 
+.flex-col {
+  flex: 1 1 400px;
+}
