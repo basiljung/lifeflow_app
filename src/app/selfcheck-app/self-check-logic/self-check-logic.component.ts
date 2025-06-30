@@ -26,9 +26,7 @@ export type ResultData = {
   templateUrl: './self-check-logic.component.html',
   styleUrls: ['./self-check-logic.component.scss'],
 })
-export class SelfcheckLogicComponent
-  implements AfterViewInit, OnInit, OnDestroy
-{
+export class SelfcheckLogicComponent implements OnInit, OnDestroy {
   currentQuestionIndex = 0;
   currentLangSelfCheck: string = 'en';
   showLanguageBtn = true;
@@ -84,12 +82,16 @@ export class SelfcheckLogicComponent
   ngOnInit(): void {
     this.langService.lang$.pipe(takeUntil(this.destroy$)).subscribe((lang) => {
       this.currentLang = lang;
+      setTimeout(() => {
+        const elems = document.querySelectorAll('.collapsible');
+        M.Collapsible.init(elems);
+      }, 0);
     });
   }
 
-  ngAfterViewInit() {
+  /*   ngAfterViewInit() {
     M.Collapsible.init(document.querySelectorAll('.collapsible'), {});
-  }
+  } */
 
   toggleLanguageSelfcheck(lang: string) {
     this.currentLangSelfCheck = lang;
