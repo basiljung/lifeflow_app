@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DisplayResultComponent } from './display-result/display-result.component';
 import { RESULTDATA_EN, SelfcheckTopics } from '../data/resultData-en';
@@ -7,8 +7,6 @@ import { QUESTIONS_DE } from '../data/questions-de';
 import { RESULTDATA_DE } from '../data/resultData-de';
 import { Subject, takeUntil } from 'rxjs';
 import { LanguageService } from '../../language.service';
-
-declare var M: any;
 
 export type ResultData = {
   [key in SelfcheckTopics]: {
@@ -82,16 +80,8 @@ export class SelfcheckLogicComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     this.langService.lang$.pipe(takeUntil(this.destroy$)).subscribe((lang) => {
       this.currentLang = lang;
-      setTimeout(() => {
-        const elems = document.querySelectorAll('.collapsible');
-        M.Collapsible.init(elems);
-      }, 0);
     });
   }
-
-  /*   ngAfterViewInit() {
-    M.Collapsible.init(document.querySelectorAll('.collapsible'), {});
-  } */
 
   toggleLanguageSelfcheck(lang: string) {
     this.currentLangSelfCheck = lang;
@@ -213,11 +203,6 @@ export class SelfcheckLogicComponent implements OnInit, OnDestroy {
       goodFlow: reduceToResultData(goodFlowKeys),
       topAreas: reduceToResultData(topAreasKeys),
     };
-
-    setTimeout(() => {
-      const elems = document.querySelectorAll('.collapsible');
-      M.Collapsible.init(elems);
-    }, 0);
   }
 
   ngOnDestroy(): void {

@@ -27,7 +27,7 @@ export class DetailsFAQComponent implements OnInit, OnDestroy {
       setTimeout(() => {
         const elems = document.querySelectorAll('.collapsible');
         M.Collapsible.init(elems);
-      }, 0);
+      }, 200);
     });
   }
 
