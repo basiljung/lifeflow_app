@@ -190,7 +190,7 @@
   </app-section-default-2col>
 }
 
-<div style="margin-bottom: 12rem">
+<div style="margin-bottom: 12rem; padding: 0.5rem" class="img-setting">
   <h3
     class="text-highlight center-align"
     style="font-size: clamp(1.5rem, 1.5vw + 0.5rem, 3rem)"
@@ -257,19 +257,6 @@
   </p>
 </app-section-default-2col>
 
-<div style="margin-bottom: 8rem">
-  <h3
-    class="text-highlight center-align"
-    style="font-size: clamp(1.5rem, 1.5vw + 0.5rem, 3rem)"
-  >
-    {{
-      currentLang === "en"
-        ? "Let's look deeper together"
-        : "Lass uns gemeinsam tiefer schauen"
-    }}
-  </h3>
-</div>
-
 <div class="cta">
   <h3 class="text-highlight">
     {{
@@ -308,7 +295,10 @@
   </p>
 </app-section-default-2col>
 
-<div class="feedback-flex-wrapper" style="margin-bottom: 12rem">
+<h4>
+  {{ currentLang === "en" ? "Client feedback" : "Kundenfeedback" }}
+</h4>
+<div class="feedback-flex-wrapper" style="margin-bottom: 8rem">
   <!-- Video links -->
   <div class="video-box">
     <div class="shorts-video-wrapper">
@@ -320,11 +310,18 @@
     </div>
   </div>
 
+  <div class="video-box">
+    <div class="shorts-video-wrapper">
+      <iframe
+        src="https://www.youtube-nocookie.com/embed/iwe4tTLorFk"
+        frameborder="0"
+        allowfullscreen
+      ></iframe>
+    </div>
+  </div>
+
   <!-- Carousel rechts -->
   <div class="carousel-box">
-    <h4>
-      {{ currentLang === "en" ? "Client feedback" : "Kundenfeedback" }}
-    </h4>
     <div class="carousel">
       <a class="carousel-item">
         <img src="assets/feedback_text/David_Feedback_lines.png" />
@@ -393,7 +390,7 @@
   </div>
 </div>
 
-<div style="margin-bottom: 12rem">
+<div style="margin-bottom: 8rem">
   <h1 class="gradient-title center-align" slot="title">
     {{ currentLang === "en" ? "What's the approach?" : "Wie gehen wir vor?" }}
   </h1>
@@ -486,25 +483,43 @@
   <h1 class="gradient-title" slot="title">
     {{
       currentLang === "en"
-        ? "🌟 Imagine your life with clarity, energy & flow."
-        : "🌟 Stelle dir ein Leben mit Klarheit, Energie und Flow vor."
+        ? "🌟 Imagine a life full of energy, inner peace & self-confidence."
+        : "🌟 Stell dir ein Leben vor, voller Energie, innerer Ruhe & Selbstvertrauen."
     }}
   </h1>
   @if (currentLang === "en") {
-    <ul class="li-item" slot="list">
-      <li>You know what really matters to you</li>
-      <li>You feel calm and confident in your next steps</li>
-      <li>You act with purpose – not pressure</li>
-      <li>You’re productive – without sacrificing your peace</li>
-      <li>You experience a deep connection to yourself and others</li>
+    <ul class="li-item" style="max-width: 100%" slot="list">
+      <li><b>1#</b> know yourself and how you function.</li>
+      <li><b>2#</b> know how to respond when something is missing.</li>
+      <li><b>3#</b> know what truly matters to you.</li>
+      <li><b>4#</b> You are full of motivation and effectiveness.</li>
+      <li><b>5#</b> You trust yourself — even in challenging situations.</li>
+      <li>
+        <b>6#</b> You feel calm and secure, even in uncertainty and hectic
+        times.
+      </li>
+      <li><b>7#</b> You act with clarity and purpose.</li>
+      <li><b>8#</b> You feel a deep connection to yourself and to others.</li>
+      <li><b>9#</b> You simply feel good.</li>
     </ul>
   } @else {
-    <ul class="li-item" slot="list">
-      <li>Du weißt, was dir wirklich wichtig ist</li>
-      <li>Du fühlst dich ruhig und sicher in deinen nächsten Schritten</li>
-      <li>Du handelst mit Klarheit – nicht aus Druck</li>
-      <li>Du bist produktiv – ohne deine innere Ruhe zu verlieren</li>
-      <li>Du spürst eine tiefe Verbindung zu dir selbst und anderen</li>
+    <ul class="li-item" style="max-width: 100%" slot="list">
+      <li><b>1#</b> Du kennst dich selbst und weißt, wie du tickst.</li>
+      <li>
+        <b>2#</b> Du weisst, wie du reagieren kannst, wenn dir etwas fehlt.
+      </li>
+      <li><b>3#</b> Du weisst, was dir wirklich wichtig ist.</li>
+      <li><b>4#</b> Du bist voller Motivation und Wirksamkeit.</li>
+      <li><b>5#</b> Du vertraust dir — auch in Herausforderungen.</li>
+      <li>
+        <b>6#</b> Du fühlst dich ruhig und sicher, selbst in Ungewissheit und
+        Hektik.
+      </li>
+      <li><b>7#</b> Du handelst klar und zielgerichtet.</li>
+      <li>
+        <b>8#</b> Du spürst eine tiefe Verbindung zu dir selbst und zu anderen.
+      </li>
+      <li><b>9#</b> Du fühlst dich einfach gut.</li>
     </ul>
   }
   <img
