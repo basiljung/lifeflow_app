@@ -27,9 +27,9 @@ export const FAQDETAILSDATA_DE: {
   {
     title: '🧠 Erklärung',
     text: `<section>
-  <h5>🧠 Über den LifeFlow Selfcheck</h5>
+  <h5>🧠 Über den lifeflow Selfcheck</h5>
 <p>
-  Der <strong>LifeFlow Selfcheck</strong> ist ein Reflexionstool, das dir hilft, dein aktuelles inneres Gleichgewicht besser zu verstehen – emotional, mental, körperlich und energetisch.
+  Der <strong>lifeflow Selfcheck</strong> ist ein Reflexionstool, das dir hilft, dein aktuelles inneres Gleichgewicht besser zu verstehen – emotional, mental, körperlich und energetisch.
 </p>
 <p>
   Du erhältst eine Momentaufnahme in 9 Lebensbereichen, die für deinen Flow im Leben und in deiner Tätigkeit entscheidend sind. Die Ergebnisse zeigen dir, wo aktuell Blockaden bestehen oder etwas aus der Balance geraten ist – und laden dich ein, gezielt daran zu arbeiten, um mehr Flow zu kultivieren.
@@ -298,9 +298,9 @@ export const FAQDETAILSDATA_EN: {
   {
     title: '🧠 Explanation',
     text: `<section>
-  <h5>🧠 About the LifeFlow Selfcheck</h5>
+  <h5>🧠 About the lifeflow Selfcheck</h5>
   <p>
-    The <strong>LifeFlow Selfcheck</strong> is a reflection tool that helps you better understand your current inner balance – emotionally, mentally, physically, and energetically.
+    The <strong>lifeflow Selfcheck</strong> is a reflection tool that helps you better understand your current inner balance – emotionally, mentally, physically, and energetically.
   </p>
   <p>
     It gives you a snapshot of 12 key areas of life that are essential for flow – both in your personal life and your work. The results show where things may be blocked or out of balance – and invite you to consciously work on those areas to cultivate more flow.

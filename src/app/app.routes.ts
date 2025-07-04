@@ -12,8 +12,9 @@ export const routes: Routes = [
     children: [
       { path: 'app', component: HomeComponent },
       { path: '', component: LandingpageComponent },
-      { path: 'drive', component: WebsiteHomeComponent },
+      { path: 'clarity', component: WebsiteHomeComponent },
       { path: 'inner-peace', component: WebsiteHomeComponent },
+      { path: 'drive', component: WebsiteHomeComponent },
       { path: 'privacy-policy', component: PrivacyPolicyComponent },
       { path: 'impressum', component: ImpressumComponent },
     ],

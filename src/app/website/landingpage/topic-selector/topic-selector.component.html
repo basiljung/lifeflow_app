@@ -1,37 +1,65 @@
 <div id="topic-selector" style="height: 70vh" class="row center-align">
-  <div class="col s12 m6">
-    <h1 class="gradient-title">
-      {{ currentLang === "en" ? "⚡️ Inner Drive" : "⚡️ Innerer Antrieb" }}
-    </h1>
-    <a
-      class="pulse-btn btn-floating btn-large waves-effect waves-light btn-gradient"
-      [routerLink]="['drive']"
-      ><i class="material-icons">grade</i></a
-    >
-    <h4>
+  <div class="col s12 m4">
+    <h1 class="gradient-title-sm">
       {{
         currentLang === "en"
-          ? "I have goals—but I’m stuck, unmotivated, & can't focus."
-          : "Ich habe Ziele – aber bin unmotiviert & der Fokus fehlt."
+          ? "📍 Meaning & Orientation"
+          : "📍 Sinn & Orientierung"
       }}
-    </h4>
-  </div>
-
-  <div class="col s12 m6">
-    <h1 class="gradient-title">
-      {{ currentLang === "en" ? "🧘 Inner Peace" : "🧘 Innere Ruhe" }}
     </h1>
     <a
-      class="btn-floating btn-large waves-effect waves-light btn-gradient pulse-btn"
-      [routerLink]="['inner-peace']"
-      ><i class="material-icons">crop_square</i></a
+      class="btn-floating btn waves-effect waves-light btn-gradient pulse-btn"
+      [routerLink]="['clarity']"
+      ><i class="material-icons">adjust</i></a
     >
-    <h4>
+    <!--     <h4>
       {{
         currentLang === "en"
           ? "I feel overwhelmed or restless."
           : "Ich fühle mich überfordert oder unruhig"
       }}
-    </h4>
+    </h4> -->
+  </div>
+  <div class="col s12 m4">
+    <h1 class="gradient-title-sm">
+      {{
+        currentLang === "en"
+          ? "🧘 Inner Peace & Confidence"
+          : "🧘 Innere Ruhe & Selbstvertrauen"
+      }}
+    </h1>
+    <a
+      class="btn-floating btn waves-effect waves-light btn-gradient pulse-btn"
+      [routerLink]="['inner-peace']"
+      ><i class="material-icons">crop_square</i></a
+    >
+    <!--     <h4>
+      {{
+        currentLang === "en"
+          ? "I feel overwhelmed or restless."
+          : "Ich fühle mich überfordert oder unruhig"
+      }}
+    </h4> -->
+  </div>
+  <div class="col s12 m4">
+    <h1 class="gradient-title-sm">
+      {{
+        currentLang === "en"
+          ? "⚡️ Inner Drive & Energy"
+          : "⚡️ Motivation & Energie"
+      }}
+    </h1>
+    <a
+      class="pulse-btn btn-floating btn waves-effect waves-light btn-gradient"
+      [routerLink]="['drive']"
+      ><i class="material-icons">360</i></a
+    >
+    <!--     <h4>
+      {{
+        currentLang === "en"
+          ? "I have goals—but I’m stuck, unmotivated, & can't focus."
+          : "Ich habe Ziele – aber bin unmotiviert & der Fokus fehlt."
+      }}
+    </h4> -->
   </div>
 </div>

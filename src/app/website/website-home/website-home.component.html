@@ -3,133 +3,190 @@
 @if (topic === "inner-peace") {
   <app-section-default-2col>
     <h1 class="gradient-title" slot="title">
-      {{
-        currentLang === "en"
-          ? "💫 Life is rushing by — and you feel like you’re missing it"
-          : "💫 Das Leben rast vorbei – und du hast das Gefühl, es zu verpassen"
-      }}
+      {{ currentLang === "en" ? "Your Challenge" : "Deine Herausforderung" }}
     </h1>
     @if (currentLang === "en") {
-      <ul slot="list">
-        <li>You’re doing a lot — but feel unfulfilled</li>
-        <li><b>That inner restlessness won’t go away</b></li>
-        <li>You feel often frustrated</li>
-        <li>It feels like an endless circle</li>
+      <ul class="li-item" slot="list">
+        <li>
+          <b>Life is rushing by — and you feel like you’re missing it.</b>
+        </li>
+        <li>That inner restlessness won’t go away.</li>
+        <li>It feels like an endless circle.</li>
+        <li><b>You are free, but you don’t feel free.</b></li>
+        <li>External triggers cut deep.</li>
       </ul>
     } @else {
-      <ul slot="list">
-        <li>Du machst viel – aber fühlst dich nicht erfüllt.</li>
-        <li><b>Diese innere Unruhe will einfach nicht verschwinden.</b></li>
-        <li>Du bist oft frustriert.</li>
+      <ul class="li-item" class="li-item" slot="list">
+        <li>
+          <b
+            >Das Leben rast vorbei – und du hast das Gefühl, es zu verpassen.</b
+          >
+        </li>
+        <li>Der innere Antrieb hat nie genug.</li>
         <li>Es fühlt sich an wie ein endloser Kreislauf.</li>
+        <li><b>Du bist frei, doch es fühlt sich nicht so an.</b></li>
+        <li>Äussere Einflüsse treffen dich tief.</li>
       </ul>
     }
 
-    <img slot="image" src="assets/rush.png" width="200" class="img-setting" />
+    <img slot="image" src="assets/rush.png" width="120" class="img-setting" />
   </app-section-default-2col>
   <app-section-default-2col>
     <h1 class="gradient-title" slot="title">
-      {{
-        currentLang === "en"
-          ? "💫 Find more inner peace"
-          : "💫 Finde mehr Gelassenheit"
-      }}
+      {{ currentLang === "en" ? "Your Dream" : "Dein Traum" }}
     </h1>
     @if (currentLang === "en") {
-      <ul slot="list">
+      <ul class="li-item" slot="list">
         <li><b>You stay grounded — stand for what truly matters.</b></li>
+        <li>You trust yourself — mentally and emotionally.</li>
+        <li>You stay calm, even in uncertainty.</li>
         <li>Act with clarity and intention.</li>
         <li><b>Enjoy the journey</b> — without losing your drive.</li>
-        <li>You stay calm in chaos.</li>
-        <li>Bonus: You explore the neuroscience behind it all</li>
       </ul>
     } @else {
-      <ul slot="list">
+      <ul class="li-item" slot="list">
         <li>
           <b
             >Du bleibst geerdet – und stehst für das, was dir wirklich wichtig
             ist.</b
           >
         </li>
-        <li>Du handelst mit Klarheit und Intention.</li>
+        <li>Du vertraust dir — mental und emotional.</li>
+        <li>Du bleibst ruhig, selbst in Zeiten der Ungewissheit.</li>
+        <li>Handle klar und mit Intention.</li>
         <li><b>Du genießt den Weg</b> – ohne deinen Antrieb zu verlieren.</li>
-        <li>Du bleibst ruhig im Chaos.</li>
-        <li>Bonus: Du erforschst die Neurobiologie hinter alldem.</li>
       </ul>
     }
 
     <img
       slot="image"
-      src="assets/inner-peace.jpg"
-      width="200"
+      src="assets/calmConfident.png"
+      width="120"
       class="img-setting"
     />
   </app-section-default-2col>
-} @else {
+}
+
+@if (topic === "clarity") {
   <app-section-default-2col>
     <h1 class="gradient-title" slot="title">
-      {{
-        currentLang === "en"
-          ? "💫 You are unmotivated or procrastinating"
-          : "💫 Du bist unmotiviert und kommst nicht voran"
-      }}
+      {{ currentLang === "en" ? "Your Challenge" : "Deine Herausforderung" }}
     </h1>
     @if (currentLang === "en") {
-      <ul slot="list">
-        <li>So many ideas — but lots of doubts and overthinking.</li>
-        <li>You lose yourself in small tasks and can’t focus.</li>
-        <li><b>You lack the energy for what truly matters.</b></li>
-        <li><b>Frustrated, you feel like you’re not in control.</b></li>
-        <li>You don't see the meaning.</li>
-        <li>It feels like the engine isn't running.</li>
+      <ul class="li-item" slot="list">
+        <li>
+          <b
+            >You’ve already overanalyzed everything and keep going in
+            circles.</b
+          >
+        </li>
+        <li>This lack of clarity drains your energy.</li>
+        <li>Your heart and mind say different things.</li>
+        <li>You doubt yourself.</li>
+        <li>
+          <b>You lack orientation and understanding.</b>
+        </li>
       </ul>
     } @else {
-      <ul slot="list">
-        <li>So viele Ideen – aber auch viele Zweifel und Grübeleien.</li>
+      <ul class="li-item" slot="list">
         <li>
-          Du verlierst dich in Kleinkram und kannst dich nicht konzentrieren.
+          <b>Du hast bereits alles überanalysiert und drehst dich im Kreis.</b>
         </li>
-        <li><b>Dir fehlt die Energie für das, was wirklich zählt.</b></li>
+        <li>Diese Unklarheit raubt dir Energie.</li>
+        <li>Herz und Verstand sagen Unterschiedliches.</li>
+        <li>Du zweifelst.</li>
         <li>
-          <b>Frustriert hast du das Gefühl, die Kontrolle zu verlieren.</b>
+          <b>Dir fehlen Orientierung und Verständnis.</b>
         </li>
-        <li>Du siehst keinen Sinn.</li>
-        <li>Es fühlt sich an, als würde der Motor nicht anspringen.</li>
       </ul>
     }
     <img
       slot="image"
       src="assets/unmotivated.png"
-      width="200"
+      width="120"
       class="img-setting"
     />
   </app-section-default-2col>
   <app-section-default-2col>
     <h1 class="gradient-title" slot="title">
-      {{
-        currentLang === "en"
-          ? "💫 Live with more drive & energy"
-          : "💫 Lebe mit mehr Antrieb & Energie"
-      }}
+      {{ currentLang === "en" ? "Your Dream" : "Dein Traum" }}
     </h1>
     @if (currentLang === "en") {
-      <ul slot="list">
-        <li>You reconnect with your inner drive.</li>
-        <li><b>You move forward — with energy, clarity, and purpose.</b></li>
-        <li>You know what truly matters.</li>
-        <li>You learn how to spark momentum and <b>stay motivated.</b></li>
-        <li>Bonus: You <b>understand the neuroscience</b> behind it all.</li>
+      <ul class="li-item" slot="list">
+        <li><b>You know what's next & what you want.</b></li>
+        <li>You trust in what’s coming.</li>
+        <li>You are connected to your WHY.</li>
+        <li><b>You stay grounded in uncertainty.</b></li>
+        <li>Act authentically, with clarity and intention.</li>
       </ul>
     } @else {
-      <ul slot="list">
-        <li>Du kommst wieder in Kontakt mit deinem inneren Antrieb.</li>
-        <li><b>Du gehst deinen Weg – mit Energie, Klarheit und Sinn.</b></li>
-        <li>Du weißt, was dir wirklich wichtig ist.</li>
-        <li>Du lernst, wie du Momentum aufbaust und <b>dranbleibst.</b></li>
-        <li>Bonus: Du <b>verstehst die Neurobiologie</b> hinter alldem.</li>
+      <ul class="li-item" slot="list">
+        <li><b>Du weißt, was als Nächstes kommt — und was du willst.</b></li>
+        <li>Du vertraust darauf, was vor dir liegt.</li>
+        <li>Du bist stärker mit deinem WARUM verbunden.</li>
+        <li><b>Du bleibst geerdet, auch in Unsicherheit.</b></li>
+        <li>Du handelst authentisch, klar und mit Intention.</li>
       </ul>
     }
-    <img slot="image" src="assets/drive.png" width="200" class="img-setting" />
+    <img slot="image" src="assets/drive.png" width="120" class="img-setting" />
+  </app-section-default-2col>
+}
+
+@if (topic === "drive") {
+  <app-section-default-2col>
+    <h1 class="gradient-title" slot="title">
+      {{ currentLang === "en" ? "Your Challenge" : "Deine Herausforderung" }}
+    </h1>
+    @if (currentLang === "en") {
+      <ul class="li-item" slot="list">
+        <li>You are unmotivated or procrastinating.</li>
+        <li>You lose yourself in small tasks and can’t focus.</li>
+        <li>So many ideas — but lots of doubts and overthinking.</li>
+        <li><b>You lack the energy for what truly matters.</b></li>
+        <li><b>You feel you don't have control.</b></li>
+      </ul>
+    } @else {
+      <ul class="li-item" slot="list">
+        <li>Du bist unmotiviert und kommst nicht voran.</li>
+        <li>
+          Du verlierst dich in Kleinigkeiten und kannst dich nicht fokussieren.
+        </li>
+        <li>So viele Ideen – aber auch viel Zweifel und Überanalysieren.</li>
+        <li><b>Dir fehlt die Energie für das, was wirklich zählt.</b></li>
+        <li><b>Du hast das Gefühl, keine Kontrolle zu haben.</b></li>
+      </ul>
+    }
+    <img
+      slot="image"
+      src="assets/unmotivated.png"
+      width="120"
+      class="img-setting"
+    />
+  </app-section-default-2col>
+  <app-section-default-2col>
+    <h1 class="gradient-title" slot="title">
+      {{ currentLang === "en" ? "Your Dream" : "Dein Traum" }}
+    </h1>
+    @if (currentLang === "en") {
+      <ul class="li-item" slot="list">
+        <li>You are connect with your inner drive.</li>
+        <li><b>You move forward — with energy, clarity, and purpose.</b></li>
+        <li>You know what truly matters.</li>
+        <li><b>You know how to spark momentum and stay motivated.</b></li>
+        <li>Act with clarity and intention.</li>
+      </ul>
+    } @else {
+      <ul class="li-item" slot="list">
+        <li>Du bist mit deinem inneren Antrieb verbunden.</li>
+        <li><b>Du gehst deinen Weg – mit Energie, Klarheit und Sinn.</b></li>
+        <li>Du weisst, was dir wirklich wichtig ist.</li>
+        <li>
+          <b>Du weiss wie du Momentum erzeugst und motiviert bleibst.</b>
+        </li>
+        <li>Du handelst klar und mit Intention.</li>
+      </ul>
+    }
+    <img slot="image" src="assets/drive.png" width="120" class="img-setting" />
   </app-section-default-2col>
 }
 
@@ -147,12 +204,78 @@
   </h3>
 </div>
 
+<app-section-default-2col>
+  <h1 class="gradient-title" slot="title">
+    {{
+      currentLang === "en"
+        ? "👉 Even if it doesn’t feel like it right now: you’re in the right place. Your challenge wants to show you something."
+        : "👉 Auch wenn es sich gerade nicht so anfühlt: Du bist am richtigen Ort. Deine Herausforderung möchte dir etwas zeigen."
+    }}
+  </h1>
+  <p slot="list">
+    @if (currentLang === "en") {
+      <div>
+        <p>
+          Change is your constant companion.
+          <b
+            >Since childhood, you’ve been searching for answers to feel safe and
+            grounded.</b
+          >
+          But especially during big periods of growth, those answers can be hard
+          to find — and suddenly, you lose your flow.
+        </p>
+        <p>
+          <b
+            >At Lifeflow, we look at your challenges holistically and
+            systemically.</b
+          >
+          I’ll guide you back into your flow — feel good, gain clarity, and move
+          with purpose and drive.
+        </p>
+      </div>
+    } @else {
+      <div>
+        <p>
+          Veränderung ist dein ständiger Begleiter.
+          <b
+            >Schon als Kind hast du nach Antworten gesucht, um dich sicher und
+            geordnet zu fühlen.</b
+          >
+          Doch gerade in grossen Entwicklungsschritten bleiben diese Antworten
+          oft aus — und plötzlich verlierst du den Flow.
+        </p>
+        <p>
+          <b
+            >Bei Lifeflow betrachten wir deine Herausforderungen ganzheitlich
+            und systemisch.</b
+          >
+          Ich begleite dich zurück in deinen Flow — fühl dich gut, werde klar
+          und bewege dich mit Sinn und Motivation.
+        </p>
+      </div>
+    }
+  </p>
+</app-section-default-2col>
+
+<div style="margin-bottom: 8rem">
+  <h3
+    class="text-highlight center-align"
+    style="font-size: clamp(1.5rem, 1.5vw + 0.5rem, 3rem)"
+  >
+    {{
+      currentLang === "en"
+        ? "Let's look deeper together"
+        : "Lass uns gemeinsam tiefer schauen"
+    }}
+  </h3>
+</div>
+
 <div class="cta">
   <h3 class="text-highlight">
     {{
       currentLang === "en"
-        ? "I developed an App! Test your FLOW, now!"
-        : "Ich habe eine App entwikelt! Teste dein FLOW, jetzt!"
+        ? "I developed an app! Test your FLOW & find your blind spots, now!"
+        : "Ich habe eine App entwickelt! Teste deinen FLOW & finde jetzt deine Blindspots!"
     }}
   </h3>
   <h4 class="text-primary" style="padding: 1rem">
@@ -167,6 +290,23 @@
     >
   </div>
 </div>
+
+<app-section-default-2col>
+  <h1 class="gradient-title" slot="title">
+    {{
+      currentLang === "en"
+        ? "What is lifeflow? Why is it relevant?"
+        : "Was ist lifeflow? Warum ist es relevant?"
+    }}
+  </h1>
+  <p slot="list">
+    {{
+      currentLang === "en"
+        ? "The world is accelerating. We all feel it: digital overload, uncertainty, pressure. Running faster isn't the answer anymore. At the same time, the desire for clarity, calm, connection, and meaning is growing. For me, escaping, distracting myself, or blocking out reality is not the solution. What can we do? Now is the time to understand who we are, how we function and how we want to live – build an inner foundation that grounds us in a fast-moving world: mentally, emotionally, physically, and spiritually. Lifeflow offers a clear response to the questions many are asking: Who am I – really? What gives my life meaning? How can I stay grounded in this high-speed world? How do I live consciously – with myself, others, AI, and digital tools? This isn't just another online course. lifeflow Coaching System is a proven transformational path that bridges theoretical knowledge, practical exercises, deep reflection, and professional coaching – and helps you embody it in everyday life. It includes modern science, integral theory, EQ, spiral dynamics, digital tools, and personal assistance for more self-confidence, balance and effectiveness with meaning and peace."
+        : "Die Welt beschleunigt sich. Wir alle spüren es: digitale Überlastung, Unsicherheit, Druck. Schneller zu laufen ist nicht mehr die Antwort. Gleichzeitig wächst das Verlangen nach Klarheit, Ruhe, Verbindung und Sinn. Für mich ist Flucht, Ablenkung oder das Ausblenden der Realität keine Lösung. Was können wir tun? Jetzt ist die Zeit, zu verstehen, wer wir sind, wie wir funktionieren und wie wir leben wollen – eine innere Grundlage aufbauen, die uns in einer sich schnell bewegenden Welt halt gibt: mental, emotional, körperlich und spirituell. Lifeflow bietet eine klare Antwort auf die Fragen: Wer bin ich – wirklich? Was gibt meinem Leben Bedeutung? Wie kann ich in dieser Hochgeschwindigkeitswelt geerdet bleiben? Wie lebe ich bewusst – mit mir selbst, anderen, KI und digitalen Werkzeugen? Dies ist nicht nur ein weiterer Online-Kurs. Das lifeflow Coaching System ist ein bewährter Transformationsweg, der theoretisches Wissen, praktische Übungen, tiefe Reflexion und professionelles Coaching miteinander verbindet – und dir hilft, es im Alltag zu verkörpern. Es umfasst moderne Wissenschaft, integrale Theorie, EQ, Spiral Dynamics, digitale Werkzeuge und persönliche Unterstützung für mehr Selbstvertrauen, Balance und Wirksamkeit mit Sinn und Frieden."
+    }}
+  </p>
+</app-section-default-2col>
 
 <div class="feedback-flex-wrapper" style="margin-bottom: 12rem">
   <!-- Video links -->
@@ -210,7 +350,7 @@
 
 <div class="row center-align" style="margin-bottom: 12rem">
   <div class="col s12 m6">
-    <h1 class="gradient-title" style="font-size: 3rem">
+    <h1 class="gradient-title">
       {{
         currentLang === "en"
           ? "I know your challenge is unique, that's why we work 1:1"
@@ -232,7 +372,7 @@
         Achtsamkeit - ​​durch deinen persönlichen Entwicklungsprozess.
       </p>
     }
-    <img src="assets/LTC-siegel.png" width="100" class="img-setting" />
+    <img src="assets/LTC-siegel.png" width="120" class="img-setting" />
   </div>
 
   <div class="col s12 m6">
@@ -240,14 +380,14 @@
       <img
         src="assets/basil-biz.jpg"
         style="border-radius: 50%"
-        width="200"
+        width="150"
         class="img-setting"
       />
       <a
         style="border-radius: 12px"
         (click)="scrollTo('aboutme')"
         class="waves-effect waves-light btn bg-highlight"
-        >More about me</a
+        >{{ currentLang === "en" ? "More about me" : "Mehr über mich" }}</a
       >
     </div>
   </div>
@@ -345,28 +485,13 @@
 <app-section-default-2col>
   <h1 class="gradient-title" slot="title">
     {{
-      currentLang === "en" ? "WHY is it relevant?" : "WARUM ist es relevant?"
-    }}
-  </h1>
-  <p slot="list">
-    {{
-      currentLang === "en"
-        ? "The world is accelerating. We all feel it: digital overload, uncertainty, pressure. Running faster isn't the answer anymore. At the same time, the desire for clarity, calm, connection, and meaning is growing. For me, escaping, distracting myself, or blocking out reality is not the solution. What can we do? Now is the time to understand who we are, how we function and how we want to live – build an inner foundation that grounds us in a fast-moving world: mentally, emotionally, physically, and spiritually. LIFEFLOW offers a clear response to the questions many are asking: Who am I – really? What gives my life meaning? How can I stay grounded in this high-speed world? How do I live consciously – with myself, others, AI, and digital tools? This isn't just another online course. LifeFlow Coaching System is a proven transformational path that bridges theoretical knowledge, practical exercises, deep reflection, and professional coaching – and helps you embody it in everyday life. It includes modern science, integral theory, EQ, spiral dynamics, digital tools, and personal assistance for more self-confidence and performance with meaning and peace."
-        : "Die Welt beschleunigt sich. Wir alle spüren es: digitale Überlastung, Unsicherheit, Druck. Schneller zu laufen ist nicht mehr die Antwort. Gleichzeitig wächst das Verlangen nach Klarheit, Ruhe, Verbindung und Sinn. Für mich ist Flucht, Ablenkung oder das Ausblenden der Realität keine Lösung. Was können wir tun? Jetzt ist die Zeit, zu verstehen, wer wir sind, wie wir funktionieren und wie wir leben wollen – eine innere Grundlage aufbauen, die uns in einer sich schnell bewegenden Welt halt gibt: mental, emotional, körperlich und spirituell. LIFEFLOW bietet eine klare Antwort auf die Fragen: Wer bin ich – wirklich? Was gibt meinem Leben Bedeutung? Wie kann ich in dieser Hochgeschwindigkeitswelt geerdet bleiben? Wie lebe ich bewusst – mit mir selbst, anderen, KI und digitalen Werkzeugen? Dies ist nicht nur ein weiterer Online-Kurs. Das LifeFlow Coaching System ist ein bewährter Transformationsweg, der theoretisches Wissen, praktische Übungen, tiefe Reflexion und professionelles Coaching miteinander verbindet – und dir hilft, es im Alltag zu verkörpern. Es umfasst moderne Wissenschaft, integrale Theorie, EQ, Spiral Dynamics, digitale Werkzeuge und persönliche Unterstützung für mehr Selbstvertrauen und Wirksamkeit mit Sinn und Frieden."
-    }}
-  </p>
-</app-section-default-2col>
-
-<app-section-default-2col>
-  <h1 class="gradient-title" slot="title">
-    {{
       currentLang === "en"
         ? "🌟 Imagine your life with clarity, energy & flow."
         : "🌟 Stelle dir ein Leben mit Klarheit, Energie und Flow vor."
     }}
   </h1>
   @if (currentLang === "en") {
-    <ul slot="list">
+    <ul class="li-item" slot="list">
       <li>You know what really matters to you</li>
       <li>You feel calm and confident in your next steps</li>
       <li>You act with purpose – not pressure</li>
@@ -374,7 +499,7 @@
       <li>You experience a deep connection to yourself and others</li>
     </ul>
   } @else {
-    <ul slot="list">
+    <ul class="li-item" slot="list">
       <li>Du weißt, was dir wirklich wichtig ist</li>
       <li>Du fühlst dich ruhig und sicher in deinen nächsten Schritten</li>
       <li>Du handelst mit Klarheit – nicht aus Druck</li>
@@ -385,7 +510,7 @@
   <img
     slot="image"
     src="assets/inner-peace.jpg"
-    width="200"
+    width="120"
     class="img-setting"
   />
 </app-section-default-2col>
@@ -394,10 +519,10 @@
 
 <app-section-default-2col id="aboutlifeflow">
   <h1 class="gradient-title" slot="title">
-    {{ currentLang === "en" ? "WHAT IS LIFEFLOW?" : "WAS IST LIFEFLOW?" }}
+    {{ currentLang === "en" ? "What is lifeflow?" : "Was ist lifeflow?" }}
   </h1>
   @if (currentLang === "en") {
-    <ul slot="list">
+    <ul class="li-item" slot="list">
       <li>✨ Klarheit, Sinn & Entscheidungen (Selbstführung mit Tiefe)</li>
       <li>🌿 Innere Ruhe & emotionale Regulation (Biologie & EQ)</li>
       <li>🚀 Motivation & Umsetzung (Flow, Zielklarheit)</li>
@@ -405,7 +530,7 @@
       <li>🌀 Flow & Energie</li>
     </ul>
   } @else {
-    <ul slot="list">
+    <ul class="li-item" slot="list">
       <li>✨ Clarity, purpose & decisions (deep self-leadership)</li>
       <li>🌿 Inner calm & emotional regulation (biology & EQ)</li>
       <li>🚀 Motivation & execution (flow, goal clarity)</li>
@@ -414,11 +539,11 @@
     </ul>
   }
 
-  <img slot="image" src="assets/4Q.png" width="200" class="img-setting" />
+  <img slot="image" src="assets/4Q.png" width="120" class="img-setting" />
   <img
     slot="image"
     src="assets/mindbodyheartintui.png"
-    width="200"
+    width="120"
     class="img-setting"
   />
 </app-section-default-2col>
@@ -592,8 +717,8 @@
   <h1 class="gradient-title" slot="title">
     {{
       currentLang === "en"
-        ? "IS LifeFlow A PATH FOR YOU?"
-        : "IST LifeFlow EIN WEG FÜR DICH?"
+        ? "IS lifeflow A PATH FOR YOU?"
+        : "IST lifeflow EIN WEG FÜR DICH?"
     }}
   </h1>
   <p slot="text">
@@ -829,7 +954,7 @@
       slot="image"
       slot="bottom"
       src="assets/basil-smile.jpg"
-      width="200"
+      width="120"
       class="img-setting"
     />
   </div>

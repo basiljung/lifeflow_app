@@ -1,5 +1,5 @@
 <div style="height: 100vh; text-align: center">
-  <h1 class="gradient-title" style="margin-top: 2em">
+  <h1 class="gradient-title-lg" style="margin-top: 2em">
     {{
       currentLang === "en"
         ? "Performance with meaning & inner peace"
@@ -21,7 +21,11 @@
       style="border-radius: 50%"
     />
     <h4>
-      {{ currentLang === "en" ? "Let's have a look." : "Los geht's." }}
+      {{
+        currentLang === "en"
+          ? "What’s on your mind right now?"
+          : "Was beschäftigt dich gerade?"
+      }}
     </h4>
     <a
       (click)="scrollTo('topic-selector')"

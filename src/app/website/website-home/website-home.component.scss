@@ -4,6 +4,19 @@
   margin: 1rem;
 }
 
+.li-item {
+  font-size: 1.2rem;
+  line-height: 2rem;
+  max-width: 30rem;
+}
+
+/* apply min-width only on screens larger than 768px */
+@media (min-width: 768px) {
+  .li-item {
+    min-width: 30rem;
+  }
+}
+
 .cta {
   border-radius: 12px;
   background-color: white;
