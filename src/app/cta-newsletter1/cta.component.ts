@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Subject, takeUntil } from 'rxjs';
-import { LanguageService } from '../../language.service';
+import { LanguageService } from '../language.service';
 
 @Component({
   selector: 'app-cta',

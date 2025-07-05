@@ -4,6 +4,7 @@ import { DetailsFAQComponent } from '../details-faq/details-faq.component';
 import { SelfcheckLogicComponent } from '../self-check-logic/self-check-logic.component';
 import { NavigationEnd, Router, RouterModule } from '@angular/router';
 import { filter, Subscription } from 'rxjs';
+import { CtaWhatsappComponent } from '../../cta-whatsapp/cta-whatsapp.component';
 
 @Component({
   selector: 'app-home',
@@ -13,6 +14,7 @@ import { filter, Subscription } from 'rxjs';
     DetailsFAQComponent,
     SelfcheckLogicComponent,
     RouterModule,
+    CtaWhatsappComponent,
   ],
   templateUrl: './home.component.html',
 })
