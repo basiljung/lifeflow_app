@@ -1,16 +1,36 @@
-<div style="height: 100vh; text-align: center">
-  <h1 class="gradient-title-lg" style="margin-top: 2em">
-    {{
-      currentLang === "en"
-        ? "Performance with meaning & inner peace"
-        : "Performance mit Sinn & Gelassenheit"
-    }}
-  </h1>
-  <h4 style="margin-top: 3em; margin-bottom: 3em">
+<div>
+  <h4 style="text-align: center">
     {{
       currentLang === "en"
         ? "Flow – when biology, mind, and purpose are aligned."
         : "Flow – wenn Biologie, Geist und Sinn im Einklang sind."
+    }}
+  </h4>
+  <div class="title-box" style="margin-top: 4rem">
+    <h1 class="gradient-title-lg">
+      {{
+        currentLang === "en"
+          ? "Find balance between ambition and inner peace"
+          : "Finde Balance zwischen Ambition und innerer Ruhe"
+      }}
+    </h1>
+    <h4 style="font-size: 2rem">
+      {{
+        currentLang === "en"
+          ? "- Master your mind – no more doubts, no more back and forth"
+          : "- Meistere deinen Geist – kein Zweifeln, kein Hin und Her mehr."
+      }}
+    </h4>
+  </div>
+
+  <h4
+    class="text-highlight"
+    style="margin-top: 3em; margin-bottom: 3em; text-align: center"
+  >
+    {{
+      currentLang === "en"
+        ? "Redefine success and live with confidence, motivation, and authenticity."
+        : "Definiere Erfolg neu und lebe selbstbewusst, motiviert und authentisch."
     }}
   </h4>
   <div class="center-elements">
@@ -20,5 +40,10 @@
       width="150"
       height="150"
     />
+    <a
+      (click)="scrollTo('topic-selector')"
+      class="btn-floating btn-large waves-effect waves-light bg-highlight"
+      ><i class="material-icons">keyboard_arrow_down</i></a
+    >
   </div>
 </div>

@@ -1,17 +1,21 @@
-<div id="topic-selector" style="height: 70vh" class="row center-align">
+<div
+  id="topic-selector"
+  style="margin-top: 10rem; margin-bottom: 10rem"
+  class="row center-align"
+>
   <div class="center-elements">
     <h4>
       {{
         currentLang === "en"
-          ? "What’s on your mind right now?"
-          : "Was beschäftigt dich gerade?"
+          ? "What’s on your mind right now? Choose the topic..."
+          : "Was beschäftigt dich gerade? Wähle das Thema..."
       }}
     </h4>
-    <a
+    <!--     <a
       (click)="scrollTo('topic-selector')"
       class="btn-floating btn-large waves-effect waves-light bg-highlight"
       ><i class="material-icons">keyboard_arrow_down</i></a
-    >
+    > -->
   </div>
   <div class="col s12 m4">
     <h1 class="gradient-title-sm">
