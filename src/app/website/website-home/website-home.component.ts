@@ -1,5 +1,4 @@
 import { AfterViewInit, Component, OnDestroy, OnInit } from '@angular/core';
-import { MailerliteformComponent } from '../mailerliteform/mailerliteform.component';
 import { Router, RouterModule } from '@angular/router';
 import { LanguageService } from '../../language.service';
 import { Subject, takeUntil } from 'rxjs';
@@ -15,7 +14,6 @@ declare var M: any;
   selector: 'app-website-home',
   imports: [
     SectionDefault2ColComponent,
-    MailerliteformComponent,
     TitlePageComponent,
     CommonModule,
     RouterModule,
