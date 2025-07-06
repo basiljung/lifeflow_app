@@ -9,7 +9,7 @@ declare var M: any;
 
 @Component({
   selector: 'app-header',
-  imports: [RouterModule, CommonModule, CtaWhatsappComponent],
+  imports: [RouterModule, CommonModule],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
 })
