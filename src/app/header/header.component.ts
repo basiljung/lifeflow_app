@@ -3,12 +3,13 @@ import { RouterModule } from '@angular/router';
 import { LanguageService } from '../language.service';
 import { Subject, takeUntil } from 'rxjs';
 import { CommonModule } from '@angular/common';
+import { CtaWhatsappComponent } from '../cta-whatsapp/cta-whatsapp.component';
 
 declare var M: any;
 
 @Component({
   selector: 'app-header',
-  imports: [RouterModule, CommonModule],
+  imports: [RouterModule, CommonModule, CtaWhatsappComponent],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
 })

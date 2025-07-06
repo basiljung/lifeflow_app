@@ -4,6 +4,7 @@
   width: 100%;
   z-index: 1000; /* Sicherstellen, dass es über anderen Elementen liegt */
   overflow: hidden;
+  padding: 0.5rem;
   background-color: #1e6f5c;
 }
 
@@ -12,7 +13,7 @@
   display: block;
   color: #ffffff;
   text-align: center;
-  padding: 14px 14px;
+  padding: 0.5rem;
   text-decoration: none;
 }
 
