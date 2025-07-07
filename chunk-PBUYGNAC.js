@@ -267,7 +267,7 @@ import{A as te,B as j,C as ne,D as r,E as x,F as d,G as ie,I as se,J as _,K as z
     The <strong>lifeflow Selfcheck</strong> is a reflection tool that helps you better understand your current inner balance \u2013 emotionally, mentally, physically, and energetically.
   </p>
   <p>
-    It gives you a snapshot of 12 key areas of life that are essential for flow \u2013 both in your personal life and your work. The results show where things may be blocked or out of balance \u2013 and invite you to consciously work on those areas to cultivate more flow.
+    It gives you a snapshot of 9 key areas of life that are essential for flow \u2013 both in your personal life and your work. The results show where things may be blocked or out of balance \u2013 and invite you to consciously work on those areas to cultivate more flow.
     <em>This snapshot essentially reflects the result of your daily habits.</em>
   </p>
 
