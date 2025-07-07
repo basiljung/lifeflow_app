@@ -303,7 +303,7 @@ export const FAQDETAILSDATA_EN: {
     The <strong>lifeflow Selfcheck</strong> is a reflection tool that helps you better understand your current inner balance – emotionally, mentally, physically, and energetically.
   </p>
   <p>
-    It gives you a snapshot of 12 key areas of life that are essential for flow – both in your personal life and your work. The results show where things may be blocked or out of balance – and invite you to consciously work on those areas to cultivate more flow.
+    It gives you a snapshot of 9 key areas of life that are essential for flow – both in your personal life and your work. The results show where things may be blocked or out of balance – and invite you to consciously work on those areas to cultivate more flow.
     <em>This snapshot essentially reflects the result of your daily habits.</em>
   </p>
 
