@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subject, takeUntil } from 'rxjs';
 import { LanguageService } from '../language.service';
 
@@ -8,7 +8,7 @@ import { LanguageService } from '../language.service';
   templateUrl: './cta.component.html',
   styleUrl: './cta.component.scss',
 })
-export class CtaComponent implements OnInit {
+export class CtaComponent implements OnInit, OnDestroy {
   private destroy$ = new Subject<void>();
   currentLang: string | null = null;
 

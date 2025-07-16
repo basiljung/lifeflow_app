@@ -223,21 +223,12 @@
     <div
       style="border-bottom: 1px solid #1e6f5c; margin: 3rem auto; width: 20rem"
     ></div>
+
     <a
-      class="waves-effect waves-light btn bg-highlight"
-      onclick="ml('show', 'CX9x9O', true)"
-      style="
-        border-radius: 15px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 8px;
-      "
+      class="waves-effect waves-light btn bg-highlight pulse-btn"
+      style="border-radius: 12px"
     >
-      <span>{{
-        currentLang === "en" ? "Sign up for more" : "Jetzt, mehr erfahren"
-      }}</span>
-      <i class="material-icons">mail</i>
+      <app-cta-email-course></app-cta-email-course>
     </a>
   } @else {
     <button

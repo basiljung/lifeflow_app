@@ -9,7 +9,7 @@
 /* 🎨 Farbpalette */
 $color-primary: #0d1b2a; // Dunkelblau – Fokus & Vertrauen
 $color-secondary: #1e6f5c; // Tiefes Grün – Wachstum & Ruhe
-$color-accent: #4a90e2; // Klarblau – Innovation & Struktur
+$color-accent: #d3af37; // Klarblau – Innovation & Struktur
 $color-highlight: #d3af37; // Warmes Gold – Sinn & Motivation
 $color-contrast: #222222; // Fast-Schwarz – Klarheit & Kraft
 $color-neutral: #e0c097; // Sand – Wärme & Menschlichkeit
@@ -29,7 +29,7 @@ $primary-color: $color-primary;
 $secondary-color: $color-secondary;
 $success-color: $color-highlight;
 $error-color: #ff5252;
-$link-color: $color-accent;
+$link-color: #d3af37;
 $font-stack: $font-body;
 
 /* ====== Utility-Klassen (optional) ====== */
@@ -165,7 +165,7 @@ main {
 }
 
 .gradient-title-lg {
-  font-size: 3rem;
+  font-size: 2.75rem;
   background: linear-gradient(to bottom, #d3af37, #ffffff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -185,7 +185,7 @@ main {
 }
 
 .gradient-title-sm {
-  font-size: 1.5rem;
+  font-size: 1.75rem;
   background: linear-gradient(to bottom, #d3af37, #ffffff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

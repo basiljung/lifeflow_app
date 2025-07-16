@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subject, takeUntil } from 'rxjs';
 import { LanguageService } from '../language.service';
 
@@ -8,7 +8,7 @@ import { LanguageService } from '../language.service';
   templateUrl: './cta-whatsapp.component.html',
   styleUrl: './cta-whatsapp.component.scss',
 })
-export class CtaWhatsappComponent implements OnInit {
+export class CtaWhatsappComponent implements OnInit, OnDestroy {
   private destroy$ = new Subject<void>();
   currentLang: string | null = null;
 

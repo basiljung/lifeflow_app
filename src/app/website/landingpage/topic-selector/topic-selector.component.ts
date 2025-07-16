@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { Subject, takeUntil } from 'rxjs';
 import { LanguageService } from '../../../language.service';
@@ -9,7 +9,7 @@ import { LanguageService } from '../../../language.service';
   templateUrl: './topic-selector.component.html',
   styleUrl: './topic-selector.component.scss',
 })
-export class TopicSelectorComponent implements OnInit {
+export class TopicSelectorComponent implements OnInit, OnDestroy {
   private destroy$ = new Subject<void>();
   currentLang: string | null = null;
 

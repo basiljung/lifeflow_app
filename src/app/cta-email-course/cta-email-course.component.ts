@@ -1,15 +1,14 @@
-import { CommonModule } from '@angular/common';
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnDestroy, OnInit } from '@angular/core';
+import { LanguageService } from '../language.service';
 import { Subject, takeUntil } from 'rxjs';
-import { LanguageService } from '../../language.service';
 
 @Component({
-  selector: 'app-section-default-2col',
-  imports: [CommonModule],
-  templateUrl: './section-default-2col.component.html',
-  styleUrl: './section-default-2col.component.scss',
+  selector: 'app-cta-email-course',
+  imports: [],
+  templateUrl: './cta-email-course.component.html',
+  styleUrl: './cta-email-course.component.scss',
 })
-export class SectionDefault2ColComponent implements OnInit, OnDestroy {
+export class CtaEmailCourseComponent implements OnInit, OnDestroy {
   private destroy$ = new Subject<void>();
   currentLang: string | null = null;
 

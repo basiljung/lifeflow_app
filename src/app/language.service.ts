@@ -1,11 +1,11 @@
-import { Injectable, OnInit } from '@angular/core';
+import { Injectable, OnDestroy } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
 import { BehaviorSubject, filter, Subject, Subscription } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
 })
-export class LanguageService {
+export class LanguageService implements OnDestroy {
   private langSubject = new BehaviorSubject<string>('en');
   lang$ = this.langSubject.asObservable();
   private routerSubscription!: Subscription;

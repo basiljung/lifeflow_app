@@ -4,11 +4,11 @@
   class="row center-align"
 >
   <div class="center-elements">
-    <h4>
+    <h4 style="padding-bottom: 2rem">
       {{
         currentLang === "en"
-          ? "What’s on your mind right now? Choose the topic..."
-          : "Was beschäftigt dich gerade? Wähle das Thema..."
+          ? "Where’s your focus right now? Click the topic that resonates."
+          : "Was beschäftigt dich gerade? Klick auf das Thema, das passt."
       }}
     </h4>
     <!--     <a
@@ -26,7 +26,7 @@
       }}
     </h1>
     <a
-      class="btn-floating btn waves-effect waves-light btn-gradient pulse-btn"
+      class="btn waves-effect waves-light btn-selector btn-gradient pulse-btn"
       [routerLink]="['clarity']"
       ><i class="material-icons">adjust</i></a
     >
@@ -42,12 +42,12 @@
     <h1 class="gradient-title-sm">
       {{
         currentLang === "en"
-          ? "🧘 Inner Peace & Confidence"
-          : "🧘 Innere Ruhe & Selbstvertrauen"
+          ? "🧘 Inner Peace & Joy"
+          : "🧘 Innere Ruhe & Freude"
       }}
     </h1>
     <a
-      class="btn-floating btn waves-effect waves-light btn-gradient pulse-btn"
+      class="btn waves-effect waves-light btn-selector btn-gradient pulse-btn"
       [routerLink]="['inner-peace']"
       ><i class="material-icons">crop_square</i></a
     >
@@ -68,7 +68,7 @@
       }}
     </h1>
     <a
-      class="pulse-btn btn-floating btn waves-effect waves-light btn-gradient"
+      class="pulse-btn btn-selector btn waves-effect waves-light btn-gradient"
       [routerLink]="['drive']"
       ><i class="material-icons">360</i></a
     >

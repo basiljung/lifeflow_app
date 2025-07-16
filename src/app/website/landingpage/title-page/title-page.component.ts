@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subject, takeUntil } from 'rxjs';
 import { LanguageService } from '../../../language.service';
 
@@ -9,7 +9,7 @@ import { LanguageService } from '../../../language.service';
   templateUrl: './title-page.component.html',
   styleUrl: './title-page.component.scss',
 })
-export class TitlePageComponent implements OnInit {
+export class TitlePageComponent implements OnInit, OnDestroy {
   private destroy$ = new Subject<void>();
   currentLang: string | null = null;
 

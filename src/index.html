@@ -60,20 +60,5 @@
   <body>
     <app-root></app-root>
   </body>
-  <footer>
-    <script>
-      function loadScript(a) {
-        var b = document.getElementsByTagName("head")[0],
-          c = document.createElement("script");
-        (c.type = "text/javascript"),
-          (c.src = "https://tracker.metricool.com/resources/be.js"),
-          (c.onreadystatechange = a),
-          (c.onload = a),
-          b.appendChild(c);
-      }
-      loadScript(function () {
-        beTracker.t({ hash: "8811865d2fce89ba4fc6859f8c852dbf" });
-      });
-    </script>
-  </footer>
+  <footer></footer>
 </html>

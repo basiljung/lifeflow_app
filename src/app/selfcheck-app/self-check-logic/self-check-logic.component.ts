@@ -7,6 +7,7 @@ import { QUESTIONS_DE } from '../data/questions-de';
 import { RESULTDATA_DE } from '../data/resultData-de';
 import { Subject, takeUntil } from 'rxjs';
 import { LanguageService } from '../../language.service';
+import { CtaEmailCourseComponent } from '../../cta-email-course/cta-email-course.component';
 
 export type ResultData = {
   [key in SelfcheckTopics]: {
@@ -19,7 +20,7 @@ export type ResultData = {
 
 @Component({
   standalone: true,
-  imports: [CommonModule, DisplayResultComponent],
+  imports: [CommonModule, DisplayResultComponent, CtaEmailCourseComponent],
   selector: 'app-self-check-logic',
   templateUrl: './self-check-logic.component.html',
   styleUrls: ['./self-check-logic.component.scss'],
