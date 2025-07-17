@@ -190,6 +190,82 @@
   </app-section-default-2col>
 }
 
+@if (topic === "digital") {
+  <app-section-default-2col>
+    <h1 class="gradient-title" slot="title">
+      {{ currentLang === "en" ? "Your Challenge" : "Deine Herausforderung" }}
+    </h1>
+    @if (currentLang === "en") {
+      <ul class="li-item" slot="list">
+        <li>
+          <b>Instead of clarity, your apps bring chaos and more stress.</b>
+        </li>
+        <li>
+          You use many tools, but without a clear system – and that makes you
+          feel restless rather than productive.
+        </li>
+        <li>You've tried a lot, but you're not sure what actually works.</li>
+        <li>
+          <b>You lack the know-how to use the right tools effectively.</b>
+        </li>
+        <li>You're missing both clarity and inner calm.</li>
+      </ul>
+    } @else {
+      <ul class="li-item" slot="list">
+        <li>
+          <b>Statt Klarheit bringen dir deine Apps nur Chaos & mehr Stress.</b>
+        </li>
+        <li>
+          Du nutzt viele Tools, aber ohne System – und das macht dich eher
+          unruhig als produktiv.
+        </li>
+        <li>
+          Du hast viel ausprobiert, weißt aber nicht, was wirklich funktioniert.
+        </li>
+        <li>
+          Dir fehlt das Know-how, um die richtigen Tools gezielt einzusetzen.
+        </li>
+        <li><b>Dir fehlt der Überblick und deine innere Ruhe.</b></li>
+      </ul>
+    }
+    <img
+      slot="image"
+      src="assets/unmotivated.png"
+      width="120"
+      class="img-setting"
+    />
+  </app-section-default-2col>
+  <app-section-default-2col>
+    <h1 class="gradient-title" slot="title">
+      {{ currentLang === "en" ? "Your Dream" : "Dein Traum" }}
+    </h1>
+    @if (currentLang === "en") {
+      <ul class="li-item" slot="list">
+        <li>Your tools work for you – and make you more efficient.</li>
+        <li><b>Important processes run automatically in the background.</b></li>
+        <li>Your to-dos are clear, organized, and actionable.</li>
+        <li>
+          <b>You have digital clarity – and the right mindset to match.</b>
+        </li>
+        <li>
+          Your tech saves you time, brings structure, and creates inner calm.
+        </li>
+      </ul>
+    } @else {
+      <ul class="li-item" slot="list">
+        <li>Deine Tools arbeiten für dich – und machen dich effizienter.</li>
+        <li><b>Wichtige Prozesse laufen automatisiert im Hintergrund.</b></li>
+        <li>Deine To-Dos sind klar, organisiert und umsetzbar.</li>
+        <li>
+          <b>Du hast digitalen Überblick – mit dem passenden Mindset dazu.</b>
+        </li>
+        <li>Deine Technik spart dir Zeit, bringt Struktur und innere Ruhe.</li>
+      </ul>
+    }
+    <img slot="image" src="assets/drive.png" width="120" class="img-setting" />
+  </app-section-default-2col>
+}
+
 <div style="margin-bottom: 12rem; padding: 0.5rem" class="img-setting">
   <h3
     class="text-highlight center-align"
@@ -255,27 +331,6 @@
     }
   </p>
 </app-section-default-2col>
-
-<div class="cta">
-  <h3 class="text-highlight">
-    {{
-      currentLang === "en"
-        ? "I developed an app! Test your FLOW & find your blind spots, now!"
-        : "Ich habe eine App entwickelt! Teste deinen FLOW & finde jetzt deine Blindspots!"
-    }}
-  </h3>
-  <h4 class="text-primary" style="padding: 1rem">
-    {{ currentLang === "en" ? "Click here" : "Klick hier" }}
-  </h4>
-  <div>
-    <a
-      class="btn-floating btn-large waves-effect waves-light btn-gradient pulse-btn"
-      [href]="'/' + currentLang + '/app'"
-      target="_blank"
-      ><i class="material-icons">assessment</i></a
-    >
-  </div>
-</div>
 
 <app-section-default-2col>
   <h1 class="gradient-title" slot="title">

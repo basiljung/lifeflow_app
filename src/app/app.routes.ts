@@ -37,6 +37,13 @@ export const routes: Routes = [
             (m) => m.WebsiteHomeComponent,
           ),
       },
+      {
+        path: 'digital',
+        loadComponent: () =>
+          import('./website/website-home/website-home.component').then(
+            (m) => m.WebsiteHomeComponent,
+          ),
+      },
       { path: 'privacy-policy', component: PrivacyPolicyComponent },
       { path: 'impressum', component: ImpressumComponent },
     ],
