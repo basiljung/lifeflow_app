@@ -48,12 +48,6 @@
   max-width: 20%;
 }
 
-/* Carousel bekommt 2/3 */
-.carousel-box {
-  flex: 2 1 600px;
-  max-width: 66.6666%;
-}
-
 /* Shorts Video Style */
 .shorts-video-wrapper {
   aspect-ratio: 9 / 16;
@@ -67,6 +61,12 @@
   width: 100%;
   height: 100%;
   border: none;
+}
+
+/* Carousel bekommt 2/3 */
+.carousel-box {
+  flex: 2 1 600px;
+  max-width: 66.6666%;
 }
 
 .carousel img {

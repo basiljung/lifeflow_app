@@ -44,6 +44,13 @@ export const routes: Routes = [
             (m) => m.WebsiteHomeComponent,
           ),
       },
+      {
+        path: 'build&be',
+        loadComponent: () =>
+          import('./website/build-andbe/build-andbe.component').then(
+            (m) => m.BuildAndbeComponent,
+          ),
+      },
       { path: 'privacy-policy', component: PrivacyPolicyComponent },
       { path: 'impressum', component: ImpressumComponent },
     ],
