@@ -1,11 +1,10 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { SectionDefault2ColComponent } from '../section-default-2col/section-default-2col.component';
 import { LanguageService } from '../../language.service';
 import { Subject, takeUntil } from 'rxjs';
 
 @Component({
   selector: 'app-build-andbe',
-  imports: [SectionDefault2ColComponent],
+  imports: [],
   templateUrl: './build-andbe.component.html',
   styleUrl: './build-andbe.component.scss',
 })
