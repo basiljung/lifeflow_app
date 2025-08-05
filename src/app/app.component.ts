@@ -4,6 +4,8 @@ import { FooterComponent } from './footer/footer.component';
 import { CookieBannerComponent } from './cookie-banner/cookie-banner.component';
 import { HeaderComponent } from './header/header.component';
 
+declare function gtag(command: string, target: string, params?: any): void;
+
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -27,4 +29,3 @@ export class AppComponent {
     });
   }
 }
-declare function gtag(command: string, target: string, params?: any): void;

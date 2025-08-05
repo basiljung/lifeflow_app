@@ -9,6 +9,8 @@ import { Subject, takeUntil } from 'rxjs';
 import { LanguageService } from '../../language.service';
 import { CtaEmailCourseComponent } from '../../cta-email-course/cta-email-course.component';
 
+declare function gtag(command: string, target: string, params?: any): void;
+
 export type ResultData = {
   [key in SelfcheckTopics]: {
     area: string;
@@ -109,7 +111,19 @@ export class SelfcheckLogicComponent implements OnInit, OnDestroy {
 
     this.currentQuestionIndex++;
 
+    gtag('event', 'selfcheck_ongoing', {
+      event_category: 'selfcheck',
+      event_label: 'Questions answered',
+      value: this.currentQuestionIndex,
+    });
+
     if (this.isQuizComplete()) {
+      // 🔥 Trigger Google Analytics event
+      gtag('event', 'selfcheck_completed', {
+        event_category: 'selfcheck',
+        event_label: 'User completed quiz',
+        value: 1,
+      });
       this.showQuestions = false;
       this.showResult = true;
       this.getTestResults();
