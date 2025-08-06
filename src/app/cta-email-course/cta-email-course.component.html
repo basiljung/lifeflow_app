@@ -1,4 +1,8 @@
-<a style="cursor: pointer; color: white" onclick="ml('show', 'CX9x9O', true)">
+<a
+  style="cursor: pointer; color: white"
+  (click)="openSignUpDialog()"
+  onclick="ml('show', 'CX9x9O', true)"
+>
   <i class="material-icons right align-center">mail</i>
   {{
     currentLang === "en"
@@ -6,3 +10,19 @@
       : "Gratis 31-Tage Emailkurs"
   }}
 </a>
+
+@if (isLoading) {
+  <div class="preloader-wrapper active">
+    <div class="spinner-layer spinner-custom">
+      <div class="circle-clipper left">
+        <div class="circle"></div>
+      </div>
+      <div class="gap-patch">
+        <div class="circle"></div>
+      </div>
+      <div class="circle-clipper right">
+        <div class="circle"></div>
+      </div>
+    </div>
+  </div>
+}
