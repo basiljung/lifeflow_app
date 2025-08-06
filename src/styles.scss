@@ -9,8 +9,8 @@
 /* 🎨 Farbpalette */
 $color-primary: #0d1b2a; // Dunkelblau – Fokus & Vertrauen
 $color-secondary: #0f4f45; // Tiefes Grün – Wachstum & Ruhe
-$color-accent: #d3af37; // Klarblau – Innovation & Struktur
-$color-highlight: #d3af37; // Warmes Gold – Sinn & Motivation
+$color-accent: #d3af37; // Warmes Gold – Sinn & Motivation
+$color-highlight: #f4b400; // Orange – Innovation & Energie
 $color-contrast: #222222; // Fast-Schwarz – Klarheit & Kraft
 $color-neutral: #e0c097; // Sand – Wärme & Menschlichkeit
 $color-light: #f5f5f5; // Hellgrau – Leichtigkeit & Struktur
@@ -29,7 +29,7 @@ $primary-color: $color-primary;
 $secondary-color: $color-secondary;
 $success-color: $color-highlight;
 $error-color: #ff5252;
-$link-color: #d3af37;
+$link-color: $color-accent;
 $font-stack: $font-body;
 
 /* ====== Utility-Klassen (optional) ====== */
@@ -135,13 +135,6 @@ main {
   border-radius: 12px;
 }
 
-/* Zitate */
-.quote {
-  font-family: $font-body;
-  font-style: italic;
-  color: #0f4f45; // Tiefes Grün
-}
-
 /* Buttons */
 .btn,
 .button {
@@ -149,12 +142,6 @@ main {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.05rem;
-}
-
-/* Kleiner Text */
-.caption {
-  font-size: 0.875rem;
-  color: #4a90e2; // Klarblau für techigen Akzent
 }
 
 .title-card-result {
@@ -166,7 +153,7 @@ main {
 
 .gradient-title-lg {
   font-size: 2.75rem;
-  background: linear-gradient(to bottom, #d3af37, #ffffff);
+  background: linear-gradient(to bottom, $color-accent, #ffffff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text; /* For Firefox */
@@ -176,7 +163,7 @@ main {
 
 .gradient-title {
   font-size: 2.5rem;
-  background: linear-gradient(to bottom, #d3af37, #ffffff);
+  background: linear-gradient(to bottom, $color-accent, #ffffff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text; /* For Firefox */
@@ -186,7 +173,7 @@ main {
 
 .gradient-title-sm {
   font-size: 1.75rem;
-  background: linear-gradient(to bottom, #d3af37, #ffffff);
+  background: linear-gradient(to bottom, $color-accent, #ffffff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text; /* For Firefox */
@@ -195,15 +182,15 @@ main {
 }
 
 .btn-gradient {
-  background: linear-gradient(to bottom, #d3af37, #ffffff);
+  background: linear-gradient(to bottom, $color-accent, #ffffff);
 }
 
 .pulse-btn {
-  background-color: #0f4f45;
+  background-color: $color-secondary;
   color: white;
   animation: pulse 3s ease-in-out infinite;
   transition: transform 0.2s ease;
-  box-shadow: 0 0 0 rgba(30, 111, 92, 0.7);
+  box-shadow: 0 0 0 $color-secondary;
 }
 
 @keyframes pulse {
