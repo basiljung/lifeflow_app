@@ -89,6 +89,14 @@ export class SelfcheckLogicComponent implements OnInit, OnDestroy {
   toggleLanguageSelfcheck(lang: string) {
     this.currentLangSelfCheck = lang;
     this.langService.switchLanguage(lang);
+
+    // 🔥 Trigger Google Analytics event
+    gtag('event', 'selfcheck_languageSelected', {
+      event_category: 'selfcheck',
+      event_label: 'Questions answered',
+      value: 1,
+    });
+
     if (this.currentLangSelfCheck === 'de') {
       this.questions = QUESTIONS_DE;
       this.resultData = RESULTDATA_DE;
@@ -110,12 +118,6 @@ export class SelfcheckLogicComponent implements OnInit, OnDestroy {
     }
 
     this.currentQuestionIndex++;
-
-    gtag('event', 'selfcheck_ongoing', {
-      event_category: 'selfcheck',
-      event_label: 'Questions answered',
-      value: this.currentQuestionIndex,
-    });
 
     if (this.isQuizComplete()) {
       // 🔥 Trigger Google Analytics event
