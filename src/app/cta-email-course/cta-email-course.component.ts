@@ -25,10 +25,11 @@ export class CtaEmailCourseComponent implements OnInit, OnDestroy {
 
   openSignUpDialog() {
     this.isLoading = true;
+
     // 🔥 Trigger Google Analytics event
-    gtag('event', 'selfcheck_languageSelected', {
-      event_category: 'selfcheck',
-      event_label: 'Questions answered',
+    gtag('event', 'email_course_signup_clicked', {
+      event_category: 'email_course',
+      event_label: 'signup_clicked',
       value: 1,
     });
     setTimeout(() => {
