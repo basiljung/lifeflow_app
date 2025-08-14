@@ -1,4 +1,4 @@
-import{a as fe}from"./chunk-EAB3IL6B.js";import{A as te,B as j,C as ne,D as r,E as x,F as d,G as ie,I as se,J as _,K as z,N,O as re,P as oe,Q as B,R as ae,S as w,U as le,W as ce,X as ue,Z as de,_ as D,a as Y,b as v,c as J,d as S,e as C,f as E,g as Z,h as Q,k as o,l as b,m as y,n as h,o as l,p as m,q as X,r as ee,s as n,t as s,u as c,v as I,w as T,x as R,y as F,z as u}from"./chunk-MT573U2U.js";var he=[{title:"\u{1F33F} Willkommen",text:`<p>
+import{a as fe}from"./chunk-KICVOW6Q.js";import{$ as D,A as u,B as te,C as j,D as ne,E as r,F as x,G as d,H as ie,J as se,K as _,L as z,O as N,P as re,Q as oe,R as B,S as ae,T as w,V as le,X as ce,Y as ue,_ as de,a as Y,b as v,c as J,d as S,e as C,f as E,g as Z,h as Q,k as o,m as b,n as y,o as h,p as l,q as m,r as X,s as ee,t as n,u as s,v as c,w as I,x as T,y as R,z as F}from"./chunk-53XKXPIZ.js";var he=[{title:"\u{1F33F} Willkommen",text:`<p>
   Sch\xF6n, dass du da bist. Diese App unterst\xFCtzt dich dabei, dich selbst besser zu verstehen \u2013 auf emotionaler, mentaler und energetischer Ebene.
 </p>
 <p>
