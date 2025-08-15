@@ -2,10 +2,10 @@ import { Routes } from '@angular/router';
 import { PrivacyPolicyComponent } from './footer/privacy-policy/privacy-policy.component';
 import { ImpressumComponent } from './footer/impressum/impressum.component';
 import { LandingpageComponent } from './website/landingpage/landingpage.component';
-import { WaitingList1Component } from './waiting-list-1/waiting-list-1.component';
 
 export const routes: Routes = [
   { path: 'app', redirectTo: 'en/app', pathMatch: 'full' },
+  { path: '31', redirectTo: 'en/31', pathMatch: 'full' },
   {
     path: ':lang',
     children: [
@@ -17,7 +17,20 @@ export const routes: Routes = [
           ),
       },
       { path: '', component: LandingpageComponent },
-      { path: 'waiting-list', component: WaitingList1Component },
+      {
+        path: 'waiting-list',
+        loadComponent: () =>
+          import('./waiting-list-1/waiting-list-1.component').then(
+            (m) => m.WaitingList1Component,
+          ),
+      },
+      {
+        path: '31',
+        loadComponent: () =>
+          import(
+            './email-course-signup-page/email-course-signup-page.component'
+          ).then((m) => m.EmailCourseSignupPageComponent),
+      },
       {
         path: 'clarity',
         loadComponent: () =>
