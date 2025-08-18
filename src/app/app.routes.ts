@@ -18,7 +18,7 @@ export const routes: Routes = [
       },
       { path: '', component: LandingpageComponent },
       {
-        path: 'waiting-list',
+        path: 'wl',
         loadComponent: () =>
           import('./waiting-list-1/waiting-list-1.component').then(
             (m) => m.WaitingList1Component,

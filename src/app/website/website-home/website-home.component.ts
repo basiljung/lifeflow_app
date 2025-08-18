@@ -6,7 +6,8 @@ import { CommonModule } from '@angular/common';
 import { TitlePageComponent } from '../landingpage/title-page/title-page.component';
 import { SectionDefault2ColComponent } from '../section-default-2col/section-default-2col.component';
 import { SectionDefaultComponent } from '../section-default/section-default.component';
-import { FamewallComponent } from '../../famewall/famewall.component';
+import { WaitingList1Component } from '../../waiting-list-1/waiting-list-1.component';
+import { SenjaCoachingTestimonialsComponent } from '../../testimonials/senja-coaching-testimonials/senja-coaching-testimonials.component';
 
 declare var M: any;
 
@@ -18,7 +19,8 @@ declare var M: any;
     CommonModule,
     RouterModule,
     SectionDefaultComponent,
-    FamewallComponent,
+    WaitingList1Component,
+    SenjaCoachingTestimonialsComponent,
   ],
   templateUrl: './website-home.component.html',
   styleUrl: './website-home.component.scss',
