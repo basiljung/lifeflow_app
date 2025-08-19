@@ -25,6 +25,13 @@ export const routes: Routes = [
           ),
       },
       {
+        path: 'feedback',
+        loadComponent: () =>
+          import(
+            './testimonials/feedbackpage-coaching-senja/feedbackpage-coaching-senja.component'
+          ).then((m) => m.FeedbackpageCoachingSenjaComponent),
+      },
+      {
         path: '31',
         loadComponent: () =>
           import(
