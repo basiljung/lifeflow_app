@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnDestroy, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DisplayResultComponent } from './display-result/display-result.component';
 import { RESULTDATA_EN, SelfcheckTopics } from '../data/resultData-en';
@@ -27,7 +27,9 @@ export type ResultData = {
   templateUrl: './self-check-logic.component.html',
   styleUrls: ['./self-check-logic.component.scss'],
 })
-export class SelfcheckLogicComponent implements OnInit, OnDestroy {
+export class SelfcheckLogicComponent
+  implements OnInit, AfterViewInit, OnDestroy
+{
   currentQuestionIndex = 0;
   currentLangSelfCheck: string = 'en';
   showLanguageBtn = true;
@@ -84,6 +86,19 @@ export class SelfcheckLogicComponent implements OnInit, OnDestroy {
     this.langService.lang$.pipe(takeUntil(this.destroy$)).subscribe((lang) => {
       this.currentLang = lang;
     });
+  }
+
+  ngAfterViewInit() {
+    // Prevent loading it multiple times
+    if (!document.getElementById('senja-script')) {
+      const scriptApp = document.createElement('script');
+      scriptApp.id = 'senja-script';
+      scriptApp.src =
+        'https://widget.senja.io/widget/f7400d7d-3c1e-4fd1-8a78-9e75088c9601/platform.js';
+      scriptApp.type = 'text/javascript';
+      scriptApp.async = true;
+      document.body.appendChild(scriptApp);
+    }
   }
 
   toggleLanguageSelfcheck(lang: string) {
