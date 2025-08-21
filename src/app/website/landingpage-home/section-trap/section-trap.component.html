@@ -8,32 +8,114 @@
             : "--DE"
         }}
       </h1>
-      <h2 class="gradient-title-sm">
-        {{
-          currentLang === "en"
-            ? "You’ve built a strong outer life — role, revenue, reputation. Yet inside, it’s noisy: stress, doubt, and a sense that you’re functioning instead of living. You try to think your way out — more podcasts, more frameworks, more lists. But willpower can’t replace self‑understanding. Without an inner system, every week feels like starting from zero.
-
-Good news: When you align your values, biology, and focus — momentum stops depending on force. Peace and performance can coexist."
-            : "Struktur für deinen Geist. Stärke für dein Nervensystem. Richtung für dein Leben."
-        }}
-      </h2>
     </div>
+    <div slot="text">
+      @if (currentLang === "en") {
+        <p>
+          You’ve built a strong outer life — role, revenue, reputation. Yet
+          inside, it’s noisy: stress, doubt, and a sense that you’re functioning
+          instead of living.
+        </p>
+
+        <p>
+          You try to think your way out — more podcasts, more frameworks, more
+          lists. But
+          <b>willpower can’t replace self-understanding.</b>
+          Without an inner system, every week feels like starting from zero.
+        </p>
+
+        <p>
+          <b>Good news:</b> When you align your values, biology, and focus —
+          momentum stops depending on force. <br />Peace and performance can
+          coexist.
+        </p>
+      } @else {
+        <p>
+          Du hast dir ein starkes äußeres Leben aufgebaut – Rolle, Einkommen,
+          Ansehen. Doch innen ist es laut: Stress, Zweifel und das Gefühl, nur
+          zu funktionieren statt wirklich zu leben.
+        </p>
+
+        <p>
+          Du versuchst, dich herauszudenken – mehr Podcasts, mehr Frameworks,
+          mehr Listen. Aber
+          <b>Willenskraft kann Selbstverständnis nicht ersetzen.</b>
+          Ohne ein inneres System fühlt sich jede Woche an wie ein Neustart.
+        </p>
+
+        <p>
+          <b>Gute Nachricht:</b> Wenn du deine Werte, deine Biologie und deinen
+          Fokus in Einklang bringst, hört Momentum auf, von Anstrengung
+          abzuhängen. <br />Frieden und Leistung können zusammen existieren.
+        </p>
+      }
+    </div>
+    <img
+      slot="image"
+      src="assets/me_mountain_trap.jpg"
+      width="300"
+      class="img-setting"
+    />
   </app-default-section-1>
 
-  <div slot="title">
-    <h1>
-      {{
-        currentLang === "en"
-          ? "The Real Problem Isn't Your Effort. It's the effort in the wrong place."
-          : "--DE"
-      }}
-    </h1>
-    <h2 class="gradient-title-sm">
-      {{
-        currentLang === "en"
-          ? "................................................."
-          : "--DE"
-      }}
-    </h2>
+  <h1>
+    {{
+      currentLang === "en"
+        ? "The Real Problem Isn't Your Effort. It's the effort in the wrong place."
+        : "--DE"
+    }}
+  </h1>
+
+  <div class="row">
+    <div
+      class="col s12 m8"
+      style="font-size: clamp(1.25rem, 1.5vw + 0.5rem, 1.4rem); color: #ffffff"
+    >
+      @if (currentLang === "en") {
+        <p>
+          Most creators and leaders aren’t stressed because of a lack of skills
+          — they optimize for output instead of clarity. More to-dos, no
+          structure that compounds over time.
+        </p>
+
+        <p>
+          Strategy, priorities, and focus only work when they address the
+          deepest causes. The deeper you understand, the clearer and more
+          confidently you decide.
+        </p>
+
+        <p>
+          A solid foundation turns questions into decisions — less friction,
+          more joy. Successful on the outside but restless on the inside? Align
+          both — calm mind, clear priorities, meaningful results.
+        </p>
+      } @else {
+        <p>
+          Die meisten Creator und Führungskräfte sind nicht wegen fehlender
+          Skills gestresst — sie optimieren für Output statt für Klarheit. Mehr
+          To-dos, keine Struktur, die sich mit der Zeit vervielfacht.
+        </p>
+
+        <p>
+          Strategie, Prioritäten und Fokus wirken nur, wenn sie an der tiefsten
+          Ursache ansetzen. Je tiefer du verstehst, desto klarer und
+          selbstbewusster triffst du Entscheidungen.
+        </p>
+
+        <p>
+          Ein solides Fundament macht aus Fragen Entscheidungen — weniger
+          Reibung, mehr Freude. Außen erfolgreich, innen unruhig? Richte beides
+          aus — ruhiger Geist, klare Prioritäten, sinnvolle Ergebnisse.
+        </p>
+      }
+    </div>
+    <div class="col s12 m4">
+      <img
+        slot="image"
+        src="assets/coffee_c_problem.jpg"
+        width="180"
+        class="img-setting"
+      />
+    </div>
   </div>
 </div>

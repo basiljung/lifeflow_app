@@ -1,160 +1,98 @@
-<app-section-default-2col>
-  <div slot="title">
-    <h1 class="gradient-title" slot="title">
-      {{ currentLang === "en" ? "Your Challenge" : "Deine Herausforderung" }}
-    </h1>
-    <h2 class="gradient-title-sm">
-      What happens when you have the achievements but inside if feels like you
-      are off?
-    </h2>
-  </div>
+<!--Challenge-->
+<div class="title-box-white">
+  <app-topic-structure>
+    <div slot="title">
+      <h1>
+        {{ currentLang === "en" ? "Your Challenge" : "Deine Herausforderung" }}
+      </h1>
+    </div>
 
-  @if (currentLang === "en") {
-    <ul class="li-item" slot="list">
-      <li>
-        <b>You’ve achieved a lot — but lack an inner system to sustain it.</b>
-      </li>
-      <li>You keep pushing and performing, yet your mind stays loud.</li>
-      <li>Your energy feels unstable and restless.</li>
-      <li>More productivity or success hasn’t brought peace.</li>
-      <li><b>Another app or hack won’t change how you feel.</b></li>
-    </ul>
-  } @else {
-    <ul class="li-item" slot="list">
-      <li>
-        <b>Du hast viel erreicht — aber kein inneres System, das es trägt.</b>
-      </li>
-      <li>Du pushst und performst, doch dein Kopf bleibt laut.</li>
-      <li>Deine Energie ist instabil und unruhig.</li>
-      <li>Mehr Produktivität oder Erfolg bringt keine innere Ruhe.</li>
-      <li>
-        <b
-          >Eine weitere App oder ein Hack verändert nicht, wie du dich
-          fühlst.</b
-        >
-      </li>
-    </ul>
-  }
-  <img
-    slot="image"
-    src="assets/unmotivated.png"
-    width="120"
-    class="img-setting"
-  />
-</app-section-default-2col>
+    @if (currentLang === "en") {
+      <ul class="li-item" slot="list">
+        <li>
+          <i class="material-icons">chevron_right</i>
+          <b
+            >You’ve already overanalyzed everything and keep going in
+            circles.</b
+          >
+        </li>
+        <li>
+          <i class="material-icons">chevron_right</i>This lack of clarity drains
+          your energy.
+        </li>
+        <li>
+          <i class="material-icons">chevron_right</i>Your heart and mind say
+          different things.
+        </li>
+        <li><i class="material-icons">chevron_right</i>You doubt yourself.</li>
+        <li>
+          <i class="material-icons">chevron_right</i
+          ><b>You lack orientation and understanding.</b>
+        </li>
+      </ul>
+    } @else {
+      <ul class="li-item" slot="list">
+        <li>
+          <i class="material-icons">chevron_right</i>
+          <b>Du hast bereits alles überanalysiert und drehst dich im Kreis.</b>
+        </li>
+        <li>
+          <i class="material-icons">chevron_right</i>Diese Unklarheit raubt dir
+          Energie.
+        </li>
+        <li>
+          <i class="material-icons">chevron_right</i>Herz und Verstand sagen
+          Unterschiedliches.
+        </li>
+        <li><i class="material-icons">chevron_right</i>Du zweifelst.</li>
+        <li>
+          <i class="material-icons">chevron_right</i
+          ><b>Dir fehlen Orientierung und Verständnis.</b>
+        </li>
+      </ul>
+    }
 
-<app-section-default-2col>
-  <h1 class="gradient-title" slot="title">
-    {{ currentLang === "en" ? "The Answer" : "Die Antwort" }}
-  </h1>
-  @if (currentLang === "en") {
-    <ul class="li-item" slot="list">
-      <li>
-        <b
-          >Structure for your mind. Strength for your nerves. Direction for your
-          life.</b
-        >
-      </li>
-      <li>
-        LifeFlow Coaching System™ is a structured 1:1 program that turns
-        pressure into focus, overthinking into clarity, and achievement into
-        fulfillment — built for time-poor leaders.
-      </li>
-      <li>Clear priorities and decision filters.</li>
-      <li>Nervous-system regulation for calm under pressure.</li>
-      <li>Weekly rhythm for energy, focus & relationships.</li>
-      <li>Simple systems for consistent action — without burnout.</li>
-      <li>
-        <b>Result:</b> You lead yourself with clarity and move forward with
-        grounded confidence.
-      </li>
-    </ul>
-  } @else {
-    <ul class="li-item" slot="list">
-      <li>
-        <b
-          >Struktur für deinen Geist. Stärke für dein Nervensystem. Richtung für
-          dein Leben.</b
-        >
-      </li>
-      <li>
-        LifeFlow Coaching System™ ist ein strukturiertes 1:1-Programm, das
-        Druck in Fokus, Grübeln in Klarheit und Leistung in Erfüllung verwandelt
-        — gemacht für zeitknappe Führungskräfte.
-      </li>
-      <li>Klare Prioritäten & Entscheidungsfilter.</li>
-      <li>Nervensystem-Regulation für Ruhe unter Druck.</li>
-      <li>Wöchentlicher Rhythmus für Energie, Fokus & Beziehungen.</li>
-      <li>Einfache Systeme für konsequentes Handeln — ohne Burnout.</li>
-      <li>
-        <b>Ergebnis:</b> Du führst dich mit Klarheit und gehst mit geerdetem
-        Selbstvertrauen voran.
-      </li>
-    </ul>
-  }
-  <img slot="image" src="assets/drive.png" width="120" class="img-setting" />
-</app-section-default-2col>
+    <img
+      slot="image"
+      src="assets/unmotivated.png"
+      width="120"
+      class="img-setting"
+    />
 
-<p class="cta">
-  <a href="#how-it-works">See how it works →</a>
-</p>
+    @if (currentLang === "en") {
+      <h3 slot="bottom">
+        You don’t need more hacks. You need a clear understanding of your mind,
+        body, and priorities.
+      </h3>
+    } @else {
+      <h3 slot="bottom">
+        Du brauchst keine weiteren Hacks. Du brauchst ein klares Verständnis für
+        deinen Geist, deinen Körper und deine Prioritäten.
+      </h3>
+    }
+  </app-topic-structure>
+</div>
 
-<app-section-default-2col>
-  <h1 class="gradient-title" slot="title">
-    {{ currentLang === "en" ? "Your Challenge" : "Deine Herausforderung" }}
-  </h1>
-  @if (currentLang === "en") {
-    <ul class="li-item" slot="list">
-      <li>
-        <b>You’ve already overanalyzed everything and keep going in circles.</b>
-      </li>
-      <li>This lack of clarity drains your energy.</li>
-      <li>Your heart and mind say different things.</li>
-      <li>You doubt yourself.</li>
-      <li>
-        <b>You lack orientation and understanding.</b>
-      </li>
-    </ul>
-  } @else {
-    <ul class="li-item" slot="list">
-      <li>
-        <b>Du hast bereits alles überanalysiert und drehst dich im Kreis.</b>
-      </li>
-      <li>Diese Unklarheit raubt dir Energie.</li>
-      <li>Herz und Verstand sagen Unterschiedliches.</li>
-      <li>Du zweifelst.</li>
-      <li>
-        <b>Dir fehlen Orientierung und Verständnis.</b>
-      </li>
-    </ul>
-  }
-  <img
-    slot="image"
-    src="assets/unmotivated.png"
-    width="120"
-    class="img-setting"
-  />
-</app-section-default-2col>
-<app-section-default-2col>
-  <h1 class="gradient-title" slot="title">
-    {{ currentLang === "en" ? "Your Dream" : "Dein Traum" }}
-  </h1>
-  @if (currentLang === "en") {
-    <ul class="li-item" slot="list">
-      <li><b>You know what's next & what you want.</b></li>
-      <li>You trust in what’s coming.</li>
-      <li>You are connected to your WHY.</li>
-      <li><b>You stay grounded in uncertainty.</b></li>
-      <li>Act authentically, with clarity and intention.</li>
-    </ul>
-  } @else {
-    <ul class="li-item" slot="list">
-      <li><b>Du weißt, was als Nächstes kommt — und was du willst.</b></li>
-      <li>Du vertraust darauf, was vor dir liegt.</li>
-      <li>Du bist stärker mit deinem WARUM verbunden.</li>
-      <li><b>Du bleibst geerdet, auch in Unsicherheit.</b></li>
-      <li>Du handelst authentisch, klar und mit Intention.</li>
-    </ul>
-  }
-  <img slot="image" src="assets/drive.png" width="120" class="img-setting" />
-</app-section-default-2col>
+<!--Answer-->
+<div class="title-box-black">
+  <app-topic-structure>
+    <div slot="title">
+      <h1>
+        {{ currentLang === "en" ? "TIME TO UNDERSTAND" : "ZEIT ZU VERSTEHEN" }}
+      </h1>
+      <h2 class="gradient-title-sm-green">
+        {{
+          currentLang === "en"
+            ? "Structure for your mind. Strength for your nerves. Direction for your life."
+            : "Struktur für deinen Geist. Stärke für dein Nervensystem. Richtung für dein Leben."
+        }}
+      </h2>
+      <h3>
+        LifeFlow Coaching System™ is a structured 1:1 program that helps you
+        turn pressure into focus, overthinking into clarity, and achievement
+        into fulfillment — with tools built for time‑poor creators & leaders.
+      </h3>
+    </div>
+  </app-topic-structure>
+  <app-get-details-btn></app-get-details-btn>
+</div>
