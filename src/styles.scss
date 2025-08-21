@@ -275,16 +275,12 @@ main {
 }
 
 // Variants
-.title-box-black {
-  @include title-box(rgba(13, 27, 42, 0.6), $color-accent, #ffffff);
+.title-box-green {
+  @include title-box($color-secondary, $color-accent, #ffffff);
 }
 
 .title-box-white {
-  @include title-box(
-    rgba(255, 255, 255, 0.6),
-    $color-secondary,
-    $color-primary
-  );
+  @include title-box(white, $color-secondary, $color-primary);
 }
 
 .img-setting {
