@@ -2,6 +2,7 @@ import { Routes } from '@angular/router';
 import { PrivacyPolicyComponent } from './footer/privacy-policy/privacy-policy.component';
 import { ImpressumComponent } from './footer/impressum/impressum.component';
 import { LandingpageComponent } from './website/landingpage/landingpage.component';
+import { LandingpageHomeComponent } from './website/landingpage-home/landingpage-home.component';
 
 export const routes: Routes = [
   { path: 'app', redirectTo: 'en/app', pathMatch: 'full' },
@@ -16,7 +17,8 @@ export const routes: Routes = [
             (m) => m.HomeComponent,
           ),
       },
-      { path: '', component: LandingpageComponent },
+      { path: '', component: LandingpageHomeComponent },
+      /*       { path: '', component: LandingpageComponent }, */
       {
         path: 'wl',
         loadComponent: () =>
@@ -24,6 +26,7 @@ export const routes: Routes = [
             (m) => m.WaitingList1Component,
           ),
       },
+
       {
         path: 'feedback',
         loadComponent: () =>
@@ -41,22 +44,22 @@ export const routes: Routes = [
       {
         path: 'clarity',
         loadComponent: () =>
-          import('./website/website-home/website-home.component').then(
-            (m) => m.WebsiteHomeComponent,
+          import('./website/landingpage-home/landingpage-home.component').then(
+            (m) => m.LandingpageHomeComponent,
           ),
       },
       {
         path: 'inner-peace',
         loadComponent: () =>
-          import('./website/website-home/website-home.component').then(
-            (m) => m.WebsiteHomeComponent,
+          import('./website/landingpage-home/landingpage-home.component').then(
+            (m) => m.LandingpageHomeComponent,
           ),
       },
       {
         path: 'drive',
         loadComponent: () =>
-          import('./website/website-home/website-home.component').then(
-            (m) => m.WebsiteHomeComponent,
+          import('./website/landingpage-home/landingpage-home.component').then(
+            (m) => m.LandingpageHomeComponent,
           ),
       },
       {

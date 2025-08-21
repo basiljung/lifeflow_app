@@ -1,0 +1,55 @@
+<app-section-default-2col>
+  <h1 class="gradient-title" slot="title">
+    {{ currentLang === "en" ? "Your Challenge" : "Deine Herausforderung" }}
+  </h1>
+  @if (currentLang === "en") {
+    <ul class="li-item" slot="list">
+      <li>You are unmotivated or procrastinating.</li>
+      <li>You lose yourself in small tasks and can’t focus.</li>
+      <li>So many ideas — but lots of doubts and overthinking.</li>
+      <li><b>You lack the energy for what truly matters.</b></li>
+      <li><b>You feel you don't have control.</b></li>
+    </ul>
+  } @else {
+    <ul class="li-item" slot="list">
+      <li>Du bist unmotiviert und kommst nicht voran.</li>
+      <li>
+        Du verlierst dich in Kleinigkeiten und kannst dich nicht fokussieren.
+      </li>
+      <li>So viele Ideen – aber auch viel Zweifel und Überanalysieren.</li>
+      <li><b>Dir fehlt die Energie für das, was wirklich zählt.</b></li>
+      <li><b>Du hast das Gefühl, keine Kontrolle zu haben.</b></li>
+    </ul>
+  }
+  <img
+    slot="image"
+    src="assets/unmotivated.png"
+    width="120"
+    class="img-setting"
+  />
+</app-section-default-2col>
+<app-section-default-2col>
+  <h1 class="gradient-title" slot="title">
+    {{ currentLang === "en" ? "Your Dream" : "Dein Traum" }}
+  </h1>
+  @if (currentLang === "en") {
+    <ul class="li-item" slot="list">
+      <li>You are connect with your inner drive.</li>
+      <li><b>You move forward — with energy, clarity, and purpose.</b></li>
+      <li>You know what truly matters.</li>
+      <li><b>You know how to spark momentum and stay motivated.</b></li>
+      <li>Act with clarity and intention.</li>
+    </ul>
+  } @else {
+    <ul class="li-item" slot="list">
+      <li>Du bist mit deinem inneren Antrieb verbunden.</li>
+      <li><b>Du gehst deinen Weg – mit Energie, Klarheit und Sinn.</b></li>
+      <li>Du weisst, was dir wirklich wichtig ist.</li>
+      <li>
+        <b>Du weiss wie du Momentum erzeugst und motiviert bleibst.</b>
+      </li>
+      <li>Du handelst klar und mit Intention.</li>
+    </ul>
+  }
+  <img slot="image" src="assets/drive.png" width="120" class="img-setting" />
+</app-section-default-2col>

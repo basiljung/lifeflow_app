@@ -1,0 +1,27 @@
+<app-title-page-top></app-title-page-top>
+
+@if (!topic) {
+  <app-topic-selector style="margin-bottom: 2rem"></app-topic-selector>
+}
+
+@if (topic === "inner-peace") {
+  <app-inner-peace></app-inner-peace>
+}
+
+@if (topic === "clarity") {
+  <app-clarity></app-clarity>
+}
+
+@if (topic === "drive") {
+  <app-drive></app-drive>
+}
+
+@if (topic === "digital") {
+  <app-digital></app-digital>
+}
+
+<app-section-trap></app-section-trap>
+
+<app-personal-story></app-personal-story>
+
+<app-the-formula></app-the-formula>

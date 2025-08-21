@@ -153,20 +153,16 @@ main {
 
 .gradient-title-lg {
   font-size: 2.75rem;
-  background: linear-gradient(to bottom, $color-accent, #ffffff);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text; /* For Firefox */
-  color: transparent;
+  color: white;
+  text-shadow: 3px 3px 8px #0d1b2a;
   padding: 0.4rem;
 }
 
-.gradient-title {
+/* .gradient-title {
   font-size: 2.5rem;
   background: linear-gradient(to bottom, $color-accent, #ffffff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-clip: text; /* For Firefox */
   color: transparent;
   padding: 0.4rem;
 }
@@ -176,10 +172,36 @@ main {
   background: linear-gradient(to bottom, $color-accent, #ffffff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-clip: text; /* For Firefox */
   color: transparent;
   padding: 0.4rem;
 }
+
+.gradient-title-lg-green {
+  font-size: 2.75rem;
+  background: linear-gradient(to bottom, $color-secondary, $color-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  padding: 0.4rem;
+}
+
+.gradient-title-green {
+  font-size: 2.5rem;
+  background: linear-gradient(to bottom, $color-secondary, $color-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  padding: 0.4rem;
+}
+
+.gradient-title-sm-green {
+  font-size: 1.75rem;
+  background: linear-gradient(to bottom, $color-secondary, $color-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  padding: 0.4rem;
+} */
 
 .btn-gradient {
   background: linear-gradient(to bottom, $color-accent, #ffffff);
@@ -206,4 +228,57 @@ main {
     transform: scale(1);
     box-shadow: 0 0 0 0 rgba(30, 111, 92, 0);
   }
+}
+
+@mixin title-box($bg, $grad-start, $grad-end) {
+  border-radius: 12px;
+  padding: 2rem;
+  margin-top: 4rem;
+  background-color: $bg;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    background: linear-gradient(to bottom, $grad-start, $grad-end);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text; /* Firefox */
+    color: transparent;
+    padding: 0.4rem;
+  }
+
+  h1 {
+    font-size: 2.75rem;
+  } // lg
+  h2 {
+    font-size: 2.5rem;
+  } // default
+  h3 {
+    font-size: 1.75rem;
+  } // sm
+  h4 {
+    font-size: 1.5rem;
+  }
+  h5 {
+    font-size: 1.25rem;
+  }
+  h6 {
+    font-size: 1rem;
+  }
+}
+
+// Variants
+.title-box-black {
+  @include title-box(rgba(13, 27, 42, 0.6), $color-accent, #ffffff);
+}
+
+.title-box-white {
+  @include title-box(
+    rgba(255, 255, 255, 0.6),
+    $color-secondary,
+    $color-primary
+  );
 }
