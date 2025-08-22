@@ -1,14 +1,14 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subject, takeUntil } from 'rxjs';
-import { LanguageService } from '../../../language.service';
+import { LanguageService } from '../../../../language.service';
 
 @Component({
-  selector: 'app-understanding-section',
+  selector: 'app-usp',
   imports: [],
-  templateUrl: './understanding-section.component.html',
-  styleUrl: './understanding-section.component.scss',
+  templateUrl: './usp.component.html',
+  styleUrl: './usp.component.scss',
 })
-export class UnderstandingSectionComponent implements OnInit, OnDestroy {
+export class UspComponent implements OnInit, OnDestroy {
   private destroy$ = new Subject<void>();
   currentLang: string | null = null;
 

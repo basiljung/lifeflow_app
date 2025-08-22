@@ -19,7 +19,6 @@ declare var M: any;
     CommonModule,
     RouterModule,
     SectionDefaultComponent,
-    WaitingList1Component,
     SenjaCoachingTestimonialsComponent,
   ],
   templateUrl: './website-home.component.html',

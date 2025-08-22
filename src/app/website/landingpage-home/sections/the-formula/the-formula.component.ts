@@ -1,15 +1,14 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { RouterModule } from '@angular/router';
 import { Subject, takeUntil } from 'rxjs';
-import { LanguageService } from '../../../language.service';
+import { LanguageService } from '../../../../language.service';
 
 @Component({
-  selector: 'app-topic-selector',
-  imports: [RouterModule],
-  templateUrl: './topic-selector.component.html',
-  styleUrl: './topic-selector.component.scss',
+  selector: 'app-the-formula',
+  imports: [],
+  templateUrl: './the-formula.component.html',
+  styleUrl: './the-formula.component.scss',
 })
-export class TopicSelectorComponent implements OnInit, OnDestroy {
+export class TheFormulaComponent implements OnInit, OnDestroy {
   private destroy$ = new Subject<void>();
   currentLang: string | null = null;
 

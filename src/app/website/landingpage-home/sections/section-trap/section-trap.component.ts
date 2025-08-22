@@ -1,14 +1,15 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subject, takeUntil } from 'rxjs';
-import { LanguageService } from '../../../language.service';
+import { LanguageService } from '../../../../language.service';
+import { DefaultSection1Component } from '../../structure-elements/default-section-1/default-section-1.component';
 
 @Component({
-  selector: 'app-the-formula',
-  imports: [],
-  templateUrl: './the-formula.component.html',
-  styleUrl: './the-formula.component.scss',
+  selector: 'app-section-trap',
+  imports: [DefaultSection1Component],
+  templateUrl: './section-trap.component.html',
+  styleUrl: './section-trap.component.scss',
 })
-export class TheFormulaComponent implements OnInit, OnDestroy {
+export class SectionTrapComponent implements OnInit, OnDestroy {
   private destroy$ = new Subject<void>();
   currentLang: string | null = null;
 

@@ -1,42 +1,34 @@
 import { AfterViewInit, Component, OnDestroy, OnInit } from '@angular/core';
-import { SectionDefault2ColComponent } from '../section-default-2col/section-default-2col.component';
-import { TitlePageComponent } from '../landingpage/title-page/title-page.component';
 import { CommonModule } from '@angular/common';
 import { Router, RouterModule } from '@angular/router';
-import { SectionDefaultComponent } from '../section-default/section-default.component';
-import { WaitingList1Component } from '../../waiting-list-1/waiting-list-1.component';
 import { SenjaCoachingTestimonialsComponent } from '../../testimonials/senja-coaching-testimonials/senja-coaching-testimonials.component';
 import { TitlePageTopComponent } from './title-page-top/title-page-top.component';
-import { TopicSelectorComponent } from '../landingpage/topic-selector/topic-selector.component';
+import { TopicSelectorComponent } from './title-page-top/topic-selector/topic-selector.component';
 import { Subject, takeUntil } from 'rxjs';
 import { LanguageService } from '../../language.service';
 import { DriveComponent } from './topics/drive/drive.component';
 import { InnerPeaceComponent } from './topics/inner-peace/inner-peace.component';
 import { DigitalComponent } from './topics/digital/digital.component';
 import { ClarityComponent } from './topics/clarity/clarity.component';
-import { SectionTrapComponent } from './section-trap/section-trap.component';
 import { PersonalStoryComponent } from './personal-story/personal-story.component';
-import { TheFormulaComponent } from './the-formula/the-formula.component';
-import { UspComponent } from './usp/usp.component';
-import { UnderstandingSectionComponent } from './understanding-section/understanding-section.component';
+import { TheFormulaComponent } from './sections/the-formula/the-formula.component';
 import { ResultComponent } from './result/result.component';
 import { Cta1Component } from './cta-1/cta-1.component';
 import { FaqComponent } from './faq/faq.component';
 import { BrandDifferentiationComponent } from './brand-differentiation/brand-differentiation.component';
 import { ForWhoIsItComponent } from './for-who-is-it/for-who-is-it.component';
-import { WhatNextComponent } from './what-next/what-next.component';
+import { SectionTrapComponent } from './sections/section-trap/section-trap.component';
+import { UnderstandingSectionComponent } from './sections/understanding-section/understanding-section.component';
+import { UspComponent } from './sections/usp/usp.component';
+import { WhatNextComponent } from './sections/what-next/what-next.component';
 
 declare var M: any;
 
 @Component({
   selector: 'app-landingpage-home',
   imports: [
-    SectionDefault2ColComponent,
-    TitlePageComponent,
     CommonModule,
     RouterModule,
-    SectionDefaultComponent,
-    WaitingList1Component,
     SenjaCoachingTestimonialsComponent,
     TitlePageTopComponent,
     TopicSelectorComponent,

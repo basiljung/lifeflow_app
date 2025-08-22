@@ -1,15 +1,15 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { DefaultSection1Component } from '../structure-elements/default-section-1/default-section-1.component';
+import { RouterModule } from '@angular/router';
 import { Subject, takeUntil } from 'rxjs';
-import { LanguageService } from '../../../language.service';
+import { LanguageService } from '../../../../language.service';
 
 @Component({
-  selector: 'app-section-trap',
-  imports: [DefaultSection1Component],
-  templateUrl: './section-trap.component.html',
-  styleUrl: './section-trap.component.scss',
+  selector: 'app-topic-selector',
+  imports: [RouterModule],
+  templateUrl: './topic-selector.component.html',
+  styleUrl: './topic-selector.component.scss',
 })
-export class SectionTrapComponent implements OnInit, OnDestroy {
+export class TopicSelectorComponent implements OnInit, OnDestroy {
   private destroy$ = new Subject<void>();
   currentLang: string | null = null;
 
