@@ -225,7 +225,7 @@ main {
 
 @mixin title-box($bg, $grad-start, $grad-end) {
   border-radius: 12px;
-  padding: 2rem;
+  padding: 1.5rem;
   margin-top: 4rem;
   background-color: $bg;
 
@@ -270,6 +270,10 @@ main {
 // Variants
 .title-box-green {
   @include title-box($color-secondary, $color-accent, #ffffff);
+  p {
+    font-size: 1.25rem;
+    color: white;
+  }
 }
 
 .title-box-white {
