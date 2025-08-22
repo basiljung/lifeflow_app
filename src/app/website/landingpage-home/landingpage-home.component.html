@@ -20,32 +20,34 @@
   <app-digital></app-digital>
 }
 
-<app-section-trap></app-section-trap>
+@if (topic) {
+  <app-section-trap></app-section-trap>
 
-<app-personal-story></app-personal-story>
+  <app-personal-story></app-personal-story>
 
-<app-the-formula></app-the-formula>
+  <app-the-formula></app-the-formula>
 
-<app-usp></app-usp>
+  <app-usp></app-usp>
 
-<app-understanding-section></app-understanding-section>
+  <app-understanding-section></app-understanding-section>
 
-<app-result></app-result>
+  <app-result></app-result>
 
-<app-brand-differentiation></app-brand-differentiation>
+  <app-brand-differentiation></app-brand-differentiation>
 
-<div style="margin-bottom: 12rem">
-  <h4>
-    {{ currentLang === "en" ? "Client feedback" : "Kundenfeedback" }}
-  </h4>
+  <div style="margin-bottom: 12rem">
+    <h4>
+      {{ currentLang === "en" ? "Client feedback" : "Kundenfeedback" }}
+    </h4>
 
-  <app-senja-coaching-testimonials></app-senja-coaching-testimonials>
-</div>
+    <app-senja-coaching-testimonials></app-senja-coaching-testimonials>
+  </div>
 
-<app-for-who-is-it></app-for-who-is-it>
+  <app-for-who-is-it></app-for-who-is-it>
 
-<app-what-next></app-what-next>
+  <app-what-next></app-what-next>
 
-<app-faq></app-faq>
+  <app-faq></app-faq>
 
-<app-cta-1></app-cta-1>
+  <app-cta-1></app-cta-1>
+}
