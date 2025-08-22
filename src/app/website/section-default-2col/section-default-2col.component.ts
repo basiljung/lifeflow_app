@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subject, takeUntil } from 'rxjs';
-import { LanguageService } from '../../language.service';
+import { LanguageService } from '../../services/language.service';
 
 @Component({
   selector: 'app-section-default-2col',

@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FAQDETAILSDATA_DE, FAQDETAILSDATA_EN } from '../data/faq_details';
 import { Subject, takeUntil } from 'rxjs';
-import { LanguageService } from '../../language.service';
+import { LanguageService } from '../../services/language.service';
 
 declare const M: any;
 

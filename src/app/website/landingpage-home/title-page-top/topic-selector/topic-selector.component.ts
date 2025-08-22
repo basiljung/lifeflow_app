@@ -1,7 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { Subject, takeUntil } from 'rxjs';
-import { LanguageService } from '../../../../language.service';
+import { LanguageService } from '../../../../services/language.service';
 
 @Component({
   selector: 'app-topic-selector',

@@ -1,7 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { SectionDefault2ColComponent } from '../../../section-default-2col/section-default-2col.component';
 import { Subject, takeUntil } from 'rxjs';
-import { LanguageService } from '../../../../language.service';
+import { LanguageService } from '../../../../services/language.service';
 import { TopicStructureComponent } from '../topic-structure/topic-structure.component';
 import { GetDetailsBtnComponent } from '../../../get-details-btn/get-details-btn.component';
 

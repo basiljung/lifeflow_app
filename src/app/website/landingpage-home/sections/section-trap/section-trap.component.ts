@@ -1,6 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subject, takeUntil } from 'rxjs';
-import { LanguageService } from '../../../../language.service';
+import { LanguageService } from '../../../../services/language.service';
 import { DefaultSection1Component } from '../../structure-elements/default-section-1/default-section-1.component';
 
 @Component({

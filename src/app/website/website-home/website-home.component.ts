@@ -1,6 +1,6 @@
 import { AfterViewInit, Component, OnDestroy, OnInit } from '@angular/core';
 import { Router, RouterModule } from '@angular/router';
-import { LanguageService } from '../../language.service';
+import { LanguageService } from '../../services/language.service';
 import { Subject, takeUntil } from 'rxjs';
 import { CommonModule } from '@angular/common';
 import { TitlePageComponent } from '../landingpage/title-page/title-page.component';

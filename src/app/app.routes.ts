@@ -1,6 +1,6 @@
 import { Routes } from '@angular/router';
-import { PrivacyPolicyComponent } from './footer/privacy-policy/privacy-policy.component';
-import { ImpressumComponent } from './footer/impressum/impressum.component';
+import { PrivacyPolicyComponent } from './general-elements/footer/privacy-policy/privacy-policy.component';
+import { ImpressumComponent } from './general-elements/footer/impressum/impressum.component';
 import { LandingpageComponent } from './website/landingpage/landingpage.component';
 import { LandingpageHomeComponent } from './website/landingpage-home/landingpage-home.component';
 

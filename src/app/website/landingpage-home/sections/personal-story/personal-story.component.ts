@@ -1,7 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { DefaultSection2Component } from '../structure-elements/default-section-2/default-section-2.component';
+import { DefaultSection2Component } from '../../structure-elements/default-section-2/default-section-2.component';
 import { Subject, takeUntil } from 'rxjs';
-import { LanguageService } from '../../../language.service';
+import { LanguageService } from '../../../../services/language.service';
 
 @Component({
   selector: 'app-personal-story',

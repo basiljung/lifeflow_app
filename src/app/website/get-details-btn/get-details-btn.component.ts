@@ -1,6 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { LanguageService } from '../../language.service';
+import { LanguageService } from '../../services/language.service';
 import { Subject, takeUntil } from 'rxjs';
 
 @Component({

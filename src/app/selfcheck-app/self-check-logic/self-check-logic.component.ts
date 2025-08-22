@@ -6,7 +6,7 @@ import { QUESTIONS_EN } from '../data/questions-en';
 import { QUESTIONS_DE } from '../data/questions-de';
 import { RESULTDATA_DE } from '../data/resultData-de';
 import { Subject, takeUntil } from 'rxjs';
-import { LanguageService } from '../../language.service';
+import { LanguageService } from '../../services/language.service';
 import { CtaEmailCourseComponent } from '../../cta-email-course/cta-email-course.component';
 
 declare function gtag(command: string, target: string, params?: any): void;

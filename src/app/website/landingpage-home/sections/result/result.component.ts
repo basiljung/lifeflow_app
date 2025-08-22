@@ -1,14 +1,14 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subject, takeUntil } from 'rxjs';
-import { LanguageService } from '../../../language.service';
+import { LanguageService } from '../../../../services/language.service';
 
 @Component({
-  selector: 'app-for-who-is-it',
+  selector: 'app-result',
   imports: [],
-  templateUrl: './for-who-is-it.component.html',
-  styleUrl: './for-who-is-it.component.scss',
+  templateUrl: './result.component.html',
+  styleUrl: './result.component.scss',
 })
-export class ForWhoIsItComponent implements OnInit, OnDestroy {
+export class ResultComponent implements OnInit, OnDestroy {
   private destroy$ = new Subject<void>();
   currentLang: string | null = null;
 

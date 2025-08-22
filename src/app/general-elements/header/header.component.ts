@@ -1,9 +1,9 @@
 import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { LanguageService } from '../language.service';
+import { LanguageService } from '../../services/language.service';
 import { Subject, takeUntil } from 'rxjs';
 import { CommonModule } from '@angular/common';
-import { CtaEmailCourseComponent } from '../cta-email-course/cta-email-course.component';
+import { CtaEmailCourseComponent } from '../../cta-email-course/cta-email-course.component';
 
 declare var M: any;
 

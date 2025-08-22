@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { NavigationEnd, Router, RouterOutlet } from '@angular/router';
-import { FooterComponent } from './footer/footer.component';
 import { CookieBannerComponent } from './cookie-banner/cookie-banner.component';
-import { HeaderComponent } from './header/header.component';
+import { HeaderComponent } from './general-elements/header/header.component';
+import { FooterComponent } from './footer/footer.component';
 
 declare function gtag(command: string, target: string, params?: any): void;
 

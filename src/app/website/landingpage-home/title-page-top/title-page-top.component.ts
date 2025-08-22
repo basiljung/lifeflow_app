@@ -1,6 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subject, takeUntil } from 'rxjs';
-import { LanguageService } from '../../../language.service';
+import { LanguageService } from '../../../services/language.service';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { GetDetailsBtnComponent } from '../../get-details-btn/get-details-btn.component';
