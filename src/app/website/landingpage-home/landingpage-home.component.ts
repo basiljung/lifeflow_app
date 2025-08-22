@@ -17,6 +17,14 @@ import { ClarityComponent } from './topics/clarity/clarity.component';
 import { SectionTrapComponent } from './section-trap/section-trap.component';
 import { PersonalStoryComponent } from './personal-story/personal-story.component';
 import { TheFormulaComponent } from './the-formula/the-formula.component';
+import { UspComponent } from './usp/usp.component';
+import { UnderstandingSectionComponent } from './understanding-section/understanding-section.component';
+import { ResultComponent } from './result/result.component';
+import { Cta1Component } from './cta-1/cta-1.component';
+import { FaqComponent } from './faq/faq.component';
+import { BrandDifferentiationComponent } from './brand-differentiation/brand-differentiation.component';
+import { ForWhoIsItComponent } from './for-who-is-it/for-who-is-it.component';
+import { WhatNextComponent } from './what-next/what-next.component';
 
 declare var M: any;
 
@@ -39,6 +47,14 @@ declare var M: any;
     SectionTrapComponent,
     PersonalStoryComponent,
     TheFormulaComponent,
+    UspComponent,
+    UnderstandingSectionComponent,
+    ResultComponent,
+    Cta1Component,
+    FaqComponent,
+    BrandDifferentiationComponent,
+    ForWhoIsItComponent,
+    WhatNextComponent,
   ],
   templateUrl: './landingpage-home.component.html',
   styleUrl: './landingpage-home.component.scss',

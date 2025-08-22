@@ -21,6 +21,7 @@
     "@angular/router": "^19.2.0",
     "@materializecss/materialize": "^2.2.2",
     "@ngneat/transloco": "^6.0.4",
+    "bootstrap": "^5.3.7",
     "jquery": "^3.7.1",
     "material-icons": "^1.13.14",
     "materialize-css": "^1.0.0-rc.2",

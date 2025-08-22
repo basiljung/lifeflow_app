@@ -1,0 +1,52 @@
+<div class="title-box-white">
+  <h1 class="gradient-title" slot="title">
+    {{
+      currentLang === "en"
+        ? "👉 Even if it doesn’t feel like it right now: you’re in the right place. Your challenge wants to show you something."
+        : "👉 Auch wenn es sich gerade nicht so anfühlt: Du bist am richtigen Ort. Deine Herausforderung möchte dir etwas zeigen."
+    }}
+  </h1>
+  <p slot="list">
+    @if (currentLang === "en") {
+      <div>
+        <p>
+          Change is your constant companion.
+          <b
+            >Since childhood, you’ve been searching for answers to feel safe and
+            grounded.</b
+          >
+          But especially during big periods of growth, those answers can be hard
+          to find — and suddenly, you lose your flow.
+        </p>
+        <p>
+          <b
+            >At lifeflow, we look at your challenges holistically and
+            systemically.</b
+          >
+          I’ll guide you back into your flow — feel good, gain clarity, and move
+          with purpose, joy and efficiency.
+        </p>
+      </div>
+    } @else {
+      <div>
+        <p>
+          Veränderung ist dein ständiger Begleiter.
+          <b
+            >Schon als Kind hast du nach Antworten gesucht, um dich sicher und
+            geordnet zu fühlen.</b
+          >
+          Doch gerade in grossen Entwicklungsschritten bleiben diese Antworten
+          oft aus — und plötzlich verlierst du den Flow.
+        </p>
+        <p>
+          <b
+            >Bei lifeflow betrachten wir deine Herausforderungen ganzheitlich
+            und systemisch.</b
+          >
+          Ich begleite dich zurück in deinen Flow — fühl dich gut, werde klar
+          und bewege dich mit Sinn, Freude und Effizienz.
+        </p>
+      </div>
+    }
+  </p>
+</div>
