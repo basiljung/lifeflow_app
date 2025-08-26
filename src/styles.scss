@@ -280,6 +280,13 @@ main {
 
 .title-box-white {
   @include title-box(white, $color-secondary, $color-primary);
+
+  .accordion-button {
+    background: none;
+    -webkit-text-fill-color: $primary-color;
+    background-clip: unset;
+  }
+
   p {
     font-size: 1.25rem;
     color: $color-primary;

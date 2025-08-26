@@ -13,7 +13,7 @@ import { ClarityComponent } from './topics/clarity/clarity.component';
 import { PersonalStoryComponent } from './sections/personal-story/personal-story.component';
 import { TheFormulaComponent } from './sections/the-formula/the-formula.component';
 import { ResultComponent } from './sections/result/result.component';
-import { Cta1Component } from './cta-1/cta-1.component';
+import { Cta1Component } from './sections/cta-1/cta-1.component';
 import { FaqComponent } from './sections/faq/faq.component';
 import { BrandDifferentiationComponent } from './sections/brand-differentiation/brand-differentiation.component';
 import { ForWhoIsItComponent } from './sections/for-who-is-it/for-who-is-it.component';

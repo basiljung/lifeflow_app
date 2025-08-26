@@ -2,8 +2,6 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subject, takeUntil } from 'rxjs';
 import { LanguageService } from '../../../../services/language.service';
 
-declare const M: any;
-
 @Component({
   selector: 'app-faq',
   imports: [],
@@ -19,10 +17,6 @@ export class FaqComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     this.langService.lang$.pipe(takeUntil(this.destroy$)).subscribe((lang) => {
       this.currentLang = lang;
-      setTimeout(() => {
-        const elems = document.querySelectorAll('.collapsible');
-        M.Collapsible.init(elems);
-      }, 200);
     });
   }
 

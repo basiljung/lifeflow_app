@@ -1,44 +1,195 @@
-<div class="title-box-white">
-  <section aria-labelledby="faq-title">
-    <h1 id="faq-title">FAQs ✅</h1>
+<div class="accordion accordion-flush title-box-white" id="faqAccordion">
+  <h1 id="faq-title">FAQs ✅</h1>
 
-    <details open>
-      <summary>How much time per week?</summary>
-      <p>
-        About 2–3 hours (one session + a simple exercise). Designed for busy
-        people.
-      </p>
-    </details>
+  <!-- 1) Time per week -->
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="faqHeadingOne">
+      <button
+        class="accordion-button collapsed"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#faqCollapseOne"
+        aria-expanded="false"
+        aria-controls="faqCollapseOne"
+      >
+        {{
+          currentLang === "en"
+            ? "How much time per week?"
+            : "Wieviel Zeit pro Woche?"
+        }}
+      </button>
+    </h2>
+    <div
+      id="faqCollapseOne"
+      class="accordion-collapse collapse"
+      aria-labelledby="faqHeadingOne"
+      data-bs-parent="#faqAccordion"
+    >
+      <div class="accordion-body">
+        {{
+          currentLang === "en"
+            ? "About 2–3 hours total (1x session + a simple exercise). Designed for busy people."
+            : "Insgesamt ca. 2–3 Stunden (1x Session + eine einfache Übung). Ausgelegt für beschäftigte Menschen."
+        }}
+      </div>
+    </div>
+  </div>
 
-    <details>
-      <summary>Is this therapy?</summary>
-      <p>
-        No. We go deep, but coaching is forward-looking and action-oriented. If
-        clinical support is needed, I’ll refer you to trusted therapists.
-      </p>
-    </details>
+  <!-- 2) Therapy vs Coaching -->
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="faqHeadingTwo">
+      <button
+        class="accordion-button collapsed"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#faqCollapseTwo"
+        aria-expanded="false"
+        aria-controls="faqCollapseTwo"
+      >
+        {{ currentLang === "en" ? "Is this therapy?" : "Ist das Therapie?" }}
+      </button>
+    </h2>
+    <div
+      id="faqCollapseTwo"
+      class="accordion-collapse collapse"
+      aria-labelledby="faqHeadingTwo"
+      data-bs-parent="#faqAccordion"
+    >
+      <div class="accordion-body">
+        {{
+          currentLang === "en"
+            ? "No. We go deep, but coaching is forward-looking and action-oriented. If clinical support is needed, I’ll refer you to trusted therapists."
+            : "Nein. Wir gehen in die Tiefe, aber Coaching ist zukunftsorientiert und handlungsbezogen. Wenn klinische Unterstützung erforderlich ist, verweise ich dich an vertrauenswürdige Therapeut:innen."
+        }}
+      </div>
+    </div>
+  </div>
 
-    <details>
-      <summary>Do I need to be in Switzerland?</summary>
-      <p>No. Sessions are online and CET-friendly.</p>
-    </details>
+  <!-- 3) Location -->
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="faqHeadingThree">
+      <button
+        class="accordion-button collapsed"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#faqCollapseThree"
+        aria-expanded="false"
+        aria-controls="faqCollapseThree"
+      >
+        {{
+          currentLang === "en"
+            ? "Do I need to be in Switzerland?"
+            : "Muss ich in der Schweiz sein?"
+        }}
+      </button>
+    </h2>
+    <div
+      id="faqCollapseThree"
+      class="accordion-collapse collapse"
+      aria-labelledby="faqHeadingThree"
+      data-bs-parent="#faqAccordion"
+    >
+      <div class="accordion-body">
+        {{
+          currentLang === "en"
+            ? "No. Sessions are online and CET-friendly."
+            : "Nein. Die Sessions sind online und CET-freundlich."
+        }}
+      </div>
+    </div>
+  </div>
 
-    <details>
-      <summary>Language?</summary>
-      <p>English, German & Swiss-German.</p>
-    </details>
+  <!-- 4) Language -->
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="faqHeadingFour">
+      <button
+        class="accordion-button collapsed"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#faqCollapseFour"
+        aria-expanded="false"
+        aria-controls="faqCollapseFour"
+      >
+        {{ currentLang === "en" ? "Language?" : "Sprache?" }}
+      </button>
+    </h2>
+    <div
+      id="faqCollapseFour"
+      class="accordion-collapse collapse"
+      aria-labelledby="faqHeadingFour"
+      data-bs-parent="#faqAccordion"
+    >
+      <div class="accordion-body">
+        {{
+          currentLang === "en"
+            ? "English, German & Swiss-German."
+            : "Englisch, Deutsch & Schweizerdeutsch."
+        }}
+      </div>
+    </div>
+  </div>
 
-    <details>
-      <summary>Confidentiality?</summary>
-      <p>Always. You get a safe space, handled with professional care.</p>
-    </details>
+  <!-- 5) Confidentiality -->
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="faqHeadingFive">
+      <button
+        class="accordion-button collapsed"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#faqCollapseFive"
+        aria-expanded="false"
+        aria-controls="faqCollapseFive"
+      >
+        {{ currentLang === "en" ? "Confidentiality?" : "Vertraulichkeit?" }}
+      </button>
+    </h2>
+    <div
+      id="faqCollapseFive"
+      class="accordion-collapse collapse"
+      aria-labelledby="faqHeadingFive"
+      data-bs-parent="#faqAccordion"
+    >
+      <div class="accordion-body">
+        {{
+          currentLang === "en"
+            ? "Always. You get a safe space, handled with professional care."
+            : "Immer. Du erhältst einen geschützten Raum, der mit professioneller Sorgfalt behandelt wird."
+        }}
+      </div>
+    </div>
+  </div>
 
-    <details>
-      <summary>Will this really work for me?</summary>
-      <p>
-        If you show up honestly and apply the tools, yes. We’ll track tangible
-        markers week by week and adjust to your needs along the way.
-      </p>
-    </details>
-  </section>
+  <!-- 6) Will it work for me? -->
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="faqHeadingSix">
+      <button
+        class="accordion-button collapsed"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#faqCollapseSix"
+        aria-expanded="false"
+        aria-controls="faqCollapseSix"
+      >
+        {{
+          currentLang === "en"
+            ? "Will this really work for me?"
+            : "Wird das wirklich für mich funktionieren?"
+        }}
+      </button>
+    </h2>
+    <div
+      id="faqCollapseSix"
+      class="accordion-collapse collapse"
+      aria-labelledby="faqHeadingSix"
+      data-bs-parent="#faqAccordion"
+    >
+      <div class="accordion-body">
+        {{
+          currentLang === "en"
+            ? "If you show up honestly & open and use the tools, it works — I’ve proven this many times in practice. We track your progress week by week and continuously adjust the process to your needs and the insights we discover along the way."
+            : "Wenn du offen & ehrlich mitarbeitest und die Tools einsetzt, funktioniert es – das habe ich schon mehrfach in der Praxis bewiesen. Wir messen deine Fortschritte Woche für Woche und passen den Prozess laufend an deine Bedürfnisse und die Erkenntnisse auf dem Weg an"
+        }}
+      </div>
+    </div>
+  </div>
 </div>

@@ -1,15 +1,14 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subject, takeUntil } from 'rxjs';
 import { LanguageService } from '../../../../services/language.service';
-import { ReadMoreComponent } from '../../structure-elements/read-more/read-more.component';
 
 @Component({
-  selector: 'app-understanding-section',
-  imports: [ReadMoreComponent],
-  templateUrl: './understanding-section.component.html',
-  styleUrl: './understanding-section.component.scss',
+  selector: 'app-cta-1',
+  imports: [],
+  templateUrl: './cta-1.component.html',
+  styleUrl: './cta-1.component.scss',
 })
-export class UnderstandingSectionComponent implements OnInit, OnDestroy {
+export class Cta1Component implements OnInit, OnDestroy {
   private destroy$ = new Subject<void>();
   currentLang: string | null = null;
 
