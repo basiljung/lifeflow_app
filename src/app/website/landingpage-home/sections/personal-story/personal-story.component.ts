@@ -1,35 +1,56 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
-import { DefaultSection2Component } from '../../structure-elements/default-section-2/default-section-2.component';
-import { Subject, takeUntil } from 'rxjs';
-import { LanguageService } from '../../../../services/language.service';
+import {
+  AfterViewInit,
+  Component,
+  ElementRef,
+  OnDestroy,
+  OnInit,
+  QueryList,
+  ViewChild,
+  ViewChildren,
+} from '@angular/core';
 
 @Component({
   selector: 'app-personal-story',
-  imports: [DefaultSection2Component],
   templateUrl: './personal-story.component.html',
   styleUrl: './personal-story.component.scss',
 })
-export class PersonalStoryComponent implements OnInit, OnDestroy {
-  private destroy$ = new Subject<void>();
-  currentLang: string | null = null;
+export class PersonalStoryComponent
+  implements OnInit, AfterViewInit, OnDestroy
+{
+  activeStep = 1;
 
-  constructor(private langService: LanguageService) {}
+  @ViewChild('rightPane', { static: false })
+  rightPane!: ElementRef<HTMLElement>;
+  @ViewChildren('storyItem') storyItems!: QueryList<ElementRef<HTMLElement>>;
 
-  ngOnInit(): void {
-    this.langService.lang$.pipe(takeUntil(this.destroy$)).subscribe((lang) => {
-      this.currentLang = lang;
-    });
-  }
+  private io?: IntersectionObserver;
 
-  scrollTo(id: string) {
-    const el = document.getElementById(id);
-    if (el) {
-      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
+  ngOnInit(): void {}
+
+  ngAfterViewInit(): void {
+    this.io = new IntersectionObserver(
+      (entries) => {
+        for (const e of entries) {
+          if (e.isIntersecting) {
+            const idx =
+              this.storyItems
+                .toArray()
+                .findIndex((ref) => ref.nativeElement === e.target) + 1;
+            if (idx > 0 && this.activeStep !== idx) this.activeStep = idx;
+          }
+        }
+      },
+      {
+        root: this.rightPane.nativeElement,
+        threshold: 0.9,
+        rootMargin: '0px',
+      },
+    );
+
+    this.storyItems.forEach((ref) => this.io!.observe(ref.nativeElement));
   }
 
   ngOnDestroy(): void {
-    this.destroy$.next();
-    this.destroy$.complete();
+    this.io?.disconnect();
   }
 }

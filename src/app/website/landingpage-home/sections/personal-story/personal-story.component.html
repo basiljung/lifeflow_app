@@ -1,21 +1,93 @@
 <div class="title-box-green">
-  <app-default-section-2>
-    <div slot="title">
-      <h1>
-        {{ currentLang === "en" ? "HOW I LEARNED THIS THE HARD WAY" : "--DE" }}
-      </h1>
-    </div>
+  <section class="section-mystory">
+    <div class="container">
+      <div class="mystory-grid">
+        <!-- LEFT: header + sticky stacked images -->
+        <div class="mystory-left">
+          <h1>How I Learned This The Hard Way</h1>
+          <div class="image-stack">
+            <div class="image-stack-inner">
+              <img
+                src="assets/work.jpg"
+                class="stack-img"
+                [class.is-active]="activeStep === 1"
+              />
+              <img
+                src="assets/SkiUp.jpg"
+                class="stack-img"
+                [class.is-active]="activeStep === 2"
+              />
+              <img
+                src="assets/basil-smile.png"
+                class="stack-img"
+                [class.is-active]="activeStep === 3"
+              />
+            </div>
+          </div>
+        </div>
 
-    <img slot="image" src="assets/work.jpg" width="180" class="img-setting" />
+        <!-- RIGHT: story items (observer sets activeStep) -->
+        <div class="mystory-right" #rightPane>
+          <!-- Part 1: Curiosity & Career -->
+          <article #storyItem class="mystory-item">
+            <p class="text-size-large">
+              <em>
+                Hi, I'm Basil.<br /><br />
+                I've always been curious – asking questions, analyzing,
+                connecting dots. Why is something the way it is? What causes
+                what? This curiosity shaped both my private life and career.
+                <br /><br />
+                I studied systems engineering and worked as a developer. But
+                beyond technology, I was fascinated by people: behavior,
+                emotions, decisions – and what truly drives us.
+              </em>
+            </p>
+            <div class="divider"></div>
+          </article>
 
-    <div slot="text">
-      <p style="color: white">
-        {{
-          currentLang === "en"
-            ? "Hi, I’m Basil — systems engineer, coach & highly ambitious aswell. I spent years optimizing performance, until I realized: optimization without self‑understanding keeps you running in circles. Over the last decade I combined systems thinking, coaching (EASC/LTC), neuroscience and mindfulness into a clear method that helps ambitious people lead themselves with calm strength. This work isn’t theory — it’s lived practice. If you’re successful outside but restless inside, I built LifeFlow.Now™ Program for you."
-            : "--DE"
-        }}
-      </p>
+          <!-- Part 2: From performance to the big question -->
+          <article #storyItem class="mystory-item">
+            <p class="text-size-large">
+              <em>
+                For years, I focused on performance, motivation, optimization,
+                and focus. Step by step, I achieved the goals I set. But
+                eventually, a deeper question arose:
+                <i>Was that all there is?</i> <br /><br />
+                For more than a decade, I’ve been exploring who I am. Why I
+                think, feel, and act the way I do. How the mind works. What
+                development truly means – and what creates real fulfillment.
+              </em>
+            </p>
+            <div class="divider"></div>
+          </article>
+
+          <!-- Part 3: My philosophy & today’s work -->
+          <article #storyItem class="mystory-item">
+            <p class="text-size-large">
+              <em>
+                I discovered that it’s not about <b>optimizing yourself</b> –
+                but <b>understanding yourself</b>, both light and shadow. Real
+                power is released when the unknown is explored, integrated, and
+                lived. <br /><br />
+                Today I guide people on their journey from self-optimization to
+                genuine self-knowledge – for effectiveness with inner balance,
+                emotional depth, and healthy relationships. I combine systems
+                thinking, values work, mindfulness, neuroscience, and technology
+                into a holistic approach.
+              </em>
+              <br /><br />
+              <strong>
+                <em>
+                  I believe: only those with inner clarity can act powerfully on
+                  the outside. True change doesn’t come from pressure, but from
+                  understanding & clarity.
+                </em>
+              </strong>
+            </p>
+            <div class="divider"></div>
+          </article>
+        </div>
+      </div>
     </div>
-  </app-default-section-2>
+  </section>
 </div>

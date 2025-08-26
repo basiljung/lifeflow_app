@@ -1,24 +1,29 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, Input, OnDestroy, OnInit } from '@angular/core';
 import { Subject, takeUntil } from 'rxjs';
 import { LanguageService } from '../../../../services/language.service';
-import { ReadMoreComponent } from '../../structure-elements/read-more/read-more.component';
+import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-for-who-is-it',
-  imports: [ReadMoreComponent],
-  templateUrl: './for-who-is-it.component.html',
-  styleUrl: './for-who-is-it.component.scss',
+  selector: 'app-read-more',
+  imports: [CommonModule],
+  templateUrl: './read-more.component.html',
+  styleUrl: './read-more.component.scss',
 })
-export class ForWhoIsItComponent implements OnInit, OnDestroy {
+export class ReadMoreComponent implements OnInit, OnDestroy {
   private destroy$ = new Subject<void>();
   currentLang: string | null = null;
-
+  @Input() limit = 200; // number of characters before truncation
+  expanded = false;
   constructor(private langService: LanguageService) {}
 
   ngOnInit(): void {
     this.langService.lang$.pipe(takeUntil(this.destroy$)).subscribe((lang) => {
       this.currentLang = lang;
     });
+  }
+
+  toggle() {
+    this.expanded = !this.expanded;
   }
 
   ngOnDestroy(): void {

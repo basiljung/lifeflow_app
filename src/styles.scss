@@ -261,10 +261,6 @@ main {
   h6 {
     font-size: 1rem;
   }
-  p {
-    font-size: 1.25rem;
-    color: $color-primary;
-  }
 }
 
 // Variants
@@ -274,10 +270,25 @@ main {
     font-size: 1.25rem;
     color: white;
   }
+  ol,
+  ul {
+    margin: 3rem;
+    font-size: 1rem;
+    color: white;
+  }
 }
 
 .title-box-white {
   @include title-box(white, $color-secondary, $color-primary);
+  p {
+    font-size: 1.25rem;
+    color: $color-primary;
+  }
+  ol {
+    margin: 2rem;
+    font-size: 1rem;
+    color: $color-primary;
+  }
 }
 
 .img-setting {

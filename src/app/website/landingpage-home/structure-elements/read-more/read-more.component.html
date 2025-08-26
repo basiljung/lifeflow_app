@@ -1,0 +1,17 @@
+<div class="read-more-container">
+  <p>
+    <span [ngClass]="{ clamp: !expanded }"
+      ><ng-content select="[slot=text-readmore-comp]"></ng-content
+    ></span>
+    <ng-content select="[slot=text-readmore-comp]"></ng-content>
+    @if (currentLang === "en") {
+      <span class="text-accent" type="button" (click)="toggle()"
+        >...{{ expanded ? "Read less" : "Read more" }}</span
+      >
+    } @else {
+      <span class="text-accent" type="button" (click)="toggle()"
+        >...{{ expanded ? "Weniger anzeigen" : "Mehr erfahren" }}</span
+      >
+    }
+  </p>
+</div>
