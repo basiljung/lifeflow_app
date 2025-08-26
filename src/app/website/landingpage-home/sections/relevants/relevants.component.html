@@ -1,0 +1,20 @@
+<div class="title-box-white">
+  <h1 class="gradient-title" slot="title">
+    {{
+      currentLang === "en"
+        ? "LifeFlow.Now™? Why is it relevant?"
+        : "LifeFlow.Now™? Warum ist es relevant?"
+    }}
+  </h1>
+  <p slot="list">
+    <app-read-more [lines]="2">
+      <div slot="text-readmore-comp">
+        {{
+          currentLang === "en"
+            ? "The world is accelerating. We all feel it: digital overload, uncertainty, pressure. Running faster isn't the answer anymore. At the same time, the desire for clarity, calm, connection, and purpose is growing. For me, escaping, distracting myself, or blocking out reality is not the solution. What can we do? Now is the time to understand who we are, how we function and how we want to live – build an inner foundation, for more resilience & flexibility, that grounds us in a fast-moving world: mentally, emotionally, physically, and spiritually. FlowPerformer Mindset™ offers a clear response to the questions many are asking: Who am I – really? What gives my life purpose? How can I stay grounded in this high-speed world?."
+            : "Die Welt beschleunigt sich. Wir alle spüren es: digitale Überlastung, Unsicherheit, Druck. Schneller zu laufen ist nicht mehr die Antwort. Gleichzeitig wächst das Verlangen nach Ruhe, Verbindung und Sinn. Für mich ist Flucht, Ablenkung oder das Ausblenden der Realität keine Lösung. Was können wir tun? Jetzt ist die Zeit, zu verstehen, wer wir sind, wie wir funktionieren und wie wir leben wollen – eine innere Haltung aufbauen, für mehr Resilienz & Flexibilität, die uns in einer schnelllebigen Welt Halt gibt: mental, emotional, körperlich und spirituell. FlowPerformer Mindset™ bietet eine klare Antwort auf die Fragen: Wer bin ich – wirklich? Was gibt meinem Leben Bedeutung? Wie kann ich in dieser Hochgeschwindigkeitswelt geerdet bleiben?"
+        }}
+      </div>
+    </app-read-more>
+  </p>
+</div>

@@ -4,7 +4,14 @@
       <div class="mystory-grid">
         <!-- LEFT: header + sticky stacked images -->
         <div class="mystory-left">
-          <h1>How I Learned This The Hard Way</h1>
+          <h1>
+            @if (currentLang === "en") {
+              How I Learned This The Hard Way
+            } @else {
+              Wie ich das auf die harte Tour gelernt habe
+            }
+          </h1>
+
           <div class="image-stack">
             <div class="image-stack-inner">
               <img
@@ -31,16 +38,30 @@
           <!-- Part 1: Curiosity & Career -->
           <article #storyItem class="mystory-item">
             <p class="text-size-large">
-              <em>
-                Hi, I'm Basil.<br /><br />
-                I've always been curious – asking questions, analyzing,
-                connecting dots. Why is something the way it is? What causes
-                what? This curiosity shaped both my private life and career.
-                <br /><br />
-                I studied systems engineering and worked as a developer. But
-                beyond technology, I was fascinated by people: behavior,
-                emotions, decisions – and what truly drives us.
-              </em>
+              @if (currentLang === "en") {
+                <em>
+                  Hi, I'm Basil.<br /><br />
+                  I've always been curious – asking questions, analyzing,
+                  connecting dots. Why is something the way it is? What causes
+                  what? This curiosity shaped both my private life and career.
+                  <br /><br />
+                  I studied systems engineering and worked as a developer. But
+                  beyond technology, I was fascinated by people: behavior,
+                  emotions, decisions – and what truly drives us.
+                </em>
+              } @else {
+                <em>
+                  Hi, ich bin Basil.<br /><br />
+                  Ich war schon immer neugierig – Fragen stellen, analysieren,
+                  Zusammenhänge erkennen. Warum ist etwas so, wie es ist? Was
+                  bewirkt was? Diese Neugier prägte mein Privatleben und meine
+                  Karriere.<br /><br />
+                  Ich habe Systems Engineering studiert und als Entwickler
+                  gearbeitet. Über die Technologie hinaus faszinierten mich
+                  jedoch die Menschen: Verhalten, Gefühle, Entscheidungen – und
+                  was uns wirklich antreibt.
+                </em>
+              }
             </p>
             <div class="divider"></div>
           </article>
@@ -48,15 +69,31 @@
           <!-- Part 2: From performance to the big question -->
           <article #storyItem class="mystory-item">
             <p class="text-size-large">
-              <em>
-                For years, I focused on performance, motivation, optimization,
-                and focus. Step by step, I achieved the goals I set. But
-                eventually, a deeper question arose:
-                <i>Was that all there is?</i> <br /><br />
-                For more than a decade, I’ve been exploring who I am. Why I
-                think, feel, and act the way I do. How the mind works. What
-                development truly means – and what creates real fulfillment.
-              </em>
+              @if (currentLang === "en") {
+                <em>
+                  For years, I focused on performance, motivation, optimization,
+                  and how to do more. Step by step, I achieved the goals I set.
+                  But somehow it never ended. I felt like an endless draining
+                  ride with a lot of confusion. With that a deeper question
+                  arose:
+                  <i
+                    >Is this it? When do I finally arrive? What else do I have
+                    to do?</i
+                  >
+                </em>
+              } @else {
+                <em>
+                  Jahrelang lag mein Fokus auf Leistung, Motivation, Optimierung
+                  – und wie ich noch mehr schaffen kann. Schritt für Schritt
+                  erreichte ich meine Ziele. Doch irgendwie hörte es nie auf. Es
+                  fühlte sich an wie eine endlose, zehrende Fahrt – und damit
+                  tauchte eine tiefere Frage auf:
+                  <i
+                    >War das alles? Wann komme ich endlich an? Was muss ich noch
+                    tun?</i
+                  >
+                </em>
+              }
             </p>
             <div class="divider"></div>
           </article>
@@ -64,25 +101,45 @@
           <!-- Part 3: My philosophy & today’s work -->
           <article #storyItem class="mystory-item">
             <p class="text-size-large">
-              <em>
-                I discovered that it’s not about <b>optimizing yourself</b> –
-                but <b>understanding yourself</b>, both light and shadow. Real
-                power is released when the unknown is explored, integrated, and
-                lived. <br /><br />
-                Today I guide people on their journey from self-optimization to
-                genuine self-knowledge – for effectiveness with inner balance,
-                emotional depth, and healthy relationships. I combine systems
-                thinking, values work, mindfulness, neuroscience, and technology
-                into a holistic approach.
-              </em>
-              <br /><br />
-              <strong>
+              @if (currentLang === "en") {
                 <em>
-                  I believe: only those with inner clarity can act powerfully on
-                  the outside. True change doesn’t come from pressure, but from
-                  understanding & clarity.
+                  I discovered that it’s not about <b>optimizing yourself</b> –
+                  but <b>understanding yourself</b>, both light and shadow. Real
+                  power & lightness emerges when you embrace uncertainty,
+                  explore the unknown, integrate it. <br /><br />
+                  Today I guide people on their journey from stress, overwhelm &
+                  unclarity – to effectiveness with inner balance, emotional
+                  depth, and purpose. I combine systems thinking, ancient
+                  wisdom, science, and mindfulness into a holistic approach.
                 </em>
-              </strong>
+                <br /><br />
+                <strong>
+                  <em>
+                    True change doesn’t come from pressure, but from
+                    understanding & clarity.
+                  </em>
+                </strong>
+              } @else {
+                <em>
+                  Ich habe erkannt: Es geht nicht darum, dich ständig zu
+                  <b>optimieren</b> – sondern darum, dich wirklich zu
+                  <b>verstehen</b>, mit all deinen Licht- und Schattenseiten.
+                  Wahre Kraft und Leichtigkeit entstehen, wenn du Ungewissheit
+                  annimmst, das Unbekannte erforschst und integrierst. Heute
+                  begleite ich Menschen auf ihrem Weg – von Stress,
+                  Überforderung und Unklarheit hin zu Wirksamkeit mit innerer
+                  Balance, emotionaler Tiefe und Sinn. Dabei verbinde ich
+                  Systemdenken, alte Weisheit, Wissenschaft und Achtsamkeit zu
+                  einem ganzheitlichen Ansatz.
+                </em>
+                <br /><br />
+                <strong>
+                  <em>
+                    Echte Veränderung entsteht nicht durch Druck, sondern durch
+                    Verständnis und Klarheit.
+                  </em>
+                </strong>
+              }
             </p>
             <div class="divider"></div>
           </article>

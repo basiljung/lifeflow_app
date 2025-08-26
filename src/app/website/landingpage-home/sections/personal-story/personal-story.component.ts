@@ -8,6 +8,8 @@ import {
   ViewChild,
   ViewChildren,
 } from '@angular/core';
+import { Subject, takeUntil } from 'rxjs';
+import { LanguageService } from '../../../../services/language.service';
 
 @Component({
   selector: 'app-personal-story',
@@ -18,6 +20,8 @@ export class PersonalStoryComponent
   implements OnInit, AfterViewInit, OnDestroy
 {
   activeStep = 1;
+  private destroy$ = new Subject<void>();
+  currentLang: string | null = null;
 
   @ViewChild('rightPane', { static: false })
   rightPane!: ElementRef<HTMLElement>;
@@ -25,7 +29,13 @@ export class PersonalStoryComponent
 
   private io?: IntersectionObserver;
 
-  ngOnInit(): void {}
+  constructor(private langService: LanguageService) {}
+
+  ngOnInit(): void {
+    this.langService.lang$.pipe(takeUntil(this.destroy$)).subscribe((lang) => {
+      this.currentLang = lang;
+    });
+  }
 
   ngAfterViewInit(): void {
     this.io = new IntersectionObserver(
@@ -52,5 +62,7 @@ export class PersonalStoryComponent
 
   ngOnDestroy(): void {
     this.io?.disconnect();
+    this.destroy$.next();
+    this.destroy$.complete();
   }
 }

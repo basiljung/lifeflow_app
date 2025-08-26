@@ -1,29 +1,40 @@
+<!-- check: translations: yes, content: yes -->
 <app-title-page-top></app-title-page-top>
 
+<!-- check: translations: yes, content: yes  -->
 @if (!topic) {
   <app-topic-selector style="margin-bottom: 2rem"></app-topic-selector>
 }
 
+<!-- check: translations: yes, content: yes  -->
 @if (topic === "inner-peace") {
   <app-inner-peace></app-inner-peace>
 }
 
+<!-- check: translations: yes, content: yes  -->
 @if (topic === "clarity") {
   <app-clarity></app-clarity>
 }
 
+<!-- check: translations: yes, content: yes  -->
 @if (topic === "drive") {
   <app-drive></app-drive>
 }
 
+<!-- check: translations: no content: no  -->
 @if (topic === "digital") {
   <app-digital></app-digital>
 }
 
 @if (topic) {
+  <!-- check: translations: yes, content: yes  -->
   <app-section-trap></app-section-trap>
 
+  <!-- check: translations: yes, content: yes  -->
   <app-personal-story></app-personal-story>
+
+  <!-- check: translations: yes, content: yes  -->
+  <app-relevants></app-relevants>
 
   <app-the-formula></app-the-formula>
 

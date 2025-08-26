@@ -21,6 +21,7 @@ import { SectionTrapComponent } from './sections/section-trap/section-trap.compo
 import { UnderstandingSectionComponent } from './sections/understanding-section/understanding-section.component';
 import { UspComponent } from './sections/usp/usp.component';
 import { WhatNextComponent } from './sections/what-next/what-next.component';
+import { RelevantsComponent } from './sections/relevants/relevants.component';
 
 declare var M: any;
 
@@ -47,6 +48,7 @@ declare var M: any;
     BrandDifferentiationComponent,
     ForWhoIsItComponent,
     WhatNextComponent,
+    RelevantsComponent,
   ],
   templateUrl: './landingpage-home.component.html',
   styleUrl: './landingpage-home.component.scss',
