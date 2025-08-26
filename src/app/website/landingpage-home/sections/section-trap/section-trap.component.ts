@@ -2,10 +2,11 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subject, takeUntil } from 'rxjs';
 import { LanguageService } from '../../../../services/language.service';
 import { DefaultSection1Component } from '../../structure-elements/default-section-1/default-section-1.component';
+import { ReadMoreComponent } from '../../structure-elements/read-more/read-more.component';
 
 @Component({
   selector: 'app-section-trap',
-  imports: [DefaultSection1Component],
+  imports: [DefaultSection1Component, ReadMoreComponent],
   templateUrl: './section-trap.component.html',
   styleUrl: './section-trap.component.scss',
 })

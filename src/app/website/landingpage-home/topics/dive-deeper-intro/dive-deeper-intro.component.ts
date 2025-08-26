@@ -1,22 +1,16 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { SectionDefault2ColComponent } from '../../../section-default-2col/section-default-2col.component';
+import { TopicStructureComponent } from '../topic-structure/topic-structure.component';
 import { Subject, takeUntil } from 'rxjs';
 import { LanguageService } from '../../../../services/language.service';
 import { GetDetailsBtnComponent } from '../../../get-details-btn/get-details-btn.component';
-import { TopicStructureComponent } from '../topic-structure/topic-structure.component';
-import { DiveDeeperIntroComponent } from '../dive-deeper-intro/dive-deeper-intro.component';
 
 @Component({
-  selector: 'app-inner-peace',
-  imports: [
-    TopicStructureComponent,
-    GetDetailsBtnComponent,
-    DiveDeeperIntroComponent,
-  ],
-  templateUrl: './inner-peace.component.html',
-  styleUrl: './inner-peace.component.scss',
+  selector: 'app-dive-deeper-intro',
+  imports: [TopicStructureComponent, GetDetailsBtnComponent],
+  templateUrl: './dive-deeper-intro.component.html',
+  styleUrl: './dive-deeper-intro.component.scss',
 })
-export class InnerPeaceComponent implements OnInit, OnDestroy {
+export class DiveDeeperIntroComponent implements OnInit, OnDestroy {
   private destroy$ = new Subject<void>();
   currentLang: string | null = null;
 

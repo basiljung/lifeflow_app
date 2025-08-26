@@ -12,7 +12,7 @@ import { CommonModule } from '@angular/common';
 export class ReadMoreComponent implements OnInit, OnDestroy {
   private destroy$ = new Subject<void>();
   currentLang: string | null = null;
-  @Input() limit = 200; // number of characters before truncation
+  @Input() lines = 3; // number of characters before truncation
   expanded = false;
   constructor(private langService: LanguageService) {}
 

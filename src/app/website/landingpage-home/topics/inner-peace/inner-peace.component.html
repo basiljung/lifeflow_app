@@ -1,13 +1,8 @@
-<!--Challenge-->
 <div class="title-box-white">
   <app-topic-structure>
     <div slot="title">
       <h1>
-        {{
-          currentLang === "en"
-            ? "What happens when you have the achievements but your inner world won’t settle?"
-            : "Was passiert, wenn du die Erfolge hast, aber deine innere Welt nicht zur Ruhe kommt?"
-        }}
+        {{ currentLang === "en" ? "The Challenge" : "Die Herausforderung" }}
       </h1>
     </div>
 
@@ -75,27 +70,10 @@
   </app-topic-structure>
 </div>
 
-<!--Answer-->
-<div class="title-box-green">
-  <app-topic-structure>
-    <div slot="title">
-      <h1>
-        {{ currentLang === "en" ? "TIME TO UNDERSTAND" : "ZEIT ZU VERSTEHEN" }}
-      </h1>
-      <h2 class="gradient-title-sm-green">
-        {{
-          currentLang === "en"
-            ? "Structure for your mind. Strength for your nerves. Direction for your life."
-            : "Struktur für deinen Geist. Stärke für dein Nervensystem. Richtung für dein Leben."
-        }}
-      </h2>
-      <h3>
-        LifeFlow Coaching System™ is a structured 1:1 program that helps you
-        build resilience, transform pressure into focus, make confident
-        decisions, and turn achievement into fulfillment — designed for
-        time-poor creators and leaders.
-      </h3>
-    </div>
-  </app-topic-structure>
-  <app-get-details-btn></app-get-details-btn>
-</div>
+<app-dive-deeper-intro>
+  <p slot="detail-text">
+    LifeFlow Coaching System™ is a structured 1:1 program that helps you build
+    resilience, make confident decisions, and turn achievements into fulfillment
+    — designed for time-poor creators and leaders.
+  </p>
+</app-dive-deeper-intro>

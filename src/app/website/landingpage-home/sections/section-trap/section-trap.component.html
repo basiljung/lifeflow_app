@@ -1,120 +1,118 @@
 <div class="title-box-white">
-  <app-default-section-1>
-    <div slot="title">
-      <h1>
-        {{
-          currentLang === "en"
-            ? "The trap most high performers fall into"
-            : "--DE"
-        }}
-      </h1>
-    </div>
-    <div slot="text">
-      @if (currentLang === "en") {
-        <p>
-          You’ve built a strong outer life, but inside it’s noisy—stress, doubt,
-          the sense you’re just functioning. It doesn’t feel free, even when you
-          are.
-        </p>
-        <p>
-          You keep tweaking the outside. Actions that don’t match your authentic
-          values drain energy. Chasing goals without knowing your drivers behind
-          it. Resisting the what shows up thought, feeling, or body sensation.
-          Holding on to instead of learning to let go.
-        </p>
-        <p>This burns you out. And leaves you unfulfilled.</p>
-      } @else {
-        <p>
-          Du hast dir ein starkes äußeres Leben aufgebaut – Rolle, Einkommen,
-          Ansehen. Doch innen ist es laut: Stress, Zweifel und das Gefühl, nur
-          zu funktionieren statt wirklich zu leben.
-        </p>
-
-        <p>
-          Du versuchst, dich herauszudenken – mehr Podcasts, mehr Frameworks,
-          mehr Listen. Aber
-          <b>Willenskraft kann Selbstverständnis nicht ersetzen.</b>
-          Ohne ein inneres System fühlt sich jede Woche an wie ein Neustart.
-        </p>
-
-        <p>
-          <b>Gute Nachricht:</b> Wenn du deine Werte, deine Biologie und deinen
-          Fokus in Einklang bringst, hört Momentum auf, von Anstrengung
-          abzuhängen. <br />Frieden und Leistung können zusammen existieren.
-        </p>
-      }
-    </div>
-    <img
-      slot="image"
-      src="assets/me_mountain_trap.jpg"
-      width="250"
-      class="img-setting"
-    />
-  </app-default-section-1>
-
-  <h1>
-    {{
-      currentLang === "en"
-        ? "The Real Problem Isn't Your Effort. It's the effort in the wrong place."
-        : "--DE"
-    }}
-  </h1>
-
-  <div class="row">
-    <div
-      class="col s12 m8"
-      style="font-size: clamp(1.25rem, 1.5vw + 0.5rem, 1.4rem); color: #ffffff"
-    >
-      @if (currentLang === "en") {
-        <p>
-          It’s optimizing for output over clarity and trust—more to-dos instead
-          of the right todo’s and decisions that compound. But why? Because
-          clarity means looking where the mind doesn’t want to look. Letting go
-          means uncertainty. It required effort, trust and can hurt, but like a
-          run at first we don’t want to go, but after it feels great. - And we
-          regret not doing it earlier.
-        </p>
-        <p>
-          Good news: when you understand why you do what you do, you regain
-          power.
-        </p>
-        <p>
-          Strategy and focus bring real leverage when they address causes, not
-          symptoms. Acceptance means seeing what’s real and allowing energy to
-          flow.
-        </p>
-        <p>
-          The trap isn’t working too much—it’s working on the wrong things for
-          the wrong reasons while fighting the present. Peace and performance
-          can coexist.
-        </p>
-      } @else {
-        <p>
-          Die meisten Creator und Führungskräfte sind nicht wegen fehlender
-          Skills gestresst — sie optimieren für Output statt für Klarheit. Mehr
-          To-dos, keine Struktur, die sich mit der Zeit vervielfacht.
-        </p>
-
-        <p>
-          Strategie, Prioritäten und Fokus wirken nur, wenn sie an der tiefsten
-          Ursache ansetzen. Je tiefer du verstehst, desto klarer und
-          selbstbewusster triffst du Entscheidungen.
-        </p>
-
-        <p>
-          Ein solides Fundament macht aus Fragen Entscheidungen — weniger
-          Reibung, mehr Freude. Außen erfolgreich, innen unruhig? Richte beides
-          aus — ruhiger Geist, klare Prioritäten, sinnvolle Ergebnisse.
-        </p>
-      }
-    </div>
-    <div class="col s12 m4">
+  <div class="row justify-content-md-center">
+    <h1>
+      {{
+        currentLang === "en"
+          ? "The trap most high performers fall into"
+          : "Die Falle, in die die meisten High Performer tappen"
+      }}
+    </h1>
+    <!--     <div class="col col-md-auto">
       <img
         slot="image"
-        src="assets/coffee_c_problem.jpg"
+        src="assets/me_mountain_trap.jpg"
         width="180"
         class="img-setting"
       />
+    </div> -->
+    <div
+      class="col"
+      style="font-size: clamp(1.25rem, 1.5vw + 0.5rem, 1.4rem); color: #ffffff"
+    >
+      @if (currentLang === "en") {
+        <div>
+          <p>
+            The trap is chasing fixes outside. The real shift comes when you
+            look within—at your drivers and what you’re holding on to.
+          </p>
+          <p>
+            Most chase hacks and tasks, but clarity means facing what the mind
+            avoids. It can hut, but like a run, afterward it feels freeing—and
+            you wish you had started earlier.
+          </p>
+        </div>
+      } @else {
+        <div>
+          <p>
+            Die Falle ist, im Außen nach schnellen Lösungen zu suchen. Der wahre
+            Wandel beginnt, wenn du nach innen schaust – zu deinen inneren
+            Antreibern und dem, was dich unbewusst festhält.
+          </p>
+          <p>
+            Viele rennen Hacks und Aufgaben hinterher. Doch echte Klarheit
+            entsteht, wenn du dich dem stellst, was dein Verstand lieber
+            verdrängt. Ja, es kann herausfordernd sein – aber wie nach einem
+            Lauf fühlst du dich danach frei, erleichtert und kraftvoll. Und oft
+            wünschst du dir, du hättest schon viel früher damit begonnen.
+          </p>
+        </div>
+      }
+    </div>
+  </div>
+
+  <div class="row justify-content-md-center">
+    <div class="col col-md-auto">
+      <img
+        slot="image"
+        src="assets/me_mountain_trap.jpg"
+        width="180"
+        class="img-setting"
+      />
+    </div>
+    <div
+      class="col"
+      style="font-size: clamp(1.25rem, 1.5vw + 0.5rem, 1.4rem); color: #ffffff"
+    >
+      <h3>
+        {{
+          currentLang === "en"
+            ? "The issue isn’t to much effort—it’s the effort in the wrong place."
+            : "Das Problem ist nicht zu viel Einsatz – sondern der Einsatz am falschen Ort."
+        }}
+      </h3>
+      @if (currentLang === "en") {
+        <app-read-more [lines]="4">
+          <div slot="text-readmore-comp">
+            <p>
+              Acting from lack burns you out. The same action, done from
+              connection and abundance, gives energy and fulfillment—in work,
+              free time, and relationships.
+            </p>
+            <p>
+              Balance matters too: rest, challenge, fun, and connection keep
+              your system strong.
+            </p>
+            <p>
+              <b>Good news:</b>When your actions align with your inner world,
+              momentum comes naturally. By giving space and listening within,
+              you regain control. Peace and performance can coexist. Real
+              leverage comes from addressing causes, not symptoms.
+            </p>
+          </div>
+        </app-read-more>
+      } @else {
+        <app-read-more [lines]="4">
+          <div slot="text-readmore-comp">
+            <p>
+              Handeln aus Mangel brennt dich aus. Dieselbe Handlung, aus
+              Verbindung und Fülle heraus getan, schenkt dir Energie und
+              Erfüllung – im Beruf, in der Freizeit und in Beziehungen.
+            </p>
+            <p>
+              Auch Balance zählt: Erholung, Herausforderung, Freude und
+              Verbindung halten dein System stark.
+            </p>
+            <p>
+              <b>Die gute Nachricht:</b>Wenn deine Handlungen mit deiner inneren
+              Welt im Einklang sind, entsteht Schwung ganz von selbst. Indem du
+              dir Raum gibst und nach innen lauschst, gewinnst du die Kontrolle
+              zurück. Frieden und Performance können nebeneinander bestehen.
+              Echte Stärke entsteht, wenn du Ursachen angehst – nicht nur
+              Symptome.
+            </p>
+          </div>
+        </app-read-more>
+      }
     </div>
   </div>
 </div>
