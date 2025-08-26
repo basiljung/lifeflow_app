@@ -1,26 +1,60 @@
 <div class="title-box-green">
-  <section>
-    <h2 id="whnTitle">What happens next ✅</h2>
+  <h2 id="whnTitle">
+    {{
+      currentLang === "en" ? "What happens next ✅" : "Wie geht es weiter ✅"
+    }}
+  </h2>
 
-    <ol>
-      <li><strong>Reach out —</strong> Fill out the form or email me.</li>
-      <li>
-        <strong>Fit check —</strong> We’ll quickly confirm if I’m the right
-        person to help.
-      </li>
-      <li>
-        <strong>Kickoff setup —</strong> If it’s a match, we schedule your
-        kickoff call; I’ll send access + payment details.
-      </li>
-      <li>
-        <strong>Start —</strong> Your program begins with the first 1:1 session
-        with me.
-      </li>
-    </ol>
+  <div style="margin: 2rem">
+    <h5>
+      <strong>{{
+        currentLang === "en" ? "1. Reach out —" : "1. Kontakt aufnehmen —"
+      }}</strong>
+      {{
+        currentLang === "en"
+          ? "Fill out the form or email me. To apply for the coaching."
+          : "Fülle das Formular aus oder schreibe mir eine E-Mail, für eine Coachinganfrage. "
+      }}
+    </h5>
 
-    <p>
-      Ready to begin? Questions?
-      <a href="mailto:basil.jung@lifeflow.now">basil.jung&#64;lifeflow.now</a>
-    </p>
-  </section>
+    <h5>
+      <strong>{{
+        currentLang === "en" ? "2. Checking —" : "2. Check —"
+      }}</strong>
+      {{
+        currentLang === "en"
+          ? "I’ll check my current availability and we check if I am the right person to help you."
+          : "Ich prüfe meine aktuelle Verfügbarkeit und wir schauen ob ich die richtige Person bin, um dir zu helfen."
+      }}
+    </h5>
+
+    <h5>
+      <strong>{{
+        currentLang === "en" ? "3. Kickoff setup —" : "3. Kickoff planen —"
+      }}</strong>
+      {{
+        currentLang === "en"
+          ? "If it fit's we schedule your kickoff call; I’ll send access + payment details."
+          : "Wenn es passt, planen wir deinen Kickoff-Call; ich sende dir Zugang und Zahlungsdetails."
+      }}
+    </h5>
+
+    <h5>
+      <strong>{{ currentLang === "en" ? "4. Start —" : "4. Start —" }}</strong>
+      {{
+        currentLang === "en"
+          ? "Your program begins with the first 1:1 session with me."
+          : "Dein Programm startet mit der ersten 1:1-Session mit mir."
+      }}
+    </h5>
+  </div>
+
+  <p>
+    {{
+      currentLang === "en"
+        ? "If you have any questions, don’t hesitate to text me:"
+        : "Wenn du Fragen hast, schreibe mir gern:"
+    }}
+    <a href="mailto:basil.jung@lifeflow.now">basil.jung&#64;lifeflow.now</a>
+  </p>
 </div>

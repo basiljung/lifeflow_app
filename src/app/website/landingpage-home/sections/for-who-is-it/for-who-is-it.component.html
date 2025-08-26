@@ -1,12 +1,12 @@
 <div class="title-box-white">
-  <h1 class="gradient-title" slot="title">
+  <h1 slot="title">
     {{
       currentLang === "en"
-        ? "Who is lifeflow mentoring™ best suited for?"
-        : "Für wen ist das lifeflow Mentoring™ das Richtige?"
+        ? "Who is LifeFlow.Now Mentoring™ best suited for?"
+        : "Für wen ist das LifeFlow.Now Mentoring™ das Richtige?"
     }}
   </h1>
-  <app-read-more [lines]="3" slot="text">
+  <app-read-more [lines]="2" slot="text">
     <p slot="text-readmore-comp">
       {{
         currentLang === "en"
