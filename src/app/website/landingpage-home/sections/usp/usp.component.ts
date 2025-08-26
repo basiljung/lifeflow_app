@@ -1,10 +1,11 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subject, takeUntil } from 'rxjs';
 import { LanguageService } from '../../../../services/language.service';
+import { ReadMoreComponent } from '../../structure-elements/read-more/read-more.component';
 
 @Component({
   selector: 'app-usp',
-  imports: [],
+  imports: [ReadMoreComponent],
   templateUrl: './usp.component.html',
   styleUrl: './usp.component.scss',
 })

@@ -2,76 +2,147 @@
   <div class="card">
     <img src="assets/work.jpg" class="card-img" alt="..." />
     <div class="card-img-overlay">
-      <h5 class="card-title">USP - What is different...</h5>
+      <h5 class="card-title"></h5>
       <p class="card-text"></p>
-      <p class="card-text"><small>Last updated 3 mins ago</small></p>
     </div>
   </div>
   <section id="usp" class="usp-section">
     <h2>Why LifeFlow Coaching System™ is Different</h2>
+    <div style="margin: 1.5rem">
+      <app-read-more [lines]="3" slot="text">
+        <div slot="text-readmore-comp">
+          <p>
+            <strong>{{
+              currentLang === "en" ? "1:1, not a crowd." : "1:1, keine Masse."
+            }}</strong>
+            {{
+              currentLang === "en"
+                ? "You work directly with me—fully seen, supported, and accountable."
+                : "Du arbeitest direkt mit mir – voll gesehen, unterstützt und verantwortlich begleitet."
+            }}
+          </p>
 
-    <p>
-      <strong>1:1, not a crowd.</strong> You work directly with me—fully seen,
-      supported, and accountable.
-    </p>
+          <p>
+            <strong>{{
+              currentLang === "en" ? "Certified." : "Zertifiziert."
+            }}</strong>
+            {{
+              currentLang === "en"
+                ? "I’m a certified coach in a world where everyone’s a “coach,” I hold the line on quality and responsibility."
+                : "Ich bin ein zertifizierter Coach – in einer Welt, in der sich jeder „Coach“ nennt, halte ich an Qualität und Verantwortung fest."
+            }}
+          </p>
 
-    <p>
-      <strong>Certified.</strong> I’m a certified coach in a world where
-      everyone’s a “coach,” I hold the line on quality and responsibility.
-    </p>
+          <p>
+            <strong>{{
+              currentLang === "en"
+                ? "Built for busy people."
+                : "Gemacht für beschäftigte Menschen."
+            }}</strong>
+            {{
+              currentLang === "en"
+                ? "Flexible online sessions. Clear steps."
+                : "Flexible Online-Sessions. Klare Schritte."
+            }}
+          </p>
 
-    <p>
-      <strong>Built for busy people.</strong> Flexible online sessions. Clear
-      steps.
-    </p>
+          <p>
+            <strong>{{
+              currentLang === "en" ? "Practice + theory." : "Praxis + Theorie."
+            }}</strong>
+            {{
+              currentLang === "en"
+                ? "Short, targeted exercises with fast feedback. You track insights in one place, see steady progress, and keep the overview."
+                : "Kurze, gezielte Übungen mit schnellem Feedback. Du hältst deine Erkenntnisse an einem Ort fest, siehst kontinuierlichen Fortschritt und behältst den Überblick."
+            }}
+          </p>
 
-    <p>
-      <strong>Practice + theory.</strong> Short, targeted exercises with fast
-      feedback. You track insights in one place, see steady progress, and keep
-      the overview.
-    </p>
+          <p>
+            <strong>
+              {{
+                currentLang === "en"
+                  ? "A systematic, integral, real-life view, not woo-woo:"
+                  : "Ein systematischer, integraler, praxisnaher Blick – kein Hokuspokus:"
+              }}
+            </strong>
+            {{
+              currentLang === "en"
+                ? "Spiral Dynamics + Four Quadrants for context, feeling–thinking–acting–intuition aligned."
+                : "Spiral Dynamics + Vier Quadranten für Kontext – Fühlen, Denken, Handeln und Intuition im Einklang."
+            }}
+          </p>
 
-    <p>
-      <strong>A systematic, integral, real-life view, not woo-woo:</strong>
-      Spiral Dynamics + Four Quadrants for context,
-      feeling–thinking–acting–intuition aligned.
-    </p>
+          <p>
+            <strong>{{ currentLang === "en" ? "Online." : "Online." }}</strong>
+            {{
+              currentLang === "en"
+                ? "Smooth collaboration, efficient communication."
+                : "Reibungslose Zusammenarbeit, effiziente Kommunikation."
+            }}
+          </p>
 
-    <p>
-      <strong>Online.</strong> Smooth collaboration, efficient communication.
-    </p>
+          <p>
+            <strong>{{
+              currentLang === "en"
+                ? "Know yourself, prompt better."
+                : "Erkenne dich selbst, bessere Prompts."
+            }}</strong>
+            {{
+              currentLang === "en"
+                ? "Muddy inputs = muddy outputs. You’ll learn how you work—patterns, energy, biology—and what generally works for humans. Result: sharper thinking and far better GPT prompts for your self-reflexion."
+                : "Unklare Eingaben = unklare Ergebnisse. Du lernst, wie du funktionierst – Muster, Energie, Biologie – und was allgemein für Menschen funktioniert. Ergebnis: klareres Denken und deutlich bessere GPT-Prompts für deine Selbstreflexion."
+            }}
+          </p>
 
-    <p>
-      <strong>Know yourself, prompt better.</strong> Muddy inputs = muddy
-      outputs. You’ll learn how you work—patterns, energy, biology—and what
-      generally works for humans. Result: sharper thinking and far better GPT
-      prompts for your self-reflexion.
-    </p>
+          <p>
+            <strong>{{
+              currentLang === "en"
+                ? "Clear roadmap, tailored pace."
+                : "Klarer Fahrplan, angepasstes Tempo."
+            }}</strong>
+            {{
+              currentLang === "en"
+                ? "A proven step-by-step path sets the guardrails; inside them, we adapt to your speed & need. - Co-created with real clients."
+                : "Ein bewährter Schritt-für-Schritt-Prozess setzt die Leitplanken; darin passen wir uns deinem Tempo und deinen Bedürfnissen an. – Mit echten Klienten entwickelt."
+            }}
+          </p>
 
-    <p>
-      <strong>Clear roadmap, tailored pace.</strong> A proven step-by-step path
-      sets the guardrails; inside them, we adapt to your speed & need. -
-      Co-created with real clients.
-    </p>
+          <p>
+            <strong>{{
+              currentLang === "en" ? "We go deep." : "Wir gehen in die Tiefe."
+            }}</strong>
+            {{
+              currentLang === "en"
+                ? "Coaching aimed at lasting clarity, inner calm, and real change."
+                : "Coaching, das auf nachhaltige Klarheit, innere Ruhe und echte Veränderung abzielt."
+            }}
+          </p>
 
-    <p>
-      <strong>We go deep.</strong> Coaching aimed at lasting clarity, inner
-      calm, and real change.
-    </p>
-
-    <p><strong>Approach:</strong> Depth, Long-term thinking, Simplicity</p>
+          <p>
+            <strong>{{
+              currentLang === "en" ? "Approach:" : "Ansatz:"
+            }}</strong>
+            {{
+              currentLang === "en"
+                ? "Depth, Long-term thinking, Simplicity"
+                : "Tiefe, Langfristigkeit, Einfachheit"
+            }}
+          </p>
+        </div>
+      </app-read-more>
+    </div>
   </section>
-  <div class="row center-align" style="margin-bottom: 12rem">
+  <div class="row center-align">
     <div class="col s12 m6">
-      <h1 class="gradient-title">
+      <h2>
         {{
           currentLang === "en"
             ? "I know your challenge is unique, that's why we work 1:1"
             : "Ich weiß, dass deine Herausforderung einzigartig ist, deshalb arbeiten wir 1:1"
         }}
-      </h1>
+      </h2>
       @if (currentLang === "en") {
-        <p class="text-light">
+        <p>
           As a certified LTC &
           <a
             href="https://www.easc-online.eu/in-ihrer-naehe/profil/basil-jung"
@@ -82,7 +153,7 @@
           and awareness - through your personal development process.
         </p>
       } @else {
-        <p class="text-light">
+        <p>
           Als zertifizierter LTC &
           <a
             href="https://www.easc-online.eu/in-ihrer-naehe/profil/basil-jung"

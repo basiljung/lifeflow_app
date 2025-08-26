@@ -3,11 +3,11 @@ import { Subject, takeUntil } from 'rxjs';
 import { LanguageService } from '../../../services/language.service';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-import { GetDetailsBtnComponent } from '../../get-details-btn/get-details-btn.component';
+import { GoToBtnComponent } from '../structure-elements/go-to-btn/go-to-btn.component';
 
 @Component({
   selector: 'app-title-page-top',
-  imports: [CommonModule, RouterModule, GetDetailsBtnComponent],
+  imports: [CommonModule, RouterModule, GoToBtnComponent],
   templateUrl: './title-page-top.component.html',
   styleUrl: './title-page-top.component.scss',
 })

@@ -1,15 +1,15 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { Router, RouterModule } from '@angular/router';
-import { LanguageService } from '../../services/language.service';
+import { Router } from '@angular/router';
 import { Subject, takeUntil } from 'rxjs';
+import { LanguageService } from '../../../../services/language.service';
 
 @Component({
-  selector: 'app-get-details-btn',
-  imports: [RouterModule],
-  templateUrl: './get-details-btn.component.html',
-  styleUrl: './get-details-btn.component.scss',
+  selector: 'app-go-to-btn',
+  imports: [],
+  templateUrl: './go-to-btn.component.html',
+  styleUrl: './go-to-btn.component.scss',
 })
-export class GetDetailsBtnComponent implements OnInit, OnDestroy {
+export class GoToBtnComponent implements OnInit, OnDestroy {
   private destroy$ = new Subject<void>();
   currentLang: string | null = null;
   topic: string | undefined;

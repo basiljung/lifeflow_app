@@ -2,11 +2,11 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { TopicStructureComponent } from '../topic-structure/topic-structure.component';
 import { Subject, takeUntil } from 'rxjs';
 import { LanguageService } from '../../../../services/language.service';
-import { GetDetailsBtnComponent } from '../../../get-details-btn/get-details-btn.component';
+import { GoToBtnComponent } from '../../structure-elements/go-to-btn/go-to-btn.component';
 
 @Component({
   selector: 'app-dive-deeper-intro',
-  imports: [TopicStructureComponent, GetDetailsBtnComponent],
+  imports: [TopicStructureComponent, GoToBtnComponent],
   templateUrl: './dive-deeper-intro.component.html',
   styleUrl: './dive-deeper-intro.component.scss',
 })
