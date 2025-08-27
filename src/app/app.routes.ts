@@ -1,6 +1,4 @@
 import { Routes } from '@angular/router';
-import { PrivacyPolicyComponent } from './general-elements/footer/privacy-policy/privacy-policy.component';
-import { ImpressumComponent } from './general-elements/footer/impressum/impressum.component';
 import { LandingpageHomeComponent } from './website/landingpage-home/landingpage-home.component';
 
 export const routes: Routes = [
@@ -37,7 +35,7 @@ export const routes: Routes = [
         path: '31',
         loadComponent: () =>
           import(
-            './email-course-signup-page/email-course-signup-page.component'
+            './general-elements/email-course-signup-page/email-course-signup-page.component'
           ).then((m) => m.EmailCourseSignupPageComponent),
       },
       {
@@ -71,12 +69,24 @@ export const routes: Routes = [
       {
         path: 'build&be',
         loadComponent: () =>
-          import('./website/build-andbe/build-andbe.component').then(
+          import('./website/old/build-andbe/build-andbe.component').then(
             (m) => m.BuildAndbeComponent,
           ),
       },
-      { path: 'privacy-policy', component: PrivacyPolicyComponent },
-      { path: 'impressum', component: ImpressumComponent },
+      {
+        path: 'privacy-policy',
+        loadComponent: () =>
+          import('./footer/privacy-policy/privacy-policy.component').then(
+            (m) => m.PrivacyPolicyComponent,
+          ),
+      },
+      {
+        path: 'impressum',
+        loadComponent: () =>
+          import('./footer/impressum/impressum.component').then(
+            (m) => m.ImpressumComponent,
+          ),
+      },
     ],
   },
   { path: '', redirectTo: 'en', pathMatch: 'full' }, // Default redirect

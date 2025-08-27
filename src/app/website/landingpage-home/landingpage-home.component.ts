@@ -12,7 +12,6 @@ import { DigitalComponent } from './topics/digital/digital.component';
 import { ClarityComponent } from './topics/clarity/clarity.component';
 import { PersonalStoryComponent } from './sections/personal-story/personal-story.component';
 import { TheFormulaComponent } from './sections/the-formula/the-formula.component';
-import { ResultComponent } from './sections/result/result.component';
 import { Cta1Component } from './sections/cta-1/cta-1.component';
 import { FaqComponent } from './sections/faq/faq.component';
 import { ForWhoIsItComponent } from './sections/for-who-is-it/for-who-is-it.component';
@@ -42,7 +41,6 @@ declare var M: any;
     TheFormulaComponent,
     UspComponent,
     UnderstandingSectionComponent,
-    ResultComponent,
     Cta1Component,
     FaqComponent,
     ForWhoIsItComponent,

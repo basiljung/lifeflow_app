@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, input, OnInit } from '@angular/core';
 import { ResultData } from '../self-check-logic.component';
-import { CtaWhatsappComponent } from '../../../cta-whatsapp/cta-whatsapp.component';
+import { CtaWhatsappComponent } from '../../../general-elements/cta-whatsapp/cta-whatsapp.component';
 
 declare const M: any;
 

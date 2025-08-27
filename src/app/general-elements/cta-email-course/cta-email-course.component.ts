@@ -1,6 +1,6 @@
-import { AfterViewInit, Component, OnDestroy, OnInit } from '@angular/core';
-import { LanguageService } from '../services/language.service';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subject, takeUntil } from 'rxjs';
+import { LanguageService } from '../../services/language.service';
 
 declare function gtag(command: string, target: string, params?: any): void;
 

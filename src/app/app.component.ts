@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavigationEnd, Router, RouterOutlet } from '@angular/router';
-import { CookieBannerComponent } from './cookie-banner/cookie-banner.component';
+import { CookieBannerComponent } from './general-elements/cookie-banner/cookie-banner.component';
 import { HeaderComponent } from './general-elements/header/header.component';
 import { FooterComponent } from './footer/footer.component';
 

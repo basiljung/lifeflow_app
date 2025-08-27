@@ -2,27 +2,21 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subject, takeUntil } from 'rxjs';
 import { LanguageService } from '../../services/language.service';
 
-declare const M: any;
-
 @Component({
-  selector: 'app-faq-website',
+  selector: 'app-cta-whatsapp',
   imports: [],
-  templateUrl: './faq-website.component.html',
-  styleUrl: './faq-website.component.scss',
+  templateUrl: './cta-whatsapp.component.html',
+  styleUrl: './cta-whatsapp.component.scss',
 })
-export class FaqWebsiteComponent implements OnInit, OnDestroy {
-  currentLang: string | null = null;
+export class CtaWhatsappComponent implements OnInit, OnDestroy {
   private destroy$ = new Subject<void>();
+  currentLang: string | null = null;
 
   constructor(private langService: LanguageService) {}
 
   ngOnInit(): void {
     this.langService.lang$.pipe(takeUntil(this.destroy$)).subscribe((lang) => {
       this.currentLang = lang;
-      setTimeout(() => {
-        const elems = document.querySelectorAll('.collapsible');
-        M.Collapsible.init(elems);
-      }, 200);
     });
   }
 
