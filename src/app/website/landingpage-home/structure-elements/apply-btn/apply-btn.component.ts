@@ -1,15 +1,14 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subject, takeUntil } from 'rxjs';
 import { LanguageService } from '../../../../services/language.service';
-import { ApplyBtnComponent } from '../../structure-elements/apply-btn/apply-btn.component';
 
 @Component({
-  selector: 'app-cta-2',
-  imports: [ApplyBtnComponent],
-  templateUrl: './cta-2.component.html',
-  styleUrl: './cta-2.component.scss',
+  selector: 'app-apply-btn',
+  imports: [],
+  templateUrl: './apply-btn.component.html',
+  styleUrl: './apply-btn.component.scss',
 })
-export class Cta2Component implements OnInit, OnDestroy {
+export class ApplyBtnComponent implements OnInit, OnDestroy {
   private destroy$ = new Subject<void>();
   currentLang: string | null = null;
 

@@ -1,4 +1,4 @@
-<div class="title-box-green">
+<div id="apply-selector" class="title-box-green">
   <section class="cta" aria-labelledby="ctaTitle">
     <h1 id="ctaTitle">
       {{
@@ -104,15 +104,7 @@
         </ol>
       </div>
       <div class="col-sm-6">
-        <a
-          href="#contact-form"
-          class="btn-selector btn waves-effect waves-light btn-gradient"
-          style="border-radius: 12px; margin: 2rem"
-        >
-          <span class="text-secondary">
-            {{ currentLang === "en" ? "Apply now" : "Jetzt anfragen" }}
-          </span>
-        </a>
+        <app-apply-btn></app-apply-btn>
 
         <p style="margin: 2rem">
           <strong>

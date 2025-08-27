@@ -1,10 +1,11 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subject, takeUntil } from 'rxjs';
 import { LanguageService } from '../../../../services/language.service';
+import { ApplyBtnComponent } from '../../structure-elements/apply-btn/apply-btn.component';
 
 @Component({
   selector: 'app-cta-1',
-  imports: [],
+  imports: [ApplyBtnComponent],
   templateUrl: './cta-1.component.html',
   styleUrl: './cta-1.component.scss',
 })

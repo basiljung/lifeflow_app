@@ -1,4 +1,4 @@
-<div class="title-box-green">
+<div id="formula-selector" class="title-box-green">
   <h1>
     {{
       currentLang === "en"
@@ -6,13 +6,13 @@
         : "LifeFlow.Now - eine einfache Formel um im Flow zu leben"
     }}
   </h1>
-  <p>
+  <!--   <p>
     {{
       currentLang === "en"
         ? "So what's the difference from the performer & creator who are able to work hard with a smile on their face and the once who end up in a dead end?"
         : "Was unterscheidet die Performer & Creator, die hart arbeiten können und dabei ein Lächeln im Gesicht haben, von denen, die am Ende in einer Sackgasse landen?"
     }}
-  </p>
+  </p> -->
   <div class="card text-center">
     <div class="card-body card-title-custom">
       {{
@@ -28,13 +28,16 @@
     </div>
   </div>
 
-  <h2>
+  <hr style="color: white" />
+
+  <p style="margin: 3rem">
     {{
       currentLang === "en"
         ? "What we want – Be effective, feel energized, & enjoy the journey."
         : "Was wir wollen – Wirksam sein, Energie spüren, & den Weg genießen."
     }}
-  </h2>
+  </p>
+  <hr style="color: white" />
   <div class="scroll-container-horizontal scroll-container">
     <div class="card">
       <div class="card-body">
@@ -169,7 +172,9 @@
   </div>
   <div class="collapse" id="collapseDetails">
     <div class="card card-body">
-      <h3>{{ currentLang === "en" ? "Overview" : "Überblick" }}</h3>
+      <div class="card-title-custom text-primary">
+        {{ currentLang === "en" ? "Overview" : "Überblick" }}
+      </div>
       <div style="margin: 1.5rem">
         <li>
           <strong>
@@ -192,8 +197,8 @@
           —
           {{
             currentLang === "en"
-              ? "focused coaching & tools"
-              : "fokussiertes Coaching & Tools"
+              ? "focused coaching & exercises"
+              : "fokussiertes Coaching & Übungen"
           }}
         </li>
         <li>
@@ -227,23 +232,89 @@
           —
           {{
             currentLang === "en"
-              ? "on Notion to directly read about it"
-              : "auf Notion, um direkt nachzulesen"
-          }}
-        </li>
-        <li>
-          <strong>{{
-            currentLang === "en" ? "Optional clinics" : "Optionale Clinics"
-          }}</strong>
-          —
-          {{
-            currentLang === "en"
-              ? "invite-only small-group implementation sessions"
-              : "exklusive Kleingruppen-Sessions zur Umsetzung (nur auf Einladung)"
+              ? "on Notion to directly read about it in you own pace"
+              : "auf Notion, um direkt in deinem Tempo nachzulesen"
           }}
         </li>
       </div>
-      <h3>{{ currentLang === "en" ? "4 phases" : "4 Phasen" }}</h3>
+      <div class="card-title-custom text-primary">
+        {{ currentLang === "en" ? "Your takeaways" : "Das nimmst du mit" }}
+      </div>
+      <div style="margin: 1.5rem">
+        <li>
+          @if (currentLang === "en") {
+            1-Page Personal Operating Manual — values, strengths, motivators,
+            limbic type, consciousness level.
+          } @else {
+            1-Seiten Persönliches Operating Manual — Werte, Stärken,
+            Motivatoren, limbischer Typ, Bewusstseins­ebene.
+          }
+        </li>
+
+        <li>
+          @if (currentLang === "en") {
+            Decision Filters — simple rules for what to say yes/no to (and why).
+          } @else {
+            Entscheidungsfilter — klare Regeln, wann du Ja oder Nein sagst (und
+            warum).
+          }
+        </li>
+
+        <li>
+          @if (currentLang === "en") {
+            12-Week Execution Map — 3 milestones, prioritized next actions.
+          } @else {
+            12-Wochen Umsetzungsplan — 3 Meilensteine, priorisierte nächste
+            Schritte.
+          }
+        </li>
+
+        <li>
+          @if (currentLang === "en") {
+            Visionboard + Strategy — purpose-driven plan to keep momentum high.
+          } @else {
+            Visionboard + Strategie — ein sinnorientierter Plan, um die
+            Motivation hoch zu halten.
+          }
+        </li>
+
+        <li>
+          @if (currentLang === "en") {
+            Self-Awareness Habit Stack — a tailored daily/weekly practice.
+          } @else {
+            Self-Awareness Habit Stack — eine individuelle tägliche/wöchentliche
+            Praxis.
+          }
+        </li>
+
+        <li>
+          @if (currentLang === "en") {
+            LifeFlow (AI) Coach — your data + LifeFlow mindset to support
+            ongoing growth.
+          } @else {
+            LifeFlow (AI) Coach — deine Daten + LifeFlow Mindset zur
+            Unterstützung deines Wachstums.
+          }
+        </li>
+
+        <li>
+          @if (currentLang === "en") {
+            Flow Protocol — triggers, blockers, and re-entry steps for
+            consistent flow.
+          } @else {
+            Flow-Protokoll — Trigger, Blockaden und Re-Entry-Schritte für
+            beständigen Flow.
+          }
+        </li>
+      </div>
+      <div class="card-title-custom text-primary">
+        {{
+          currentLang === "en"
+            ? "4 phases - In 14 Weeks"
+            : "4 Phasen - In 14 Wochen"
+        }}
+      </div>
+      <p>{{ currentLang === "en" ? "In 14 Wochen" : "In 14 Wochen" }}</p>
       <div class="scroll-container-vertical scroll-container">
         <!-- 1) Orientation · Resilience -->
         <div class="card">

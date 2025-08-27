@@ -37,7 +37,7 @@ export class GoToBtnComponent implements OnInit, OnDestroy {
 
   handleAction() {
     if (this.topic) {
-      this.scrollTo('result-selector');
+      this.scrollTo('formula-selector');
     } else {
       this.scrollTo('topic-selector');
     }
