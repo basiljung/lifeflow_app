@@ -1,9 +1,26 @@
 <a
-  href="#contact-form"
+  (click)="applyCoachingDialog()"
   class="btn-selector btn waves-effect waves-light btn-gradient"
   style="border-radius: 12px; margin-bottom: 2rem"
+  onclick="ml('show', '9FBWV0', true)"
 >
   <span class="text-secondary">
     {{ currentLang === "en" ? "Apply now" : "Jetzt anfragen" }}
   </span>
 </a>
+
+@if (isLoading) {
+  <div style="margin-left: 2rem" class="preloader-wrapper small active">
+    <div class="spinner-layer spinner-custom">
+      <div class="circle-clipper left">
+        <div class="circle"></div>
+      </div>
+      <div class="gap-patch">
+        <div class="circle"></div>
+      </div>
+      <div class="circle-clipper right">
+        <div class="circle"></div>
+      </div>
+    </div>
+  </div>
+}
