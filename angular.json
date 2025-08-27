@@ -32,7 +32,6 @@
             ],
             "styles": [
               "node_modules/material-icons/iconfont/material-icons.css",
-              "node_modules/materialize-css/dist/css/materialize.min.css",
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.scss"
             ],
