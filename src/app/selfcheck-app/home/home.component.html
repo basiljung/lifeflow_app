@@ -3,8 +3,8 @@
     <div class="card-content">
       <span class="card-title">{{
         currentLang === "en"
-          ? "🧠🌿 Welcome to the lifeflow-Selfcheck!"
-          : "🧠🌿 Willkommen beim lifeflow-Selbstcheck!"
+          ? "🧠🌿 Welcome to the LifeFlow.Now™-FlowCheck!"
+          : "🧠🌿 Willkommen beim LifeFlow.Now™-FlowCheck!"
       }}</span>
     </div>
 
@@ -20,24 +20,24 @@
         style="text-transform: none"
         target="_blank"
         [routerLink]="'/'"
-        >lifeflow.now</a
+        >LifeFlow.Now™</a
       >
 
       <a
-        class="activator"
-        style="
-          color: #0f4f45;
-          margin: 0;
-          padding: 0;
-          text-transform: none;
-          cursor: pointer;
-        "
+        class="btn-selector btn btn-gradient"
+        data-bs-toggle="collapse"
+        href="#collapseExample"
+        role="button"
+        aria-expanded="false"
+        aria-controls="collapseExample"
       >
-        👉 Details & FAQ
+        Details & FAQ
       </a>
     </div>
-    <div class="card-reveal">
-      <app-details-faq></app-details-faq>
-    </div>
+  </div>
+</div>
+<div class="collapse" id="collapseExample">
+  <div class="card card-body">
+    <app-details-faq></app-details-faq>
   </div>
 </div>

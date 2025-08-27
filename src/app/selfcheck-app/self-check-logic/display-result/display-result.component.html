@@ -1,104 +1,104 @@
-@if (results(); as data) {
-  @if (data | keyvalue; as resultEntries) {
-    @if (resultEntries.length > 0) {
-      <div class="container">
-        <div>
-          <ng-content select="[slot=top]"></ng-content>
-        </div>
-        <ul class="collapsible" style="border-radius: 12px">
-          <ng-container *ngFor="let entry of resultEntries">
-            <li>
-              <div class="collapsible-header" style="border-radius: 12px">
-                <i class="material-icons">psychology</i>
-                <span class="left-align">{{
-                  entry.value.area | titlecase
-                }}</span>
-                <span class="badge text-secondary right-align"
-                  >{{ lang() === "en" ? "👉 Details" : "👉 Details" }}
-                </span>
-              </div>
-              <div
-                class="collapsible-body left-align"
-                style="text-align: justify"
-              >
-                <h6>
-                  <b> {{ lang() === "en" ? "🔍  Reason" : "🔍  Ursache" }}</b>
-                </h6>
-                <div>
-                  <ul>
-                    <li
-                      *ngFor="
-                        let reason of entry.value.reasons;
-                        let even = even
-                      "
-                      style="margin-bottom: 1rem"
-                    >
+@let entries = resultEntries();
+
+@if (entries.length > 0) {
+  <div class="container">
+    <div>
+      <ng-content select="[slot=top]"></ng-content>
+    </div>
+
+    <div
+      class="accordion accordion-flush"
+      id="resultAccordion"
+      style="border-radius: 12px"
+    >
+      @for (entry of entries; track $index; let i = $index) {
+        <div class="accordion-item">
+          <h2 class="accordion-header" [id]="'res-h-' + i">
+            <button
+              type="button"
+              class="accordion-button"
+              [class.collapsed]="openIndex() !== i"
+              (click)="toggle(i)"
+              [attr.aria-expanded]="openIndex() === i"
+              [attr.aria-controls]="'res-c-' + i"
+            >
+              <span class="me-2">🧠</span>
+              <span class="text-start">{{ entry.value.area | titlecase }}</span>
+            </button>
+          </h2>
+
+          <div
+            class="accordion-collapse collapse"
+            [class.show]="openIndex() === i"
+            [id]="'res-c-' + i"
+            role="region"
+            [attr.aria-labelledby]="'res-h-' + i"
+            data-bs-parent="#resultAccordion"
+          >
+            <div class="accordion-body left-align" style="text-align: justify">
+              <h6>
+                <b>{{ lang() === "en" ? "🔍  Reason" : "🔍  Ursache" }}</b>
+              </h6>
+              <div>
+                <ul class="mb-0">
+                  @for (reason of entry.value.reasons; track $index) {
+                    <li style="margin-bottom: 1rem">
                       <span> ⬩ {{ reason }}</span>
                     </li>
-                  </ul>
-                </div>
-
-                <div
-                  style="
-                    border-bottom: 1.5px solid #0f4f45;
-                    margin-top: 2rem;
-                    margin-bottom: 2rem;
-                    width: 10rem;
-                  "
-                ></div>
-
-                <h6>
-                  <b>{{ lang() === "en" ? "💡 Tip" : "💡 Tipp" }}</b>
-                </h6>
-                <div>
-                  <ul>
-                    <li
-                      *ngFor="let tip of entry.value.tips; let even = even"
-                      style="margin-bottom: 1rem"
-                    >
-                      <span>
-                        <b>{{ tip.title }}</b> </span
-                      ><br />
-                      <span> {{ tip.text }}</span>
-                    </li>
-                  </ul>
-                </div>
-                <div
-                  style="
-                    border-bottom: 1.5px solid #0f4f45;
-                    margin-top: 2rem;
-                    margin-bottom: 2rem;
-                    width: 10rem;
-                  "
-                ></div>
-
-                <h6>
-                  <b>{{ lang() === "en" ? "✚ Details" : "✚ Details" }}</b>
-                </h6>
-                <div>
-                  <p class="block-text">
-                    {{ entry.value.input }}
-                  </p>
-                </div>
-                <div>
-                  <app-cta-whatsapp></app-cta-whatsapp>
-                </div>
+                  }
+                </ul>
               </div>
-            </li>
-          </ng-container>
-        </ul>
-      </div>
-      <div
-        style="
-          border-bottom: 1px solid #0f4f45;
-          margin: 3rem auto;
-          width: 20rem;
-        "
-      ></div>
-    } @else {
-      <div class="container" style="margin-bottom: 1rem">
-        <em> <ng-content select="[slot=bottom]"></ng-content></em>
-      </div>
-    }
-  }
+
+              <div
+                style="
+                  border-bottom: 1.5px solid #0f4f45;
+                  margin: 2rem 0;
+                  width: 10rem;
+                "
+              ></div>
+
+              <h6>
+                <b>{{ lang() === "en" ? "💡 Tip" : "💡 Tipp" }}</b>
+              </h6>
+              <div>
+                <ul class="mb-0">
+                  @for (tip of entry.value.tips; track $index) {
+                    <li style="margin-bottom: 1rem">
+                      <span
+                        ><b>{{ tip.title }}</b></span
+                      ><br />
+                      <span>{{ tip.text }}</span>
+                    </li>
+                  }
+                </ul>
+              </div>
+
+              <div
+                style="
+                  border-bottom: 1.5px solid #0f4f45;
+                  margin: 2rem 0;
+                  width: 10rem;
+                "
+              ></div>
+
+              <h6>
+                <b>{{ lang() === "en" ? "✚ Details" : "✚ Details" }}</b>
+              </h6>
+              <p class="block-text">{{ entry.value.input }}</p>
+
+              <app-cta-whatsapp></app-cta-whatsapp>
+            </div>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+
+  <div
+    style="border-bottom: 1px solid #0f4f45; margin: 3rem auto; width: 20rem"
+  ></div>
+} @else {
+  <div class="container" style="margin-bottom: 1rem">
+    <em><ng-content select="[slot=bottom]"></ng-content></em>
+  </div>
 }

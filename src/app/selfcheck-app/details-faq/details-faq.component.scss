@@ -1,0 +1,19 @@
+/* Base color */
+$selected-color: #0f4f45;
+
+.accordion-button:not(.collapsed) {
+  background-color: $selected-color;
+  color: #fff; // make text white for contrast (optional)
+
+  /* Optional: adjust icon/badge inside */
+  .badge {
+    background-color: #fff;
+    color: $selected-color;
+  }
+}
+
+/* Optional: remove Bootstrap’s default shadow */
+.accordion-button:focus {
+  box-shadow: none;
+  border-color: $selected-color;
+}
