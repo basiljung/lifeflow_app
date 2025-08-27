@@ -1,0 +1,142 @@
+<div class="title-box-green">
+  <section class="cta" aria-labelledby="ctaTitle">
+    <h1 id="ctaTitle">
+      {{
+        currentLang === "en"
+          ? "Ready for your transformation?"
+          : "Bereit für deine Transformation?"
+      }}
+    </h1>
+
+    <h3 style="margin: 2rem">
+      <strong>
+        {{
+          currentLang === "en"
+            ? "You’ve built the outside."
+            : "Du hast das Äußere aufgebaut."
+        }}
+      </strong>
+      {{
+        currentLang === "en"
+          ? "Now we align the inside. – Quiet mind. Clear direction. Strong impact."
+          : "Jetzt richten wir das Innere aus. – Klarer Geist. Klare Richtung. Starke Wirkung."
+      }}
+    </h3>
+
+    <div class="row">
+      <div class="col-sm-6 mb-3 mb-sm-0">
+        <ol>
+          <li>
+            @if (currentLang === "en") {
+              You know who you are—and what truly matters.
+            } @else {
+              Du weißt, wer du bist – und was wirklich zählt.
+            }
+          </li>
+
+          <li>
+            @if (currentLang === "en") {
+              You recognize your patterns and grow beyond them.
+            } @else {
+              Du erkennst deine Muster – und wächst über sie hinaus.
+            }
+          </li>
+
+          <li>
+            @if (currentLang === "en") {
+              You stay calm and grounded, even in chaos.
+            } @else {
+              Du bleibst ruhig und geerdet – selbst im Chaos.
+            }
+          </li>
+
+          <li>
+            @if (currentLang === "en") {
+              You keep overview and perspective, even with a full to-do list.
+            } @else {
+              Du behältst Überblick und Perspektive – auch bei voller
+              To-do-Liste.
+            }
+          </li>
+
+          <li>
+            @if (currentLang === "en") {
+              You feel connected—to yourself, others, and life.
+            } @else {
+              Du fühlst dich verbunden – mit dir selbst, anderen und dem Leben.
+            }
+          </li>
+
+          <li>
+            @if (currentLang === "en") {
+              You grow with a clear inner compass.
+            } @else {
+              Du wächst mit einem klaren inneren Kompass.
+            }
+          </li>
+
+          <li>
+            @if (currentLang === "en") {
+              You get things done with focus and ease.
+            } @else {
+              Du setzt Dinge mit Fokus und Leichtigkeit um.
+            }
+          </li>
+
+          <li>
+            @if (currentLang === "en") {
+              Your digital tools serve you—not the other way around.
+            } @else {
+              Deine digitalen Tools dienen dir – nicht umgekehrt.
+            }
+          </li>
+
+          <li>
+            @if (currentLang === "en") {
+              You feel good on your path—less stress, more trust, resilience,
+              and joy; whatever comes, you can integrate.
+            } @else {
+              Du fühlst dich wohl auf deinem Weg – weniger Stress, mehr
+              Vertrauen, Resilienz und Freude; egal was kommt, du kannst es
+              integrieren.
+            }
+          </li>
+        </ol>
+      </div>
+      <div class="col-sm-6">
+        <a
+          href="#contact-form"
+          class="btn-selector btn waves-effect waves-light btn-gradient"
+          style="border-radius: 12px; margin: 2rem"
+        >
+          <span class="text-secondary">
+            {{ currentLang === "en" ? "Apply now" : "Jetzt anfragen" }}
+          </span>
+        </a>
+
+        <p style="margin: 2rem">
+          <strong>
+            {{
+              currentLang === "en"
+                ? "LifeFlow.Now™ — Focused. Grounded. Effective."
+                : "LifeFlow.Now™ — Fokussiert. Geerdet. Wirksam."
+            }}
+          </strong>
+          {{
+            currentLang === "en"
+              ? "Build a life that feels as good inside as it looks outside."
+              : "Gestalte ein Leben, das sich innerlich genauso gut anfühlt, wie es äußerlich aussieht."
+          }}
+        </p>
+      </div>
+    </div>
+  </section>
+  <p>
+    {{
+      currentLang === "en"
+        ? "If you have any questions, don’t hesitate to text me:"
+        : "Wenn du Fragen hast, schreibe mir gern:"
+    }}
+    <a href="mailto:basil.jung@lifeflow.now">basil.jung&#64;lifeflow.now</a>
+  </p>
+</div>

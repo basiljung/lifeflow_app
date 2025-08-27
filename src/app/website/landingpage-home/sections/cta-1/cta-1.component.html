@@ -1,93 +1,37 @@
 <div class="title-box-green">
   <section class="cta" aria-labelledby="ctaTitle">
     <h1 id="ctaTitle">
-      {{ currentLang === "en" ? "CTA ✅" : "CTA ✅" }}
-    </h1>
-
-    <p>
-      <strong>
-        {{
-          currentLang === "en"
-            ? "You’ve built the outside."
-            : "Du hast das Äußere aufgebaut."
-        }}
-      </strong>
-      {{
-        currentLang === "en"
-          ? "Now we align the inside. – Quiet mind. Clear direction. Strong impact."
-          : "Jetzt richten wir das Innere aus. – Klarer Geist. Klare Richtung. Starke Wirkung."
-      }}
-    </p>
-
-    <h3>
       {{
         currentLang === "en"
           ? "Ready for your transformation?"
           : "Bereit für deine Transformation?"
       }}
-    </h3>
+    </h1>
+    <div style="margin: 2rem">
+      <a
+        href="#contact-form"
+        class="btn-selector btn waves-effect waves-light btn-gradient"
+        style="border-radius: 12px; margin-bottom: 2rem"
+      >
+        <span class="text-secondary">
+          {{ currentLang === "en" ? "Apply now" : "Jetzt anfragen" }}
+        </span>
+      </a>
 
-    <div class="row">
-      <!-- Form option -->
-      <div class="col-sm-6 mb-3 mb-sm-0">
-        <div class="card" style="min-height: 150px">
-          <div class="card-body">
-            <p class="card-title-custom text-primary">
-              {{
-                currentLang === "en"
-                  ? "Fill out the form"
-                  : "Fülle das Formular aus"
-              }}
-            </p>
-            <a
-              href="#contact-form"
-              class="btn-selector btn waves-effect waves-light btn-gradient"
-              style="border-radius: 12px"
-            >
-              <span class="text-secondary">
-                {{ currentLang === "en" ? "Apply now" : "Jetzt anfragen" }}
-              </span>
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Email option -->
-      <div class="col-sm-6">
-        <div class="card" style="min-height: 150px">
-          <div class="card-body">
-            <p class="card-title-custom text-primary">
-              {{
-                currentLang === "en"
-                  ? "Or send me an email if there is any open question."
-                  : "Oder sende mir eine E-Mail falls es noch offene Fragen gibt."
-              }}
-            </p>
-            <a
-              class="btn-selector btn waves-effect waves-light btn-gradient"
-              style="border-radius: 12px"
-              href="mailto:basil.jung@lifeflow.now?subject=I%20want%20to%20know%20more"
-            >
-              <span class="text-secondary">basil.jung&#64;lifeflow.now</span>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <p style="margin: 2rem">
-      <strong>
+      <p>
+        <strong>
+          {{
+            currentLang === "en"
+              ? "LifeFlow.Now™ — Focused. Grounded. Effective."
+              : "LifeFlow.Now™ — Fokussiert. Geerdet. Wirksam."
+          }}
+        </strong>
         {{
           currentLang === "en"
-            ? "LifeFlow.Now™ — Focused. Grounded. Effective."
-            : "LifeFlow.Now™ — Fokussiert. Geerdet. Wirksam."
+            ? "Build a life that feels as good inside as it looks outside."
+            : "Gestalte ein Leben, das sich innerlich genauso gut anfühlt, wie es äußerlich aussieht."
         }}
-      </strong>
-      {{
-        currentLang === "en"
-          ? "Build a life that feels as good inside as it looks outside."
-          : "Gestalte ein Leben, das sich innerlich genauso gut anfühlt, wie es äußerlich aussieht."
-      }}
-    </p>
+      </p>
+    </div>
   </section>
 </div>

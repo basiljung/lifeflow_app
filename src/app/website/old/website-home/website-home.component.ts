@@ -1,13 +1,12 @@
-import { AfterViewInit, Component, OnDestroy, OnInit } from '@angular/core';
-import { Router, RouterModule } from '@angular/router';
-import { LanguageService } from '../../services/language.service';
-import { Subject, takeUntil } from 'rxjs';
 import { CommonModule } from '@angular/common';
-import { TitlePageComponent } from '../landingpage/title-page/title-page.component';
+import { Component, OnInit, OnDestroy, AfterViewInit } from '@angular/core';
+import { RouterModule, Router } from '@angular/router';
+import { Subject, takeUntil } from 'rxjs';
+import { LanguageService } from '../../../services/language.service';
+import { SenjaCoachingTestimonialsComponent } from '../../../testimonials/senja-coaching-testimonials/senja-coaching-testimonials.component';
+import { TitlePageComponent } from '../../landingpage/title-page/title-page.component';
 import { SectionDefault2ColComponent } from '../section-default-2col/section-default-2col.component';
 import { SectionDefaultComponent } from '../section-default/section-default.component';
-import { WaitingList1Component } from '../../waiting-list-1/waiting-list-1.component';
-import { SenjaCoachingTestimonialsComponent } from '../../testimonials/senja-coaching-testimonials/senja-coaching-testimonials.component';
 
 declare var M: any;
 

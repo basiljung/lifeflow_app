@@ -1,7 +1,6 @@
 import { Routes } from '@angular/router';
 import { PrivacyPolicyComponent } from './general-elements/footer/privacy-policy/privacy-policy.component';
 import { ImpressumComponent } from './general-elements/footer/impressum/impressum.component';
-import { LandingpageComponent } from './website/landingpage/landingpage.component';
 import { LandingpageHomeComponent } from './website/landingpage-home/landingpage-home.component';
 
 export const routes: Routes = [
@@ -65,7 +64,7 @@ export const routes: Routes = [
       {
         path: 'digital',
         loadComponent: () =>
-          import('./website/website-home/website-home.component').then(
+          import('./website/old/website-home/website-home.component').then(
             (m) => m.WebsiteHomeComponent,
           ),
       },

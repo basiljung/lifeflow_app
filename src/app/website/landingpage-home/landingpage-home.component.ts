@@ -22,6 +22,7 @@ import { UnderstandingSectionComponent } from './sections/understanding-section/
 import { UspComponent } from './sections/usp/usp.component';
 import { WhatNextComponent } from './sections/what-next/what-next.component';
 import { RelevantsComponent } from './sections/relevants/relevants.component';
+import { Cta2Component } from './sections/cta-2/cta-2.component';
 
 declare var M: any;
 
@@ -49,6 +50,7 @@ declare var M: any;
     ForWhoIsItComponent,
     WhatNextComponent,
     RelevantsComponent,
+    Cta2Component,
   ],
   templateUrl: './landingpage-home.component.html',
   styleUrl: './landingpage-home.component.scss',
