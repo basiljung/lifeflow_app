@@ -1,0 +1,2 @@
+import{Da as a,Va as t,Wa as i,hb as n}from"./chunk-M66ZQN2Y.js";var s=class o{ngAfterViewInit(){}static \u0275fac=function(e){return new(e||o)};static \u0275cmp=a({type:o,selectors:[["app-waiting-list-1"]],decls:4,vars:0,consts:[["onclick","window.open('https://senja.io/p/lifeflow/r/KiBUlt', '_blank')",2,"cursor","pointer"]],template:function(e,c){e&1&&(t(0,"h6"),n(1,"Ich freue mich \xFCber dein Feedback."),i(),t(2,"button",0),n(3,` \u{1F4A1} Feedback
+`),i())},encapsulation:2})};export{s as WaitingList1Component};
