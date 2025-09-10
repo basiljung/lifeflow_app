@@ -4,6 +4,8 @@ import { LanguageService } from '../../../../services/language.service';
 
 declare function gtag(command: string, target: string, params?: any): void;
 
+declare var ml: any;
+
 @Component({
   selector: 'app-apply-btn',
   imports: [],
@@ -23,9 +25,11 @@ export class ApplyBtnComponent implements OnInit, OnDestroy {
     });
   }
 
-  applyCoachingDialog() {
+  openApplyCoachingDialog() {
     this.isLoading = true;
-
+    if (typeof ml !== 'undefined') {
+      ml('show', '9FBWV0');
+    }
     // 🔥 Trigger Google Analytics event
     gtag('event', 'apply_coaching_btn_clicked', {
       event_category: 'apply_coaching',
