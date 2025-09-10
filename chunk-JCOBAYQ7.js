@@ -1,1 +1,0 @@
-import{a}from"./chunk-SEVWLJ4B.js";import"./chunk-46HYHXQE.js";import"./chunk-PTFKKW2T.js";import"./chunk-SZ6OZ272.js";import"./chunk-FAIG6ZOG.js";import"./chunk-M66ZQN2Y.js";export{a as LandingpageHomeComponent};
