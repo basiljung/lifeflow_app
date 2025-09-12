@@ -1,10 +1,11 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subject, takeUntil } from 'rxjs';
 import { LanguageService } from '../../../../services/language.service';
+import { CarouselFormulaComponent } from './carousel-formula/carousel-formula.component';
 
 @Component({
   selector: 'app-the-formula',
-  imports: [],
+  imports: [CarouselFormulaComponent],
   templateUrl: './the-formula.component.html',
   styleUrl: './the-formula.component.scss',
 })

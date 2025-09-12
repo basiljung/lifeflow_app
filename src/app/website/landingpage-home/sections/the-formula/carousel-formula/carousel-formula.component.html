@@ -1,0 +1,145 @@
+<div id="textCarousel" class="carousel slide" data-bs-ride="carousel">
+  <!-- Indicators -->
+  <div class="carousel-indicators">
+    <button
+      type="button"
+      data-bs-target="#textCarousel"
+      data-bs-slide-to="0"
+      class="active"
+      aria-current="true"
+      aria-label="Slide 1"
+    ></button>
+    <button
+      type="button"
+      data-bs-target="#textCarousel"
+      data-bs-slide-to="1"
+      aria-label="Slide 2"
+    ></button>
+    <button
+      type="button"
+      data-bs-target="#textCarousel"
+      data-bs-slide-to="2"
+      aria-label="Slide 3"
+    ></button>
+    <button
+      type="button"
+      data-bs-target="#textCarousel"
+      data-bs-slide-to="3"
+      aria-label="Slide 4"
+    ></button>
+    <button
+      type="button"
+      data-bs-target="#textCarousel"
+      data-bs-slide-to="4"
+      aria-label="Slide 5"
+    ></button>
+  </div>
+
+  <!-- Carousel inner -->
+  <div class="carousel-inner text-center p-5">
+    <div class="carousel-item active">
+      <h5>
+        {{
+          currentLang === "en"
+            ? "1# - Understanding your current situation"
+            : "1# - Verstehen deiner aktuellen Situation"
+        }}
+      </h5>
+      <p>
+        {{
+          currentLang === "en"
+            ? "Reflection & awareness – you know where you stand and why."
+            : "Reflexion & Bewusstsein – du weißt, wo du stehst und warum."
+        }}
+      </p>
+    </div>
+
+    <div class="carousel-item">
+      <h5>
+        {{
+          currentLang === "en"
+            ? "2# - Self-knowledge & connection"
+            : "2# - Selbstkenntnis & Verbindung"
+        }}
+      </h5>
+      <p>
+        {{
+          currentLang === "en"
+            ? "You build a deeper connection with yourself and expand your self-awareness."
+            : "Du baust eine tiefere Verbindung zu dir auf und erweiterst dein Selbstbewusstsein."
+        }}
+      </p>
+    </div>
+
+    <div class="carousel-item">
+      <h5>
+        {{
+          currentLang === "en"
+            ? "3# - Purpose & direction"
+            : "3# - Sinn & Ausrichtung"
+        }}
+      </h5>
+      <p>
+        {{
+          currentLang === "en"
+            ? "You gain clarity on your next step and your vision."
+            : "Du erkennst deinen nächsten Schritt und deine Vision klarer."
+        }}
+      </p>
+    </div>
+
+    <div class="carousel-item">
+      <h5>
+        {{
+          currentLang === "en"
+            ? "4# - Priorities & joyful action"
+            : "4# - Prioritäten & freudiges Handeln"
+        }}
+      </h5>
+      <p>
+        {{
+          currentLang === "en"
+            ? "You take action with confidence & joy, because the next step makes sense."
+            : "Du handelst mit Selbstbewusstsein & Freude, weil der nächste Schritt Sinn ergibt."
+        }}
+      </p>
+    </div>
+
+    <div class="carousel-item">
+      <h5>
+        {{
+          currentLang === "en"
+            ? "5# - Integration & resilience"
+            : "5# - Integration & Resilienz"
+        }}
+      </h5>
+      <p>
+        {{
+          currentLang === "en"
+            ? "You integrate new insights and emotions, and allow yourself to grow with them."
+            : "Du integrierst neue Erkenntnisse und Emotionen und lässt dich darauf ein."
+        }}
+      </p>
+    </div>
+  </div>
+
+  <!-- Controls -->
+  <button
+    class="carousel-control-prev"
+    type="button"
+    data-bs-target="#textCarousel"
+    data-bs-slide="prev"
+  >
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button
+    class="carousel-control-next"
+    type="button"
+    data-bs-target="#textCarousel"
+    data-bs-slide="next"
+  >
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
