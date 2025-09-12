@@ -1,81 +1,60 @@
-<div
-  id="topic-selector"
-  style="margin-top: 10rem; margin-bottom: 10rem"
-  class="row center-align"
->
-  <div class="center-elements">
-    <h4 style="padding-bottom: 2rem">
-      {{
-        currentLang === "en"
-          ? "Click the topic that resonates."
-          : "Was beschäftigt dich gerade?"
-      }}
-    </h4>
-    <!--     <a
-      (click)="scrollTo('topic-selector')"
-      class="btn-floating btn-large waves-effect waves-light bg-highlight"
-      ><i class="material-icons">keyboard_arrow_down</i></a
-    > -->
+<div id="topic-selector" class="container my-5">
+  <div class="row text-center mb-5">
+    <div class="col-12">
+      <h4>
+        {{
+          currentLang === "en"
+            ? "Click the topic that resonates."
+            : "Was beschäftigt dich gerade?"
+        }}
+      </h4>
+    </div>
   </div>
-  <div class="col s12 m4">
-    <h1 class="gradient-title-sm">
-      {{ currentLang === "en" ? "📍Orientation" : "📍Orientierung" }}
-    </h1>
-    <a
-      class="btn waves-effect waves-light btn-selector btn-gradient pulse-btn"
-      [routerLink]="['clarity']"
-      ><i class="material-icons">adjust</i></a
-    >
-    <!--     <h4>
-      {{
-        currentLang === "en"
-          ? "I feel overwhelmed or restless."
-          : "Ich fühle mich überfordert oder unruhig"
-      }}
-    </h4> -->
+
+  <div class="row text-center g-4">
+    <!-- Orientation -->
+    <div class="col-12 col-md-4">
+      <div class="d-flex flex-column align-items-center">
+        <h1 class="gradient-title-sm">
+          {{ currentLang === "en" ? "📍Orientation" : "📍Orientierung" }}
+        </h1>
+        <a
+          class="btn waves-effect waves-light btn-selector btn-gradient pulse-btn"
+          [routerLink]="['clarity']"
+        >
+          <i class="bi bi-geo-alt"></i>
+        </a>
+      </div>
+    </div>
+
+    <!-- Inner Peace -->
+    <div class="col-12 col-md-4">
+      <div class="d-flex flex-column align-items-center">
+        <h1 class="gradient-title-sm">
+          {{ currentLang === "en" ? "🧘Inner Peace" : "🧘Innere Ruhe" }}
+        </h1>
+        <a
+          class="btn waves-effect waves-light btn-selector btn-gradient pulse-btn"
+          [routerLink]="['inner-peace']"
+        >
+          <i class="bi bi-circle"></i>
+        </a>
+      </div>
+    </div>
+
+    <!-- Energy -->
+    <div class="col-12 col-md-4">
+      <div class="d-flex flex-column align-items-center">
+        <h1 class="gradient-title-sm">
+          {{ currentLang === "en" ? "⚡️Energy" : "⚡️Energie" }}
+        </h1>
+        <a
+          class="btn waves-effect waves-light btn-selector btn-gradient pulse-btn"
+          [routerLink]="['drive']"
+        >
+          <i class="bi bi-lightning"></i>
+        </a>
+      </div>
+    </div>
   </div>
-  <div class="col s12 m4">
-    <h1 class="gradient-title-sm">
-      {{ currentLang === "en" ? "🧘Inner Peace" : "🧘Innere Ruhe" }}
-    </h1>
-    <a
-      class="btn waves-effect waves-light btn-selector btn-gradient pulse-btn"
-      [routerLink]="['inner-peace']"
-      ><i class="material-icons">crop_square</i></a
-    >
-    <!--     <h4>
-      {{
-        currentLang === "en"
-          ? "I feel overwhelmed or restless."
-          : "Ich fühle mich überfordert oder unruhig"
-      }}
-    </h4> -->
-  </div>
-  <div class="col s12 m4">
-    <h1 class="gradient-title-sm">
-      {{ currentLang === "en" ? "⚡️Energy" : "⚡️Energie" }}
-    </h1>
-    <a
-      class="pulse-btn btn-selector btn waves-effect waves-light btn-gradient"
-      [routerLink]="['drive']"
-      ><i class="material-icons">360</i></a
-    >
-    <!--     <h4>
-      {{
-        currentLang === "en"
-          ? "I have goals—but I’m stuck, unmotivated, & can't focus."
-          : "Ich habe Ziele – aber bin unmotiviert & der Fokus fehlt."
-      }}
-    </h4> -->
-  </div>
-  <!--   <div class="col s12 m3">
-    <h1 class="gradient-title-sm">
-      {{ currentLang === "en" ? "📱 Digital balance" : "📱 Digitale Balance" }}
-    </h1>
-    <a
-      class="pulse-btn btn-selector btn waves-effect waves-light btn-gradient"
-      [routerLink]="['digital']"
-      ><i class="material-icons">add_to_queue</i></a
-    >
-  </div> -->
 </div>

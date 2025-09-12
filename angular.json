@@ -31,7 +31,7 @@
               "src/CNAME"
             ],
             "styles": [
-              "node_modules/material-icons/iconfont/material-icons.css",
+              "node_modules/bootstrap-icons/font/bootstrap-icons.css",
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.scss"
             ],
