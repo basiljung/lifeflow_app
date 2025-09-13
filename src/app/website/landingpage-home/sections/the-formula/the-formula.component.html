@@ -6,72 +6,80 @@
         : "LifeFlow.Now - eine einfache Formel um im Flow zu leben"
     }}
   </h1>
-  <!--   <p>
-    {{
-      currentLang === "en"
-        ? "So what's the difference from the performer & creator who are able to work hard with a smile on their face and the once who end up in a dead end?"
-        : "Was unterscheidet die Performer & Creator, die hart arbeiten können und dabei ein Lächeln im Gesicht haben, von denen, die am Ende in einer Sackgasse landen?"
-    }}
-  </p> -->
-  <div class="card text-center">
-    <div class="card-body card-title-custom">
-      {{
-        currentLang === "en"
-          ? "Life in Flow = Awareness × Self‑Knowledge x Orientation × Action × Integration"
-          : "Leben im Flow = Bewusstsein × Selbstkenntnis × Orientierung × Handeln × Integration"
-      }}
+
+  <div class="row" style="margin-top: 2rem; margin-bottom: 2rem">
+    <div class="card text-center col-sm-10 col-md-8 mx-auto">
+      <div class="card-body card-title-custom">
+        {{
+          currentLang === "en"
+            ? "Life in Flow = Awareness × Self-Knowledge × Orientation × Action × Integration"
+            : "Leben im Flow = Bewusstsein × Selbstkenntnis × Orientierung × Handeln × Integration"
+        }}
+      </div>
+      <div class="card-footer">
+        {{
+          currentLang === "en"
+            ? "LifeFlow.Now™ FORMULA"
+            : "LifeFlow.Now FORMEL"
+        }}
+      </div>
     </div>
-    <div class="card-footer">
-      {{
-        currentLang === "en" ? "LifeFlow.Now™ FORMULA" : "LifeFlow.Now FORMEL"
-      }}
+  </div>
+
+  <div class="row" style="margin-top: 2rem; margin-bottom: 2rem">
+    <div class="text-center col-sm-10 col-md-8 mx-auto">
+      <p class="text-center" style="margin-top: 2rem">
+        <i>
+          {{
+            currentLang === "en"
+              ? "Once you realize you can’t get anywhere, you start to act and think differently - enter the LifeFlow-Cycle."
+              : "Sobald du erkennst, dass du nirgends ankommst, beginnst du, anders zu handeln und zu denken - steige in the LifeFlow-Zyklus ein. "
+          }}</i
+        >
+      </p>
     </div>
   </div>
 
   <hr style="color: white" />
-
-  <p class="text-center" style="margin-top: 2rem">
-    {{
-      currentLang === "en"
-        ? "Once you realize you can’t get anywhere, you start to act and think differently - enter the LifeFlow-Cycle."
-        : "Sobald du erkennst, dass du nirgends ankommst, beginnst du, anders zu handeln und zu denken - steige in the LifeFlow-Zyklus ein. "
-    }}
-  </p>
 
   <app-carousel-formula> </app-carousel-formula>
 
   <hr style="color: white" />
 
-  <h3>
-    {{
-      currentLang === "en"
-        ? "Life repeats itself until we face what we try to avoid. Once we realize there’s nothing to fear in our inner world, life turns into play. True change begins within—let’s explore it together."
-        : "Das Leben wiederholt sich, bis wir dem begegnen, was wir zu vermeiden versuchen. Sobald wir erkennen, dass wir keine Angst vor unserer inneren Welt haben müssen, wird das Leben zum Spiel. Wahre Veränderung beginnt im Inneren – lass uns gemeinsam dorthin schauen."
-    }}
-  </h3>
-
-  <h1>
-    {{
-      currentLang === "en"
-        ? "That's how the process looks like"
-        : "So sieht der Prozess aus"
-    }}
-  </h1>
-  <div style="margin: 2rem">
-    <a
-      class="btn-selector btn waves-effect waves-light btn-gradient"
-      data-bs-toggle="collapse"
-      href="#collapseDetails"
-      role="button"
-      style="border-radius: 12px"
-      aria-expanded="false"
-      aria-controls="collapseExample"
+  <div class="row" style="margin-top: 2rem; margin-bottom: 2rem">
+    <div
+      class="card text-center col-sm-10 col-md-8 mx-auto"
+      style="background-color: #1e6f5c"
     >
-      <span class="text-secondary">{{
-        currentLang === "en" ? "SHOW DETAILS" : "MEHR ERFAHREN"
-      }}</span>
-    </a>
+      <div class="card-body card-custom-text-formula">
+        <h5>
+          <i>{{
+            currentLang === "en"
+              ? "Life repeats itself until we face what we try to avoid. Once we realize there’s nothing to fear in our inner world, life turns into play. True change begins within—let’s explore it together."
+              : "Das Leben wiederholt sich, bis wir dem begegnen, was wir zu vermeiden versuchen. Sobald wir erkennen, dass wir keine Angst vor unserer inneren Welt haben müssen, wird das Leben zum Spiel. Wahre Veränderung beginnt im Inneren – lass uns gemeinsam dorthin schauen."
+          }}</i>
+        </h5>
+      </div>
+      <div style="margin: 2rem">
+        <a
+          class="btn waves-effect waves-light btn-selector btn-gradient pulse-btn"
+          data-bs-toggle="collapse"
+          href="#collapseDetails"
+          role="button"
+          style="border-radius: 12px"
+          aria-expanded="false"
+          aria-controls="collapseExample"
+        >
+          <span class="text-secondary">{{
+            currentLang === "en"
+              ? "TELL ME MORE ABOUT THE PROCESS"
+              : "MEHR ERFAHREN ÜBER DEN PROZESS"
+          }}</span>
+        </a>
+      </div>
+    </div>
   </div>
+
   <div class="collapse" id="collapseDetails">
     <div class="card card-body">
       <div class="card-title-custom text-primary">
