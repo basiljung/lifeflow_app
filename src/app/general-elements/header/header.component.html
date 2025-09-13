@@ -1,48 +1,76 @@
-<div class="topnav" [ngClass]="{ topnav: true, responsive: isMenuOpen }">
-  <a href="/" class="brand-logo">LifeFlow.Now™</a>
-  <a
-    href="https://www.instagram.com/lifeflow.now/"
-    target="_blank"
-    aria-label="Instagram"
-    style="margin-left: 2rem"
-  >
-    <img
-      src="assets/instagram-icon.svg"
-      alt="Instagram"
-      width="25"
-      height="25"
-    />
-  </a>
-  <a
-    class="waves-effect waves-light"
-    style="float: right; margin-right: 2rem"
-    (click)="toggleLanguage(currentLang === 'en' ? 'de' : 'en'); toggleMenu()"
-  >
-    <span style="font-weight: bold">
-      {{ currentLang === "en" ? "DE" : "EN" }}
-    </span>
-  </a>
+<!-- NAVBAR -->
+<nav class="navbar bg-secondary navbar-expand-md fixed-top">
+  <div class="container-fluid">
+    <!-- Brand -->
+    <a
+      class="navbar-brand text-light"
+      style="font-size: 1rem"
+      routerLink="/"
+      aria-label="Home"
+    >
+      LifeFlow.Now™
+    </a>
 
-  <a style="margin-right: 2rem; float: right">
-    <app-cta-email-course></app-cta-email-course>
-  </a>
+    <!-- Toggler -->
+    <button
+      class="navbar-toggler"
+      type="button"
+      aria-controls="mainNavbar"
+      [attr.aria-expanded]="isMenuOpen ? 'true' : 'false'"
+      aria-label="Toggle navigation"
+      (click)="toggleMenu()"
+      data-bs-toggle="collapse"
+      data-bs-target="#mainNavbar"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-  <!--   <a
-    href="https://wa.me/41787860731?text=Hey%20I%20just%20want%20to%20say%20hi."
-    target="_blank"
-    style="float: right; cursor: pointer; margin-right: 2rem"
-  >
-    <span>
-      {{
-        currentLang === "en"
-          ? "Question? Contact me"
-          : "Frage? Kontaktiere mich"
-      }}
-    </span>
-    <i class="material-icons">chat</i>
-  </a> -->
+    <!-- Collapsible content -->
+    <div
+      id="mainNavbar"
+      class="collapse navbar-collapse"
+      [class.show]="isMenuOpen"
+    >
+      <ul class="navbar-nav ms-auto align-items-center gap-3">
+        <!-- Instagram -->
+        <li class="nav-item">
+          <a
+            class="nav-link d-flex align-items-center"
+            href="https://www.instagram.com/lifeflow.now/"
+            target="_blank"
+            rel="noopener"
+            aria-label="Instagram"
+          >
+            <img
+              src="assets/instagram-icon.svg"
+              alt="Instagram"
+              width="20"
+              height="20"
+            />
+          </a>
+        </li>
 
-  <a (click)="toggleMenu()" class="icon" style="margin-right: 2rem">
-    <i class="material-icons">menu</i>
-  </a>
-</div>
+        <!-- CTA component -->
+        <li class="nav-item">
+          <a class="nav-link">
+            <app-cta-email-course></app-cta-email-course>
+          </a>
+        </li>
+
+        <!-- Language toggle -->
+        <li class="nav-item">
+          <button
+            type="button"
+            class="btn text-light"
+            style="border: 1px solid white"
+            (click)="
+              toggleLanguage(currentLang === 'en' ? 'de' : 'en'); toggleMenu()
+            "
+          >
+            <strong>{{ currentLang === "en" ? "DE" : "EN" }}</strong>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

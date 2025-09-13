@@ -1,28 +1,25 @@
-<a
-  style="cursor: pointer; color: white"
-  (click)="openSignUpDialog()"
-  onclick="ml('show', 'CX9x9O', true)"
->
-  <i class="material-icons right align-center">mail</i>
-  {{
-    currentLang === "en"
-      ? "Free 31-day Flow-Course"
-      : "Gratis 31-Tage Flow-Kurs"
-  }}
-</a>
+<div class="d-inline-flex align-items-center gap-2">
+  <a
+    class="text-white text-decoration-none d-inline-flex align-items-center gap-2"
+    style="cursor: pointer"
+    (click)="openSignUpDialog()"
+    onclick="ml('show', 'CX9x9O', true)"
+    [attr.aria-busy]="isLoading ? 'true' : null"
+  >
+    <i class="bi bi-envelope"></i>
+    {{
+      currentLang === "en"
+        ? "Free 31-day Flow-Course"
+        : "Gratis 31-Tage Flow-Kurs"
+    }}
 
-@if (isLoading) {
-  <div class="preloader-wrapper small active">
-    <div class="spinner-layer spinner-custom">
-      <div class="circle-clipper left">
-        <div class="circle"></div>
-      </div>
-      <div class="gap-patch">
-        <div class="circle"></div>
-      </div>
-      <div class="circle-clipper right">
-        <div class="circle"></div>
-      </div>
-    </div>
-  </div>
-}
+    @if (isLoading) {
+      <span
+        class="spinner-border spinner-border-sm"
+        role="status"
+        aria-hidden="true"
+      ></span>
+      <span class="visually-hidden">Loading…</span>
+    }
+  </a>
+</div>
