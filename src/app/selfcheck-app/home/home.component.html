@@ -1,43 +1,44 @@
-<div>
-  <div class="card">
-    <div class="card-content">
-      <span class="card-title">{{
+<div class="card shadow-sm">
+  <!-- Header / Title -->
+  <div class="card-header">
+    <h5 class="card-title m-4">
+      {{
         currentLang === "en"
-          ? "🧠🌿 Welcome to the LifeFlow.Now™-FlowCheck!"
-          : "🧠🌿 Willkommen beim LifeFlow.Now™-FlowCheck!"
-      }}</span>
-    </div>
-
-    <div style="border-bottom: 1px solid #0f4f45; margin: 0 50px"></div>
-
-    <app-self-check-logic></app-self-check-logic>
-    <div
-      class="card-action"
-      style="display: flex; justify-content: space-between; align-items: center"
-    >
-      <a
-        class="text-accent"
-        style="text-transform: none"
-        target="_blank"
-        [routerLink]="'/'"
-        >LifeFlow.Now™</a
-      >
-
-      <a
-        class="btn-selector btn btn-gradient"
-        data-bs-toggle="collapse"
-        href="#collapseExample"
-        role="button"
-        aria-expanded="false"
-        aria-controls="collapseExample"
-      >
-        Details & FAQ
-      </a>
-    </div>
+          ? "🧠🌿 Welcome to the LifeFlow.Now-FlowCheck™"
+          : "🧠🌿 Willkommen beim LifeFlow.Now-FlowCheck™"
+      }}
+    </h5>
   </div>
-</div>
-<div class="collapse" id="collapseExample">
-  <div class="card card-body">
-    <app-details-faq></app-details-faq>
+
+  <!-- Optional divider (kept your color) -->
+  <hr class="my-0" style="border-color: #0f4f45; opacity: 1" />
+
+  <!-- Main content -->
+  <div class="card-body">
+    <app-self-check-logic></app-self-check-logic>
+  </div>
+
+  <!-- Actions -->
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <!-- If you really want a new tab, prefer href over routerLink -->
+    <a class="text-secondary text-decoration-none">LifeFlow.Now™</a>
+
+    <button
+      type="button"
+      class="btn text-secondary"
+      data-bs-toggle="collapse"
+      data-bs-target="#flowFaq"
+      aria-expanded="false"
+      aria-controls="flowFaq"
+    >
+      Details & FAQ
+    </button>
+  </div>
+
+  <!-- Collapsible details inside the card -->
+  <div id="flowFaq" class="collapse">
+    <div class="card-body border-top">
+      <app-details-faq></app-details-faq>
+    </div>
   </div>
 </div>
