@@ -8,14 +8,9 @@
             : "ZEIT, TIEFER EINZUTAUCHEN"
         }}
       </h1>
-      <h2 class="gradient-title-sm-green">
-        {{
-          currentLang === "en"
-            ? "Clarity for your mind. Resilience for your system. Direction for your life."
-            : "Klarheit für deinen Geist. Resilienz für dein System. Richtung für dein Leben."
-        }}
-      </h2>
-      <ng-content select="[slot=detail-text]"></ng-content>
+      <div class="m-3">
+        <ng-content select="[slot=detail-text]"></ng-content>
+      </div>
     </div>
   </app-topic-structure>
   <app-go-to-btn></app-go-to-btn>
