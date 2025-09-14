@@ -7,7 +7,13 @@
     </div>
   </div>
   <section id="usp" class="usp-section">
-    <h2>Why LifeFlow Coaching System™ is Different</h2>
+    <h2>
+      {{
+        currentLang === "en"
+          ? "What makes the LifeFlow Coaching System™ different?"
+          : "Was zeichnet das LifeFlow Coaching System™ aus?"
+      }}
+    </h2>
     <div style="margin: 1.5rem">
       <app-read-more [lines]="3" slot="text">
         <div slot="text-readmore-comp">
@@ -57,6 +63,22 @@
                 ? "Short, targeted exercises with fast feedback. You track insights in one place, see steady progress, and keep the overview."
                 : "Kurze, gezielte Übungen mit schnellem Feedback. Du hältst deine Erkenntnisse an einem Ort fest, siehst kontinuierlichen Fortschritt und behältst den Überblick."
             }}
+          </p>
+
+          <p>
+            •
+            {{
+              currentLang === "en"
+                ? "We also assess your"
+                : "Wir beurteilen auch Ihr "
+            }}
+            <b>
+              {{
+                currentLang === "en"
+                  ? "neurotransmitter balance."
+                  : "Neurotransmitter-Gleichgewicht."
+              }}
+            </b>
           </p>
 
           <p>

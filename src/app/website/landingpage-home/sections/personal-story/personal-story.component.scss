@@ -1,12 +1,6 @@
-.container {
-  max-width: none;
-  padding: 0;
-}
-
 .mystory-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 2rem;
 }
 @media (min-width: 992px) {
   .mystory-grid {
@@ -17,18 +11,18 @@
 
 .image-stack {
   position: sticky;
-  top: 2rem;
 }
 .image-stack-inner {
   position: relative;
   width: 100%;
+  margin-top: 4rem;
+  margin-left: 4rem;
   height: clamp(320px, 60vh, 720px);
 }
 
 .stack-img {
   position: absolute;
   inset: 0;
-  width: 70%;
   height: 70%;
   object-fit: cover;
   border-radius: 12px;
@@ -46,13 +40,11 @@
 
 .mystory-right {
   display: grid;
-  gap: 1rem;
 }
 @media (min-width: 992px) {
   .mystory-right {
     max-height: calc(80vh - 4rem);
     overflow-y: auto;
-    padding-right: 0.75rem;
   }
 }
 
@@ -69,14 +61,13 @@
 
 .mystory-item .text-size-large {
   font-size: clamp(1.05rem, 0.6vw + 1rem, 1.25rem);
-  line-height: 1.65;
-  padding-top: 2rem;
+  line-height: 1.5;
+  margin: 1rem;
 }
 .divider {
   height: 1px;
   width: 100%;
   background: rgba(255, 255, 255, 0.15);
-  margin-top: 1.5rem;
 }
 
 /* Mobile behavior: show current image at top (stickiness off by default stacking) */
