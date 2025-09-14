@@ -225,6 +225,9 @@ main {
   padding: 1.5rem;
   margin-top: 4rem;
   background-color: $bg;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  hyphens: auto;
 
   h1,
   h2,
