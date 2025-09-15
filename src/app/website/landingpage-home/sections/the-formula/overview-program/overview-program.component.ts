@@ -1,15 +1,14 @@
-import { CommonModule } from '@angular/common';
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subject, takeUntil } from 'rxjs';
 import { LanguageService } from '../../../../../services/language.service';
 
 @Component({
-  selector: 'app-carousel-formula',
-  imports: [CommonModule],
-  templateUrl: './carousel-formula.component.html',
-  styleUrl: './carousel-formula.component.scss',
+  selector: 'app-overview-program',
+  imports: [],
+  templateUrl: './overview-program.component.html',
+  styleUrl: './overview-program.component.scss',
 })
-export class CarouselFormulaComponent implements OnInit, OnDestroy {
+export class OverviewProgramComponent implements OnInit, OnDestroy {
   private destroy$ = new Subject<void>();
   currentLang: string | null = null;
 

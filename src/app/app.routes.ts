@@ -14,6 +14,13 @@ export const routes: Routes = [
             (m) => m.HomeComponent,
           ),
       },
+      {
+        path: 'offer',
+        loadComponent: () =>
+          import('./offer-page/offer/offer.component').then(
+            (m) => m.OfferComponent,
+          ),
+      },
       { path: '', component: LandingpageHomeComponent },
       /*       { path: '', component: LandingpageComponent }, */
       {
@@ -23,7 +30,6 @@ export const routes: Routes = [
             (m) => m.WaitingList1Component,
           ),
       },
-
       {
         path: 'feedback',
         loadComponent: () =>

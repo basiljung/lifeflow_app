@@ -2,25 +2,25 @@
   <h1>
     {{
       currentLang === "en"
-        ? "LifeFlow.Now™ — a simple formula for living in flow"
-        : "LifeFlow.Now - eine einfache Formel um im Flow zu leben"
+        ? "LifeFlow.Now™ — a simple cycle for living in flow"
+        : "LifeFlow.Now™ - ein einfacher zyklus um im Flow zu leben"
     }}
   </h1>
 
   <div class="row" style="margin-top: 2rem; margin-bottom: 2rem">
     <div class="card text-center col-sm-10 col-md-8 mx-auto">
-      <div class="card-body card-title-custom">
+      <div class="card-body font-fomula-custom">
         {{
           currentLang === "en"
-            ? "Life in Flow = Awareness × Self-Knowledge × Orientation × Action × Integration"
-            : "Leben im Flow = Bewusstsein × Selbstkenntnis × Orientierung × Handeln × Integration"
+            ? "Life in Flow => Awareness > Self-Knowledge > Orientation > Action > Integration > ..."
+            : "Leben im Flow => Bewusstsein > Selbstkenntnis > Orientierung > Handeln > Integration > ..."
         }}
       </div>
       <div class="card-footer">
         {{
           currentLang === "en"
-            ? "LifeFlow.Now™ FORMULA"
-            : "LifeFlow.Now FORMEL"
+            ? "LifeFlow.Now-CYCLE™"
+            : "LifeFlow.Now-ZYKLUS™"
         }}
       </div>
     </div>
@@ -32,8 +32,8 @@
         <i>
           {{
             currentLang === "en"
-              ? "Once you realize you can’t get anywhere, you start to act and think differently - enter the LifeFlow-Cycle."
-              : "Sobald du erkennst, dass du nirgends ankommst, beginnst du, anders zu handeln und zu denken - steige in the LifeFlow-Zyklus ein. "
+              ? "Once you realize you can’t get anywhere, you start to act and think differently - enter the LifeFlow.Now-CYCLE™."
+              : "Sobald du erkennst, dass du nirgends ankommen wirst, beginnst du anders zu handeln und zu denken - steige in the LifeFlow.Now-ZYKLUS™ ein. "
           }}</i
         >
       </p>
@@ -56,7 +56,7 @@
           <i>{{
             currentLang === "en"
               ? "Life repeats itself until we face what we try to avoid. Once we realize there’s nothing to fear in our inner world, life turns into play. True change begins within—let’s explore it together."
-              : "Das Leben wiederholt sich, bis wir dem begegnen, was wir zu vermeiden versuchen. Sobald wir erkennen, dass wir keine Angst vor unserer inneren Welt haben müssen, wird das Leben zum Spiel. Wahre Veränderung beginnt im Inneren – lass uns gemeinsam dorthin schauen."
+              : "Das Leben wiederholt sich, bis wir uns öffnen für das, was wir zu vermeiden versuchen. Sobald wir erkennen, dass wir keine Angst vor unserer inneren Welt haben müssen, wird das Leben zum Spiel. Wahre Veränderung beginnt im Inneren – lass uns gemeinsam dorthin schauen."
           }}</i>
         </h5>
       </div>
@@ -79,290 +79,8 @@
       </div>
     </div>
   </div>
+</div>
 
-  <div class="collapse" id="collapseDetails">
-    <div class="card card-body">
-      <div class="card-title-custom text-primary">
-        {{ currentLang === "en" ? "Overview" : "Überblick" }}
-      </div>
-      <div style="margin: 1.5rem">
-        <li>
-          <strong>
-            {{
-              currentLang === "en"
-                ? "Initial Deep-Dive (75–90 min)"
-                : "Initiales Deep-Dive (75–90 Min)"
-            }}
-          </strong>
-          — {{ currentLang === "en" ? "Kick off" : "Startschuss" }}
-        </li>
-        <li>
-          <strong>
-            {{
-              currentLang === "en"
-                ? "Weekly 1:1 sessions (55 min)"
-                : "Wöchentliche 1:1 Sessions (55 Min)"
-            }}
-          </strong>
-          —
-          {{
-            currentLang === "en"
-              ? "focused coaching & exercises"
-              : "fokussiertes Coaching & Übungen"
-          }}
-        </li>
-        <li>
-          <strong>{{
-            currentLang === "en"
-              ? "Asynchronous support"
-              : "Asynchrone Unterstützung"
-          }}</strong>
-          —
-          {{
-            currentLang === "en"
-              ? "lightweight check-ins between calls with text, voice and video messages"
-              : "leichte Check-ins zwischen den Calls mit Text-, Sprach- und Videonachrichten"
-          }}
-        </li>
-        <li>
-          <strong>{{
-            currentLang === "en" ? "Exercises and plan" : "Übungen und Plan"
-          }}</strong>
-          —
-          {{
-            currentLang === "en"
-              ? "on Notion to do the exercises and collaborate"
-              : "auf Notion, um die Übungen zu machen und zusammenzuarbeiten"
-          }}
-        </li>
-        <li>
-          <strong>{{
-            currentLang === "en" ? "Resource library" : "Ressourcenbibliothek"
-          }}</strong>
-          —
-          {{
-            currentLang === "en"
-              ? "on Notion to directly read about it in you own pace"
-              : "auf Notion, um direkt in deinem Tempo nachzulesen"
-          }}
-        </li>
-      </div>
-      <div class="card-title-custom text-primary">
-        {{ currentLang === "en" ? "Your takeaways" : "Das nimmst du mit" }}
-      </div>
-      <div style="margin: 1.5rem">
-        <li>
-          @if (currentLang === "en") {
-            1-Page Personal Operating Manual — values, strengths, motivators,
-            limbic type, consciousness level.
-          } @else {
-            1-Seiten Persönliches Operating Manual — Werte, Stärken,
-            Motivatoren, limbischer Typ, Bewusstseins­ebene.
-          }
-        </li>
-
-        <li>
-          @if (currentLang === "en") {
-            Decision Filters — simple rules for what to say yes/no to (and why).
-          } @else {
-            Entscheidungsfilter — klare Regeln, wann du Ja oder Nein sagst (und
-            warum).
-          }
-        </li>
-
-        <li>
-          @if (currentLang === "en") {
-            12-Week Execution Map — 3 milestones, prioritized next actions.
-          } @else {
-            12-Wochen Umsetzungsplan — 3 Meilensteine, priorisierte nächste
-            Schritte.
-          }
-        </li>
-
-        <li>
-          @if (currentLang === "en") {
-            Visionboard + Strategy — purpose-driven plan to keep momentum high.
-          } @else {
-            Visionboard + Strategie — ein sinnorientierter Plan, um die
-            Motivation hoch zu halten.
-          }
-        </li>
-
-        <li>
-          @if (currentLang === "en") {
-            Self-Awareness Habit Stack — a tailored daily/weekly practice.
-          } @else {
-            Self-Awareness Habit Stack — eine individuelle tägliche/wöchentliche
-            Praxis.
-          }
-        </li>
-
-        <li>
-          @if (currentLang === "en") {
-            LifeFlow (AI) Coach — your data + LifeFlow mindset to support
-            ongoing growth.
-          } @else {
-            LifeFlow (AI) Coach — deine Daten + LifeFlow Mindset zur
-            Unterstützung deines Wachstums.
-          }
-        </li>
-
-        <li>
-          @if (currentLang === "en") {
-            Flow Protocol — triggers, blockers, and re-entry steps for
-            consistent flow.
-          } @else {
-            Flow-Protokoll — Trigger, Blockaden und Re-Entry-Schritte für
-            beständigen Flow.
-          }
-        </li>
-      </div>
-      <div class="card-title-custom text-primary">
-        {{
-          currentLang === "en"
-            ? "4 phases - In 14 Weeks"
-            : "4 Phasen - In 14 Wochen"
-        }}
-      </div>
-      <p>{{ currentLang === "en" ? "In 14 Wochen" : "In 14 Wochen" }}</p>
-      <div class="scroll-container-vertical scroll-container">
-        <!-- 1) Orientation · Resilience -->
-        <div class="card">
-          <div class="card-body">
-            <div class="card-title-custom text-primary">
-              {{
-                currentLang === "en"
-                  ? "1# – Orientation · Resilience"
-                  : "1# – Orientierung · Resilienz"
-              }}
-            </div>
-            <ul class="text-primary">
-              <li>
-                {{
-                  currentLang === "en"
-                    ? "Map your inner landscape: thoughts, emotions, behaviors—and the ways you block yourself."
-                    : "Erkunde deine innere Landschaft: Gedanken, Gefühle, Verhaltensweisen – und die Wege, wie du dich selbst blockierst."
-                }}
-              </li>
-              <li>
-                {{
-                  currentLang === "en"
-                    ? "Establish your standpoint using salutogenesis (what creates health and resilience)."
-                    : "Finde deinen Standpunkt mithilfe der Salutogenese (was Gesundheit und Resilienz stärkt)."
-                }}
-              </li>
-              <li>
-                {{
-                  currentLang === "en"
-                    ? "Practice presence. Use an integral view—Head (clarity), Heart (connection), Hands (doing)."
-                    : "Übe Präsenz. Nutze eine integrale Sichtweise – Kopf (Klarheit), Herz (Verbindung), Hände (Handeln)."
-                }}
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- 2) Self-Understanding · Self-Awareness -->
-        <div class="card">
-          <div class="card-body">
-            <div class="card-title-custom text-primary">
-              {{
-                currentLang === "en"
-                  ? "2# – Self-Understanding · Self-Awareness"
-                  : "2# – Selbstverständnis · Selbstbewusstsein"
-              }}
-            </div>
-            <ul class="text-primary">
-              <li>
-                {{
-                  currentLang === "en"
-                    ? "Look at biology and neurobalance: how body states shape mood, focus, and energy."
-                    : "Betrachte Biologie und Neurobalance: wie Körperzustände Stimmung, Fokus und Energie beeinflussen."
-                }}
-              </li>
-              <li>
-                {{
-                  currentLang === "en"
-                    ? "Clarify values, strengths, needs, and motivators."
-                    : "Kläre Werte, Stärken, Bedürfnisse und Motivatoren."
-                }}
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- 3) Align · Strategy -->
-        <div class="card">
-          <div class="card-body">
-            <div class="card-title-custom text-primary">
-              {{
-                currentLang === "en"
-                  ? "3# – Align · Strategy"
-                  : "3# – Ausrichten · Strategie"
-              }}
-            </div>
-            <ul class="text-primary">
-              <li>
-                {{
-                  currentLang === "en"
-                    ? "Define authentic goals and purpose."
-                    : "Definiere authentische Ziele und Sinn."
-                }}
-              </li>
-              <li>
-                {{
-                  currentLang === "en"
-                    ? "Translate them into structure, priorities, habits, and simple systems."
-                    : "Übersetze sie in Strukturen, Prioritäten, Gewohnheiten und einfache Systeme."
-                }}
-              </li>
-              <li>
-                {{
-                  currentLang === "en"
-                    ? "Design for motivation and joy, not just willpower."
-                    : "Gestalte für Motivation und Freude – nicht nur für Willenskraft."
-                }}
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- 4) Live · Cultivate Flow -->
-        <div class="card">
-          <div class="card-body">
-            <div class="card-title-custom text-primary">
-              {{
-                currentLang === "en"
-                  ? "4# – Live · Cultivate Flow"
-                  : "4# – Leben · Flow kultivieren"
-              }}
-            </div>
-            <ul class="text-primary">
-              <li>
-                {{
-                  currentLang === "en"
-                    ? "Act, iterate, and keep going."
-                    : "Handle, probiere aus und bleibe dran."
-                }}
-              </li>
-              <li>
-                {{
-                  currentLang === "en"
-                    ? "Align thinking, feeling, and action; integrate emotions with awareness and inner strength."
-                    : "Bringe Denken, Fühlen und Handeln in Einklang; integriere Gefühle mit Bewusstsein und innerer Stärke."
-                }}
-              </li>
-              <li>
-                {{
-                  currentLang === "en"
-                    ? "Review, correct, and create. Add play and celebration so learning sticks."
-                    : "Überprüfe, korrigiere und erschaffe. Füge Spiel und Feier hinzu, damit das Lernen nachhaltig bleibt."
-                }}
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+<div>
+  <app-details-process></app-details-process>
 </div>
