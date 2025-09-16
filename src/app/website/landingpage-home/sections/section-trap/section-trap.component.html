@@ -63,52 +63,50 @@
               : "Das Problem ist nicht zu viel Einsatz – sondern der Einsatz am falschen Ort."
           }}
         </h3>
-        <p>
-          @if (currentLang === "en") {
-            <app-read-more [lines]="3">
-              <div slot="text-readmore-comp">
-                <span>
-                  Acting from lack burns you out. The same action, done from
-                  connection and abundance, gives energy and fulfillment—in
-                  work, free time, and relationships.
-                </span>
-                <span>
-                  Balance matters too: rest, challenge, fun, and connection keep
-                  your system strong.
-                </span>
-                <span>
-                  <b>Good news:</b> When your actions align with your inner
-                  world, momentum & joy comes naturally. By giving space and
-                  listening within, you regain control. Peace and performance
-                  can coexist. Real leverage comes from addressing causes, not
-                  symptoms.
-                </span>
-              </div>
-            </app-read-more>
-          } @else {
-            <app-read-more [lines]="3">
-              <div slot="text-readmore-comp">
-                <span>
-                  Handeln aus Mangel brennt dich aus. Dieselbe Handlung, aus
-                  Verbindung und Fülle heraus getan, schenkt dir Energie und
-                  Erfüllung – im Beruf, in der Freizeit und in Beziehungen.
-                </span>
-                <span>
-                  Auch Balance zählt: Erholung, Herausforderung, Freude und
-                  Verbindung halten dein System stark.
-                </span>
-                <span>
-                  <b>Die gute Nachricht:</b> Wenn deine Handlungen mit deiner
-                  inneren Welt im Einklang sind, entsteht Schwung und Freude
-                  ganz von selbst. Indem du dir Raum gibst und nach innen
-                  lauschst, gewinnst du die Kontrolle zurück. Frieden und
-                  Performance können nebeneinander bestehen. Echte Stärke
-                  entsteht, wenn du Ursachen angehst – nicht nur Symptome.
-                </span>
-              </div>
-            </app-read-more>
-          }
-        </p>
+
+        @if (currentLang === "en") {
+          <app-read-more [lines]="3">
+            <div slot="text-readmore-comp">
+              <span>
+                Acting from lack burns you out. The same action, done from
+                connection and abundance, gives energy and fulfillment—in work,
+                free time, and relationships.
+              </span>
+              <span>
+                Balance matters too: rest, challenge, fun, and connection keep
+                your system strong.
+              </span>
+              <span>
+                <b>Good news:</b> When your actions align with your inner world,
+                momentum & joy comes naturally. By giving space and listening
+                within, you regain control. Peace and performance can coexist.
+                Real leverage comes from addressing causes, not symptoms.
+              </span>
+            </div>
+          </app-read-more>
+        } @else {
+          <app-read-more [lines]="3">
+            <div slot="text-readmore-comp">
+              <span>
+                Handeln aus Mangel brennt dich aus. Dieselbe Handlung, aus
+                Verbindung und Fülle heraus getan, schenkt dir Energie und
+                Erfüllung – im Beruf, in der Freizeit und in Beziehungen.
+              </span>
+              <span>
+                Auch Balance zählt: Erholung, Herausforderung, Freude und
+                Verbindung halten dein System stark.
+              </span>
+              <span>
+                <b>Die gute Nachricht:</b> Wenn deine Handlungen mit deiner
+                inneren Welt im Einklang sind, entsteht Schwung und Freude ganz
+                von selbst. Indem du dir Raum gibst und nach innen lauschst,
+                gewinnst du die Kontrolle zurück. Frieden und Performance können
+                nebeneinander bestehen. Echte Stärke entsteht, wenn du Ursachen
+                angehst – nicht nur Symptome.
+              </span>
+            </div>
+          </app-read-more>
+        }
       </div>
     </div>
   </div>

@@ -1,5 +1,5 @@
 <div class="read-more-container">
-  <div>
+  <p>
     <span [ngClass]="{ clamp: !expanded }" [style.--lines]="lines"
       ><ng-content select="[slot=text-readmore-comp]"></ng-content
     ></span>
@@ -13,5 +13,5 @@
         >...{{ expanded ? "Weniger anzeigen" : "Mehr erfahren" }}</span
       >
     }
-  </div>
+  </p>
 </div>

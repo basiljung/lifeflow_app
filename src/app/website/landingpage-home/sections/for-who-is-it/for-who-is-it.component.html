@@ -7,13 +7,13 @@
     }}
   </h1>
   <app-read-more [lines]="2" slot="text">
-    <p slot="text-readmore-comp">
+    <div slot="text-readmore-comp">
       {{
         currentLang === "en"
           ? "If you've become curious and want to know if I can really help you, take a moment and feel into these questions: Are you genuinely interested in experiencing lasting inner peace, freedom, and joy – regardless of what happens in the outside world? Do you often feel stressed, exhausted, or internally restless? Do you feel like you've lost sight of yourself and your true direction? Are you functioning in everyday life – but feeling internally empty or driven? Do you lack the energy to pursue your goals with ease and joy? Would you like to better understand yourself and lead a life that truly suits you? Do you want to feel deeply connected with yourself and the people in your life? If you nodded internally to these questions – then I can help you"
           : "Wenn du neugierig geworden bist und wissen willst, ob ich dir wirklich helfen kann, dann nimm dir einen Moment Zeit und spüre in diese Fragen hinein: Bist du aufrichtig daran interessiert, nachhaltigen inneren Frieden, Freiheit und Freude zu erleben – unabhängig davon, was im Außen geschieht? Fühlst du dich oft gestresst, erschöpft oder innerlich unruhig? Hast du das Gefühl, dich selbst und deine wahre Ausrichtung aus den Augen verloren zu haben? Funktionierst du im Alltag – fühlst dich dabei aber innerlich leer oder getrieben? Fehlt dir die Energie, um deine Ziele mit Leichtigkeit und Freude zu verfolgen? Möchtest du dich selbst besser verstehen und ein Leben führen, das wirklich zu dir passt? Willst du dich tief mit dir selbst und den Menschen in deinem Leben verbunden fühlen? Wenn du innerlich bei diesen Fragen genickt hast – dann kann ich dir helfen."
       }}
-    </p>
+    </div>
   </app-read-more>
   <div slot="bottom">
     @if (currentLang === "en") {
