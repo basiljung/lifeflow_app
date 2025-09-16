@@ -31,8 +31,3 @@
   overflow-y: auto; /* enable vertical scroll */
   padding-right: 0.5rem; /* avoid scrollbar overlaying text */
 }
-
-.font-fomula-custom {
-  font-size: clamp(18px, 1vw + 0.4rem, 20px);
-  font-weight: 800;
-}
