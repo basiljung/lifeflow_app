@@ -1,113 +1,115 @@
 <div class="title-box-white">
-  <div class="row justify-content-md-center">
-    <h1>
-      {{
-        currentLang === "en"
-          ? "The trap most busy people fall into"
-          : "Die Falle, in die die meisten Vielbeschäftigten tappen"
-      }}
-    </h1>
-    <!--     <div class="col col-md-auto">
-      <img
-        slot="image"
-        src="assets/me_mountain_trap.jpg"
-        width="180"
-        class="img-setting"
-      />
-    </div> -->
-    <div class="col" style="color: #ffffff">
-      @if (currentLang === "en") {
-        <div>
-          <p>
-            You are chasing fixes outside. The real shift comes when you look
-            inside - at your drivers and what you’re holding on to.
-          </p>
-          <p>
-            Many chase the next hack. But true clarity arises when you face what
-            your mind prefers to avoid. Yes, it can be challenging—but like
-            after a run, you feel free, relieved, and powerful afterward. And
-            often, you’ll wish you had started much earlier.
-          </p>
-        </div>
-      } @else {
-        <div>
-          <p>
-            Du suchst nach schnellen Lösungen im Aussen. Der wahre Wandel
-            beginnt, wenn du nach innen schaust – zu deinen inneren Antreibern
-            und dem, was du unbewusst festhält.
-          </p>
-          <p>
-            Viele rennen neuen Hacks hinterher. Doch echte Klarheit entsteht,
-            wenn du dich dem stellst, was dein Verstand lieber verdrängt. Ja, es
-            kann herausfordernd sein – aber wie nach einem Lauf fühlst du dich
-            danach frei, erleichtert und kraftvoll. Und oft wünschst du dir, du
-            hättest schon viel früher damit begonnen.
-          </p>
-        </div>
-      }
-    </div>
+  <!-- Title -->
+  <h1>
+    {{
+      currentLang === "en"
+        ? "The trap most busy people fall into"
+        : "Die Falle, in die die meisten Vielbeschäftigten tappen"
+    }}
+  </h1>
+
+  <!-- Intro text (same order on all sizes) -->
+  <div>
+    @if (currentLang === "en") {
+      <div>
+        <p>
+          You are chasing fixes outside. The real shift comes when you look
+          inside - at your drivers and what you’re holding on to.
+        </p>
+        <p>
+          Many chase the next hack. But true clarity arises when you face what
+          your mind prefers to avoid. Yes, it can be challenging—but like after
+          a run, you feel free, relieved, and powerful afterward. And often,
+          you’ll wish you had started much earlier.
+        </p>
+      </div>
+    } @else {
+      <div>
+        <p>
+          Du suchst nach schnellen Lösungen im Aussen. Der wahre Wandel beginnt,
+          wenn du nach innen schaust – zu deinen inneren Antreibern und dem, was
+          du unbewusst festhält.
+        </p>
+        <p>
+          Viele rennen neuen Hacks hinterher. Doch echte Klarheit entsteht, wenn
+          du dich dem stellst, was dein Verstand lieber verdrängt. Ja, es kann
+          herausfordernd sein – aber wie nach einem Lauf fühlst du dich danach
+          frei, erleichtert und kraftvoll. Und oft wünschst du dir, du hättest
+          schon viel früher damit begonnen.
+        </p>
+      </div>
+    }
   </div>
 
-  <div class="row justify-content-md-center">
-    <div class="col col-md-auto">
-      <img
-        slot="image"
-        src="assets/me_mountain_trap.jpg"
-        width="180"
-        class="img-setting"
-      />
-    </div>
-    <div class="col" style="color: #ffffff">
-      <h3>
-        {{
-          currentLang === "en"
-            ? "The issue isn’t to much effort—it’s the effort in the wrong place."
-            : "Das Problem ist nicht zu viel Einsatz – sondern der Einsatz am falschen Ort."
-        }}
-      </h3>
-      @if (currentLang === "en") {
-        <app-read-more [lines]="4">
-          <div slot="text-readmore-comp">
-            <p>
-              Acting from lack burns you out. The same action, done from
-              connection and abundance, gives energy and fulfillment—in work,
-              free time, and relationships.
-            </p>
-            <p>
-              Balance matters too: rest, challenge, fun, and connection keep
-              your system strong.
-            </p>
-            <p>
-              <b>Good news:</b> When your actions align with your inner world,
-              momentum & joy comes naturally. By giving space and listening
-              within, you regain control. Peace and performance can coexist.
-              Real leverage comes from addressing causes, not symptoms.
-            </p>
-          </div>
-        </app-read-more>
-      } @else {
-        <app-read-more [lines]="4">
-          <div slot="text-readmore-comp">
-            <p>
-              Handeln aus Mangel brennt dich aus. Dieselbe Handlung, aus
-              Verbindung und Fülle heraus getan, schenkt dir Energie und
-              Erfüllung – im Beruf, in der Freizeit und in Beziehungen.
-            </p>
-            <p>
-              Auch Balance zählt: Erholung, Herausforderung, Freude und
-              Verbindung halten dein System stark.
-            </p>
-            <p>
-              <b>Die gute Nachricht:</b> Wenn deine Handlungen mit deiner
-              inneren Welt im Einklang sind, entsteht Schwung und Freude ganz
-              von selbst. Indem du dir Raum gibst und nach innen lauschst,
-              gewinnst du die Kontrolle zurück. Frieden und Performance können
-              nebeneinander bestehen. Echte Stärke entsteht, wenn du Ursachen
-              angehst – nicht nur Symptome.
-            </p>
-          </div>
-        </app-read-more>
-      }
+  <!-- Section 2: image then text on mobile; side-by-side (image left, text right) on md+ -->
+  <div class="container-fluid">
+    <div class="row align-items-start">
+      <!-- Image column -->
+      <div class="col-12 col-md-3">
+        <img
+          slot="image"
+          src="assets/me_mountain_trap.jpg"
+          width="180"
+          class="img-setting"
+        />
+      </div>
+
+      <!-- Text column -->
+      <div class="col-12 col-md-7">
+        <h3>
+          {{
+            currentLang === "en"
+              ? "The issue isn’t to much effort—it’s the effort in the wrong place."
+              : "Das Problem ist nicht zu viel Einsatz – sondern der Einsatz am falschen Ort."
+          }}
+        </h3>
+        <p>
+          @if (currentLang === "en") {
+            <app-read-more [lines]="3">
+              <div slot="text-readmore-comp">
+                <span>
+                  Acting from lack burns you out. The same action, done from
+                  connection and abundance, gives energy and fulfillment—in
+                  work, free time, and relationships.
+                </span>
+                <span>
+                  Balance matters too: rest, challenge, fun, and connection keep
+                  your system strong.
+                </span>
+                <span>
+                  <b>Good news:</b> When your actions align with your inner
+                  world, momentum & joy comes naturally. By giving space and
+                  listening within, you regain control. Peace and performance
+                  can coexist. Real leverage comes from addressing causes, not
+                  symptoms.
+                </span>
+              </div>
+            </app-read-more>
+          } @else {
+            <app-read-more [lines]="3">
+              <div slot="text-readmore-comp">
+                <span>
+                  Handeln aus Mangel brennt dich aus. Dieselbe Handlung, aus
+                  Verbindung und Fülle heraus getan, schenkt dir Energie und
+                  Erfüllung – im Beruf, in der Freizeit und in Beziehungen.
+                </span>
+                <span>
+                  Auch Balance zählt: Erholung, Herausforderung, Freude und
+                  Verbindung halten dein System stark.
+                </span>
+                <span>
+                  <b>Die gute Nachricht:</b> Wenn deine Handlungen mit deiner
+                  inneren Welt im Einklang sind, entsteht Schwung und Freude
+                  ganz von selbst. Indem du dir Raum gibst und nach innen
+                  lauschst, gewinnst du die Kontrolle zurück. Frieden und
+                  Performance können nebeneinander bestehen. Echte Stärke
+                  entsteht, wenn du Ursachen angehst – nicht nur Symptome.
+                </span>
+              </div>
+            </app-read-more>
+          }
+        </p>
+      </div>
     </div>
   </div>
 </div>
