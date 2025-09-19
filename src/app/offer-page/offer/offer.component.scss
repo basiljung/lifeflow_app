@@ -1,0 +1,21 @@
+.card.selectable {
+  cursor: pointer;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
+}
+
+.card.selectable:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+.card.selected {
+  border: 2px solid #007bff; /* Bootstrap primary */
+  box-shadow: 0 0 12px rgba(0, 123, 255, 0.5);
+}
+
+a.btn.disabled {
+  pointer-events: none;
+  opacity: 0.6;
+}

@@ -1,5 +1,6 @@
 import { Routes } from '@angular/router';
 import { LandingpageHomeComponent } from './website/landingpage-home/landingpage-home.component';
+import { Component } from '@angular/core';
 
 export const routes: Routes = [
   { path: 'app', redirectTo: 'en/app', pathMatch: 'full' },
@@ -20,9 +21,24 @@ export const routes: Routes = [
           import('./offer-page/offer/offer.component').then(
             (m) => m.OfferComponent,
           ),
+        children: [
+          {
+            path: 't&c',
+            loadComponent: () =>
+              import(
+                './offer-page/termsandconditions/termsandconditions.component'
+              ).then((m) => m.TermsandconditionsComponent),
+          },
+        ],
+      },
+      {
+        path: 'terms',
+        loadComponent: () =>
+          import(
+            './offer-page/termsandconditions/termsandconditions.component'
+          ).then((m) => m.TermsandconditionsComponent),
       },
       { path: '', component: LandingpageHomeComponent },
-      /*       { path: '', component: LandingpageComponent }, */
       {
         path: 'wl',
         loadComponent: () =>

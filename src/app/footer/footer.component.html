@@ -43,13 +43,14 @@
         <a
           class="grey-text text-lighten-4 right"
           [routerLink]="'/de/impressum'"
-          style="margin-left: 20px"
-          >Impressum</a
+          style="margin-left: 10px"
+          >{{ currentLang === "en" ? "Imprint" : "Impressum" }}</a
         >
         <a
           class="grey-text text-lighten-4 right"
           [routerLink]="'/de/privacy-policy'"
-          >Datenschutz</a
+          style="margin-left: 10px"
+          >{{ currentLang === "en" ? "Privacy" : "Datenschutz" }}</a
         >
         <!--<a
           style="padding-right: 1rem"

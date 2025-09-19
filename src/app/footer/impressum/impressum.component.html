@@ -1,41 +1,61 @@
-<div>
-  <a
-    class="grey-text text-lighten-4 right"
-    [routerLink]="'/'"
-    style="margin-left: 20px"
-    >Back</a
-  >
+<div class="title-box-white" style="padding: 3rem">
+  <div>
+    <div style="padding-bottom: 2rem">
+      <a
+        class="grey-text text-lighten-4 right"
+        (click)="goBack()"
+        style="cursor: pointer"
+      >
+        {{ currentLang === "en" ? "Back" : "Zurück" }}
+      </a>
+    </div>
+    <h2>{{ currentLang === "en" ? "Imprint" : "Impressum" }}</h2>
+
+    <p>
+      <strong>LifeFlow.Now Coaching</strong><br />
+      Basil Jung<br />
+      8706 Meilen, {{ currentLang === "en" ? "Switzerland" : "Schweiz" }}
+    </p>
+
+    <p>
+      E-Mail:
+      <a href="mailto:basil.jung@lifeflow.now">basil.jung&#64;lifeflow.now</a>
+    </p>
+
+    <h3>{{ currentLang === "en" ? "Disclaimer" : "Haftungsausschluss" }}</h3>
+    <p>
+      {{
+        currentLang === "en"
+          ? "The contents of this website were created with the greatest care. However, I do not assume any liability for the accuracy, completeness, or timeliness of the contents. Coaching is not psychotherapy and does not replace medical or psychological treatment."
+          : "Die Inhalte dieser Website wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte übernehme ich jedoch keine Gewähr. Coaching ist keine Psychotherapie und ersetzt keine medizinische oder psychologische Behandlung."
+      }}
+    </p>
+
+    <h3>{{ currentLang === "en" ? "Copyright" : "Urheberrecht" }}</h3>
+    <p>
+      {{
+        currentLang === "en"
+          ? "The contents published on this website are subject to Swiss copyright law. Any use (e.g. reproduction, editing, distribution) outside the limits of copyright law requires my prior written consent."
+          : "Die auf dieser Website veröffentlichten Inhalte unterliegen dem schweizerischen Urheberrecht. Jede Art der Verwertung (z. B. Vervielfältigung, Bearbeitung, Verbreitung) außerhalb der Grenzen des Urheberrechts bedarf meiner vorherigen schriftlichen Zustimmung."
+      }}
+    </p>
+
+    <h3>
+      {{
+        currentLang === "en" ? "Data Usage Notice" : "Hinweis zur Datennutzung"
+      }}
+    </h3>
+    <p>
+      {{
+        currentLang === "en"
+          ? "Further information on the processing of personal data can be found in the "
+          : "Weitere Informationen zur Verarbeitung personenbezogener Daten finden Sie in der "
+      }}
+      <a href="/privacy">
+        {{
+          currentLang === "en" ? "Privacy Policy" : "Datenschutzerklärung"
+        }} </a
+      >.
+    </p>
+  </div>
 </div>
-<section id="impressum" style="padding: 20px; font-family: Arial, sans-serif">
-  <h2>Impressum</h2>
-
-  <p>
-    <strong>LifeFlow.Now Coaching</strong><br />
-    Basil Jung<br />
-    General-Wille-Strasse 153<br />
-    8706 Meilen, Schweiz<br />
-    E-Mail:
-    <a href="mailto:basil.jung@lifeflow.now">basil.jung&#64;lifeflow.now</a>
-  </p>
-
-  <h4>Haftungsausschluss</h4>
-  <p>
-    Die Inhalte dieser Website wurden mit größter Sorgfalt erstellt. Für die
-    Richtigkeit, Vollständigkeit und Aktualität der Inhalte übernehme ich jedoch
-    keine Gewähr.
-  </p>
-
-  <h4>Urheberrecht</h4>
-  <p>
-    Die auf dieser Website veröffentlichten Inhalte unterliegen dem
-    schweizerischen Urheberrecht. Jede Art der Verwertung (z.&nbsp;B.
-    Vervielfältigung, Bearbeitung, Verbreitung) außerhalb der Grenzen des
-    Urheberrechts bedarf meiner vorherigen schriftlichen Zustimmung.
-  </p>
-
-  <h4>Hinweis zur Datennutzung</h4>
-  <p>
-    Weitere Informationen zur Verarbeitung personenbezogener Daten finden Sie in
-    der <a href="/datenschutz">Datenschutzerklärung</a>.
-  </p>
-</section>

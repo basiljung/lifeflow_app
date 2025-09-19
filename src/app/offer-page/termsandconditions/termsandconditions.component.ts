@@ -1,16 +1,14 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { RouterModule } from '@angular/router';
 import { Subject, takeUntil } from 'rxjs';
 import { LanguageService } from '../../services/language.service';
-import { Location } from '@angular/common';
 
 @Component({
-  selector: 'app-privacy-policy',
-  imports: [RouterModule],
-  templateUrl: './privacy-policy.component.html',
-  styleUrl: './privacy-policy.component.scss',
+  selector: 'app-termsandconditions',
+  imports: [],
+  templateUrl: './termsandconditions.component.html',
+  styleUrl: './termsandconditions.component.scss',
 })
-export class PrivacyPolicyComponent implements OnInit, OnDestroy {
+export class TermsandconditionsComponent implements OnInit, OnDestroy {
   private destroy$ = new Subject<void>();
   currentLang: string | null = null;
 
@@ -23,10 +21,6 @@ export class PrivacyPolicyComponent implements OnInit, OnDestroy {
     this.langService.lang$.pipe(takeUntil(this.destroy$)).subscribe((lang) => {
       this.currentLang = lang;
     });
-  }
-
-  goBack() {
-    this.location.back();
   }
 
   ngOnDestroy(): void {

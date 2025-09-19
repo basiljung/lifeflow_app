@@ -1,355 +1,372 @@
-<div>
-  <a
-    class="grey-text text-lighten-4 right"
-    [routerLink]="'/'"
-    style="margin-left: 20px"
-    >Back</a
-  >
+<div class="title-box-white" style="padding: 3rem">
+  <div style="padding-bottom: 2rem">
+    <a
+      class="grey-text text-lighten-4 right"
+      (click)="goBack()"
+      style="cursor: pointer"
+    >
+      {{ currentLang === "en" ? "Back" : "Zurück" }}
+    </a>
+  </div>
+  <div>
+    <h2>
+      {{ currentLang === "en" ? "Privacy Policy" : "Datenschutzerklärung" }}
+    </h2>
+    <p>
+      <em>
+        {{
+          currentLang === "en"
+            ? "Last updated: September 19, 2025"
+            : "Stand: 19. September 2025"
+        }}
+      </em>
+    </p>
+
+    <h3>1. {{ currentLang === "en" ? "Introduction" : "Präambel" }}</h3>
+    <p>
+      {{
+        currentLang === "en"
+          ? "This Privacy Policy explains which types of personal data we process, for what purposes, and to what extent. It applies to all processing carried out in the course of providing our services as well as to our website, external online presences, and social media."
+          : "Mit dieser Datenschutzerklärung informieren wir Sie darüber, welche Arten personenbezogener Daten wir zu welchen Zwecken und in welchem Umfang verarbeiten. Die Erklärung gilt für alle Verarbeitungen im Rahmen unserer Leistungen sowie für unsere Website, externe Onlinepräsenzen und Social Media."
+      }}
+    </p>
+
+    <h3>2. {{ currentLang === "en" ? "Controller" : "Verantwortlicher" }}</h3>
+    <p>
+      <strong>Basil Jung (LifeFlow.Now™ Coaching)</strong><br />
+
+      8706 Meilen, {{ currentLang === "en" ? "Switzerland" : "Schweiz" }}<br />
+      {{ currentLang === "en" ? "Email:" : "E-Mail:" }}
+      <a href="mailto:basil.jung@lifeflow.now">basil.jung&#64;lifeflow.now</a>
+    </p>
+
+    <h3>
+      3.
+      {{
+        currentLang === "en"
+          ? "Categories of Data"
+          : "Arten der verarbeiteten Daten"
+      }}
+    </h3>
+    <ul>
+      <li>
+        {{
+          currentLang === "en"
+            ? "Master and contact data (name, address, email, phone)"
+            : "Bestands- und Kontaktdaten (Name, Adresse, E-Mail, Telefonnummer)"
+        }}
+      </li>
+      <li>
+        {{
+          currentLang === "en"
+            ? "Contract and payment data (via Stripe)"
+            : "Vertrags- und Zahlungsdaten (über Stripe)"
+        }}
+      </li>
+      <li>
+        {{
+          currentLang === "en"
+            ? "Session notes and coaching documents"
+            : "Sitzungsnotizen und Coaching-Dokumente"
+        }}
+      </li>
+      <li>
+        {{
+          currentLang === "en"
+            ? "Content and communication data (e.g. emails, inquiries)"
+            : "Inhalts- und Kommunikationsdaten (z. B. Anfragen, E-Mails)"
+        }}
+      </li>
+      <li>
+        {{
+          currentLang === "en"
+            ? "Usage and log data (e.g. IP address, logfiles)"
+            : "Nutzungs- und Protokolldaten (z. B. IP-Adresse, Logfiles)"
+        }}
+      </li>
+    </ul>
+
+    <h3>
+      4.
+      {{
+        currentLang === "en"
+          ? "Purposes of Processing"
+          : "Zwecke der Verarbeitung"
+      }}
+    </h3>
+    <ul>
+      <li>
+        {{
+          currentLang === "en"
+            ? "Execution of coaching contracts"
+            : "Erfüllung von Coaching-Verträgen"
+        }}
+      </li>
+      <li>
+        {{
+          currentLang === "en"
+            ? "Communication and scheduling"
+            : "Kommunikation und Terminabwicklung"
+        }}
+      </li>
+      <li>
+        {{
+          currentLang === "en"
+            ? "Billing and payment processing (Stripe)"
+            : "Abrechnung und Zahlungsabwicklung (Stripe)"
+        }}
+      </li>
+      <li>
+        {{
+          currentLang === "en"
+            ? "Analytics and website optimization (Google Analytics)"
+            : "Analyse und Optimierung unseres Onlineangebots (Google Analytics)"
+        }}
+      </li>
+      <li>
+        {{
+          currentLang === "en"
+            ? "Newsletter distribution (MailerLite)"
+            : "Versand von Newslettern (MailerLite)"
+        }}
+      </li>
+      <li>
+        {{
+          currentLang === "en"
+            ? "Security and abuse prevention"
+            : "Sicherheitsmaßnahmen und Missbrauchsprävention"
+        }}
+      </li>
+    </ul>
+
+    <h3>5. {{ currentLang === "en" ? "Legal Bases" : "Rechtsgrundlagen" }}</h3>
+    <p>
+      {{
+        currentLang === "en"
+          ? "We process data under the Swiss Federal Act on Data Protection (nFADP) and – where EU citizens are concerned – under the GDPR. The legal bases are consent (Art. 6(1)(a) GDPR), contract performance (lit. b), legal obligations (lit. c), and legitimate interests (lit. f)."
+          : "Wir verarbeiten Daten nach dem Schweizer Datenschutzgesetz (nFADP) und – sofern EU-Bürger betroffen sind – nach der DSGVO. Grundlage sind Einwilligung (Art. 6 Abs. 1 lit. a DSGVO), Vertragserfüllung (lit. b), rechtliche Verpflichtungen (lit. c) sowie berechtigtes Interesse (lit. f)."
+      }}
+    </p>
+
+    <h3>
+      6.
+      {{
+        currentLang === "en"
+          ? "Data Transfers & Service Providers"
+          : "Datenweitergabe & Dienstleister"
+      }}
+    </h3>
+    <ul>
+      <li>
+        <strong>Stripe Payments Europe Ltd.</strong> –
+        {{
+          currentLang === "en"
+            ? "Payment processing. Data: payment details, billing information."
+            : "Zahlungsabwicklung. Daten: Zahlungsinformationen, Rechnungsdaten."
+        }}
+        <a href="https://stripe.com/privacy" target="_blank"
+          >Stripe Privacy Policy</a
+        >.
+      </li>
+      <li>
+        <strong>MailerLite UAB</strong> –
+        {{
+          currentLang === "en"
+            ? "Newsletter delivery. Data: email, timestamp, IP."
+            : "Newsletter-Versand. Daten: E-Mail, Zeitstempel, IP."
+        }}
+        <a
+          href="https://www.mailerlite.com/legal/privacy-policy"
+          target="_blank"
+          >MailerLite Privacy</a
+        >.
+      </li>
+      <li>
+        <strong>Google Analytics (Google Ireland Ltd.)</strong> –
+        {{
+          currentLang === "en"
+            ? "Website usage analysis. Data: IP address (shortened), usage data."
+            : "Website-Analyse. Daten: IP-Adresse (gekürzt), Nutzungsdaten."
+        }}
+        <a href="https://policies.google.com/privacy" target="_blank"
+          >Google Privacy</a
+        >.
+      </li>
+      <li>
+        <strong>GitHub Pages</strong> –
+        {{
+          currentLang === "en"
+            ? "Hosting provider. Data: IP address, logfiles."
+            : "Hosting der Website. Daten: IP-Adresse, Logfiles."
+        }}
+        <a
+          href="https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement"
+          target="_blank"
+          >GitHub Privacy</a
+        >.
+      </li>
+      <li>
+        <strong>Notion Labs Inc.</strong> –
+        {{
+          currentLang === "en"
+            ? "Coaching content storage/sharing. Data: session notes, worksheets."
+            : "Speicherung/Sharing von Coaching-Inhalten. Daten: Sitzungsnotizen, Arbeitsblätter."
+        }}
+        <a href="https://www.notion.so/help/guides/data-privacy" target="_blank"
+          >Notion Privacy</a
+        >.
+      </li>
+    </ul>
+
+    <h3>
+      7.
+      {{
+        currentLang === "en" ? "Storage & Deletion" : "Speicherung & Löschung"
+      }}
+    </h3>
+    <ul>
+      <li>
+        {{
+          currentLang === "en"
+            ? "Contract and invoice data: 10 years (Swiss tax law)"
+            : "Vertrags- und Rechnungsdaten: 10 Jahre (Steuerrecht Schweiz)"
+        }}
+      </li>
+      <li>
+        {{
+          currentLang === "en"
+            ? "Contact requests: 12 months if no contract results"
+            : "Kontaktanfragen: 12 Monate, falls kein Vertrag zustande kommt"
+        }}
+      </li>
+      <li>
+        {{
+          currentLang === "en"
+            ? "Coaching notes/documents: 12 months after program end unless longer retention is legally required"
+            : "Coaching-Notizen/Dokumente: 12 Monate nach Programmende, es sei denn, rechtliche Pflichten erfordern längere Aufbewahrung"
+        }}
+      </li>
+      <li>
+        {{
+          currentLang === "en"
+            ? "Server logs: max. 30 days"
+            : "Server-Logfiles: max. 30 Tage"
+        }}
+      </li>
+      <li>
+        {{
+          currentLang === "en"
+            ? "Newsletter data: until consent is withdrawn"
+            : "Newsletter-Daten: bis Widerruf der Einwilligung"
+        }}
+      </li>
+    </ul>
+
+    <h3>
+      8.
+      {{
+        currentLang === "en"
+          ? "International Transfers"
+          : "Internationale Datentransfers"
+      }}
+    </h3>
+    <p>
+      {{
+        currentLang === "en"
+          ? "Data may be transferred abroad only where adequate safeguards are in place (e.g. Data Privacy Framework for the USA or Standard Contractual Clauses)."
+          : "Eine Übermittlung in Drittländer erfolgt nur bei angemessenem Datenschutzniveau (z. B. Data Privacy Framework für die USA) oder durch Standardvertragsklauseln."
+      }}
+    </p>
+
+    <h3>
+      9.
+      {{
+        currentLang === "en"
+          ? "Data Subject Rights"
+          : "Rechte der betroffenen Personen"
+      }}
+    </h3>
+    <ul>
+      <li>
+        {{
+          currentLang === "en"
+            ? "Access to stored data"
+            : "Auskunft über gespeicherte Daten"
+        }}
+      </li>
+      <li>
+        {{
+          currentLang === "en"
+            ? "Rectification of inaccurate data"
+            : "Berichtigung unrichtiger Daten"
+        }}
+      </li>
+      <li>
+        {{
+          currentLang === "en"
+            ? "Erasure or restriction of processing"
+            : "Löschung oder Einschränkung der Verarbeitung"
+        }}
+      </li>
+      <li>
+        {{ currentLang === "en" ? "Data portability" : "Datenübertragbarkeit" }}
+      </li>
+      <li>
+        {{
+          currentLang === "en"
+            ? "Objection to processing"
+            : "Widerspruch gegen Verarbeitung"
+        }}
+      </li>
+      <li>
+        {{
+          currentLang === "en"
+            ? "Withdrawal of consent"
+            : "Widerruf von Einwilligungen"
+        }}
+      </li>
+    </ul>
+    <p>
+      {{
+        currentLang === "en"
+          ? "Please send requests to:"
+          : "Anfragen richten Sie bitte an:"
+      }}
+      <a href="mailto:basil.jung@lifeflow.now">basil.jung&#64;lifeflow.now</a>.
+    </p>
+
+    <h3>10. Cookies & Consent</h3>
+    <p>
+      {{
+        currentLang === "en"
+          ? "We use cookies only within the legal framework. Where required, we ask for your consent via a cookie banner. You can delete or disable cookies anytime in your browser settings."
+          : "Wir verwenden Cookies nur im rechtlich zulässigen Rahmen. Soweit erforderlich, holen wir Ihre Einwilligung über ein Cookie-Banner ein. Sie können Cookies jederzeit über die Browser-Einstellungen löschen oder deaktivieren."
+      }}
+    </p>
+
+    <h3>11. {{ currentLang === "en" ? "Security" : "Sicherheit" }}</h3>
+    <p>
+      {{
+        currentLang === "en"
+          ? "We implement technical and organizational measures (TLS/SSL encryption, access controls, secure storage) to protect your data against unauthorized access and misuse."
+          : "Wir setzen technische und organisatorische Maßnahmen ein (TLS/SSL, Zugriffskontrollen, Verschlüsselung), um ein dem Risiko angemessenes Schutzniveau zu gewährleisten."
+      }}
+    </p>
+
+    <h3>12. EU</h3>
+    <p>
+      {{
+        currentLang === "en"
+          ? "For EU consumers: you have a statutory 14-day withdrawal right for online services. If you request coaching to begin before this period ends, the withdrawal right is waived once services start."
+          : "Für EU-Kunden gilt: Wenn Sie wünschen, dass das Coaching vor Ablauf der gesetzlichen 14-tägigen Widerrufsfrist beginnt, verzichten Sie auf dieses Recht, sobald die Dienstleistung begonnen hat."
+      }}
+    </p>
+    <p>
+      {{
+        currentLang === "en"
+          ? "If we regularly serve EU clients, an EU representative may be appointed pursuant to Art. 27 GDPR."
+          : "Falls wir regelmäßig EU-Kunden bedienen, kann ein Vertreter gemäß Art. 27 DSGVO benannt werden."
+      }}
+    </p>
+  </div>
 </div>
-<h3>Datenschutzerklärung</h3>
-
-<h4>Präambel</h4>
-<p>
-  Mit der folgenden Datenschutzerklärung möchten wir Sie darüber aufklären,
-  welche Arten Ihrer personenbezogenen Daten (nachfolgend auch kurz als "Daten"
-  bezeichnet) wir zu welchen Zwecken und in welchem Umfang verarbeiten. Die
-  Datenschutzerklärung gilt für alle von uns durchgeführten Verarbeitungen
-  personenbezogener Daten, sowohl im Rahmen der Erbringung unserer Leistungen
-  als auch insbesondere auf unseren Webseiten, in mobilen Applikationen sowie
-  innerhalb externer Onlinepräsenzen, wie z. B. unserer Social-Media-Profile
-  (nachfolgend zusammenfassend bezeichnet als "Onlineangebot").
-</p>
-<p>Die verwendeten Begriffe sind nicht geschlechtsspezifisch.</p>
-<p><strong>Stand:</strong> 30. März 2025</p>
-
-<h4>Inhaltsübersicht</h4>
-<ul>
-  <li>Präambel</li>
-  <li>Verantwortlicher</li>
-  <li>Übersicht der Verarbeitungen</li>
-  <li>Maßgebliche Rechtsgrundlagen</li>
-  <li>Sicherheitsmaßnahmen</li>
-  <li>Übermittlung von personenbezogenen Daten</li>
-  <li>Internationale Datentransfers</li>
-  <li>Rechte der betroffenen Personen</li>
-  <li>Bereitstellung des Onlineangebots und Webhosting</li>
-  <li>Einsatz von Cookies</li>
-  <li>Kontakt- und Anfrageverwaltung</li>
-  <li>Newsletter und E-Mail-Kommunikation über MailerLite</li>
-  <li>Einsatz von Google Analytics</li>
-  <li>Hosting über GitHub Pages</li>
-  <li>Eingebundene Inhalte von Notion</li>
-  <li>Cookie-Consent-Management</li>
-</ul>
-
-<div>
-  Kontakt- und Anfrageverwaltung Verantwortlicher Basil Jung
-  General-Wille-Strasse 153 8707 Meilen CH E-Mail-Adresse:
-  basil.jung&#64;lifeflow.now Übersicht der Verarbeitungen Die nachfolgende
-  Übersicht fasst die Arten der verarbeiteten Daten und die Zwecke ihrer
-  Verarbeitung zusammen und verweist auf die betroffenen Personen. Arten der
-  verarbeiteten Daten Bestandsdaten. Kontaktdaten. Inhaltsdaten. Nutzungsdaten.
-  Meta-, Kommunikations- und Verfahrensdaten. Protokolldaten. Kategorien
-  betroffener Personen Kommunikationspartner. Nutzer. Zwecke der Verarbeitung
-  Kommunikation. Sicherheitsmaßnahmen. Organisations- und Verwaltungsverfahren.
-  Feedback. Bereitstellung unseres Onlineangebotes und Nutzerfreundlichkeit.
-  Informationstechnische Infrastruktur. Maßgebliche Rechtsgrundlagen Maßgebliche
-  Rechtsgrundlagen nach dem Schweizer Datenschutzgesetz: Wenn Sie sich in der
-  Schweiz befinden, bearbeiten wir Ihre Daten auf Grundlage des Bundesgesetzes
-  über den Datenschutz (kurz „Schweizer DSG"). Anders als beispielsweise die
-  DSGVO sieht das Schweizer DSG grundsätzlich nicht vor, dass eine
-  Rechtsgrundlage für die Bearbeitung der Personendaten genannt werden muss und
-  die Bearbeitung von Personendaten nach Treu und Glauben durchgeführt wird,
-  rechtmäßig und verhältnismäßig ist (Art. 6 Abs. 1 und 2 des Schweizer DSG).
-  Zudem werden Personendaten von uns nur zu einem bestimmten, für die betroffene
-  Person erkennbaren Zweck beschafft und nur so bearbeitet, wie es mit diesem
-  Zweck vereinbar ist (Art. 6 Abs. 3 des Schweizer DSG). Sicherheitsmaßnahmen
-  Wir treffen nach Maßgabe der gesetzlichen Vorgaben unter Berücksichtigung des
-  Stands der Technik, der Implementierungskosten und der Art, des Umfangs, der
-  Umstände und der Zwecke der Verarbeitung sowie der unterschiedlichen
-  Eintrittswahrscheinlichkeiten und des Ausmaßes der Bedrohung der Rechte und
-  Freiheiten natürlicher Personen geeignete technische und organisatorische
-  Maßnahmen, um ein dem Risiko angemessenes Schutzniveau zu gewährleisten. Zu
-  den Maßnahmen gehören insbesondere die Sicherung der Vertraulichkeit,
-  Integrität und Verfügbarkeit von Daten durch Kontrolle des physischen und
-  elektronischen Zugangs zu den Daten als auch des sie betreffenden Zugriffs,
-  der Eingabe, der Weitergabe, der Sicherung der Verfügbarkeit und ihrer
-  Trennung. Des Weiteren haben wir Verfahren eingerichtet, die eine Wahrnehmung
-  von Betroffenenrechten, die Löschung von Daten und Reaktionen auf die
-  Gefährdung der Daten gewährleisten. Ferner berücksichtigen wir den Schutz
-  personenbezogener Daten bereits bei der Entwicklung bzw. Auswahl von Hardware,
-  Software sowie Verfahren entsprechend dem Prinzip des Datenschutzes, durch
-  Technikgestaltung und durch datenschutzfreundliche Voreinstellungen. Sicherung
-  von Online-Verbindungen durch TLS-/SSL-Verschlüsselungstechnologie (HTTPS): Um
-  die Daten der Nutzer, die über unsere Online-Dienste übertragen werden, vor
-  unerlaubten Zugriffen zu schützen, setzen wir auf die
-  TLS-/SSL-Verschlüsselungstechnologie. Secure Sockets Layer (SSL) und Transport
-  Layer Security (TLS) sind die Eckpfeiler der sicheren Datenübertragung im
-  Internet. Diese Technologien verschlüsseln die Informationen, die zwischen der
-  Website oder App und dem Browser des Nutzers (oder zwischen zwei Servern)
-  übertragen werden, wodurch die Daten vor unbefugtem Zugriff geschützt sind.
-  TLS, als die weiterentwickelte und sicherere Version von SSL, gewährleistet,
-  dass alle Datenübertragungen den höchsten Sicherheitsstandards entsprechen.
-  Wenn eine Website durch ein SSL-/TLS-Zertifikat gesichert ist, wird dies durch
-  die Anzeige von HTTPS in der URL signalisiert. Dies dient als ein Indikator
-  für die Nutzer, dass ihre Daten sicher und verschlüsselt übertragen werden.
-  Übermittlung von personenbezogenen Daten Im Rahmen unserer Verarbeitung von
-  personenbezogenen Daten kommt es vor, dass diese an andere Stellen,
-  Unternehmen, rechtlich selbstständige Organisationseinheiten oder Personen
-  übermittelt beziehungsweise ihnen gegenüber offengelegt werden. Zu den
-  Empfängern dieser Daten können z. B. mit IT-Aufgaben beauftragte Dienstleister
-  gehören oder Anbieter von Diensten und Inhalten, die in eine Website
-  eingebunden sind. In solchen Fällen beachten wir die gesetzlichen Vorgaben und
-  schließen insbesondere entsprechende Verträge bzw. Vereinbarungen, die dem
-  Schutz Ihrer Daten dienen, mit den Empfängern Ihrer Daten ab. Internationale
-  Datentransfers Bekanntgabe von Personendaten ins Ausland: Gemäß dem Schweizer
-  DSG geben wir personenbezogene Daten nur dann ins Ausland bekannt, wenn ein
-  angemessener Schutz der betroffenen Personen gewährleistet ist (Art. 16
-  Schweizer DSG). Sofern der Bundesrat keinen angemessenen Schutz festgestellt
-  hat (Liste:
-  https://www.bj.admin.ch/bj/de/home/staat/datenschutz/internationales/anerkennung-staaten.html),
-  ergreifen wir alternative Sicherheitsmaßnahmen. Für Datenübermittlungen in die
-  USA stützen wir uns vorrangig auf das Data Privacy Framework (DPF), welches
-  durch einen Angemessenheitsbeschluss der Schweiz vom 07.06.2024 als sicherer
-  Rechtsrahmen anerkannt wurde. Zusätzlich haben wir mit den jeweiligen
-  Anbietern Standarddatenschutzklauseln abgeschlossen, die von der
-  Eidgenössischen Datenschutz- und Öffentlichkeitsbeauftragten (EDÖB) genehmigt
-  wurden und vertragliche Verpflichtungen zum Schutz Ihrer Daten festlegen.
-  Diese zweifache Absicherung gewährleistet einen umfassenden Schutz Ihrer
-  Daten: Das DPF bildet die primäre Schutzebene, während die
-  Standarddatenschutzklauseln als zusätzliche Sicherheit dienen. Sollten sich
-  Änderungen im Rahmen des DPF ergeben, greifen die Standarddatenschutzklauseln
-  als zuverlässige Rückfalloption ein. So stellen wir sicher, dass Ihre Daten
-  auch bei etwaigen politischen oder rechtlichen Veränderungen stets angemessen
-  geschützt bleiben. Bei den einzelnen Diensteanbietern informieren wir Sie
-  darüber, ob sie nach dem DPF zertifiziert sind und ob
-  Standarddatenschutzklauseln vorliegen. Die Liste der zertifizierten
-  Unternehmen sowie weitere Informationen zum DPF finden Sie auf der Website des
-  US-Handelsministeriums unter https://www.dataprivacyframework.gov/ (in
-  englischer Sprache). Für Datenübermittlungen in andere Drittländer gelten
-  entsprechende Sicherheitsmaßnahmen, einschließlich internationaler Verträge,
-  spezifischer Garantien, von der EDÖB genehmigter Standarddatenschutzklauseln
-  oder von der EDÖB oder einer zuständigen Datenschutzbehörde eines anderen
-  Landes vorab anerkannter unternehmensinterner Datenschutzvorschriften. Rechte
-  der betroffenen Personen Rechte der betroffenen Personen nach dem Schweizer
-  DSG: Ihnen stehen als betroffene Person nach Maßgabe der Vorgaben des
-  Schweizer DSG die folgenden Rechte zu: Recht auf Auskunft: Sie haben das
-  Recht, eine Bestätigung darüber zu verlangen, ob Sie betreffende Personendaten
-  verarbeitet werden, und auf Erhalt derjenigen Informationen, die erforderlich
-  sind, damit Sie Ihre Rechte nach diesem Gesetz geltend machen können und eine
-  transparente Datenbearbeitung gewährleistet ist. Recht auf Datenherausgabe
-  oder -übertragung: Sie haben das Recht, die Herausgabe Ihrer Personendaten,
-  die Sie uns bekanntgegeben haben, in einem gängigen elektronischen Format zu
-  verlangen. Recht auf Berichtigung: Sie haben das Recht, die Berichtigung der
-  Sie betreffenden unrichtigen Personendaten zu verlangen. Recht auf
-  Widerspruch, Löschung und Vernichtung: Sie haben das Recht, der Verarbeitung
-  Ihrer Daten zu widersprechen, sowie zu verlangen, dass die Sie betreffenden
-  Personendaten gelöscht oder vernichtet werden. Bereitstellung des
-  Onlineangebots und Webhosting Wir verarbeiten die Daten der Nutzer, um ihnen
-  unsere Online-Dienste zur Verfügung stellen zu können. Zu diesem Zweck
-  verarbeiten wir die IP-Adresse des Nutzers, die notwendig ist, um die Inhalte
-  und Funktionen unserer Online-Dienste an den Browser oder das Endgerät der
-  Nutzer zu übermitteln. Verarbeitete Datenarten: Nutzungsdaten (z. B.
-  Seitenaufrufe und Verweildauer, Klickpfade, Nutzungsintensität und -frequenz,
-  verwendete Gerätetypen und Betriebssysteme, Interaktionen mit Inhalten und
-  Funktionen); Meta-, Kommunikations- und Verfahrensdaten (z. B. IP-Adressen,
-  Zeitangaben, Identifikationsnummern, beteiligte Personen). Protokolldaten (z.
-  B. Logfiles betreffend Logins oder den Abruf von Daten oder Zugriffszeiten.).
-  Betroffene Personen: Nutzer (z. B. Webseitenbesucher, Nutzer von
-  Onlinediensten). Zwecke der Verarbeitung: Bereitstellung unseres
-  Onlineangebotes und Nutzerfreundlichkeit; Informationstechnische Infrastruktur
-  (Betrieb und Bereitstellung von Informationssystemen und technischen Geräten
-  (Computer, Server etc.)). Sicherheitsmaßnahmen. Aufbewahrung und Löschung:
-  Löschung entsprechend Angaben im Abschnitt "Allgemeine Informationen zur
-  Datenspeicherung und Löschung". Rechtsgrundlagen: Berechtigte Interessen (Art.
-  6 Abs. 1 S. 1 lit. f) DSGVO). Weitere Hinweise zu Verarbeitungsprozessen,
-  Verfahren und Diensten: Erhebung von Zugriffsdaten und Logfiles: Der Zugriff
-  auf unser Onlineangebot wird in Form von sogenannten "Server-Logfiles"
-  protokolliert. Zu den Serverlogfiles können die Adresse und der Name der
-  abgerufenen Webseiten und Dateien, Datum und Uhrzeit des Abrufs, übertragene
-  Datenmengen, Meldung über erfolgreichen Abruf, Browsertyp nebst Version, das
-  Betriebssystem des Nutzers, Referrer URL (die zuvor besuchte Seite) und im
-  Regelfall IP-Adressen und der anfragende Provider gehören. Die Serverlogfiles
-  können zum einen zu Sicherheitszwecken eingesetzt werden, z. B. um eine
-  Überlastung der Server zu vermeiden (insbesondere im Fall von missbräuchlichen
-  Angriffen, sogenannten DDoS-Attacken), und zum anderen, um die Auslastung der
-  Server und ihre Stabilität sicherzustellen; Rechtsgrundlagen: Berechtigte
-  Interessen (Art. 6 Abs. 1 S. 1 lit. f) DSGVO). Löschung von Daten:
-  Logfile-Informationen werden für die Dauer von maximal 30 Tagen gespeichert
-  und danach gelöscht oder anonymisiert. Daten, deren weitere Aufbewahrung zu
-  Beweiszwecken erforderlich ist, sind bis zur endgültigen Klärung des
-  jeweiligen Vorfalls von der Löschung ausgenommen. Einsatz von Cookies Unter
-  dem Begriff „Cookies" werden Funktionen, die Informationen auf Endgeräten der
-  Nutzer speichern und aus ihnen auslesen, verstanden. Cookies können ferner in
-  Bezug auf unterschiedliche Anliegen Einsatz finden, etwa zu Zwecken der
-  Funktionsfähigkeit, der Sicherheit und des Komforts von Onlineangeboten sowie
-  der Erstellung von Analysen der Besucherströme. Wir verwenden Cookies gemäß
-  den gesetzlichen Vorschriften. Dazu holen wir, wenn erforderlich, vorab die
-  Zustimmung der Nutzer ein. Ist eine Zustimmung nicht notwendig, setzen wir auf
-  unsere berechtigten Interessen. Dies gilt, wenn das Speichern und Auslesen von
-  Informationen unerlässlich ist, um ausdrücklich angeforderte Inhalte und
-  Funktionen bereitstellen zu können. Dazu zählen etwa die Speicherung von
-  Einstellungen sowie die Sicherstellung der Funktionalität und Sicherheit
-  unseres Onlineangebots. Die Einwilligung kann jederzeit widerrufen werden. Wir
-  informieren klar über deren Umfang und welche Cookies genutzt werden. Hinweise
-  zu datenschutzrechtlichen Rechtsgrundlagen: Ob wir personenbezogene Daten
-  mithilfe von Cookies verarbeiten, hängt von einer Einwilligung ab. Liegt eine
-  Einwilligung vor, dient sie als Rechtsgrundlage. Ohne Einwilligung stützen wir
-  uns auf unsere berechtigten Interessen, die vorstehend in diesem Abschnitt und
-  im Kontext der jeweiligen Dienste und Verfahren erläutert sind. Speicherdauer:
-  Im Hinblick auf die Speicherdauer werden die folgenden Arten von Cookies
-  unterschieden: Temporäre Cookies (auch: Session- oder Sitzungscookies):
-  Temporäre Cookies werden spätestens gelöscht, nachdem ein Nutzer ein
-  Onlineangebot verlassen und sein Endgerät (z. B. Browser oder mobile
-  Applikation) geschlossen hat. Permanente Cookies: Permanente Cookies bleiben
-  auch nach dem Schließen des Endgeräts gespeichert. So können beispielsweise
-  der Log-in-Status gespeichert und bevorzugte Inhalte direkt angezeigt werden,
-  wenn der Nutzer eine Website erneut besucht. Ebenso können die mithilfe von
-  Cookies erhobenen Nutzerdaten zur Reichweitenmessung Verwendung finden. Sofern
-  wir Nutzern keine expliziten Angaben zur Art und Speicherdauer von Cookies
-  mitteilen (z. B. im Rahmen der Einholung der Einwilligung), sollten sie davon
-  ausgehen, dass diese permanent sind und die Speicherdauer bis zu zwei Jahre
-  betragen kann. Allgemeine Hinweise zum Widerruf und Widerspruch (Opt-out):
-  Nutzer können die von ihnen abgegebenen Einwilligungen jederzeit widerrufen
-  und zudem einen Widerspruch gegen die Verarbeitung entsprechend den
-  gesetzlichen Vorgaben, auch mittels der Privatsphäre-Einstellungen ihres
-  Browsers, erklären. Verarbeitete Datenarten: Meta-, Kommunikations- und
-  Verfahrensdaten (z. B. IP-Adressen, Zeitangaben, Identifikationsnummern,
-  beteiligte Personen). Betroffene Personen: Nutzer (z. B. Webseitenbesucher,
-  Nutzer von Onlinediensten). Rechtsgrundlagen: Berechtigte Interessen (Art. 6
-  Abs. 1 S. 1 lit. f) DSGVO). Einwilligung (Art. 6 Abs. 1 S. 1 lit. a) DSGVO).
-  Weitere Hinweise zu Verarbeitungsprozessen, Verfahren und Diensten:
-  Verarbeitung von Cookie-Daten auf Grundlage einer Einwilligung: Wir setzen
-  eine Einwilligungs-Management-Lösung ein, bei der die Einwilligung der Nutzer
-  zur Verwendung von Cookies oder zu den im Rahmen der
-  Einwilligungs-Management-Lösung genannten Verfahren und Anbietern eingeholt
-  wird. Dieses Verfahren dient der Einholung, Protokollierung, Verwaltung und
-  dem Widerruf von Einwilligungen, insbesondere bezogen auf den Einsatz von
-  Cookies und vergleichbaren Technologien, die zur Speicherung, zum Auslesen und
-  zur Verarbeitung von Informationen auf den Endgeräten der Nutzer eingesetzt
-  werden. Im Rahmen dieses Verfahrens werden die Einwilligungen der Nutzer für
-  die Nutzung von Cookies und die damit verbundenen Verarbeitungen von
-  Informationen, einschließlich der im Einwilligungs-Management-Verfahren
-  genannten spezifischen Verarbeitungen und Anbieter, eingeholt. Die Nutzer
-  haben zudem die Möglichkeit, ihre Einwilligungen zu verwalten und zu
-  widerrufen. Die Einwilligungserklärungen werden gespeichert, um eine erneute
-  Abfrage zu vermeiden und den Nachweis der Einwilligung gemäß der gesetzlichen
-  Anforderungen führen zu können. Die Speicherung erfolgt serverseitig und/oder
-  in einem Cookie (sogenanntes Opt-In-Cookie) oder mittels vergleichbarer
-  Technologien, um die Einwilligung einem spezifischen Nutzer oder dessen Gerät
-  zuordnen zu können. Sofern keine spezifischen Angaben zu den Anbietern von
-  Einwilligungs-Management-Diensten vorliegen, gelten folgende allgemeine
-  Hinweise: Die Dauer der Speicherung der Einwilligung beträgt bis zu zwei
-  Jahre. Dabei wird ein pseudonymer Nutzer-Identifikator erstellt, der zusammen
-  mit dem Zeitpunkt der Einwilligung, den Angaben zum Umfang der Einwilligung
-  (z. B. betreffende Kategorien von Cookies und/oder Diensteanbieter) sowie
-  Informationen über den Browser, das System und das verwendete Endgerät
-  gespeichert wird; Rechtsgrundlagen: Einwilligung (Art. 6 Abs. 1 S. 1 lit. a)
-  DSGVO). Kontakt- und Anfrageverwaltung Bei der Kontaktaufnahme mit uns (z. B.
-  per Post, Kontaktformular, E-Mail, Telefon oder via soziale Medien) sowie im
-  Rahmen bestehender Nutzer- und Geschäftsbeziehungen werden die Angaben der
-  anfragenden Personen verarbeitet, soweit dies zur Beantwortung der
-  Kontaktanfragen und etwaiger angefragter Maßnahmen erforderlich ist.
-</div>
-
-<h4>Newsletter und E-Mail-Kommunikation über MailerLite</h4>
-<p>
-  Wir nutzen den Anbieter MailerLite für den Versand von Newslettern. Die
-  Anmeldung erfolgt im Double-Opt-in-Verfahren. Nach der Anmeldung erhalten Sie
-  eine E-Mail, in der Sie um die Bestätigung Ihrer Anmeldung gebeten werden.
-  Diese Bestätigung ist notwendig, damit sich niemand mit fremden
-  E-Mail-Adressen anmelden kann. Die Daten werden ausschließlich für den Versand
-  des Newsletters verwendet und nicht an Dritte weitergegeben. Die Abmeldung ist
-  jederzeit möglich – entweder über den Link am Ende jeder E-Mail oder durch
-  eine formlose Mitteilung an uns.
-</p>
-<p>
-  <strong>Verarbeitete Datenarten:</strong> E-Mail-Adresse, Zeitstempel der
-  Anmeldung, IP-Adresse.
-</p>
-<p>
-  <strong>Zwecke der Verarbeitung:</strong> Newsletter-Versand, Information über
-  neue Inhalte und Angebote.
-</p>
-<p>
-  <strong>Rechtsgrundlage:</strong> Einwilligung (Art. 6 Abs. 1 lit. a DSGVO).
-</p>
-<p>
-  <strong>Anbieter:</strong> MailerLite UAB, J. Basanavičiaus 15, LT-03108
-  Vilnius, Litauen –
-  <a href="https://www.mailerlite.com/legal/privacy-policy" target="_blank"
-    >Datenschutzrichtlinie</a
-  >
-</p>
-
-<h4>Einsatz von Google Analytics</h4>
-<p>
-  Wir verwenden Google Analytics, um das Nutzerverhalten auf unserer Website
-  besser zu verstehen und unser Angebot zu optimieren. Google Analytics
-  speichert Cookies auf Ihrem Endgerät und überträgt die erzeugten Informationen
-  in der Regel an einen Server von Google in den USA. Die IP-Adresse wird vor
-  der Übertragung anonymisiert.
-</p>
-<p>
-  <strong>Verarbeitete Datenarten:</strong> IP-Adresse (gekürzt), Nutzungsdaten,
-  technische Informationen.
-</p>
-<p>
-  <strong>Zwecke der Verarbeitung:</strong> Analyse, Statistik, Optimierung.
-</p>
-<p>
-  <strong>Rechtsgrundlage:</strong> Einwilligung (Art. 6 Abs. 1 lit. a DSGVO).
-</p>
-<p>
-  <strong>Anbieter:</strong> Google Ireland Limited –
-  <a href="https://policies.google.com/privacy" target="_blank"
-    >Datenschutzerklärung</a
-  >
-</p>
-
-<h4>Hosting über GitHub Pages</h4>
-<p>
-  Unsere Website wird bei GitHub Pages gehostet. Dabei werden beim Aufruf der
-  Seite automatisch technische Informationen verarbeitet (z. B. IP-Adresse,
-  Browsertyp, Uhrzeit des Zugriffs), die für den technischen Betrieb der Website
-  erforderlich sind.
-</p>
-<p>
-  <strong>Anbieter:</strong> GitHub, Inc., San Francisco, CA, USA –
-  <a
-    href="https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement"
-    target="_blank"
-    >Datenschutzerklärung</a
-  >
-</p>
-
-<h4>Eingebundene Inhalte von Notion</h4>
-<p>
-  Auf unserer Seite können Inhalte von Notion.so eingebunden sein (z. B.
-  eingebettete Seiten, Formulare). Beim Abruf solcher Inhalte wird die
-  IP-Adresse des Nutzers an die Server von Notion übertragen.
-</p>
-<p>
-  <strong>Anbieter:</strong> Notion Labs, Inc. –
-  <a
-    href="https://www.notion.so/Privacy-Policy-3468d120cf614d4c9014c09f6adc9091"
-    target="_blank"
-    >Datenschutzrichtlinie</a
-  >
-</p>
-
-<h4>Kontaktformular</h4>
-<p>
-  Wenn Sie uns per Kontaktformular Anfragen zukommen lassen, werden Ihre Angaben
-  aus dem Formular inklusive der von Ihnen dort angegebenen Kontaktdaten zwecks
-  Bearbeitung bei uns gespeichert. Diese Daten geben wir nicht ohne Ihre
-  Einwilligung weiter.
-</p>
-
-<h4>Cookie-Consent-Management</h4>
-<p>
-  Wir verwenden ein Cookie-Banner zur Verwaltung von Einwilligungen. Beim ersten
-  Besuch unserer Website werden Nutzer gefragt, ob sie der Verwendung bestimmter
-  Cookies zustimmen möchten. Diese Entscheidung kann jederzeit über das Banner
-  geändert oder widerrufen werden.
-</p>
