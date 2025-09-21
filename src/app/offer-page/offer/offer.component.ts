@@ -57,7 +57,7 @@ export class OfferComponent implements OnInit, OnDestroy {
   /** Single source of truth for Stripe links */
   stripeLinks: Record<PackageKey, string> = {
     '4': 'https://buy.stripe.com/your-4-link',
-    '8': 'https://buy.stripe.com/your-8-link',
+    '8': 'https://buy.stripe.com/14A4gy8lZ1B94ws4HQ0gw00',
     '12': 'https://buy.stripe.com/your-12-link',
   };
 
