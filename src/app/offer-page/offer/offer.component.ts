@@ -49,16 +49,16 @@ export class OfferComponent implements OnInit, OnDestroy {
   };
 
   prices: Record<PackageKey, string> = {
-    '4': 'CHF 550',
-    '8': 'CHF 1’150',
-    '12': 'CHF 2’200',
+    '4': 'CHF 450',
+    '8': 'CHF 950',
+    '12': 'CHF 1400',
   };
 
   /** Single source of truth for Stripe links */
   stripeLinks: Record<PackageKey, string> = {
-    '4': 'https://buy.stripe.com/your-4-link',
-    '8': 'https://buy.stripe.com/14A4gy8lZ1B94ws4HQ0gw00',
-    '12': 'https://buy.stripe.com/your-12-link',
+    '4': 'https://buy.stripe.com/5kQ4gygSvbbJ3so5LU0gw03',
+    '8': 'https://book.stripe.com/8x29ASeKn1B99QMeiq0gw02',
+    '12': 'https://book.stripe.com/aFacN40Txa7Fgfa5LU0gw01',
   };
 
   /** Computed helpers */
