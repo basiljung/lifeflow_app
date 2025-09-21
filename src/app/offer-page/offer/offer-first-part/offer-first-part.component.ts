@@ -1,10 +1,11 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subject, takeUntil } from 'rxjs';
 import { LanguageService } from '../../../services/language.service';
+import { OverviewProgramComponent } from '../../../website/landingpage-home/sections/the-formula/overview-program/overview-program.component';
 
 @Component({
   selector: 'app-offer-first-part',
-  imports: [],
+  imports: [OverviewProgramComponent],
   templateUrl: './offer-first-part.component.html',
   styleUrl: './offer-first-part.component.scss',
 })

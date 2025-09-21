@@ -19,9 +19,20 @@
       </li>
       <li>
         <strong>
-          {{ currentLang === "en" ? "Program Duration:" : "Programmlaufzeit" }}
+          {{ currentLang === "en" ? "Languages" : "Sprache" }}
         </strong>
-        :
+        —
+        {{
+          currentLang === "en"
+            ? "DE / EN / Swiss-German"
+            : "DE / EN / Schweizer-Deutsch"
+        }}
+      </li>
+      <li>
+        <strong>
+          {{ currentLang === "en" ? "Program Duration" : "Programmlaufzeit" }}
+        </strong>
+        —
         {{
           currentLang === "en"
             ? "Flexible duration (typically 2–6 months)"
@@ -85,7 +96,6 @@
             : "Zu wissen, was zu tun ist, führt noch nicht zu Veränderungen – hier leiste ich als hochmotivierender 'Accountability-Partner', der Sie auf Kurs hält, einen Mehrwert."
         }}
       </li>
-
       <p>
         <strong>Not included:</strong> psychotherapy/medical; emergency support;
         done-for-you work.

@@ -8,191 +8,182 @@
     </section>
     <section>
       <h2>
-        {{
-          currentLang === "en"
-            ? "5 phases - In 12 Weeks"
-            : "5 Phasen - In 12 Wochen"
-        }}
+        {{ currentLang === "en" ? "5 phases" : "5 Phasen" }}
       </h2>
-      <div class="scroll-container-vertical scroll-container">
-        <!-- 1) Orientation · Resilience -->
-        <div class="card">
-          <div class="card-body">
-            <h4>
+      <div
+        class="scroll-container-vertical scroll-container"
+        style="margin: 1rem"
+      >
+        <!-- 1) Direction · Resilience -->
+        <div class="card card-body">
+          <h4>
+            {{ currentLang === "en" ? "1# – Awareness" : "1# – Bewusstsein" }}
+          </h4>
+          <ul style="margin: 0rem">
+            <li>
               {{
                 currentLang === "en"
-                  ? "1# – Orientation · Resilience"
-                  : "1# – Orientierung · Resilienz"
+                  ? "Map your inner landscape: thoughts, emotions, behaviors — and the ways you block yourself."
+                  : "Erkunde deine innere Landschaft: Gedanken, Gefühle, Verhaltensweisen — und die Wege, wie du dich selbst blockierst."
               }}
-            </h4>
-            <ul>
-              <li>
-                {{
-                  currentLang === "en"
-                    ? "Map your inner landscape: thoughts, emotions, behaviors—and the ways you block yourself."
-                    : "Erkunde deine innere Landschaft: Gedanken, Gefühle, Verhaltensweisen – und die Wege, wie du dich selbst blockierst."
-                }}
-              </li>
-              <li>
-                {{
-                  currentLang === "en"
-                    ? "Establish your standpoint using salutogenesis (what creates health and resilience)."
-                    : "Finde deinen Standpunkt mithilfe der Salutogenese (was Gesundheit und Resilienz stärkt)."
-                }}
-              </li>
-              <li>
-                {{
-                  currentLang === "en"
-                    ? "Practice presence. Use an integral view—Head (clarity), Heart (connection), Hands (doing)."
-                    : "Übe Präsenz. Nutze eine integrale Sichtweise – Kopf (Klarheit), Herz (Verbindung), Hände (Handeln)."
-                }}
-              </li>
-            </ul>
-          </div>
+            </li>
+
+            <li>
+              {{
+                currentLang === "en"
+                  ? "Establish your standpoint using salutogenesis (what strengthens health and resilience)."
+                  : "Finde deinen Standpunkt mithilfe der Salutogenese (was Gesundheit und Resilienz stärkt)."
+              }}
+            </li>
+
+            <li>
+              {{
+                currentLang === "en"
+                  ? "Practice presence. Apply an integral perspective — Head (clarity), Heart (connection), Hands (action)."
+                  : "Übe Präsenz. Nutze eine integrale Perspektive — Kopf (Klarheit), Herz (Verbindung), Hände (Handeln)."
+              }}
+            </li>
+          </ul>
         </div>
 
         <!-- 2) Self-Understanding · Self-Awareness -->
-        <div class="card">
-          <div class="card-body">
-            <h4>
+        <div class="card card-body">
+          <h4>
+            {{
+              currentLang === "en"
+                ? "2# – Self-Knowledge"
+                : "2# – Selbstkenntnis"
+            }}
+          </h4>
+          <ul style="margin: 0rem">
+            <li>
               {{
                 currentLang === "en"
-                  ? "2# – Self-Understanding · Self-Awareness"
-                  : "2# – Selbstverständnis · Selbstbewusstsein"
+                  ? "Look at biology and neurobalance: how body states shape mood, focus, and energy."
+                  : "Betrachte Biologie und Neurobalance: wie Körperzustände Stimmung, Fokus und Energie beeinflussen."
               }}
-            </h4>
-            <ul>
-              <li>
-                {{
-                  currentLang === "en"
-                    ? "Look at biology and neurobalance: how body states shape mood, focus, and energy."
-                    : "Betrachte Biologie und Neurobalance: wie Körperzustände Stimmung, Fokus und Energie beeinflussen."
-                }}
-              </li>
-              <li>
-                {{
-                  currentLang === "en"
-                    ? "Clarify values, strengths, needs, and motivators."
-                    : "Kläre Werte, Stärken, Bedürfnisse und Motivatoren."
-                }}
-              </li>
-            </ul>
-          </div>
+            </li>
+
+            <li>
+              {{
+                currentLang === "en"
+                  ? "Clarify values, strengths, needs, motivators, consciousness level, and limbic type."
+                  : "Kläre Werte, Stärken, Bedürfnisse, Motivatoren, Bewusstseinsstufe und limbischen Typ."
+              }}
+            </li>
+          </ul>
         </div>
 
         <!-- 3) Align · Strategy -->
-        <div class="card">
-          <div class="card-body">
-            <h4>
+        <div class="card card-body">
+          <h4>
+            {{
+              currentLang === "en"
+                ? "3# – Direction · Purpose"
+                : "3# – Richtung · Sinn"
+            }}
+          </h4>
+          <ul style="margin: 0rem">
+            <li>
               {{
                 currentLang === "en"
-                  ? "3# – Purpose & direction"
-                  : "3# – Sinn & Ausrichtung"
+                  ? "Define authentic goals, visions, and purpose."
+                  : "Definiere authentische Ziele, Visionen und deinen Sinn."
               }}
-            </h4>
-            <ul>
-              <li>
-                {{
-                  currentLang === "en"
-                    ? "Define authentic goals, visions and purpose."
-                    : "Definiere authentische Ziele, Visionen und Sinn."
-                }}
-              </li>
-              <li>
-                {{
-                  currentLang === "en"
-                    ? "Translate them into structure, priorities, habits, and simple systems."
-                    : "Übersetze sie in Strukturen, Prioritäten, Gewohnheiten und einfache Systeme."
-                }}
-              </li>
-              <li>
-                {{
-                  currentLang === "en"
-                    ? "Design for motivation and joy, not just willpower."
-                    : "Gestalte für Motivation und Freude – nicht nur für Willenskraft."
-                }}
-              </li>
-            </ul>
-          </div>
+            </li>
+
+            <li>
+              {{
+                currentLang === "en"
+                  ? "Translate them into structures, priorities, habits, and simple systems."
+                  : "Übersetze sie in Strukturen, Prioritäten, Gewohnheiten und einfache Systeme."
+              }}
+            </li>
+
+            <li>
+              {{
+                currentLang === "en"
+                  ? "Design for motivation and joy — not just willpower."
+                  : "Gestalte für Motivation und Freude — nicht nur für Willenskraft."
+              }}
+            </li>
+          </ul>
         </div>
 
         <!-- 4) Align · Strategy -->
-        <div class="card">
-          <div class="card-body">
-            <h4>
+        <div class="card card-body">
+          <h4>
+            {{
+              currentLang === "en"
+                ? "4# – Priorities & joyful action"
+                : "4# – Prioritäten & begeistertes Handeln"
+            }}
+          </h4>
+          <ul style="margin: 0rem">
+            <li>
               {{
                 currentLang === "en"
-                  ? "4# – Priorities & joyful action"
-                  : "4# – Prioritäten & freudiges Handeln"
+                  ? "You take action with confidence and joy, because the next step makes sense."
+                  : "Du handelst mit Selbstbewusstsein und Freude, weil der nächste Schritt Sinn ergibt."
               }}
-            </h4>
-            <ul>
-              <li>
-                {{
-                  currentLang === "en"
-                    ? "You take action with confidence & joy, because the next step makes sense."
-                    : "Du handelst mit Selbstbewusstsein & Freude, weil der nächste Schritt Sinn ergibt"
-                }}
-              </li>
-              <li>
-                {{
-                  currentLang === "en"
-                    ? "Translate them into structure, priorities, habits, and simple systems."
-                    : "Übersetze sie in Strukturen, Prioritäten, Gewohnheiten und einfache Systeme."
-                }}
-              </li>
-              <li>
-                {{
-                  currentLang === "en"
-                    ? "Design for motivation and joy, not just willpower."
-                    : "Gestalte für Motivation und Freude – nicht nur für Willenskraft."
-                }}
-              </li>
-            </ul>
-          </div>
+            </li>
+
+            <li>
+              {{
+                currentLang === "en"
+                  ? "Translate insights into structures, priorities, habits, and simple systems."
+                  : "Übersetze Erkenntnisse in Strukturen, Prioritäten, Gewohnheiten und einfache Systeme."
+              }}
+            </li>
+
+            <li>
+              {{
+                currentLang === "en"
+                  ? "Design for motivation and joy — not just willpower."
+                  : "Gestalte für Motivation und Freude — nicht nur für Willenskraft."
+              }}
+            </li>
+          </ul>
         </div>
 
         <!-- 5) Live · Cultivate Flow -->
-        <div class="card">
-          <div class="card-body">
-            <h4>
+        <div class="card card-body">
+          <h4>
+            {{ currentLang === "en" ? "5# – Integration" : "5# – Integration" }}
+          </h4>
+          <ul style="margin: 0rem">
+            <li>
               {{
                 currentLang === "en"
-                  ? "5# – Integration & resilience"
-                  : "5# – Integration & Resilienz"
+                  ? "Live & cultivate flow"
+                  : "Lebe & kultiviere Flow"
               }}
-            </h4>
-            <ul>
-              <li>
-                {{
-                  currentLang === "en"
-                    ? "Live & cultivate Flow"
-                    : "Lebe & kultiviere Flow"
-                }}
-              </li>
-              <li>
-                {{
-                  currentLang === "en"
-                    ? "Observe yourself and the signals of your system."
-                    : "Beobachte dich und die signale deines Systems."
-                }}
-              </li>
-              <li>
-                {{
-                  currentLang === "en"
-                    ? "Act, feel, reflect - Align thinking, feeling, and action; integrate emotions & intuition with awareness."
-                    : "Handle, fühle, reflektiere - Bringe Denken, Fühlen und Handeln in Einklang; integriere Emotionen & Intuition bewusst."
-                }}
-              </li>
-              <li>
-                {{
-                  currentLang === "en"
-                    ? "Review, correct, and create. Enjoy and celebration so learning sticks."
-                    : "Überprüfe, korrigiere und erschaffe. Füge Spiel und Feier hinzu, damit das Lernen nachhaltig bleibt."
-                }}
-              </li>
-            </ul>
-          </div>
+            </li>
+
+            <li>
+              {{
+                currentLang === "en"
+                  ? "Observe yourself and the signals of your system."
+                  : "Beobachte dich und die Signale deines Systems."
+              }}
+            </li>
+
+            <li>
+              {{
+                currentLang === "en"
+                  ? "Act, feel, reflect — align thinking, feeling, and action; integrate emotions and intuition with awareness."
+                  : "Handle, fühle, reflektiere — bringe Denken, Fühlen und Handeln in Einklang; integriere Emotionen und Intuition bewusst."
+              }}
+            </li>
+
+            <li>
+              {{
+                currentLang === "en"
+                  ? "Review, adjust, and create — add play and celebration so learning lasts."
+                  : "Überprüfe, passe an und erschaffe — füge Spiel und Feier hinzu, damit das Lernen nachhaltig wirkt."
+              }}
+            </li>
+          </ul>
         </div>
       </div>
     </section>
