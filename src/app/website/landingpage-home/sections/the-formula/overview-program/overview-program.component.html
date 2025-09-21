@@ -1,91 +1,95 @@
-<h2>
-  {{ currentLang === "en" ? "Overview" : "Überblick" }}
-</h2>
 <div>
-  <ul>
-    <li>
-      <strong>
+  <h2>
+    {{ currentLang === "en" ? "Overview" : "Überblick" }}
+  </h2>
+  <div>
+    <ul>
+      <li>
+        <strong>
+          {{
+            currentLang === "en"
+              ? "Weekly 1:1 online sessions (60min)"
+              : "Wöchentliche 1:1 online Sessions (60min)"
+          }}
+        </strong>
+        —
+        {{
+          currentLang === "en" ? "focused coachings" : "fokussiertes Coaching"
+        }}
+      </li>
+      <li>
+        <strong>
+          {{ currentLang === "en" ? "Program Duration:" : "Programmlaufzeit" }}
+        </strong>
+        :
         {{
           currentLang === "en"
-            ? "Weekly 1:1 online sessions (60min)"
-            : "Wöchentliche 1:1 online Sessions (60min)"
+            ? "Flexible duration (typically 2–6 months)"
+            : "Flexible Dauer (in der Regel 2–6 Monate)"
         }}
-      </strong>
-      —
-      {{ currentLang === "en" ? "focused coachings" : "fokussiertes Coaching" }}
-    </li>
-    <li>
-      <strong>
-        {{ currentLang === "en" ? "Program Duration:" : "Programmlaufzeit" }}
-      </strong>
-      :
-      {{
-        currentLang === "en"
-          ? "Flexible duration (typically 2–6 months)"
-          : "Flexible Dauer (in der Regel 2–6 Monate)"
-      }}
-    </li>
-    <li>
-      <strong>{{
-        currentLang === "en"
-          ? "Asynchronous support"
-          : "Asynchrone Unterstützung"
-      }}</strong>
-      —
-      {{
-        currentLang === "en"
-          ? "Quick check-ins between sessions — with text, voice, or video messages to support you in exercises and upcoming challenges."
-          : "Kurze Check-ins zwischen den Sitzungen – per Text-, Sprach- oder Videonachricht, um dich bei den Aufgaben und kommenden Herausforderungen zu unterstützen."
-      }}
-    </li>
-    <li>
-      <strong>{{
-        currentLang === "en" ? "Exercises and plan" : "Übungen und Plan"
-      }}</strong>
-      —
-      {{
-        currentLang === "en"
-          ? "Easily accessible online, also usable on smartphones – with voice-to-text and commenting features for simple, seamless collaboration."
-          : "Online leicht zugänglich, auch am Smartphone nutzbar – mit Voice-to-Text und Kommentarfunktion für eine einfache, reibungslose Zusammenarbeit."
-      }}
-    </li>
-    <li>
-      <strong>{{
-        currentLang === "en" ? "Resource library" : "Ressourcenbibliothek"
-      }}</strong>
-      —
-      {{
-        currentLang === "en"
-          ? "Directly alongside the exercises, you’ll find additional resources for further reading – with more details on the topics we cover in the exercises and in coaching."
-          : "Direkt zu den Übungen findest du zusätzliche Ressourcen zum Nachlesen – mit mehr Details zu den Themen, die wir in den Übungen und im Coaching behandeln."
-      }}
-    </li>
-    <li>
-      <strong>{{
-        currentLang === "en" ? "Lifetime Access" : "Lebenslanger Zugriff"
-      }}</strong>
-      —
-      {{
-        currentLang === "en"
-          ? "You can download all the insights you’ve gained as a PDF at any time. They, along with the additional resources for further reading, will remain permanently available to you online even after the coaching."
-          : "Alle erarbeiteten Erkenntnisse kannst du jederzeit als PDF herunterladen. Sie bleiben ebenso wie die Ressourcen zum Nachlesen auch nach dem Coaching dauerhaft online für dich verfügbar."
-      }}
-    </li>
-    <li>
-      <strong>{{
-        currentLang === "en" ? "Accountability" : "Accountability"
-      }}</strong>
-      —
-      {{
-        currentLang === "en"
-          ? "Knowing what to do doesn’t create change — that’s where I bring extra value as a highly motivating accountability partner who keeps you on track."
-          : "Zu wissen, was zu tun ist, führt noch nicht zu Veränderungen – hier leiste ich als hochmotivierender 'Accountability-Partner', der Sie auf Kurs hält, einen Mehrwert."
-      }}
-    </li>
+      </li>
+      <li>
+        <strong>{{
+          currentLang === "en"
+            ? "Asynchronous support"
+            : "Asynchrone Unterstützung"
+        }}</strong>
+        —
+        {{
+          currentLang === "en"
+            ? "Quick check-ins between sessions — with text, voice, or video messages to support you in exercises and upcoming challenges."
+            : "Kurze Check-ins zwischen den Sitzungen – per Text-, Sprach- oder Videonachricht, um dich bei den Aufgaben und kommenden Herausforderungen zu unterstützen."
+        }}
+      </li>
+      <li>
+        <strong>{{
+          currentLang === "en" ? "Exercises and plan" : "Übungen und Plan"
+        }}</strong>
+        —
+        {{
+          currentLang === "en"
+            ? "Easily accessible online, also usable on smartphones – with voice-to-text and commenting features for simple, seamless collaboration."
+            : "Online leicht zugänglich, auch am Smartphone nutzbar – mit Voice-to-Text und Kommentarfunktion für eine einfache, reibungslose Zusammenarbeit."
+        }}
+      </li>
+      <li>
+        <strong>{{
+          currentLang === "en" ? "Resource library" : "Ressourcenbibliothek"
+        }}</strong>
+        —
+        {{
+          currentLang === "en"
+            ? "Directly alongside the exercises, you’ll find additional resources for further reading – with more details on the topics we cover in the exercises and in coaching."
+            : "Direkt zu den Übungen findest du zusätzliche Ressourcen zum Nachlesen – mit mehr Details zu den Themen, die wir in den Übungen und im Coaching behandeln."
+        }}
+      </li>
+      <li>
+        <strong>{{
+          currentLang === "en" ? "Lifetime Access" : "Lebenslanger Zugriff"
+        }}</strong>
+        —
+        {{
+          currentLang === "en"
+            ? "You can download all the insights you’ve gained as a PDF at any time. They, along with the additional resources for further reading, will remain permanently available to you online even after the coaching."
+            : "Alle erarbeiteten Erkenntnisse kannst du jederzeit als PDF herunterladen. Sie bleiben ebenso wie die Ressourcen zum Nachlesen auch nach dem Coaching dauerhaft online für dich verfügbar."
+        }}
+      </li>
+      <li>
+        <strong>{{
+          currentLang === "en" ? "Accountability" : "Accountability"
+        }}</strong>
+        —
+        {{
+          currentLang === "en"
+            ? "Knowing what to do doesn’t create change — that’s where I bring extra value as a highly motivating accountability partner who keeps you on track."
+            : "Zu wissen, was zu tun ist, führt noch nicht zu Veränderungen – hier leiste ich als hochmotivierender 'Accountability-Partner', der Sie auf Kurs hält, einen Mehrwert."
+        }}
+      </li>
 
-    <p>
-      <strong>Not included:</strong> psychotherapy/medical; emergency support;
-      done-for-you work.
-    </p>
-  </ul>
+      <p>
+        <strong>Not included:</strong> psychotherapy/medical; emergency support;
+        done-for-you work.
+      </p>
+    </ul>
+  </div>
 </div>
