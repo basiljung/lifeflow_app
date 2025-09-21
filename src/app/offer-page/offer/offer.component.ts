@@ -1,6 +1,6 @@
 import { Component, OnDestroy, OnInit, computed, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterOutlet } from '@angular/router';
+import { RouterModule, RouterOutlet } from '@angular/router';
 import { Subject, takeUntil } from 'rxjs';
 
 import { TakeAwaysComponent } from '../../website/landingpage-home/sections/the-formula/take-aways/take-aways.component';
@@ -17,6 +17,7 @@ type PackageKey = '4' | '8' | '12';
     RouterOutlet,
     TakeAwaysComponent,
     OfferFirstPartComponent,
+    RouterModule,
   ],
   templateUrl: './offer.component.html',
   styleUrls: ['./offer.component.scss'],

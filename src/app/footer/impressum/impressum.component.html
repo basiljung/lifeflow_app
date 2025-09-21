@@ -51,7 +51,7 @@
           ? "Further information on the processing of personal data can be found in the "
           : "Weitere Informationen zur Verarbeitung personenbezogener Daten finden Sie in der "
       }}
-      <a href="/privacy">
+      <a [routerLink]="['/', currentLang, 'privacy-policy']">
         {{
           currentLang === "en" ? "Privacy Policy" : "Datenschutzerklärung"
         }} </a

@@ -42,13 +42,13 @@
       <div>
         <a
           class="grey-text text-lighten-4 right"
-          [routerLink]="'/de/impressum'"
+          [routerLink]="['/', currentLang, 'impressum']"
           style="margin-left: 10px"
           >{{ currentLang === "en" ? "Imprint" : "Impressum" }}</a
         >
         <a
           class="grey-text text-lighten-4 right"
-          [routerLink]="'/de/privacy-policy'"
+          [routerLink]="['/', currentLang, 'privacy-policy']"
           style="margin-left: 10px"
           >{{ currentLang === "en" ? "Privacy" : "Datenschutz" }}</a
         >

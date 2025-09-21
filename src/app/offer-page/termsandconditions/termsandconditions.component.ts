@@ -12,10 +12,7 @@ export class TermsandconditionsComponent implements OnInit, OnDestroy {
   private destroy$ = new Subject<void>();
   currentLang: string | null = null;
 
-  constructor(
-    private langService: LanguageService,
-    private location: Location,
-  ) {}
+  constructor(private langService: LanguageService) {}
 
   ngOnInit(): void {
     this.langService.lang$.pipe(takeUntil(this.destroy$)).subscribe((lang) => {
