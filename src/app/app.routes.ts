@@ -3,7 +3,7 @@ import { LandingpageHomeComponent } from './website/landingpage-home/landingpage
 
 export const routes: Routes = [
   { path: 'app', redirectTo: 'en/app', pathMatch: 'full' },
-  { path: 'valueletter', redirectTo: 'en/valueletter', pathMatch: 'full' },
+  { path: 'click', redirectTo: 'en/click', pathMatch: 'full' },
   {
     path: ':lang',
     children: [
@@ -44,7 +44,7 @@ export const routes: Routes = [
           ).then((m) => m.FeedbackpageCoachingSenjaComponent),
       },
       {
-        path: 'valueletter',
+        path: 'click',
         loadComponent: () =>
           import(
             './general-elements/email-course-signup-page/email-course-signup-page.component'
