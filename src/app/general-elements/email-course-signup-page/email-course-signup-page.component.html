@@ -1,21 +1,109 @@
-<div
-  style="
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding-top: 5rem;
-    padding-bottom: 5rem;
-  "
-  class="title-box-white"
->
-  <h1>Join the Email Course</h1>
-
-  <a
-    class="waves-effect waves-light btn bg-highlight pulse-btn"
-    style="border-radius: 12px; margin-top: 20px"
+<div class="container my-5 title-box-green">
+  <div
+    style="
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding-top: 5rem;
+    "
   >
-    <app-cta-email-course></app-cta-email-course>
-  </a>
+    <h1>
+      {{
+        currentLang === "en"
+          ? "Join the LifeFlow Newsletter™"
+          : "LifeFlow Newsletter™"
+      }}
+    </h1>
+    <hr />
+
+    <div class="row gx-5 gy-4 align-items-start">
+      <div class="col-12 col-lg-7">
+        <h3>
+          {{
+            currentLang === "en"
+              ? "Unterstand, Act, Integrate"
+              : "Verstehen, Handeln, Integrieren"
+          }}
+        </h3>
+        <p>
+          {{
+            currentLang === "en"
+              ? "A 3-minute weekly read directly to your inbox to understand yourself, upgrade your identity, and build a life you love to live."
+              : "Eine wöchentliche Lektüre von 3 Minuten direkt in dein Postfach, um dich selbst besser zu verstehen, deine Identität weiterzuentwickeln und ein Leben aufzubauen, das du wirklich liebst."
+          }}
+        </p>
+        <div
+          style="
+            display: flex;
+            flex-direction: column;
+            align-items: left;
+            justify-content: left;
+            text-align: left;
+            padding-left: 5rem;
+            padding-right: 5rem;
+          "
+        >
+          <ul>
+            <li>
+              {{
+                currentLang === "en"
+                  ? "Jumpstart your Weeks with a top story, lesson, and exercise"
+                  : "Starte deine Wochen mit einer Top-Story, einer Lektion und einer Übung!"
+              }}
+            </li>
+            <li>
+              {{
+                currentLang === "en"
+                  ? "Learn the tactics & mindset to build meaningfull and resilient life"
+                  : "Lerne die Taktiken und die Denkweise, um ein sinnvolles und widerstandsfähiges Leben aufzubauen."
+              }}
+            </li>
+            <li>
+              {{
+                currentLang === "en"
+                  ? "More Flow, more Joy, more Connection"
+                  : "Mehr Flow, mehr Freude, mehr Verbindung"
+              }}
+            </li>
+            <li>
+              {{
+                currentLang === "en"
+                  ? "Access to the LifeFlow Selfcheck™ for more self-awareness"
+                  : "Zugang zum LifeFlow Selfcheck™ für mehr Selbstwahrnehmung"
+              }}
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-12 col-lg-5">
+        <div>
+          <h3 class="mb-3">
+            {{ currentLang === "en" ? "Subscribe Today" : "Jetzt abonnieren" }}
+          </h3>
+
+          <div>
+            <a
+              class="waves-effect waves-light btn bg-accent pulse-btn"
+              style="border-radius: 12px; margin: 25px"
+            >
+              <app-cta-email-course></app-cta-email-course>
+            </a>
+          </div>
+        </div>
+        <div class="col s-12 m-4">
+          <div>
+            <img
+              src="assets/basil-smile.png"
+              style="border-radius: 50%"
+              width="120"
+              class="img-setting"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
