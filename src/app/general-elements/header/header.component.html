@@ -1,7 +1,5 @@
-<!-- NAVBAR -->
 <nav class="navbar page-header navbar-expand-md fixed-top">
   <div class="container-fluid">
-    <!-- Brand -->
     <a
       class="navbar-brand text-light"
       style="font-size: 1rem"
@@ -11,7 +9,6 @@
       LifeFlow.Now™
     </a>
 
-    <!-- Toggler -->
     <button
       class="navbar-toggler"
       type="button"
@@ -26,26 +23,12 @@
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <!-- Collapsible content -->
     <div
       id="mainNavbar"
       class="collapse navbar-collapse"
       [class.show]="isMenuOpen"
-      style="
-        border-left: 2px solid white;
-        border-right: 2px solid white;
-        border-bottom: 2px solid white;
-        border-top: none;
-
-        border-bottom-left-radius: 12px;
-        border-bottom-right-radius: 12px;
-
-        color: white;
-        padding-top: 10px;
-      "
     >
       <ul class="navbar-nav ms-auto align-items-center gap-3">
-        <!-- Instagram -->
         <li class="nav-item">
           <a
             class="nav-link d-flex align-items-center"
@@ -63,25 +46,24 @@
           </a>
         </li>
 
-        <!-- CTA component -->
         <li class="nav-item">
-          <a class="nav-link" routerLink="/valueletter">
+          <a class="nav-link custom-item" routerLink="/valueletter">
             <app-cta-email-course></app-cta-email-course>
           </a>
         </li>
 
-        <!-- Language toggle -->
-        <li class="nav-item" style="padding-bottom: 5px">
-          <button
-            type="button"
-            class="btn text-light"
-            style="border: 1px solid white"
-            (click)="
-              toggleLanguage(currentLang === 'en' ? 'de' : 'en'); toggleMenu()
-            "
+        <li class="nav-item">
+          <a
+            ><button
+              type="button"
+              class="btn text-light custom-item"
+              (click)="
+                toggleLanguage(currentLang === 'en' ? 'de' : 'en'); toggleMenu()
+              "
+            >
+              <strong>{{ currentLang === "en" ? "DE" : "EN" }}</strong>
+            </button></a
           >
-            <strong>{{ currentLang === "en" ? "DE" : "EN" }}</strong>
-          </button>
         </li>
       </ul>
     </div>
