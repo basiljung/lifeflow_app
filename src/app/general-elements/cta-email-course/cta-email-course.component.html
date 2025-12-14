@@ -7,11 +7,7 @@
     [attr.aria-busy]="isLoading ? 'true' : null"
   >
     <i class="bi bi-envelope"></i>
-    {{
-      currentLang === "en"
-        ? "Free Newsletter for more Flow"
-        : "Gratis Newsletter für mehr Flow"
-    }}
+    {{ currentLang === "en" ? "Subscribe Today" : "Jetzt abonnieren" }}
 
     @if (isLoading) {
       <span

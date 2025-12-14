@@ -12,10 +12,20 @@
     <h1>
       {{
         currentLang === "en"
-          ? "Join the LifeFlow Newsletter™"
-          : "LifeFlow Newsletter™"
+          ? "Learn the tactics & mindset to build a fulfilling and joyful life."
+          : "Lerne die Taktiken und das Mindset für ein erfüllendes und freudvolles Leben."
       }}
     </h1>
+    <hr class="divider" />
+    <div class="col s-12 m-4">
+      <img
+        src="assets/basil-smile.png"
+        style="border-radius: 50%"
+        width="120"
+        class="img-setting"
+      />
+    </div>
+
     <hr />
 
     <div class="row gx-5 gy-4 align-items-start">
@@ -49,15 +59,15 @@
             <li style="padding-bottom: 1rem">
               {{
                 currentLang === "en"
-                  ? "Jumpstart your Weeks with a top story, lesson, and exercise"
-                  : "Starte deine Wochen mit einer Top-Story, einer Lektion und einer Übung!"
+                  ? "Start your week inspired, with a powerful story, a lesson, and a practical exercise!"
+                  : "Starte inspiriert in deine Woche, mit einer starken Story, einer Lektion und einer praktischen Übung!"
               }}
             </li>
             <li style="padding-bottom: 1rem">
               {{
                 currentLang === "en"
-                  ? "Learn the tactics & mindset to build meaningfull and resilient life"
-                  : "Lerne die Taktiken und die Denkweise, um ein sinnvolles und widerstandsfähiges Leben aufzubauen."
+                  ? "Learn the tactics & mindset to live a passionate and resilient life."
+                  : "Lerne die Taktiken und das Mindset, um ein leidenschaftliches und resilientes Leben zu führen."
               }}
             </li>
             <li style="padding-bottom: 1rem">
@@ -70,8 +80,8 @@
             <li style="padding-bottom: 1rem">
               {{
                 currentLang === "en"
-                  ? "Access to the LifeFlow Selfcheck™ for more self-awareness"
-                  : "Zugang zum LifeFlow Selfcheck™ für mehr Selbstwahrnehmung"
+                  ? "Discover the LifeFlow Selfcheck™ for more self-awareness"
+                  : "Entdecke den LifeFlow Selfcheck™ für mehr Selbstwahrnehmung"
               }}
             </li>
           </ul>
@@ -81,7 +91,11 @@
       <div class="col-12 col-lg-5">
         <div>
           <h3 class="mb-3">
-            {{ currentLang === "en" ? "Subscribe Today" : "Jetzt abonnieren" }}
+            {{
+              currentLang === "en"
+                ? "Join the LifeFlow Newsletter™"
+                : "LifeFlow Newsletter™"
+            }}
           </h3>
 
           <div>
@@ -117,15 +131,6 @@
           ></div>
         </div>
       </div>
-    </div>
-
-    <div class="col s-12 m-4">
-      <img
-        src="assets/basil-smile.png"
-        style="border-radius: 50%"
-        width="120"
-        class="img-setting"
-      />
     </div>
   </div>
 </div>
