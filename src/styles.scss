@@ -194,14 +194,12 @@ main {
 } */
 
 .btn-gradient {
-  background: linear-gradient(to bottom, $color-accent, #ffffff);
+  background: $color-accent;
 }
 
 .pulse-btn {
   background-color: $color-secondary;
   color: white;
-  animation: pulse 3s ease-in-out infinite;
-  transition: transform 0.2s ease;
   box-shadow: 0 0 0 $color-secondary;
 }
 
