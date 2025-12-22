@@ -27,9 +27,9 @@ export const FAQDETAILSDATA_DE: {
   {
     title: '🧠 Erklärung',
     text: `<section>
-  <h5>🧠 Über den lifeflow Selfcheck</h5>
+  <h5>🧠 Über den LifeFlowCheck™</h5>
 <p>
-  Der <strong>lifeflow Selfcheck</strong> ist ein Reflexionstool, das dir hilft, dein aktuelles inneres Gleichgewicht besser zu verstehen – emotional, mental, körperlich und energetisch.
+  Der <strong>LifeFlowCheck™</strong> ist ein Reflexionstool, das dir hilft, dein aktuelles inneres Gleichgewicht besser zu verstehen – emotional, mental, körperlich und energetisch.
 </p>
 <p>
   Du erhältst eine Momentaufnahme in 9 Lebensbereichen, die für deinen Flow im Leben und in deiner Tätigkeit entscheidend sind. Die Ergebnisse zeigen dir, wo aktuell Blockaden bestehen oder etwas aus der Balance geraten ist – und laden dich ein, gezielt daran zu arbeiten, um mehr Flow zu kultivieren.
@@ -168,7 +168,7 @@ export const FAQDETAILSDATA_DE: {
     Dieser Test ist kein Urteil, sondern eine Einladung zur
     <strong>Selbstbeobachtung</strong> und ein Zugang zu tieferer Selbsterkenntnis.
   </p>
-    📌 Hinweis: Der Selfcheck ersetzt keine psychologische oder medizinische
+    📌 Hinweis: Der LifeFlowCheck™ ersetzt keine psychologische oder medizinische
     Diagnose.
 </section>
 `,
@@ -276,13 +276,13 @@ export const FAQDETAILSDATA_EN: {
   {
     title: '🌿 Welcome',
     text: `<p>
-  I'm glad you're here. This app is designed to help you better understand yourself – emotionally, mentally, and energetically.
+  I'm glad you're here. This app is designed to help you better understand yourself; emotionally, mentally, and energetically.
 </p>
 <p>
-  It invites you to explore your own patterns around stress, motivation, drive, and inner balance – based on biological foundations.
+  It invites you to explore your own patterns around stress, motivation, drive, and inner balance; based on biological foundations.
 </p>
 <p>
-  Through a short questionnaire, you’ll receive personal insights into your current life balance – combined with practical tips and gentle impulses to help you feel more connected, focused, and at ease.
+  Through a short questionnaire, you’ll receive personal insights into your current life balance; combined with practical tips and gentle impulses to help you feel more connected, focused, and at ease.
 </p>
 <p>
   The analysis is based on neuroscience, motivational psychology, and flow research – with a focus on the role of dopamine, serotonin, oxytocin, and endorphins, as well as themes like clarity, self-responsibility, and inner strength.
@@ -298,9 +298,9 @@ export const FAQDETAILSDATA_EN: {
   {
     title: '🧠 Explanation',
     text: `<section>
-  <h5>🧠 About the lifeflow Selfcheck</h5>
+  <h5>🧠 About the LifeFlowCheck™</h5>
   <p>
-    The <strong>lifeflow Selfcheck</strong> is a reflection tool that helps you better understand your current inner balance – emotionally, mentally, physically, and energetically.
+    The <strong>LifeFlowCheck™</strong> is a reflection tool that helps you better understand your current inner balance – emotionally, mentally, physically, and energetically.
   </p>
   <p>
     It gives you a snapshot of 9 key areas of life that are essential for flow – both in your personal life and your work. The results show where things may be blocked or out of balance – and invite you to consciously work on those areas to cultivate more flow.
@@ -412,7 +412,7 @@ export const FAQDETAILSDATA_EN: {
     This test is not a judgment, but an invitation for <strong>self-observation</strong> – and a doorway to deeper self-awareness.
   </p>
   <p>
-    📌 Note: The Selfcheck is not a psychological or medical diagnosis.
+    📌 Note: The LifeFlowCheck™ is not a psychological or medical diagnosis.
   </p>
 </section>`,
   },
