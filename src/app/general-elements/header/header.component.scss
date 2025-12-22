@@ -1,10 +1,34 @@
 .page-header {
-  background-color: rgba(15, 79, 69);
+  background-color: #0d1b2a;
 }
 
 .custom-item {
-  border: 1px solid white;
   color: white;
   padding: 12px;
   border-radius: 12px;
+}
+
+/* Base hover for nav links */
+.navbar .nav-link,
+.navbar .navbar-brand,
+.navbar .custom-item {
+  position: relative;
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+/* Text hover */
+.navbar .nav-link:hover,
+.navbar .navbar-brand:hover {
+  color: #d3af37 !important; /* soft accent */
+}
+
+/* Micro movement = perceived quality */
+.navbar .nav-link:hover {
+  transform: translateY(-1px);
+}
+
+.navbar-toggler-icon {
+  filter: invert(1);
 }
