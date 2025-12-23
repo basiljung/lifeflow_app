@@ -1,5 +1,5 @@
 import { Routes } from '@angular/router';
-import { LandingpageHomeComponent } from './website/landingpage-home/landingpage-home.component';
+import { LandingpageComponent } from './website/landingpage/landingpage.component';
 
 export const routes: Routes = [
   { path: 'app', redirectTo: 'en/app', pathMatch: 'full' },
@@ -7,6 +7,7 @@ export const routes: Routes = [
   {
     path: ':lang',
     children: [
+      { path: '', component: LandingpageComponent },
       {
         path: 'app',
         loadComponent: () =>
@@ -28,7 +29,6 @@ export const routes: Routes = [
             './offer-page/termsandconditions/termsandconditions.component'
           ).then((m) => m.TermsandconditionsComponent),
       },
-      { path: '', component: LandingpageHomeComponent },
       {
         path: 'wl',
         loadComponent: () =>
@@ -51,6 +51,20 @@ export const routes: Routes = [
           ).then((m) => m.EmailCourseSignupPageComponent),
       },
       {
+        path: '1-1',
+        loadComponent: () =>
+          import('./website/landingpage-home/landingpage-home.component').then(
+            (m) => m.LandingpageHomeComponent,
+          ),
+      },
+      {
+        path: 'course',
+        loadComponent: () =>
+          import('./selfdiscovery-course/selfdiscovery-course.component').then(
+            (m) => m.SelfdiscoveryCourseComponent,
+          ),
+      },
+      {
         path: 'clarity',
         loadComponent: () =>
           import('./website/landingpage-home/landingpage-home.component').then(
@@ -69,13 +83,6 @@ export const routes: Routes = [
         loadComponent: () =>
           import('./website/landingpage-home/landingpage-home.component').then(
             (m) => m.LandingpageHomeComponent,
-          ),
-      },
-      {
-        path: 'digital',
-        loadComponent: () =>
-          import('./website/old/website-home/website-home.component').then(
-            (m) => m.WebsiteHomeComponent,
           ),
       },
       {

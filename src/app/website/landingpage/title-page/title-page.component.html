@@ -1,67 +1,43 @@
-<div>
-  <!--   <h4 style="text-align: center">
-    {{
-      currentLang === "en"
-        ? "Flow – when biology, mind, and purpose are aligned."
-        : "Flow – wenn Biologie, Geist und Sinn im Einklang sind."
-    }}
-  </h4> -->
-  <div class="title-box-green" style="margin-top: 4rem">
-    <h1 class="gradient-title-lg">
-      {{
-        currentLang === "en"
-          ? "I help you look inside, find balance & purpose in your ambition. Finally feel free, confident and calm."
-          : "Ich helfe dir, nach innen zu schauen, Balance und Sinn in deiner Ambition finden. Fühl dich frei, selbstbewusst und ruhig."
-      }}
-    </h1>
-    <h4>
-      <span style="font-size: 1.75rem">
-        {{
-          currentLang === "en"
-            ? "- Truly arrive – to maximize your impact in all your to-dos."
-            : "- Lerne, anzukommen – um in all den ToDo's maximal zu wirken."
-        }}</span
-      >
-    </h4>
-    <!--     <h4>
-      <span style="font-size: 1.75rem">
-        {{
-          currentLang === "en"
-            ? "- I help you find clarity, meaning and calm in your to-dos and your life."
-            : "- Ich helfe dir, Übersicht, Sinn und Ruhe in deine Todo’s & dein Leben zu bringen."
-        }}</span
-      >
-    </h4> -->
-    <!--     <h4 style="font-size: 2rem">
-      {{
-        currentLang === "en"
-          ? "- Master your mind – no more doubts, no more back and forth"
-          : "- Meistere deinen Geist – kein Zweifeln, kein Hin und Her mehr."
-      }}
-    </h4> -->
+<div class="container text-center">
+  <div class="title-box-green bg-color" style="margin-top: 4rem">
+    <div class="row justify-content-center align-items-center g-3">
+      <div class="col-md-8">
+        <h1>
+          {{
+            currentLang === "en"
+              ? "Present, clear, and confident."
+              : "Present, klar und selbstbewusst."
+          }}
+        </h1>
+      </div>
+      <div class="col-md-4 mb-4">
+        <img
+          class="img-setting-title"
+          src="assets/basil-smile.png"
+          width="150"
+          height="150"
+        />
+      </div>
+    </div>
   </div>
-
-  <h4
-    class="text-accent"
-    style="margin-top: 3em; margin-bottom: 3em; text-align: center"
-  >
-    {{
-      currentLang === "en"
-        ? "Clear path. Quiet mind. Meaningful action."
-        : "Klarer Weg. Ruhiger Geist. Sinnvolle Effizienz."
-    }}
-  </h4>
-  <div class="center-elements">
-    <img
-      class="img-setting-title bg-highlight"
-      src="assets/basil-smile.png"
-      width="150"
-      height="150"
-    />
-    <a
-      (click)="scrollTo('topic-selector')"
-      class="btn-floating btn-large waves-effect waves-light bg-highlight"
-      ><i class="material-icons">keyboard_arrow_down</i></a
-    >
+</div>
+<div class="container position-move-up">
+  <div class="row justify-content-center">
+    <div class="col-12 col-md-6">
+      <div class="card border-light text-center">
+        <div class="card-body">
+          <h5 class="card-title">
+            {{ currentLang === "en" ? "Hi, I am Basil" : "Hi, ich bin Basil" }}
+          </h5>
+          <p class="card-text">
+            {{
+              currentLang === "en"
+                ? "It’s great to have you here. As a coach and mentor, I guide people like you toward greater fulfillment, inner peace, and flow in everyday life."
+                : "So schön, dass du da bist! Als Coach & Mentor unterstütze ich Menschen wie dich dabei, mehr Erfüllung, innere Ruhe und Flow im Alltag zu erfahren."
+            }}
+          </p>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

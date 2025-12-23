@@ -3,10 +3,10 @@
     <a
       class="navbar-brand text-light"
       style="font-size: 1rem"
-      routerLink="/"
+      [routerLink]="['/', currentLang]"
       aria-label="Home"
     >
-      Home
+      LifeFlow.Now™
     </a>
 
     <button
@@ -44,16 +44,39 @@
             />
           </a>
         </li>
-
-        <li class="nav-item">
-          <a class="nav-link custom-item" routerLink="/click">
-            <app-cta-email-course></app-cta-email-course>
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link custom-item d-flex align-items-center dropdown-toggle"
+            href="#"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            {{ currentLang === "en" ? "Discover" : "Entdecken" }}
           </a>
+          <ul class="dropdown-menu">
+            <li class="dropdown-item">
+              <a class="nav-link" [routerLink]="['/', currentLang, 'app']">
+                {{
+                  currentLang === "en" ? "LifeFlowCheck™" : "LifeFlowCheck™"
+                }}
+              </a>
+            </li>
+            <!-- <li><hr class="dropdown-divider" /></li> -->
+            <li class="dropdown-item">
+              <a class="nav-link" [routerLink]="['/', currentLang, '1-1']">
+                {{ currentLang === "en" ? "1-1" : "1-1" }}
+              </a>
+            </li>
+          </ul>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link custom-item" routerLink="/app">
-            {{ currentLang === "en" ? "LifeFlowCheck™" : "LifeFlowCheck™" }}
+          <a
+            class="nav-link custom-item"
+            [routerLink]="['/', currentLang, 'click']"
+          >
+            <app-cta-email-course></app-cta-email-course>
           </a>
         </li>
 

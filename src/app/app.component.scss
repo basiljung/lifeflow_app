@@ -5,10 +5,10 @@
   height: 100%;
   width: 100%;
   z-index: -2;
-  background: url("../assets/background.jpg") center/cover no-repeat;
+  background: white; //url("../assets/background.jpg") center/cover no-repeat;
 }
 
-.background-layer::after {
+/* .background-layer::after {
   content: "";
   position: absolute;
   top: 0;
@@ -17,9 +17,9 @@
   width: 100%;
   //background: linear-gradient(0, #ffffff 10%, #0d1b2a 90%);
   background-color: #0d1b2a;
-  opacity: 0.7; /* Adjust transparency as needed */
+  opacity: 0.7;
   pointer-events: none;
-}
+}*/
 
 .main-content {
   position: relative;

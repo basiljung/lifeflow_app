@@ -1,9 +1,11 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { LanguageService } from '../../services/language.service';
-import { TopicSelectorComponent } from '../landingpage-home/title-page-top/topic-selector/topic-selector.component';
 import { TitlePageComponent } from './title-page/title-page.component';
+import { NewsletterBannerComponent } from './newsletter-banner/newsletter-banner.component';
+import { CertificationBannerComponent } from './certification-banner/certification-banner.component';
+import { Subject, takeUntil } from 'rxjs';
 
 @Component({
   selector: 'app-landingpage',
@@ -11,16 +13,33 @@ import { TitlePageComponent } from './title-page/title-page.component';
     CommonModule,
     RouterModule,
     TitlePageComponent,
-    TopicSelectorComponent,
+    NewsletterBannerComponent,
+    CertificationBannerComponent,
   ],
   templateUrl: './landingpage.component.html',
   styleUrl: './landingpage.component.scss',
 })
-export class LandingpageComponent implements OnInit {
-  lang: string = 'en';
+export class LandingpageComponent implements OnInit, OnDestroy {
+  private destroy$ = new Subject<void>();
+  currentLang: string | null = null;
+
   constructor(private langService: LanguageService) {}
 
   ngOnInit(): void {
-    this.lang = this.langService.getCurrentLang();
+    this.langService.lang$.pipe(takeUntil(this.destroy$)).subscribe((lang) => {
+      this.currentLang = lang;
+    });
+  }
+
+  scrollTo(id: string) {
+    const el = document.getElementById(id);
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
+
+  ngOnDestroy(): void {
+    this.destroy$.next();
+    this.destroy$.complete();
   }
 }

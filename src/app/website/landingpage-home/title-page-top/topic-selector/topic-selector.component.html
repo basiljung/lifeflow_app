@@ -1,7 +1,7 @@
 <div id="topic-selector" class="container my-5">
   <div class="row text-center mb-5">
     <div class="col-12">
-      <h4>
+      <h4 class="gradient-title-sm">
         {{
           currentLang === "en"
             ? "Click the topic that resonates."
@@ -17,7 +17,7 @@
       <div class="d-flex flex-column align-items-center">
         <a
           class="btn waves-effect waves-light btn-selector btn-gradient pulse-btn"
-          [routerLink]="['clarity']"
+          [routerLink]="['/', currentLang, 'clarity']"
           >{{ currentLang === "en" ? "Orientation" : "Orientierung" }}
           <i class="bi bi-geo-alt"></i>
         </a>
@@ -29,7 +29,7 @@
       <div class="d-flex flex-column align-items-center">
         <a
           class="btn waves-effect waves-light btn-selector btn-gradient pulse-btn"
-          [routerLink]="['inner-peace']"
+          [routerLink]="['/', currentLang, 'inner-peace']"
           >{{ currentLang === "en" ? "Inner Peace" : "Innere Ruhe" }}
           <i class="bi bi-circle"></i>
         </a>
@@ -41,7 +41,7 @@
       <div class="d-flex flex-column align-items-center">
         <a
           class="btn waves-effect waves-light btn-selector btn-gradient pulse-btn"
-          [routerLink]="['drive']"
+          [routerLink]="['/', currentLang, 'drive']"
           >{{ currentLang === "en" ? "Energy" : "Energie" }}
           <i class="bi bi-lightning"></i>
         </a>

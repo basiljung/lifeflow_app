@@ -1,78 +1,75 @@
-<!-- check: translations: yes, content: yes -->
-<app-title-page-top></app-title-page-top>
-
 <!-- check: translations: yes, content: yes  -->
-@if (!topic) {
+@if (topic === "1-1") {
   <app-topic-selector style="margin-bottom: 2rem"></app-topic-selector>
-}
-
-<!-- check: translations: yes, content: yes  -->
-@if (topic === "inner-peace") {
-  <app-inner-peace></app-inner-peace>
-}
-
-<!-- check: translations: yes, content: yes  -->
-@if (topic === "clarity") {
-  <app-clarity></app-clarity>
-}
-
-<!-- check: translations: yes, content: yes  -->
-@if (topic === "drive") {
-  <app-drive></app-drive>
-}
-
-<!-- check: translations: no content: no  -->
-@if (topic === "digital") {
-  <app-digital></app-digital>
-}
-
-@if (topic) {
+} @else {
   <!-- check: translations: yes, content: yes  -->
-  <app-section-trap></app-section-trap>
+  @if (topic === "inner-peace") {
+    <app-inner-peace></app-inner-peace>
+  }
 
   <!-- check: translations: yes, content: yes  -->
-  <app-personal-story></app-personal-story>
+  @if (topic === "clarity") {
+    <app-clarity></app-clarity>
+  }
 
   <!-- check: translations: yes, content: yes  -->
-  <app-relevants></app-relevants>
+  @if (topic === "drive") {
+    <app-drive></app-drive>
+  }
 
-  <!-- check: translations: yes, content: yes  -->
-  <app-the-formula></app-the-formula>
+  <!-- check: translations: no content: no  -->
+  @if (topic === "digital") {
+    <app-digital></app-digital>
+  }
 
-  <!-- check: translations: yes, content: yes  -->
-  <app-usp></app-usp>
+  @if (topic) {
+    <!-- check: translations: yes, content: yes  -->
+    <app-section-trap></app-section-trap>
 
-  <!-- check: translations: yes, content: yes  -->
-  <app-understanding-section></app-understanding-section>
+    <!-- check: translations: yes, content: yes  -->
+    <app-personal-story></app-personal-story>
 
-  <!--<app-result></app-result>-->
+    <!-- check: translations: yes, content: yes  -->
+    <app-relevants></app-relevants>
 
-  <!-- what makes me different  -->
-  <!--<app-brand-differentiation></app-brand-differentiation>-->
+    <!-- check: translations: yes, content: yes  -->
+    <app-the-formula></app-the-formula>
 
-  <div style="margin-bottom: 6rem; margin-top: 6rem">
-    <h4>
-      {{ currentLang === "en" ? "Client feedback" : "Kundenfeedback" }}
-    </h4>
+    <!-- check: translations: yes, content: yes  -->
+    <app-usp></app-usp>
 
-    <app-senja-coaching-testimonials></app-senja-coaching-testimonials>
-  </div>
+    <!-- check: translations: yes, content: yes  -->
+    <app-understanding-section></app-understanding-section>
 
-  <!-- check: translations: yes, content: yes  -->
-  <app-for-who-is-it></app-for-who-is-it>
+    <!--<app-result></app-result>-->
 
-  <!-- check: translations: yes, content: yes  -->
-  <app-cta-1></app-cta-1>
+    <!-- what makes me different  -->
+    <!--<app-brand-differentiation></app-brand-differentiation>-->
 
-  <!-- check: translations: yes, content: yes  -->
-  <app-what-next></app-what-next>
+    <div style="margin-bottom: 6rem; margin-top: 6rem">
+      <h4>
+        {{ currentLang === "en" ? "Client feedback" : "Kundenfeedback" }}
+      </h4>
 
-  <!-- check: translations: yes, content: yes  -->
-  <app-cta-2></app-cta-2>
+      <app-senja-coaching-testimonials></app-senja-coaching-testimonials>
+    </div>
 
-  <!-- check: translations: yes, content: yes  -->
-  <app-faq></app-faq>
+    <!-- check: translations: yes, content: yes  -->
+    <app-for-who-is-it></app-for-who-is-it>
 
-  <!-- check: translations: yes, content: yes  -->
-  <app-cta-1></app-cta-1>
+    <!-- check: translations: yes, content: yes  -->
+    <app-cta-1></app-cta-1>
+
+    <!-- check: translations: yes, content: yes  -->
+    <app-what-next></app-what-next>
+
+    <!-- check: translations: yes, content: yes  -->
+    <app-cta-2></app-cta-2>
+
+    <!-- check: translations: yes, content: yes  -->
+    <app-faq></app-faq>
+
+    <!-- check: translations: yes, content: yes  -->
+    <app-cta-1></app-cta-1>
+  }
 }

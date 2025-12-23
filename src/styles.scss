@@ -148,50 +148,13 @@ main {
   margin: 0px;
 }
 
-/* .gradient-title {
-  font-size: 2.5rem;
-  background: linear-gradient(to bottom, $color-accent, #ffffff);
+.gradient-title-newsletterbanner {
+  font-size: clamp(14px, 0.8vw + 0.35rem, 18px);
+  background: linear-gradient(to top, #f4b400, #ffffff);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  background-clip: text;
   color: transparent;
-  padding: 0.4rem;
 }
-
-.gradient-title-sm {
-  font-size: 1.75rem;
-  background: linear-gradient(to bottom, $color-accent, #ffffff);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: transparent;
-  padding: 0.4rem;
-}
-
-.gradient-title-lg-green {
-  font-size: 2.75rem;
-  background: linear-gradient(to bottom, $color-secondary, $color-primary);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: transparent;
-  padding: 0.4rem;
-}
-
-.gradient-title-green {
-  font-size: 2.5rem;
-  background: linear-gradient(to bottom, $color-secondary, $color-primary);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: transparent;
-  padding: 0.4rem;
-}
-
-.gradient-title-sm-green {
-  font-size: 1.75rem;
-  background: linear-gradient(to bottom, $color-secondary, $color-primary);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: transparent;
-  padding: 0.4rem;
-} */
 
 .btn-gradient {
   background: $color-accent;
