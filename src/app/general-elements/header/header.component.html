@@ -68,6 +68,16 @@
                 {{ currentLang === "en" ? "1-1" : "1-1" }}
               </a>
             </li>
+            <li class="dropdown-item">
+              <a class="nav-link" [routerLink]="['/', currentLang, 'books']">
+                {{ currentLang === "en" ? "Books" : "Books" }}
+              </a>
+            </li>
+            <li class="dropdown-item">
+              <a class="nav-link" [routerLink]="['/', currentLang, 'about']">
+                {{ currentLang === "en" ? "About" : "About" }}
+              </a>
+            </li>
           </ul>
         </li>
 

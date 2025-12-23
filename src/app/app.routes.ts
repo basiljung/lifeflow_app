@@ -30,13 +30,6 @@ export const routes: Routes = [
           ).then((m) => m.TermsandconditionsComponent),
       },
       {
-        path: 'wl',
-        loadComponent: () =>
-          import('./waiting-list-1/waiting-list-1.component').then(
-            (m) => m.WaitingList1Component,
-          ),
-      },
-      {
         path: 'feedback',
         loadComponent: () =>
           import(
