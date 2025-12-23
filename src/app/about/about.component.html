@@ -1,1 +1,27 @@
-<p>about works!</p>
+<div class="text-center bg-light p-5 background-layer-about">
+  <div class="row justify-content-center align-items-center g-3">
+    <div class="col-8 gradient-title-newsletterbanner"></div>
+
+    <div class="col-auto"></div>
+  </div>
+</div>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-12 col-md-6">
+      <div class="card border-light text-center">
+        <div class="card-body">
+          <h5 class="card-title">
+            {{ currentLang === "en" ? "Hi, I am Basil" : "Hi, ich bin Basil" }}
+          </h5>
+          <p class="card-text">
+            {{
+              currentLang === "en"
+                ? "It’s great to have you here. As a coach and mentor, I guide people like you toward greater fulfillment, inner peace, and flow in everyday life."
+                : "So schön, dass du da bist! Als Coach & Mentor unterstütze ich Menschen wie dich dabei, mehr Erfüllung, innere Ruhe und Flow im Alltag zu erfahren."
+            }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

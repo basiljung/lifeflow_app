@@ -58,6 +58,16 @@ export const routes: Routes = [
           ),
       },
       {
+        path: 'about',
+        loadComponent: () =>
+          import('./about/about.component').then((m) => m.AboutComponent),
+      },
+      {
+        path: 'books',
+        loadComponent: () =>
+          import('./books/books.component').then((m) => m.BooksComponent),
+      },
+      {
         path: 'clarity',
         loadComponent: () =>
           import('./website/landingpage-home/landingpage-home.component').then(
