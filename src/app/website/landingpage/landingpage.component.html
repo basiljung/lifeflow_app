@@ -4,92 +4,41 @@
 
 <!-- <app-certification-banner></app-certification-banner> -->
 
-<div style="margin-top: 8rem">
-  <div class="container">
-    <div class="row justify-content-center mb-5">
-      <div class="col-12 col-md-6">
-        <div class="card border-light text-center">
-          <div class="card-body">
-            <h5 class="card-title">
-              {{
-                currentLang === "en"
-                  ? "LifeFlow Newsletter™ - Free"
-                  : "LifeFlow Newsletter™ - Kostenlos"
-              }}
-            </h5>
-            <p class="card-text">
-              {{
-                currentLang === "en"
-                  ? "Learn the tactics & mindset to build a fulfilling and joyful life."
-                  : "Lerne die Taktiken und das Mindset für ein erfüllendes und
+<div class="container">
+  <div class="row justify-content-center">
+    <hr class="my-0 w-75" style="border-color: #0f4f45; opacity: 1" />
+  </div>
+</div>
+<div class="row justify-content-center mb-5">
+  <div style="margin-top: 8rem">
+    <div class="container">
+      <div class="row justify-content-center mb-5">
+        <div class="col-12 col-md-6">
+          <div class="card border-light text-center">
+            <div class="card-body">
+              <h5 class="card-title">
+                {{
+                  currentLang === "en"
+                    ? "LifeFlow Newsletter™ - Free"
+                    : "LifeFlow Newsletter™ - Kostenlos"
+                }}
+              </h5>
+              <p class="card-text">
+                {{
+                  currentLang === "en"
+                    ? "Learn the tactics & mindset to build a fulfilling and joyful life."
+                    : "Lerne die Taktiken und das Mindset für ein erfüllendes und
               freudvolles Leben."
-              }}
-            </p>
-            <a
-              class="btn bg-highlight pulse-btn"
-              [routerLink]="['/', currentLang, 'app']"
-              style="border-radius: 12px"
-            >
-              {{ currentLang === "en" ? "Discover more" : "Mehr erfahren" }}
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="row justify-content-center">
-      <div class="col-12 col-md-6">
-        <div class="card border-light text-center mb-5">
-          <div class="card-body">
-            <h5 class="card-title">
-              {{
-                currentLang === "en"
-                  ? "LifeFlowCheck™ - Free"
-                  : "LifeFlowCheck™ - Kostenlos"
-              }}
-            </h5>
-            <p class="card-text">
-              {{
-                currentLang === "en"
-                  ? "A quick check-in to unlock your potential, and boost your flow, balance & energy."
-                  : "Ein kurzer Check-in, der dir hilft, dein Potenzial zu entdecken, für mehr Flow, Balance und Energie."
-              }}
-            </p>
-            <a
-              class="btn bg-highlight pulse-btn"
-              [routerLink]="['/', currentLang, 'app']"
-              style="border-radius: 12px"
-            >
-              {{ currentLang === "en" ? "Discover more" : "Mehr erfahren" }}
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="row justify-content-center">
-      <div class="col-12 col-md-6">
-        <div class="card border-light text-center mb-5">
-          <div class="card-body">
-            <h5 class="card-title">
-              {{
-                currentLang === "en"
-                  ? "LifeFlow Self-discovery Course™ - Coming soon"
-                  : "LifeFlow Self-discovery Course™ - Kommt bald"
-              }}
-            </h5>
-            <p class="card-text">
-              {{
-                currentLang === "en"
-                  ? "A practical self-discovery course that teaches you the fundamentals of your inner system, helping you make better decisions, find direction in your life, and live a more authentic and fulfilling life."
-                  : "Ein praxisnaher Selbstentdeckungs-Kurs, der dir die Grundlagen deines inneren Systems vermittelt und dich dabei unterstützt, bessere Entscheidungen zu treffen, Orientierung in deinem Leben zu finden und ein authentischeres, erfüllteres Leben zu führen."
-              }}
-            </p>
-            <a
-              class="btn bg-highlight pulse-btn"
-              [routerLink]="['/', currentLang, 'course']"
-              style="border-radius: 12px"
-            >
-              {{ currentLang === "en" ? "Discover more" : "Mehr erfahren" }}
-            </a>
+                }}
+              </p>
+              <a
+                class="btn bg-highlight pulse-btn"
+                [routerLink]="['/', currentLang, 'app']"
+                style="border-radius: 12px"
+              >
+                {{ currentLang === "en" ? "Discover more" : "Mehr erfahren" }}
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -98,22 +47,80 @@
           <div class="card border-light text-center mb-5">
             <div class="card-body">
               <h5 class="card-title">
-                {{ currentLang === "en" ? "1:1" : "1:1" }}
+                {{
+                  currentLang === "en"
+                    ? "LifeFlowCheck™ - Free"
+                    : "LifeFlowCheck™ - Kostenlos"
+                }}
               </h5>
               <p class="card-text">
                 {{
                   currentLang === "en"
-                    ? "TIME TO DIVE DEEPER; LifeFlow Coaching & Mentoring™ is a structured 1:1 program that helps you find inner peace, break free from overthinking, and move forward with clarity. Designed for time-poor professionals."
-                    : "ZEIT, TIEFER EINZUTAUCHEN; LifeFlow Coaching & Mentoring™ is a structured 1:1 program that helps you find purpose, break free from overthinking, and move forward with clarity. Designed for time-poor professionals."
+                    ? "A quick check-in to unlock your potential, and boost your flow, balance & energy."
+                    : "Ein kurzer Check-in, der dir hilft, dein Potenzial zu entdecken, für mehr Flow, Balance und Energie."
                 }}
               </p>
               <a
                 class="btn bg-highlight pulse-btn"
-                [routerLink]="['/', currentLang, '1-1']"
+                [routerLink]="['/', currentLang, 'app']"
                 style="border-radius: 12px"
               >
                 {{ currentLang === "en" ? "Discover more" : "Mehr erfahren" }}
               </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-6">
+          <div class="card border-light text-center mb-5">
+            <div class="card-body">
+              <h5 class="card-title">
+                {{
+                  currentLang === "en"
+                    ? "LifeFlow Self-discovery Course™ - Coming soon"
+                    : "LifeFlow Self-discovery Course™ - Kommt bald"
+                }}
+              </h5>
+              <p class="card-text">
+                {{
+                  currentLang === "en"
+                    ? "A practical self-discovery course that teaches you the fundamentals of your inner system, helping you make better decisions, find direction in your life, and live a more authentic and fulfilling life."
+                    : "Ein praxisnaher Selbstentdeckungs-Kurs, der dir die Grundlagen deines inneren Systems vermittelt und dich dabei unterstützt, bessere Entscheidungen zu treffen, Orientierung in deinem Leben zu finden und ein authentischeres, erfüllteres Leben zu führen."
+                }}
+              </p>
+              <a
+                class="btn bg-highlight pulse-btn"
+                [routerLink]="['/', currentLang, 'course']"
+                style="border-radius: 12px"
+              >
+                {{ currentLang === "en" ? "Discover more" : "Mehr erfahren" }}
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-6">
+            <div class="card border-light text-center mb-5">
+              <div class="card-body">
+                <h5 class="card-title">
+                  {{ currentLang === "en" ? "1:1" : "1:1" }}
+                </h5>
+                <p class="card-text">
+                  {{
+                    currentLang === "en"
+                      ? "TIME TO DIVE DEEPER; LifeFlow Coaching & Mentoring™ is a structured 1:1 program that helps you find inner peace, break free from overthinking, and move forward with clarity. Designed for time-poor professionals."
+                      : "ZEIT, TIEFER EINZUTAUCHEN; LifeFlow Coaching & Mentoring™ is a structured 1:1 program that helps you find purpose, break free from overthinking, and move forward with clarity. Designed for time-poor professionals."
+                  }}
+                </p>
+                <a
+                  class="btn bg-highlight pulse-btn"
+                  [routerLink]="['/', currentLang, '1-1']"
+                  style="border-radius: 12px"
+                >
+                  {{ currentLang === "en" ? "Discover more" : "Mehr erfahren" }}
+                </a>
+              </div>
             </div>
           </div>
         </div>
