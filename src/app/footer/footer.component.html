@@ -30,43 +30,30 @@
   </div>
   <div class="footer-copyright">
     <div class="container">
-      <div class="row fw-bold">
-        <div class="col-3">
-          {{
-            currentLang === "en"
-              ? "LifeFlow.Now™ by Basil Jung"
-              : "LifeFlow.Now™ by Basil Jung"
-          }}
-        </div>
-        <div class="col-3">
-          {{ currentLang === "en" ? "Contact" : "Kontakt" }}
-        </div>
-        <div class="col-2">
-          {{ currentLang === "en" ? "Legal" : "Rechtliches" }}
-        </div>
-        <div class="col">
-          {{ currentLang === "en" ? "Disclaimer" : "Haftungsausschluss" }}
-        </div>
-      </div>
       <div class="row">
-        <div class="col-3"></div>
-        <div class="col-3"></div>
-        <div class="col-2">
-          <a
-            class="grey-text text-lighten-4 right"
-            [routerLink]="['/', currentLang, 'impressum']"
-            >{{ currentLang === "en" ? "Imprint" : "Impressum" }}</a
-          >
-        </div>
-        <div class="col"></div>
-      </div>
-      <div class="row">
-        <div class="col-3 fst-italic fw-lighter">
+        <div class="col-12 col-md-3 fst-italic fw-lighter my-2">
+          <b>
+            {{
+              currentLang === "en"
+                ? "LifeFlow.Now™ by Basil Jung"
+                : "LifeFlow.Now™ by Basil Jung"
+            }}
+          </b>
+          <hr />
           {{
             currentLang === "en"
               ? "Integral consciousness development for orientation, inner peace, and joy."
               : "Integrale Bewusstseinsentwicklung für Orientierung, innere Ruhe und Freude."
           }}
+        </div>
+        <div class="col-12 col-md-2 my-2"></div>
+        <div class="col-12 col-md-3 my-2">
+          E-Mail:
+          <a href="mailto:basil.jung@lifeflow.now"
+            >basil.jung&#64;lifeflow.now</a
+          >
+        </div>
+        <div class="col-12 col-md-4 my-2 d-flex justify-content-center">
           <img
             class="img-setting-title"
             src="assets/basil-biz.jpg"
@@ -74,25 +61,24 @@
             height="100"
           />
         </div>
-        <div class="col-3">
-          E-Mail:
-          <a href="mailto:basil.jung@lifeflow.now"
-            >basil.jung&#64;lifeflow.now</a
-          >
+        <div class="col-12 col-md-6 fst-italic fw-lighter my-2">
+          {{
+            currentLang === "en"
+              ? "The content is intended for personal development, reflection, and educational purposes. It does not constitute therapeutic, medical, or psychological services and does not replace professional treatment. Coaching is understood as a supportive developmental process. Responsibility for decisions and actions always remains with the users. In case of medical or psychological concerns, acute distress, or emergencies, please consult appropriate professionals."
+              : "Die Inhalte dienen der persönlichen Entwicklung, Reflexion und Bildung. Sie stellen kein therapeutisches, medizinisches oder psychologisches Angebot dar und ersetzen keine fachliche Behandlung. Coaching versteht sich als begleitender Entwicklungsprozess. Die Verantwortung für Entscheidungen und Handlungen liegt stets bei den Nutzer:innen selbst. Bei medizinischen oder psychischen Beschwerden, akuten Krisen oder Notfällen wende dich bitte an entsprechende Fachpersonen."
+          }}
         </div>
-        <div class="col-2">
+        <div class="col-12 my-2">
           <a
             class="grey-text text-lighten-4 right"
             [routerLink]="['/', currentLang, 'privacy-policy']"
             >{{ currentLang === "en" ? "Privacy" : "Datenschutz" }}</a
           >
-        </div>
-        <div class="col fst-italic fw-lighter">
-          {{
-            currentLang === "en"
-              ? "The content is intended for personal development, reflection, and educational purposes. It does not constitute therapeutic, medical, or psychological services and does not replace professional treatment. Coaching is understood as a supportive developmental process. Responsibility for decisions and actions always remains with the users. In case of medical or psychological concerns, acute distress, or emergencies, please consult qualified professionals or appropriate services."
-              : "Die Inhalte dienen der persönlichen Entwicklung, Reflexion und Bildung. Sie stellen kein therapeutisches, medizinisches oder psychologisches Angebot dar und ersetzen keine fachliche Behandlung. Coaching versteht sich als begleitender Entwicklungsprozess. Die Verantwortung für Entscheidungen und Handlungen liegt stets bei den Nutzer:innen selbst. Bei medizinischen oder psychischen Beschwerden, akuten Krisen oder Notfällen wende dich bitte an qualifizierte Fachpersonen oder entsprechende Stellen."
-          }}
+          <a
+            class="grey-text text-lighten-4 right m-2"
+            [routerLink]="['/', currentLang, 'impressum']"
+            >{{ currentLang === "en" ? "Imprint" : "Impressum" }}</a
+          >
         </div>
       </div>
     </div>
