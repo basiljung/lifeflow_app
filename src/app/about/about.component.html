@@ -10,7 +10,7 @@
           <p class="card-text">
             {{
               currentLang === "en"
-                ? "On this page, I share some personal insights to my world, how it all began, what drives me, and why I do what I do."
+                ? "On this page, I share some personal insights into my world, how it all began, what drives me, and why I do what I do."
                 : "Auf dieser Seite teile ich einen persönlichen Einblick in meine Welt, wie alles begonnen hat, was mich bewegt und warum ich heute tue, was ich tue."
             }}
           </p>
@@ -36,23 +36,83 @@
           <div class="col-md-8">
             <div class="card-body">
               <h5 class="card-title">
-                {{ currentLang === "en" ? "How is started" : "Wie es begann" }}
+                {{ currentLang === "en" ? "How it started" : "Wie es begann" }}
               </h5>
-              <p class="card-text">
-                {{
-                  currentLang === "en"
-                    ? "With 16, I began my first professional education. I remember thinking, “If I do well here, I’ll be set for life. No Suffering no worries, just free.” That belief became my first real wake-up call.
-
-I did perform well. And yet, nothing fundamentally changed. But I still believed pushing and achieving will make me feel worthy and free. Work and hustle slowly became my way of proving my worth. Staying busy felt safer than slowing down. But deep down, I was running from myself. For years, I lived with self-doubt, constant overthinking, and the pressure to justify my existence through performance. That became my default state.
-
-I always wanted to live fully—to maximize my life while still feeling good and genuinely happy. But most of the time, life felt more like a fight than a flow. Funny enough I grew up in an environment where my pressure was created by myself. I am greatfull for it because it taught be dicipline persistance and the ability to psuh through. Today I know with the right knowledge, self-awareness, acceptenace and direction your drive does not have to come from lack but from abundance.  
-
------What helped me? The decision to follow my curiosity and believe. And constantly evaluating and persistance.  I kept searching. I went deeper. And eventually, I turned inward.
-
-I stopped optimizing my life and started understanding myself. I began uncovering the hidden beliefs and internal drivers that kept me trapped in a race I could never win. It was no longer about becoming better, just to better—it was about discovering what had been unknown within me, using my strength and living my values. And with that shift overtime, more ease, energy & clarity returned."
-                    : "-"
-                }}
-              </p>
+              @if (currentLang === "en") {
+                <div class="story story-en">
+                  <p>
+                    At sixteen, I began my first professional education,
+                    believing that good performance would lead to an easy life:
+                    no suffering, no worries, just freedom. I performed well.
+                    Yet nothing really changed.
+                  </p>
+                  <p>
+                    So I pushed harder. Work became my way of proving my worth,
+                    and staying busy felt safer than slowing down. Beneath it
+                    all, I was running from myself.
+                  </p>
+                  <p>
+                    For years, self-doubt and mental pressure defined my
+                    baseline. I wanted to live fully and feel genuinely happy,
+                    but life felt more like a fight than a flow.
+                  </p>
+                  <p>
+                    Much of that pressure was self-created, and I’m grateful for
+                    it. It built discipline and resilience. What I didn’t know
+                    then is what I know now: fulfillment and drive don’t have to
+                    come from lack. With awareness and direction, they can come
+                    from abundance.
+                  </p>
+                  <p>
+                    Following my curiosity, combined with honest
+                    self-reflection, new knowledge and lived experience, changed
+                    everything. I stopped optimizing my life and began truly
+                    understanding myself, stepping out of a race I could never
+                    win and into alignment with who I already was.
+                  </p>
+                  <p>With that shift, ease, energy, and clarity returned.</p>
+                </div>
+              } @else {
+                <div class="story story-de">
+                  <p>
+                    Mit sechzehn begann ich meine erste berufliche Ausbildung,
+                    überzeugt davon, dass gute Leistung zu einem leichten Leben
+                    führt: kein Leiden, keine Sorgen, nur Freiheit. Ich war gut.
+                    Und trotzdem änderte sich nichts Wesentliches.
+                  </p>
+                  <p>
+                    Also strengte ich mich noch mehr an. Arbeit wurde zu meiner
+                    Art, meinen Wert zu beweisen, und beschäftigt zu sein fühlte
+                    sich sicherer an, als langsamer zu werden. Tief drin lief
+                    ich vor mir selbst davon.
+                  </p>
+                  <p>
+                    Jahrelang waren Selbstzweifel und mentaler Druck mein
+                    Normalzustand. Ich wollte das Leben voll leben und mich
+                    wirklich glücklich fühlen, doch es fühlte sich eher wie ein
+                    Kampf als wie ein Fluss an.
+                  </p>
+                  <p>
+                    Viel von diesem Druck war selbst erzeugt, und dafür bin ich
+                    dankbar. Er hat Disziplin und Resilienz aufgebaut. Was ich
+                    damals nicht wusste, weiss ich heute: Erfüllung und Antrieb
+                    müssen nicht aus Mangel entstehen. Mit Bewusstsein und
+                    Ausrichtung können sie aus Fülle kommen.
+                  </p>
+                  <p>
+                    Meiner Neugier zu folgen, verbunden mit ehrlicher
+                    Selbstreflexion, neuem Wissen und gelebter Erfahrung, hat
+                    alles verändert. Ich hörte auf, mein Leben zu optimieren,
+                    und begann, mich wirklich zu verstehen. Ich trat aus einem
+                    Rennen heraus, das ich nie gewinnen konnte, und fand zurück
+                    in die Ausrichtung mit dem, was ich im Kern bereits war.
+                  </p>
+                  <p>
+                    Mit diesem Wandel kehrten Leichtigkeit, Energie und Klarheit
+                    zurück.
+                  </p>
+                </div>
+              }
             </div>
           </div>
         </div>
@@ -61,29 +121,29 @@ I stopped optimizing my life and started understanding myself. I began uncoverin
   </div>
 
   <div class="row my-4 justify-content-center">
-    <div class="col-12 col-md-6">
-      <div class="card">
+    <div class="col-12 col-md-10">
+      <div class="card bg-light border-light">
         <div class="card-body">
           <h5 class="card-title">
             {{
               currentLang === "en"
-                ? "I dream of a world..."
-                : "Ich träume von einer Welt..."
+                ? "I  dream of a world where..."
+                : "Ich träume von einer Welt,"
             }}
           </h5>
           <p class="card-text">
             {{
               currentLang === "en"
-                ? "...where effectiveness and humanity go hand in hand. Where maximization is measured by happiness, and where consciousness is at the center, and where work, business, and innovation help us foster the human experience, not the other way around. Passionate, vibrant, and full of energy."
-                : ".., in der Wirksamkeit und Menschlichkeit Hand in Hand gehen. In der Maximierung auf Glück bemessen wird und wir das Bewusstsein im Zentrum haben und Arbeit, Wirtschaft, Innovation uns helfen die Menschliche Erfahrung zufördern und nicht ungekehrt. Leidenschaftlich, lebendig und voller Energie."
+                ? "consciousness and impact move as one, where success is felt as happiness & fulfillment, and where work and innovation exist to nourish the human spirit. Alive, vibrant, and deeply human."
+                : "in der Bewusstsein und Wirksamkeit eins werden, in der Erfolg als Glück & Erfüllung, empfunden wird und in der Arbeit und Innovation den menschlichen Geist nähren. Lebendig, kraftvoll und zutiefst menschlich."
             }}
           </p>
         </div>
       </div>
     </div>
 
-    <div class="col-12 col-md-6">
-      <div class="card">
+    <div class="col-12 col-md-6 m-4">
+      <div class="card border-light m-4">
         <div class="card-body">
           <h5 class="card-title">
             {{ currentLang === "en" ? "Mission" : "Mission" }}
@@ -91,48 +151,24 @@ I stopped optimizing my life and started understanding myself. I began uncoverin
           <p class="card-text">
             {{
               currentLang === "en"
-                ? "My mission is to bring integral awareness into everyday life — not only on the meditation cushion or in retreat settings, but in a grounded, honest, and deeply human way, right in the midst of life. Where we work, make decisions, and carry responsibility — where awareness can offer the greatest stability and impact.
-
-I am convinced that we need more people doing meaningful and useful work. And we need work environments where awareness is present — so that we can unite our humanity with purpose, effectiveness, and responsibility. In this way, a world can emerge that lives in harmony with nature and enables a form of development that brings us closer to one another."
-                : "Mission - Meine Mission ist es, integrales Bewusstsein im Alltag lebendig zu machen – nicht nur auf dem Meditationskissen oder im Retreat, sondern ehrlich, menschlich und mitten im Leben. Dort, wo wir arbeiten, entscheiden, Verantwortung tragen und Bewusstsein am meisten Halt geben kann.
-
-Ich bin überzeugt: Wir brauchen mehr Menschen, die sinnvolle und nützliche Arbeit leisten. Und wir brauchen Arbeitsumfelder, in denen Bewusstsein präsent ist – damit wir unsere Menschlichkeit mit Sinn, Wirksamkeit und Verantwortung verbinden können. So entsteht eine Welt, die im Einklang mit der Natur steht und eine Entwicklung ermöglicht die uns näher zu einander bringt."
+                ? "My mission is to bring integral awareness into everyday life. Not only onto the meditation cushion or into retreats, but into the lived reality of relationships, work, decision-making, and responsibility. Into the places where awareness can create the greatest stability and impact. I believe we need more people doing meaningful, useful work, and environments where awareness is present, so humanity, purpose, effectiveness, and responsibility can come together. From this, a world can emerge that lives in greater harmony with nature and supports a form of development that serves us."
+                : "Meine Mission ist es, integrales Bewusstsein in den Alltag zu bringen, nicht nur auf das Meditationskissen oder in Retreats, sondern in die gelebte Realität von Beziehung, Arbeit, Entscheidungsfindung und Verantwortung. Dorthin, wo Bewusstsein die grösste Stabilität und Wirkung entfalten kann. Ich bin überzeugt, dass wir mehr Menschen brauchen, die sinnvolle und nützliche Arbeit tun, und Arbeitsumfelder, in denen Bewusstsein präsent ist, sodass Menschlichkeit, Sinn, Wirksamkeit und Verantwortung zusammenfinden können. Daraus kann eine Welt entstehen, die in grösserer Harmonie mit der Natur lebt und eine Form von Entwicklung ermöglicht, die uns dient"
             }}
           </p>
         </div>
       </div>
     </div>
   </div>
-  <div id="formula-selector" class="title-box-green my-4">
-    <div class="row my-4 justify-content-center">
-      <div class="col-12 col-md-6">
-        <div class="card border-light text-center">
-          <div class="card-body">
-            <h5 class="card-title">
-              {{
-                currentLang === "en"
-                  ? "A bit more about me"
-                  : "Etwas mehr über mich"
-              }}
-            </h5>
-            <p class="card-text" style="color: black">
-              {{
-                currentLang === "en"
-                  ? "Curiosity is a central driving force in my life. I am inspired by health, movement, innovative technology, complexity, deep questions, and personal growth. I am guided by my intuition, an integral perspective, and what gives me energy.
 
-Movement, mountains, adventure, innovation, relationships, and personal development are passions I live fully."
-                  : "Neugier ist ein zentraler Antrieb in meinem Leben. Gesundheit, Bewegung, innovative Technologie, Komplexität, tiefe Fragen und persönliches Wachstum begeistern mich. Ich folge dabei meiner Intuition, einem integralen Blick und dem, was mir Energie gibt. Bewegung, Berge, Abenteuer, Innovation, Beziehungen und persönliche Entwicklung lebe ich mit Leidenschaft."
-              }}
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <app-about-carousel></app-about-carousel>
-  </div>
   <div class="row justify-content-center my-4">
-    <div class="col-12 col-md-6">
-      <div class="card border-light">
+    <div class="col-12 col-md-8">
+      <app-about-carousel></app-about-carousel>
+    </div>
+  </div>
+
+  <div class="row justify-content-center my-4">
+    <div class="col-12 col-md-8 m-4">
+      <div class="card bg-light border-light">
         <div class="card-body">
           <figure class="text-center">
             <blockquote class="blockquote">

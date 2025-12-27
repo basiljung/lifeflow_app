@@ -1,4 +1,8 @@
-<div id="textCarousel" class="carousel slide" data-bs-ride="carousel">
+<div
+  id="textCarousel"
+  class="carousel slide card overflow-hidden"
+  data-bs-ride="carousel"
+>
   <!-- Indicators -->
   <div class="carousel-indicators">
     <button
@@ -33,114 +37,141 @@
       data-bs-slide-to="4"
       aria-label="Slide 5"
     ></button>
-    <button
-      type="button"
-      data-bs-target="#textCarousel"
-      data-bs-slide-to="5"
-      aria-label="Slide 6"
-    ></button>
   </div>
 
   <!-- Carousel inner -->
-  <div class="carousel-inner text-center p-5">
-    <div class="carousel-item active">
-      <h4>
-        {{
-          currentLang === "en"
-            ? "1# - Curious & modern mystic"
-            : "1# - Neugieriger & moderner Mystiker"
-        }}
-      </h4>
-      <p>
-        {{
-          currentLang === "en"
-            ? "I experience the human being as more than just body and thoughts. Exploring this reality is not an act of belief for me, but a natural form of awareness—because whether we question it or not, we are already in the midst of this life."
-            : "Ich erlebe den Menschen nicht nur als Körper und Gedanken. Diese Wirklichkeit zu erforschen ist für mich kein Glaubensakt, sondern eine natürliche Form von Wachheit – denn ob wir fragen oder nicht: Wir sind mitten in diesem Leben."
-        }}
-      </p>
+  <div class="carousel-inner text-center">
+    <div
+      class="carousel-item active p-4"
+      style="
+        background-image: url(./../../../assets/mountainlake.jpg);
+        background-size: cover;
+        background-position: center;
+        min-height: 400px;
+      "
+    >
+      <div class="w-50 mx-auto">
+        <h4>
+          {{
+            currentLang === "en"
+              ? "1# - Curious & modern mystic"
+              : "1# - Neugieriger & moderner Mystiker"
+          }}
+        </h4>
+        <p>
+          {{
+            currentLang === "en"
+              ? "Exploring reality and life is not an act of belief for me, but a way of living life. Because no matter what we do, we are always in the midst of life. Constantly. Always."
+              : "Die Wirklichkeit und das Leben zu erforschen ist für mich kein Glaubensakt, sondern die Art, das Leben zu leben. Denn egal, was wir tun, wir sind mitten im Leben. Ständig, immer."
+          }}
+        </p>
+      </div>
     </div>
 
-    <div class="carousel-item">
-      <h4>
-        {{
-          currentLang === "en" ? "2# - Coach & Mentor" : "2# - Coach & Mentor"
-        }}
-      </h4>
-      <p>
-        {{
-          currentLang === "en"
-            ? "I hold spaces for insight and transformation, supporting clarity, self-trust, and inner peace. I support people in developing inner clarity, stability and effectiveness in a complex world – through the connection of systems thinking, consciousness and embodiment."
-            : "Ich halte Räume für Erkenntnis und Transformation und fördere Klarheit, Selbstvertrauen und inneren Frieden. Ich begleite Menschen dabei, in einer komplexen Welt innere Klarheit, Stabilität und Wirksamkeit zu entwickeln – durch die Verbindung von Systemdenken, Bewusstsein und Verkörperung."
-        }}
-      </p>
+    <div
+      class="carousel-item p-4"
+      style="
+        background-image: url(./../../../assets/me.jpg);
+        background-size: cover;
+        background-position: center;
+        min-height: 400px;
+      "
+    >
+      <div class="w-50 mx-auto">
+        <h4>
+          {{
+            currentLang === "en" ? "2# - Coach & Mentor" : "2# - Coach & Mentor"
+          }}
+        </h4>
+        <p>
+          {{
+            currentLang === "en"
+              ? "I hold space for insight and transformation and support people in developing clarity, self-confidence, and inner peace in these fast-paced and dynamic times."
+              : "Ich halte Räume für Erkenntnis und Transformation und unterstütze Menschen dabei, in dieser hektischen und dynamischen Zeit Klarheit, Selbstvertrauen und inneren Frieden zu entwickeln."
+          }}
+        </p>
+      </div>
     </div>
 
-    <div class="carousel-item">
-      <h4>
-        {{
-          currentLang === "en"
-            ? "3# - Technologie, System & Software Engineer"
-            : "3# - Technology, System- & Software Engineer"
-        }}
-      </h4>
-      <p>
-        {{
-          currentLang === "en"
-            ? "Analyzing complex problems and developing effective solutions is my playground. Understanding, simplifying, and shaping systems is in my nature. Innovation and technology have fascinated and challenged me since childhood."
-            : "Komplexe Probleme zu durchdringen und wirksame Lösungen zu entwickeln ist meine Spielwiese. Systeme zu verstehen, zu vereinfachen und gestaltend zu wirken liegt in meiner Natur. Innovation und Technologie faszinieren mich seit meiner Kindheit und fordern meinen Geist."
-        }}
-      </p>
+    <div
+      class="carousel-item p-4"
+      style="
+        background-image: url(./../../../assets/skiUp.jpg);
+        background-size: cover;
+        background-position: center;
+        min-height: 400px;
+      "
+    >
+      <div class="w-50 mx-auto">
+        <h4>
+          {{
+            currentLang === "en"
+              ? "3# - System & Software Engineer"
+              : "3# - System- & Software Engineer"
+          }}
+        </h4>
+        <p>
+          {{
+            currentLang === "en"
+              ? "Complex problems are my playground. I naturally simplify and shape systems, driven by a lifelong fascination with innovation and technology."
+              : "Komplexe Probleme sind mein Spielplatz. Ich vereinfache und gestalte Systeme aus einer lebenslangen Faszination für Innovation und Technologie heraus."
+          }}
+        </p>
+      </div>
     </div>
 
-    <div class="carousel-item">
-      <h4>
-        {{
-          currentLang === "en"
-            ? "4# - Friend & Partner"
-            : "4# - Freund & Partner"
-        }}
-      </h4>
-      <p>
-        {{
-          currentLang === "en"
-            ? "Deep, honest, and authentic relationships are essential to me. I experience partnership as a space for healing, growth, and reflection. My greatest teacher."
-            : "Tiefe, ehrliche und authentische Beziehungen sind mir wesentlich. Partnerschaft erlebe ich als Raum für Heilung, Wachstum und Spiegelung. Meinen grössten Lehrmeister."
-        }}
-      </p>
+    <div
+      class="carousel-item p-4"
+      style="
+        background-image: url(./../../../assets/zundb.jpg);
+        background-size: cover;
+        background-position: center;
+        min-height: 400px;
+      "
+    >
+      <div class="w-50 mx-auto">
+        <h4>
+          {{
+            currentLang === "en"
+              ? "4# - Friend & Partner"
+              : "4# - Freund & Partner"
+          }}
+        </h4>
+        <p>
+          {{
+            currentLang === "en"
+              ? "Deep, honest, and fun relationships are essential to me. I experience partnership as a space for healing, growth, and reflection. They are my greatest teachers."
+              : "Tiefe, ehrliche und freudvolle Beziehungen sind mir wesentlich. Partnerschaft erlebe ich als Raum für Heilung, Wachstum und Spiegelung. Sie sind der grösste Lehrmeister."
+          }}
+        </p>
+      </div>
     </div>
 
-    <div class="carousel-item">
-      <h4>
-        {{
-          currentLang === "en"
-            ? "5# - Mountain & sports enthusiast"
-            : "5# - Berg- & Sportbegeisterter"
-        }}
-      </h4>
-      <p>
-        {{
-          currentLang === "en"
-            ? "Movement is medicine for me; it keeps me present and clear-headed."
-            : "Bewegung ist für mich Medizin und hält mich präsent und klar."
-        }}
-      </p>
-    </div>
-
-    <div class="carousel-item">
-      <h4>
-        {{
-          currentLang === "en"
-            ? "6# - Nature-loving adventurer"
-            : "6# - Naturverbundener Abenteurer"
-        }}
-      </h4>
-      <p>
-        {{
-          currentLang === "en"
-            ? "I turn ideas into lived reality, combining creativity, technology, and meaningful action."
-            : "Ich lerne gerne, entdecke neue Perspektiven und erweitere meinen Blick. Ich vertraue der Kraft der Natur und daran, dass Mut seinen eigenen Weg belohnt."
-        }}
-      </p>
+    <div
+      class="carousel-item p-4"
+      style="
+        background-image: url(./../../../assets/hike2.jpg);
+        background-size: cover;
+        background-position: center;
+        min-height: 400px;
+      "
+    >
+      <div class="w-50 mx-auto">
+        <h4>
+          {{
+            currentLang === "en"
+              ? "5# - Mountains, nature & sports enthusiast"
+              : "5# - Berg- & Sportbegeisterter"
+          }}
+        </h4>
+        <p>
+          {{
+            currentLang === "en"
+              ? "Movement & nature is medicine for me; it keeps me present and clear-headed."
+              : "Bewegung & Natur ist für mich Medizin und hält mich präsent und klar."
+          }}
+        </p>
+      </div>
     </div>
   </div>
 
