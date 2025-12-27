@@ -38,6 +38,13 @@ export class LandingpageComponent implements OnInit, OnDestroy {
     }
   }
 
+  scrollToTop(): void {
+    window.scrollTo({
+      top: 20,
+      behavior: 'smooth',
+    });
+  }
+
   ngOnDestroy(): void {
     this.destroy$.next();
     this.destroy$.complete();

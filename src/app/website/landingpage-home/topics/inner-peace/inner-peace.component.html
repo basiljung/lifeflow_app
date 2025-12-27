@@ -1,4 +1,4 @@
-<div class="title-box-white">
+<div class="title-box-white container">
   <app-topic-structure>
     <div slot="title">
       <h1>
@@ -32,24 +32,32 @@
 
     <img slot="image" src="assets/rush.png" width="120" class="img-setting" />
     @if (currentLang === "en") {
-      <h3 slot="bottom">
+      <h4 slot="bottom">
         You don’t need more hacks. You need a clear understanding of your mind,
         patterns and priorities.
-      </h3>
+      </h4>
     } @else {
-      <h3 slot="bottom">
+      <h4 slot="bottom">
         Du brauchst keine weiteren Hacks. Du brauchst ein klares Verständnis für
         deinen Geist, deine Muster und Prioritäten.
-      </h3>
+      </h4>
     }
   </app-topic-structure>
 </div>
 
 <app-dive-deeper-intro>
-  <p slot="detail-text">
-    LifeFlow Coaching System™ is a structured 1:1 program that helps you build
-    resilience, make confident decisions, and turn achievements into
-    fulfillment. Designed for time-poor professionals. Enhanced with AI and easy
-    to integrate in your day.
-  </p>
+  @if (currentLang === "en") {
+    <p slot="detail-text">
+      LifeFlow Coaching™ is a structured 1:1 program that helps you build
+      resilience, make confident decisions, and turn achievements into
+      fulfillment. Designed for ambitious and time-poor individuals.
+    </p>
+  } @else {
+    <p slot="detail-text">
+      LifeFlow Coaching™ ist ein strukturiertes 1:1-Programm, das dir hilft,
+      Resilienz aufzubauen, klare und selbstsichere Entscheidungen zu treffen
+      und Erfolge in echte Erfüllung zu verwandeln. Entwickelt für ambitionierte
+      Menschen mit wenig Zeit.
+    </p>
+  }
 </app-dive-deeper-intro>

@@ -1,134 +1,136 @@
-<div class="container my-5 title-box-green">
-  <div
-    style="
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding-top: 5rem;
-    "
-  >
-    <h1>
-      {{
-        currentLang === "en"
-          ? "Learn the tactics & mindset to build a fulfilling and joyful life."
-          : "Lerne die Taktiken und das Mindset für ein erfüllendes und freudvolles Leben."
-      }}
-    </h1>
-    <hr class="divider" />
-    <div class="col s-12 m-4">
-      <img
-        src="assets/basil-smile.png"
-        style="border-radius: 50%"
-        width="120"
-        class="img-setting"
-      />
-    </div>
-
-    <hr />
-
-    <div class="row gx-5 gy-4 align-items-start">
-      <div class="col-12 col-lg-7">
-        <h3>
-          {{
-            currentLang === "en"
-              ? "Unterstand, Act, Integrate"
-              : "Verstehen, Handeln, Integrieren"
-          }}
-        </h3>
-        <p>
-          {{
-            currentLang === "en"
-              ? "A 3-minute weekly read directly to your inbox to understand yourself, upgrade your identity, and build a life you love to live."
-              : "Eine wöchentliche Lektüre von 3 Minuten direkt in dein Postfach, um dich selbst besser zu verstehen, deine Identität weiterzuentwickeln und ein Leben aufzubauen, das du wirklich liebst."
-          }}
-        </p>
-        <div
-          style="
-            display: flex;
-            flex-direction: column;
-            align-items: left;
-            justify-content: left;
-            text-align: left;
-            padding-left: 2rem;
-            padding-right: 2rem;
-          "
-        >
-          <ul>
-            <li style="padding-bottom: 1rem">
-              {{
-                currentLang === "en"
-                  ? "Start your week inspired, with a powerful story, a lesson, and a practical exercise!"
-                  : "Starte inspiriert in deine Woche, mit einer starken Story, einer Lektion und einer praktischen Übung!"
-              }}
-            </li>
-            <li style="padding-bottom: 1rem">
-              {{
-                currentLang === "en"
-                  ? "Learn the tactics & mindset to live a passionate and resilient life."
-                  : "Lerne die Taktiken und das Mindset, um ein leidenschaftliches und resilientes Leben zu führen."
-              }}
-            </li>
-            <li style="padding-bottom: 1rem">
-              {{
-                currentLang === "en"
-                  ? "More Flow, more Joy, more Connection"
-                  : "Mehr Flow, mehr Freude, mehr Verbindung"
-              }}
-            </li>
-            <li style="padding-bottom: 1rem">
-              {{
-                currentLang === "en"
-                  ? "Discover the LifeFlowCheck™ for more self-awareness"
-                  : "Entdecke den LifeFlowCheck™ für mehr Selbstwahrnehmung"
-              }}
-            </li>
-          </ul>
-        </div>
+<div class="container" style="margin-bottom: 2rem">
+  <div class="title-box-green">
+    <div
+      style="
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 2rem;
+      "
+    >
+      <h1>
+        {{
+          currentLang === "en"
+            ? "Learn the tactics & mindset to build a fulfilling and joyful life."
+            : "Lerne die Taktiken und das Mindset für ein erfüllendes und freudvolles Leben."
+        }}
+      </h1>
+      <hr class="divider" />
+      <div class="col s-12 m-2">
+        <img
+          src="assets/basil-smile.png"
+          style="border-radius: 50%"
+          width="120"
+          class="img-setting"
+        />
       </div>
 
-      <div class="col-12 col-lg-5">
-        <div>
-          <h3 class="mb-3">
+      <hr />
+
+      <div class="row gx-5 gy-4 align-items-start">
+        <div class="col-12 col-lg-7">
+          <h3>
             {{
               currentLang === "en"
-                ? "Join the LifeFlow Newsletter™"
-                : "LifeFlow Newsletter™"
+                ? "Unterstand, Act, Integrate"
+                : "Verstehen, Handeln, Integrieren"
             }}
           </h3>
-
-          <div>
-            <a
-              class="waves-effect waves-light btn bg-accent pulse-btn"
-              style="border-radius: 12px; margin: 25px"
-            >
-              <app-cta-email-course></app-cta-email-course>
-            </a>
+          <p>
+            {{
+              currentLang === "en"
+                ? "A 3-minute weekly read directly to your inbox to understand yourself, upgrade your identity, and build a life you love to live."
+                : "Eine wöchentliche Lektüre von 3 Minuten direkt in dein Postfach, um dich selbst besser zu verstehen, deine Identität weiterzuentwickeln und ein Leben aufzubauen, das du wirklich liebst."
+            }}
+          </p>
+          <div
+            style="
+              display: flex;
+              flex-direction: column;
+              align-items: left;
+              justify-content: left;
+              text-align: left;
+              padding-left: 2rem;
+              padding-right: 2rem;
+            "
+          >
+            <ul>
+              <li style="padding-bottom: 1rem">
+                {{
+                  currentLang === "en"
+                    ? "Start your week inspired, with a powerful story, a lesson, and a practical exercise!"
+                    : "Starte inspiriert in deine Woche, mit einer starken Story, einer Lektion und einer praktischen Übung!"
+                }}
+              </li>
+              <li style="padding-bottom: 1rem">
+                {{
+                  currentLang === "en"
+                    ? "Learn the tactics & mindset to live a passionate and resilient life."
+                    : "Lerne die Taktiken und das Mindset, um ein leidenschaftliches und resilientes Leben zu führen."
+                }}
+              </li>
+              <li style="padding-bottom: 1rem">
+                {{
+                  currentLang === "en"
+                    ? "More Flow, more Joy, more Connection"
+                    : "Mehr Flow, mehr Freude, mehr Verbindung"
+                }}
+              </li>
+              <li>
+                {{
+                  currentLang === "en"
+                    ? "Discover the LifeFlowCheck™ for more self-awareness"
+                    : "Entdecke den LifeFlowCheck™ für mehr Selbstwahrnehmung"
+                }}
+              </li>
+            </ul>
           </div>
         </div>
-        <div
-          style="
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-          "
-        >
+
+        <div class="col-12 col-lg-5">
+          <div>
+            <h3 class="mb-3">
+              {{
+                currentLang === "en"
+                  ? "Join the LifeFlow Newsletter™"
+                  : "LifeFlow Newsletter™"
+              }}
+            </h3>
+
+            <div>
+              <a
+                class="waves-effect waves-light btn bg-accent pulse-btn"
+                style="border-radius: 12px; margin: 25px"
+              >
+                <app-cta-email-course></app-cta-email-course>
+              </a>
+            </div>
+          </div>
           <div
-            class="senja-embed"
-            data-id="31c90a2f-c3da-45f5-b0bb-68659ffc39cb"
-            data-mode="shadow"
-            data-lazyload="false"
             style="
-              width: 50%;
-              background-color: aliceblue;
-              border-radius: 12px;
-              padding: 5px;
-              margin-top: 2rem;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: center;
+              text-align: center;
             "
-          ></div>
+          >
+            <div
+              class="senja-embed"
+              data-id="31c90a2f-c3da-45f5-b0bb-68659ffc39cb"
+              data-mode="shadow"
+              data-lazyload="false"
+              style="
+                width: 50%;
+                background-color: aliceblue;
+                border-radius: 12px;
+                padding: 5px;
+                margin-top: 2rem;
+              "
+            ></div>
+          </div>
         </div>
       </div>
     </div>

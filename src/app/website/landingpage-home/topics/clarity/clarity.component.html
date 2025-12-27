@@ -1,4 +1,4 @@
-<div class="title-box-white">
+<div class="title-box-white container">
   <app-topic-structure>
     <div slot="title">
       <h1>
@@ -15,9 +15,7 @@
           >
         </li>
         <li>This lack of clarity drains your energy.</li>
-        <li>Your heart and mind say different things.</li>
         <li>You doubt yourself.</li>
-        <li><b>You lack orientation and understanding.</b></li>
       </ul>
     } @else {
       <ul class="li-item" slot="list">
@@ -25,24 +23,22 @@
           <b>Du hast bereits alles überanalysiert und drehst dich im Kreis.</b>
         </li>
         <li>Diese Unklarheit raubt dir Energie.</li>
-        <li>Herz und Verstand sagen Unterschiedliches.</li>
         <li>Du zweifelst.</li>
-        <li><b>Dir fehlen Orientierung und Verständnis.</b></li>
       </ul>
     }
 
-    <img
+    <!--     <img
       slot="image"
       src="assets/unmotivated.png"
       width="120"
       class="img-setting"
-    />
+    /> -->
 
     @if (currentLang === "en") {
-      <h3 slot="bottom">
+      <h4 slot="bottom">
         You don’t need more hacks. You need a clear understanding of your mind,
         patterns and priorities.
-      </h3>
+      </h4>
     } @else {
       <h3 slot="bottom">
         Du brauchst keine weiteren Hacks. Du brauchst ein klares Verständnis für
@@ -53,10 +49,18 @@
 </div>
 
 <app-dive-deeper-intro>
-  <p slot="detail-text">
-    LifeFlow Coaching System™ is a structured 1:1 program that helps you find
-    purpose, break free from overthinking, and move forward with clarity.
-    Designed for time-poor professionals. Enhanced with AI and easy to integrate
-    in your day.
-  </p>
+  @if (currentLang === "en") {
+    <p slot="detail-text">
+      LifeFlow Coaching™ is a structured 1:1 program that helps you find
+      direction, break free from overthinking, and move forward with clarity.
+      Designed for ambitious & time-poor individuals.
+    </p>
+  } @else {
+    <p slot="detail-text">
+      LifeFlow Coaching™ ist ein strukturiertes 1:1-Programm, das dir hilft,
+      Orientierung zu finden, aus dem Gedankenkarussell auszusteigen und mit
+      Klarheit voranzugehen. Entwickelt für ambitionierte Menschen mit wenig
+      Zeit.
+    </p>
+  }
 </app-dive-deeper-intro>

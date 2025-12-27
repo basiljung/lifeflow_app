@@ -32,8 +32,9 @@
                 }}
               </p>
               <a
+                (click)="scrollToTop()"
                 class="btn bg-highlight pulse-btn"
-                [routerLink]="['/', currentLang, 'app']"
+                [routerLink]="['/', currentLang, 'click']"
                 style="border-radius: 12px"
               >
                 {{ currentLang === "en" ? "Discover more" : "Mehr erfahren" }}
@@ -61,6 +62,7 @@
                 }}
               </p>
               <a
+                (click)="scrollToTop()"
                 class="btn bg-highlight pulse-btn"
                 [routerLink]="['/', currentLang, 'app']"
                 style="border-radius: 12px"
@@ -90,6 +92,7 @@
                 }}
               </p>
               <a
+                (click)="scrollToTop()"
                 class="btn bg-highlight pulse-btn"
                 [routerLink]="['/', currentLang, 'course']"
                 style="border-radius: 12px"
@@ -109,11 +112,13 @@
                 <p class="card-text">
                   {{
                     currentLang === "en"
-                      ? "TIME TO DIVE DEEPER; LifeFlow Coaching & Mentoring™ is a structured 1:1 program that helps you find inner peace, break free from overthinking, and move forward with clarity. Designed for time-poor professionals."
-                      : "ZEIT, TIEFER EINZUTAUCHEN; LifeFlow Coaching & Mentoring™ is a structured 1:1 program that helps you find purpose, break free from overthinking, and move forward with clarity. Designed for time-poor professionals."
+                      ? "TIME TO DIVE DEEPER; LifeFlow Coaching & Mentoring™ is a structured 1:1 program that helps you find inner peace, break free from overthinking, and move forward with clarity. Designed for ambitious & time-poor individuals."
+                      : "ZEIT, TIEFER EINZUTAUCHEN; LifeFlow Coaching & Mentoring™ ist ein strukturiertes 1:1-Programm, das dir hilft, innere Ruhe zu finden, aus dem Gedankenkarussell auszusteigen und mit Klarheit voranzugehen.
+Es wurde für ambitionierte Menschen mit wenig Zeit entwickelt."
                   }}
                 </p>
                 <a
+                  (click)="scrollToTop()"
                   class="btn bg-highlight pulse-btn"
                   [routerLink]="['/', currentLang, '1-1']"
                   style="border-radius: 12px"
