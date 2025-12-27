@@ -3,33 +3,28 @@ export const FAQDETAILSDATA_DE: {
   text: string;
 }[] = [
   {
-    title: '🌿 Willkommen',
-    text: `<p>
-  Schön, dass du da bist. Diese App unterstützt dich dabei, dich selbst besser zu verstehen – auf emotionaler, mentaler und energetischer Ebene.
-</p>
+    title: 'Willkommen, schön, dass du hier bist.',
+    text: `<p>Diese App hilft dir, dich auf emotionaler, mentaler und energetischer Ebene besser zu verstehen.</p>
+
 <p>
-  Sie lädt dich ein, dein eigenes Muster rund um Stress, Motivation, Antrieb und innere Balance zu erforschen – basierend auf biologischen Grundlagen.
+  Durch einen kurzen Fragebogen erhältst du persönliche Einblicke für mehr innere Balance, Motivation und Flow. Zusätzlich bekommst du praktische Impulse, die dir helfen, dich fokussierter, verbundener und gelassener zu fühlen.
 </p>
+
 <p>
-  Durch einen kurzen Fragebogen erhältst du persönliche Impulse zu deinem aktuellen Gleichgewicht im Leben – kombiniert mit praktischen Tipps und sanften Anregungen, die dir helfen können, dich verbundener, fokussierter und gelassener zu fühlen.
+  Mein Ziel ist es, dich dabei zu unterstützen, kleine, sinnvolle Schritte hin zu einem ruhigeren, klareren und erfüllteren Leben zu gehen.
 </p>
+
 <p>
-  Die Grundlage der Auswertung liegt in der Neurobiologie, Motivationspsychologie und Flow-Forschung – mit Fokus auf die Wirkung von Dopamin, Serotonin, Oxytocin und Endorphinen, sowie Themen wie Zielklarheit, Selbstverantwortung und innere Stärke.
-</p>
-<p>
-  All diese Faktoren beeinflussen, wie wir mit Stress umgehen, Energie aufbauen und Erfüllung erleben. Mein Ziel? Dich dabei zu unterstützen, kleine, bedeutungsvolle Schritte in Richtung eines gelasseneren, klareren und erfüllteren Lebens zu gehen.
-</p>
-<p>
-  Wenn du Fragen, Feedback oder Ideen hast – schreib mir gerne: 📩 basil.jung@lifeflow.now  
+  Wenn du Fragen oder Feedback hast, melde dich gerne: 📩 basil.jung@lifeflow.now  
   <br />Herzlich, Basil
 </p>`,
   },
   {
-    title: '🧠 Erklärung',
+    title: 'Erklärung',
     text: `<section>
-  <h5>🧠 Über den LifeFlowCheck™</h5>
+  <h5>Über den LifeFlowCheck™</h5>
 <p>
-  Der <strong>LifeFlowCheck™</strong> ist ein Reflexionstool, das dir hilft, dein aktuelles inneres Gleichgewicht besser zu verstehen – emotional, mental, körperlich und energetisch.
+  Der <strong>LifeFlowCheck™</strong> ist ein Reflexionstool, das dir hilft, dein aktuelles inneres Gleichgewicht besser zu verstehen; emotional, mental, körperlich und energetisch.
 </p>
 <p>
   Du erhältst eine Momentaufnahme in 9 Lebensbereichen, die für deinen Flow im Leben und in deiner Tätigkeit entscheidend sind. Die Ergebnisse zeigen dir, wo aktuell Blockaden bestehen oder etwas aus der Balance geraten ist – und laden dich ein, gezielt daran zu arbeiten, um mehr Flow zu kultivieren.
@@ -38,13 +33,13 @@ export const FAQDETAILSDATA_DE: {
 
   <hr />
 
-  <h5>🧩 Aufbau & Methodik</h5>
+  <h5>Aufbau & Methodik</h5>
   <ul>
-    <p> - <strong>27 Fragen</strong></p>
-    <p> - <strong>9 Themenbereiche</strong> mit je <strong>3 Fragen</strong></p>
-    <p> - Antwortskala: <strong>Likert-Skala von -2 bis +2</strong></p>
+    <p> • <strong>27 Fragen</strong></p>
+    <p> • <strong>9 Themenbereiche</strong> mit je <strong>3 Fragen</strong></p>
+    <p> • Antwortskala: <strong>Likert-Skala von -2 bis +2</strong></p>
     <p>
-       - Berücksichtigt <strong>positive und kritische Aussagen</strong> (inkl.
+       • Berücksichtigt <strong>positive und kritische Aussagen</strong> (inkl.
       invertierter Fragen)
     </p>
   </ul>
@@ -63,7 +58,7 @@ export const FAQDETAILSDATA_DE: {
 
   <hr />
 
-  <h5>🔢 Auswertung & Scoring</h5>
+  <h5>Auswertung & Scoring</h5>
   <ul>
     <li>
       Jeder Themenbereich ergibt eine
@@ -109,8 +104,9 @@ export const FAQDETAILSDATA_DE: {
       </tr>
     </tbody>
   </table>
+  <hr />
 
-  <h5>🌊 Die 9 Themenbereiche im Überblick</h5>
+  <h5>Die 9 Themenbereiche im Überblick</h5>
   <blockquote>  
     <p>
       1. <strong>Klarheit, Ausrichtung & Ziel</strong> --> <em
@@ -119,7 +115,7 @@ export const FAQDETAILSDATA_DE: {
     </p>
     <p>
       2. <strong>Herausforderung & Machbarkeit</strong> --> <em
-        >Bist du angenehm gefordert – oder über- oder unterfordert? Ist dein Alltag & deine Aufgaben darin umsetzbar – kennst du deinen nächsten Schritt?</em
+        >Bist du angenehm gefordert oder über- oder unterfordert? Ist dein Alltag & deine Aufgaben darin umsetzbar kennst du deinen nächsten Schritt?</em
       >
     </p>
     <p>
@@ -163,7 +159,7 @@ export const FAQDETAILSDATA_DE: {
   </blockquote>
   <hr />
 
-  <h5>🧭 Was du daraus mitnehmen kannst</h5>
+  <h5>Was du daraus mitnehmen kannst</h5>
   <p>
     Dieser Test ist kein Urteil, sondern eine Einladung zur
     <strong>Selbstbeobachtung</strong> und ein Zugang zu tieferer Selbsterkenntnis.
@@ -174,11 +170,11 @@ export const FAQDETAILSDATA_DE: {
 `,
   },
   {
-    title: '🚀 lifeflow.now',
+    title: 'LifeFlow.Now™',
     text: `<section>
   <h5>🌟 Vision</h5>
   <p>
-    Eine Welt, in der Menschen sich selbst treu sind, ihren Körper-Geist-Systemen verstehen und ihr Leben authentisch gestalten – frei, klar und im Flow.
+    Eine Welt, in der Menschen sich selbst treu sind, ihren Körper-Geist-Systemen verstehen und ihr Leben authentisch gestalten; frei, klar und im Flow.
   </p>
 
   <h5>🎯 Mission</h5>
@@ -186,7 +182,7 @@ export const FAQDETAILSDATA_DE: {
     Ich begleite viel beschäftigte, ambitionierte Menschen auf ihrem Weg zu mehr Umsetzungskraft, Sinn und Energie.
   </p>
   <p>
-    Mit tiefgehender Selbstkenntnis, neuen Perspektiven, modernen Tools & Wissen unterstütze ich sie dabei, ihren eigenen Weg zu finden, mutige Entscheidungen zu treffen und mit Leichtigkeit und Freude umzusetzen – persönlich, beruflich und spirituell.
+    Mit tiefgehender Selbstkenntnis, neuen Perspektiven, modernen Tools & Wissen unterstütze ich sie dabei, ihren eigenen Weg zu finden, mutige Entscheidungen zu treffen und mit Leichtigkeit und Freude umzusetzen; persönlich, beruflich und spirituell.
   </p>
 </section>`,
   },
@@ -274,48 +270,40 @@ export const FAQDETAILSDATA_EN: {
   text: string;
 }[] = [
   {
-    title: '🌿 Welcome',
-    text: `<p>
-  I'm glad you're here. This app is designed to help you better understand yourself; emotionally, mentally, and energetically.
+    title: 'Welcome, I’m glad you’re here.',
+    text: `<p> This app helps you understand yourself better on an emotional, mental, and energetic level.</p>
+<p>
+  Through a short questionnaire, you’ll gain personal insights for more inner balance, motivation and flow. You’ll also receive practical, gentle impulses to feel more focused, connected, and at ease.
 </p>
 <p>
-  It invites you to explore your own patterns around stress, motivation, drive, and inner balance; based on biological foundations.
+  My goal is to support you in taking small, meaningful steps toward a calmer, clearer, and more fulfilling life.
 </p>
 <p>
-  Through a short questionnaire, you’ll receive personal insights into your current life balance; combined with practical tips and gentle impulses to help you feel more connected, focused, and at ease.
-</p>
-<p>
-  The analysis is based on neuroscience, motivational psychology, and flow research – with a focus on the role of dopamine, serotonin, oxytocin, and endorphins, as well as themes like clarity, self-responsibility, and inner strength.
-</p>
-<p>
-  All of these factors influence how we deal with stress, build energy, and experience fulfillment. My goal? To support you in taking small, meaningful steps toward a calmer, clearer, and more fulfilling life.
-</p>
-<p>
-  If you have questions, feedback, or ideas – feel free to write me: 📩 basil.jung@lifeflow.now  
+  If you have questions or feedback, feel free to reach out: 📩 basil.jung@lifeflow.now  
   <br />Warmly, Basil
 </p>`,
   },
   {
-    title: '🧠 Explanation',
+    title: 'Explanation',
     text: `<section>
-  <h5>🧠 About the LifeFlowCheck™</h5>
+  <h5>About the LifeFlowCheck™</h5>
   <p>
-    The <strong>LifeFlowCheck™</strong> is a reflection tool that helps you better understand your current inner balance – emotionally, mentally, physically, and energetically.
+    The <strong>LifeFlowCheck™</strong> is a reflection tool that helps you better understand your current inner balance; emotionally, mentally, physically, and energetically.
   </p>
   <p>
-    It gives you a snapshot of 9 key areas of life that are essential for flow – both in your personal life and your work. The results show where things may be blocked or out of balance – and invite you to consciously work on those areas to cultivate more flow.
+    It gives you a snapshot of 9 key areas of life that are essential for flow – both in your personal life and your work. The results show where things may be blocked or out of balance and invite you to consciously work on those areas to cultivate more flow.
     <em>This snapshot essentially reflects the result of your daily habits.</em>
   </p>
 
   <hr />
 
-  <h5>🧩 Structure & Methodology</h5>
+  <h5>Structure & Methodology</h5>
   <ul>
-    <p> - <strong>27 questions</strong></p>
-    <p> - <strong>9 topics</strong>, each with <strong>3 questions</strong></p>
-    <p> - Rating scale: <strong>Likert scale from -2 to +2</strong></p>
+    <p> • <strong>27 questions</strong></p>
+    <p> • <strong>9 topics</strong>, each with <strong>3 questions</strong></p>
+    <p> • Rating scale: <strong>Likert scale from -2 to +2</strong></p>
     <p>
-      - Includes <strong>positive and critical statements</strong> (incl. inverted items)
+      • Includes <strong>positive and critical statements</strong> (incl. inverted items)
     </p>
   </ul>
 
@@ -332,7 +320,7 @@ export const FAQDETAILSDATA_EN: {
 
   <hr />
 
-  <h5>🔢 Evaluation & Scoring</h5>
+  <h5>Evaluation & Scoring</h5>
   <ul>
     <li>
       Each topic results in a <strong>total score between -6 and +6</strong>
@@ -373,8 +361,9 @@ export const FAQDETAILSDATA_EN: {
       </tr>
     </tbody>
   </table>
+  <hr />
 
-  <h5>🌊 Overview of the 9 Topics</h5>
+  <h5>Overview of the 9 Topics</h5>
   <blockquote>
     <p>
       1. <strong>Clarity & Goal</strong> → <em>Do you know where you want to go? Do you know your goals?</em>
@@ -407,7 +396,7 @@ export const FAQDETAILSDATA_EN: {
 
   <hr />
 
-  <h5>🧭 What You Can Take Away</h5>
+  <h5>What You Can Take Away</h5>
   <p>
     This test is not a judgment, but an invitation for <strong>self-observation</strong> – and a doorway to deeper self-awareness.
   </p>
@@ -417,11 +406,11 @@ export const FAQDETAILSDATA_EN: {
 </section>`,
   },
   {
-    title: '🚀 lifeflow.now',
+    title: 'LifeFlow.Now™',
     text: `<section>
   <h5>🌟 Vision</h5>
   <p>
-    A world where people stay true to themselves, understand their body-mind system, and shape their lives authentically – free, clear, and in flow.
+    A world where people stay true to themselves, understand their body-mind system, and shape their lives authentically; free, clear, and in flow.
   </p>
 
   <h5>🎯 Mission</h5>
@@ -429,7 +418,7 @@ export const FAQDETAILSDATA_EN: {
     I support busy, ambitious individuals on their path to greater drive, purpose, and energy.
   </p>
   <p>
-    Through deep self-understanding, fresh perspectives, modern tools, and knowledge, I help them find their own path, make bold decisions, and take action with ease and joy – personally, professionally, and spiritually.
+    Through deep self-understanding, fresh perspectives, modern tools, and knowledge, I help them find their own path, make bold decisions, and take action with ease and joy; personally, professionally, and spiritually.
   </p>
 </section>`,
   },
