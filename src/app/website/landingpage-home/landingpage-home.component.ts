@@ -22,8 +22,6 @@ import { WhatNextComponent } from './sections/what-next/what-next.component';
 import { RelevantsComponent } from './sections/relevants/relevants.component';
 import { Cta2Component } from './sections/cta-2/cta-2.component';
 
-declare var M: any;
-
 @Component({
   selector: 'app-landingpage-home',
   imports: [
@@ -62,6 +60,9 @@ export class LandingpageHomeComponent
     private langService: LanguageService,
     private router: Router,
   ) {}
+  ngAfterViewInit(): void {
+    throw new Error('Method not implemented.');
+  }
 
   ngOnInit(): void {
     const segments = this.router.url.split('/').filter(Boolean);
@@ -69,17 +70,6 @@ export class LandingpageHomeComponent
     this.topic = segments[1];
     this.langService.lang$.pipe(takeUntil(this.destroy$)).subscribe((lang) => {
       this.currentLang = lang;
-    });
-  }
-
-  ngAfterViewInit(): void {
-    const elems = document.querySelectorAll('.carousel');
-    M.Carousel.init(elems, {
-      dist: 0,
-      padding: 20,
-      numVisible: 3,
-      shift: 0,
-      indicators: true,
     });
   }
 

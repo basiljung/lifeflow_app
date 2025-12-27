@@ -5,15 +5,13 @@ import { Subject, takeUntil } from 'rxjs';
 import { CommonModule } from '@angular/common';
 import { CtaEmailCourseComponent } from '../cta-email-course/cta-email-course.component';
 
-declare var M: any;
-
 @Component({
   selector: 'app-header',
   imports: [RouterModule, CommonModule, CtaEmailCourseComponent],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
 })
-export class HeaderComponent implements AfterViewInit, OnInit {
+export class HeaderComponent implements OnInit {
   private destroy$ = new Subject<void>();
   currentLang: string | null = null;
   isMenuOpen = false;
@@ -24,11 +22,6 @@ export class HeaderComponent implements AfterViewInit, OnInit {
     this.langService.lang$.pipe(takeUntil(this.destroy$)).subscribe((lang) => {
       this.currentLang = lang;
     });
-  }
-
-  ngAfterViewInit(): void {
-    const elems = document.querySelectorAll('.sidenav');
-    M.Sidenav.init(elems);
   }
 
   toggleLanguage(lang: string) {

@@ -1,0 +1,166 @@
+<div id="textCarousel" class="carousel slide" data-bs-ride="carousel">
+  <!-- Indicators -->
+  <div class="carousel-indicators">
+    <button
+      type="button"
+      data-bs-target="#textCarousel"
+      data-bs-slide-to="0"
+      class="active"
+      aria-current="true"
+      aria-label="Slide 1"
+    ></button>
+    <button
+      type="button"
+      data-bs-target="#textCarousel"
+      data-bs-slide-to="1"
+      aria-label="Slide 2"
+    ></button>
+    <button
+      type="button"
+      data-bs-target="#textCarousel"
+      data-bs-slide-to="2"
+      aria-label="Slide 3"
+    ></button>
+    <button
+      type="button"
+      data-bs-target="#textCarousel"
+      data-bs-slide-to="3"
+      aria-label="Slide 4"
+    ></button>
+    <button
+      type="button"
+      data-bs-target="#textCarousel"
+      data-bs-slide-to="4"
+      aria-label="Slide 5"
+    ></button>
+    <button
+      type="button"
+      data-bs-target="#textCarousel"
+      data-bs-slide-to="5"
+      aria-label="Slide 6"
+    ></button>
+  </div>
+
+  <!-- Carousel inner -->
+  <div class="carousel-inner text-center p-5">
+    <div class="carousel-item active">
+      <h4>
+        {{
+          currentLang === "en"
+            ? "1# - Curious & modern mystic"
+            : "1# - Neugieriger & moderner Mystiker"
+        }}
+      </h4>
+      <p>
+        {{
+          currentLang === "en"
+            ? "I experience the human being as more than just body and thoughts. Exploring this reality is not an act of belief for me, but a natural form of awareness—because whether we question it or not, we are already in the midst of this life."
+            : "Ich erlebe den Menschen nicht nur als Körper und Gedanken. Diese Wirklichkeit zu erforschen ist für mich kein Glaubensakt, sondern eine natürliche Form von Wachheit – denn ob wir fragen oder nicht: Wir sind mitten in diesem Leben."
+        }}
+      </p>
+    </div>
+
+    <div class="carousel-item">
+      <h4>
+        {{
+          currentLang === "en" ? "2# - Coach & Mentor" : "2# - Coach & Mentor"
+        }}
+      </h4>
+      <p>
+        {{
+          currentLang === "en"
+            ? "I hold spaces for insight and transformation, supporting clarity, self-trust, and inner peace. I support people in developing inner clarity, stability and effectiveness in a complex world – through the connection of systems thinking, consciousness and embodiment."
+            : "Ich halte Räume für Erkenntnis und Transformation und fördere Klarheit, Selbstvertrauen und inneren Frieden. Ich begleite Menschen dabei, in einer komplexen Welt innere Klarheit, Stabilität und Wirksamkeit zu entwickeln – durch die Verbindung von Systemdenken, Bewusstsein und Verkörperung."
+        }}
+      </p>
+    </div>
+
+    <div class="carousel-item">
+      <h4>
+        {{
+          currentLang === "en"
+            ? "3# - Technologie, System & Software Engineer"
+            : "3# - Technology, System- & Software Engineer"
+        }}
+      </h4>
+      <p>
+        {{
+          currentLang === "en"
+            ? "Analyzing complex problems and developing effective solutions is my playground. Understanding, simplifying, and shaping systems is in my nature. Innovation and technology have fascinated and challenged me since childhood."
+            : "Komplexe Probleme zu durchdringen und wirksame Lösungen zu entwickeln ist meine Spielwiese. Systeme zu verstehen, zu vereinfachen und gestaltend zu wirken liegt in meiner Natur. Innovation und Technologie faszinieren mich seit meiner Kindheit und fordern meinen Geist."
+        }}
+      </p>
+    </div>
+
+    <div class="carousel-item">
+      <h4>
+        {{
+          currentLang === "en"
+            ? "4# - Friend & Partner"
+            : "4# - Freund & Partner"
+        }}
+      </h4>
+      <p>
+        {{
+          currentLang === "en"
+            ? "Deep, honest, and authentic relationships are essential to me. I experience partnership as a space for healing, growth, and reflection. My greatest teacher."
+            : "Tiefe, ehrliche und authentische Beziehungen sind mir wesentlich. Partnerschaft erlebe ich als Raum für Heilung, Wachstum und Spiegelung. Meinen grössten Lehrmeister."
+        }}
+      </p>
+    </div>
+
+    <div class="carousel-item">
+      <h4>
+        {{
+          currentLang === "en"
+            ? "5# - Mountain & sports enthusiast"
+            : "5# - Berg- & Sportbegeisterter"
+        }}
+      </h4>
+      <p>
+        {{
+          currentLang === "en"
+            ? "Movement is medicine for me; it keeps me present and clear-headed."
+            : "Bewegung ist für mich Medizin und hält mich präsent und klar."
+        }}
+      </p>
+    </div>
+
+    <div class="carousel-item">
+      <h4>
+        {{
+          currentLang === "en"
+            ? "6# - Nature-loving adventurer"
+            : "6# - Naturverbundener Abenteurer"
+        }}
+      </h4>
+      <p>
+        {{
+          currentLang === "en"
+            ? "I turn ideas into lived reality, combining creativity, technology, and meaningful action."
+            : "Ich lerne gerne, entdecke neue Perspektiven und erweitere meinen Blick. Ich vertraue der Kraft der Natur und daran, dass Mut seinen eigenen Weg belohnt."
+        }}
+      </p>
+    </div>
+  </div>
+
+  <!-- Controls -->
+  <button
+    class="carousel-control-prev"
+    type="button"
+    data-bs-target="#textCarousel"
+    data-bs-slide="prev"
+  >
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button
+    class="carousel-control-next"
+    type="button"
+    data-bs-target="#textCarousel"
+    data-bs-slide="next"
+  >
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>

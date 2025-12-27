@@ -1,15 +1,14 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
+import { LanguageService } from '../../services/language.service';
 import { Subject, takeUntil } from 'rxjs';
-import { LanguageService } from '../services/language.service';
-import { AboutCarouselComponent } from './about-carousel/about-carousel.component';
 
 @Component({
-  selector: 'app-about',
-  imports: [AboutCarouselComponent],
-  templateUrl: './about.component.html',
-  styleUrl: './about.component.scss',
+  selector: 'app-about-carousel',
+  imports: [],
+  templateUrl: './about-carousel.component.html',
+  styleUrl: './about-carousel.component.scss',
 })
-export class AboutComponent implements OnInit, OnDestroy {
+export class AboutCarouselComponent implements OnInit, OnDestroy {
   private destroy$ = new Subject<void>();
   currentLang: string | null = null;
 
