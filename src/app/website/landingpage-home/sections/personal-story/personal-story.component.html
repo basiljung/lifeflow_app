@@ -1,45 +1,20 @@
-<div class="title-box-green container container">
-  <section>
-    <div class="container">
-      <div class="mystory-grid">
-        <!-- LEFT: header + sticky stacked images -->
-        <div class="mystory-left">
-          <h1>
-            @if (currentLang === "en") {
-              Why am I talking about this?
-            } @else {
-              Warum spreche ich darüber?
-            }
-          </h1>
-
-          <div class="image-stack">
-            <div class="image-stack-inner">
-              <div class="text-center">
-                <img
-                  src="assets/work.jpg"
-                  class="stack-img"
-                  [class.is-active]="activeStep === 1"
-                />
-                <img
-                  src="assets/SkiUp.jpg"
-                  class="stack-img"
-                  [class.is-active]="activeStep === 2"
-                />
-                <img
-                  src="assets/basil-smile.png"
-                  class="stack-img"
-                  [class.is-active]="activeStep === 3"
-                />
-              </div>
-            </div>
+<div class="title-box-green container">
+  <h1>
+    @if (currentLang === "en") {
+      Why am I talking about this?
+    } @else {
+      Warum spreche ich darüber?
+    }
+  </h1>
+  <div class="row justify-content-center">
+    <div class="col-12 col-md-12">
+      <div class="card bg-secondary overflow-hidden border-light">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img width="300" src="./../../../../../assets/basil-smile.png" />
           </div>
-        </div>
-
-        <!-- RIGHT: story items (observer sets activeStep) -->
-        <div class="mystory-right" #rightPane>
-          <!-- Part 1: Curiosity & Career -->
-          <article #storyItem class="mystory-item">
-            <p>
+          <div class="col-md-8">
+            <div class="card-body text-light">
               @if (currentLang === "en") {
                 <em>
                   Hi, I'm Basil.<br /><br />
@@ -51,27 +26,7 @@
                   beyond technology, I was fascinated by people: behavior,
                   emotions, decisions – and what truly drives us.
                 </em>
-              } @else {
-                <em>
-                  Hi, ich bin Basil.<br /><br />
-                  Ich war schon immer neugierig – Fragen stellen, analysieren,
-                  Zusammenhänge erkennen. Warum ist etwas so, wie es ist? Was
-                  bewirkt was? Diese Neugier prägte mein Privatleben und meine
-                  Karriere.<br /><br />
-                  Ich habe Systems Engineering studiert und als Entwickler
-                  gearbeitet. Über die Technologie hinaus faszinierten mich
-                  jedoch die Menschen: Verhalten, Gefühle, Entscheidungen – und
-                  was uns wirklich antreibt.
-                </em>
-              }
-            </p>
-            <div class="divider"></div>
-          </article>
-
-          <!-- Part 2: From performance to the big question -->
-          <article #storyItem class="mystory-item">
-            <p class="text-size-large">
-              @if (currentLang === "en") {
+                <br /><br />
                 <em>
                   For years, I focused on performance, motivation, optimization,
                   and how to do more. Step by step, I achieved the goals I set.
@@ -83,27 +38,7 @@
                     to do?</i
                   >
                 </em>
-              } @else {
-                <em>
-                  Jahrelang lag mein Fokus auf Leistung, Motivation, Optimierung
-                  – und wie ich noch mehr schaffen kann. Schritt für Schritt
-                  erreichte ich meine Ziele. Doch irgendwie hörte es nie auf. Es
-                  fühlte sich an wie eine endlose, zehrende Fahrt – und damit
-                  tauchte eine tiefere Frage auf:
-                  <i
-                    >War das alles? Wann komme ich endlich an? Was muss ich noch
-                    tun?</i
-                  >
-                </em>
-              }
-            </p>
-            <div class="divider"></div>
-          </article>
-
-          <!-- Part 3: My philosophy & today’s work -->
-          <article #storyItem class="mystory-item">
-            <p class="text-size-large">
-              @if (currentLang === "en") {
+                <br /><br />
                 <em>
                   I discovered that it’s not about <b>optimizing yourself</b> –
                   but <b>understanding yourself</b>, both light and shadow. Real
@@ -124,6 +59,30 @@
                   </em>
                 </strong>
               } @else {
+                <em>
+                  Hi, ich bin Basil.<br /><br />
+                  Ich war schon immer neugierig – Fragen stellen, analysieren,
+                  Zusammenhänge erkennen. Warum ist etwas so, wie es ist? Was
+                  bewirkt was? Diese Neugier prägte mein Privatleben und meine
+                  Karriere.<br /><br />
+                  Ich habe Systems Engineering studiert und als Entwickler
+                  gearbeitet. Über die Technologie hinaus faszinierten mich
+                  jedoch die Menschen: Verhalten, Gefühle, Entscheidungen – und
+                  was uns wirklich antreibt.
+                </em>
+                <br /><br />
+                <em>
+                  Jahrelang lag mein Fokus auf Leistung, Motivation, Optimierung
+                  – und wie ich noch mehr schaffen kann. Schritt für Schritt
+                  erreichte ich meine Ziele. Doch irgendwie hörte es nie auf. Es
+                  fühlte sich an wie eine endlose, zehrende Fahrt – und damit
+                  tauchte eine tiefere Frage auf:
+                  <i
+                    >War das alles? Wann komme ich endlich an? Was muss ich noch
+                    tun?</i
+                  >
+                </em>
+                <br /><br />
                 <em>
                   Ich habe erkannt: Es geht nicht darum, dich ständig zu
                   <b>optimieren</b> – sondern darum, dich wirklich zu
@@ -146,11 +105,10 @@
                   </em>
                 </strong>
               }
-            </p>
-            <div class="divider"></div>
-          </article>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </section>
+  </div>
 </div>
