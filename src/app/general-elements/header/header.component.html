@@ -56,7 +56,11 @@
           </a>
           <ul class="dropdown-menu">
             <li class="dropdown-item">
-              <a class="nav-link" [routerLink]="['/', currentLang, 'app']">
+              <a
+                (click)="closeMenu()"
+                class="nav-link"
+                [routerLink]="['/', currentLang, 'app']"
+              >
                 {{
                   currentLang === "en" ? "LifeFlowCheck™" : "LifeFlowCheck™"
                 }}
@@ -64,17 +68,29 @@
             </li>
             <!-- <li><hr class="dropdown-divider" /></li> -->
             <li class="dropdown-item">
-              <a class="nav-link" [routerLink]="['/', currentLang, '1-1']">
+              <a
+                (click)="closeMenu()"
+                class="nav-link"
+                [routerLink]="['/', currentLang, '1-1']"
+              >
                 {{ currentLang === "en" ? "1-1" : "1-1" }}
               </a>
             </li>
             <li class="dropdown-item">
-              <a class="nav-link" [routerLink]="['/', currentLang, 'books']">
+              <a
+                (click)="closeMenu()"
+                class="nav-link"
+                [routerLink]="['/', currentLang, 'books']"
+              >
                 {{ currentLang === "en" ? "Books" : "Books" }}
               </a>
             </li>
             <li class="dropdown-item">
-              <a class="nav-link" [routerLink]="['/', currentLang, 'about']">
+              <a
+                (click)="closeMenu()"
+                class="nav-link"
+                [routerLink]="['/', currentLang, 'about']"
+              >
                 {{ currentLang === "en" ? "About" : "About" }}
               </a>
             </li>
