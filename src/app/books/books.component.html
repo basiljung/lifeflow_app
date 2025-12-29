@@ -1,1 +1,237 @@
-<p>books works!</p>
+<div class="row justify-content-center my-4">
+  <div class="col-12 col-md-8 m-4">
+    <div class="card bg-light border-light">
+      <div class="card-body">
+        <figure class="text-center">
+          <blockquote class="blockquote">
+            <p>
+              {{
+                currentLang === "en"
+                  ? "I never understood why people idolize athletes, but not the way they live their own lives.
+To me, you are an athlete of your life whether you’re a leader, a parent, a professional, or a business owner.
+Join the free newsletter to cultivate a clear mind, inner drive, calm focus, and joy in the process."
+                  : "Ich habe nie verstanden, warum Menschen Athleten verehren, aber nicht die Art, wie sie ihr eigenes Leben führen.
+Für mich bist du ein Athlet deines Lebens, egal ob als Führungskraft, Elternteil, Fachperson oder Unternehmer:in.
+Abonniere den kostenlosen Newsletter und entwickle einen klaren Geist, innere Antriebskraft, ruhigen Fokus und Freude am Prozess."
+              }}
+            </p>
+          </blockquote>
+          <figcaption class="blockquote-footer">
+            Basil Jung, <cite title="Source Title">LifeFlow.Now™</cite>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container overflow-hidden">
+  <div class="row gy-5">
+    <div class="col-12">
+      <div class="card mb-3">
+        <div class="row g-0">
+          <div class="col-md-3">
+            <img
+              src="./../../assets/books/flow_book.jpg"
+              class="img-fluid rounded-start"
+              alt="..."
+            />
+          </div>
+          <div class="col-md-9">
+            <div class="card-body">
+              <h5 class="card-title">
+                Flow: The Psychology of Optimal Experience
+              </h5>
+              @if (currentLang === "en") {
+                <section lang="en">
+                  <p>
+                    <strong>Flow</strong> is a psychological state of deep
+                    concentration and full engagement in a single activity or in
+                    life itself. Your sense of time shifts, and awareness
+                    becomes fully anchored in the present moment. Action feels
+                    effortless yet controlled, accompanied by inner clarity,
+                    improved performance, and positive emotions.
+                  </p>
+
+                  <p>
+                    Flow is the state in which we create and experience genuine
+                    joy, fulfillment, and aliveness.
+                  </p>
+
+                  <p>
+                    For a flow state to emerge, several conditions need to be in
+                    place:
+                  </p>
+
+                  <ol>
+                    <li>Clearly defined goal</li>
+                    <li>Balance between skills and challenge</li>
+                    <li>
+                      <strong>Concentration and focus:</strong>
+                      Flow occurs when a person is fully immersed in the present
+                      activity and filters out distractions.
+                    </li>
+                    <li>Joy and meaning</li>
+                    <li>
+                      <strong>Immediate feedback:</strong>
+                      “Am I moving in the right direction?” (e.g., when the code
+                      runs)
+                    </li>
+                  </ol>
+                </section>
+              } @else {
+                <section lang="de">
+                  <p>
+                    <strong>Flow</strong> ist ein psychologischer Zustand tiefer
+                    Konzentration und vollständiger Hingabe an eine Tätigkeit –
+                    oder an das Leben selbst. Das Zeitgefühl verändert sich, das
+                    Bewusstsein ist vollständig im gegenwärtigen Moment
+                    verankert. Handeln geschieht mühelos und zugleich
+                    kontrolliert, begleitet von innerer Klarheit, erhöhter
+                    Leistungsfähigkeit und positiven Emotionen.
+                  </p>
+
+                  <p>
+                    Flow ist der Zustand, in dem wir schöpferisch tätig sind und
+                    dabei echte Freude, Erfüllung und Lebendigkeit erfahren.
+                  </p>
+
+                  <p>
+                    Damit ein Flow-Zustand entstehen kann, müssen mehrere
+                    Bedingungen erfüllt sein:
+                  </p>
+
+                  <ol>
+                    <li>Klar definiertes Ziel</li>
+                    <li>Balance von Fähigkeiten und Herausforderungen</li>
+                    <li>
+                      <strong>Konzentration und Fokus:</strong>
+                      Flow tritt auf, wenn eine Person sich vollständig auf die
+                      gegenwärtige Aktivität konzentriert und alle Ablenkungen
+                      ausblendet.
+                    </li>
+                    <li>Freude und Sinn</li>
+                    <li>
+                      <strong>Unmittelbares Feedback:</strong>
+                      „Bewege ich mich in die richtige Richtung?“ (z. B. wenn
+                      der Code läuft)
+                    </li>
+                  </ol>
+                </section>
+              }
+              <p class="card-text">
+                <small class="text-body-secondary"
+                  >Last updated 28.12.2025</small
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-6">
+      <div class="card mb-3">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img
+              src="./../../assets/books/near_enemies_book.jpg"
+              class="img-fluid rounded-start"
+              alt="..."
+            />
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">
+                Near Enemies of the Truth: Avoid the Pitfalls of a Spiritual
+                Life and Become Radically Free
+              </h5>
+              <p class="card-text">
+                @if (currentLang === "en") {
+                  Spirituality can be a powerful tool and mindset if it is
+                  understood correctly. We don’t fully know what is going on in
+                  this world. Yet at the same time, there are aspects of reality
+                  we experience as true, even if we cannot fully explain them.
+                  If you are searching for a better model to navigate your life
+                  and find grounding in spirituality, this book is a must-read.
+                  It helped me accelerate the process of critically reflecting
+                  on subtle patterns, assumptions, and blind spots. Most
+                  importantly, it supports the creation of sustainable inner
+                  maps that guide clearer thinking, wiser action, and deeper
+                  alignment.
+                } @else {
+                  Spiritualität kann ein kraftvolles Werkzeug und eine
+                  wirkungsvolle innere Haltung sein, wenn sie richtig verstanden
+                  wird. Wir wissen nicht vollständig, was in dieser Welt vor
+                  sich geht. Gleichzeitig gibt es Aspekte der Realität, die wir
+                  als wahr erfahren – selbst dann, wenn wir sie nicht
+                  vollständig erklären können. Wenn du nach einem besseren
+                  Modell suchst, um dein Leben bewusst zu navigieren, und dabei
+                  Halt in der Spiritualität findest, ist dieses Buch eine klare
+                  Leseempfehlung. Es hat mir geholfen, den Prozess der
+                  kritischen Reflexion über feine Muster, Annahmen und blinde
+                  Flecken deutlich zu beschleunigen. Vor allem unterstützt es
+                  die Entwicklung nachhaltiger innerer Landkarten, die zu
+                  klarerem Denken, weiserem Handeln und tieferer innerer
+                  Ausrichtung führen.
+                }
+              </p>
+              <p class="card-text">
+                <small class="text-body-secondary"
+                  >Last updated 3 mins ago</small
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-6">
+      <div class="card mb-3" style="max-width: 540px">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="..." class="img-fluid rounded-start" alt="..." />
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                This is a wider card with supporting text below as a natural
+                lead-in to additional content. This content is a little bit
+                longer.
+              </p>
+              <p class="card-text">
+                <small class="text-body-secondary"
+                  >Last updated 3 mins ago</small
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-6">
+      <div class="card mb-3" style="max-width: 540px">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="..." class="img-fluid rounded-start" alt="..." />
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                This is a wider card with supporting text below as a natural
+                lead-in to additional content. This content is a little bit
+                longer.
+              </p>
+              <p class="card-text">
+                <small class="text-body-secondary"
+                  >Last updated 3 mins ago</small
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

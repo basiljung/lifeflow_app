@@ -37,10 +37,16 @@
       data-bs-slide-to="4"
       aria-label="Slide 5"
     ></button>
+    <button
+      type="button"
+      data-bs-target="#textCarousel"
+      data-bs-slide-to="5"
+      aria-label="Slide 6"
+    ></button>
   </div>
 
   <!-- Carousel inner -->
-  <div class="carousel-inner text-center">
+  <div class="carousel-inner text-center text-light">
     <div
       class="carousel-item active p-4"
       style="
@@ -77,7 +83,7 @@
         min-height: 400px;
       "
     >
-      <div class="w-50 mx-auto">
+      <div class="w-50 mx-auto text-shadow">
         <h4>
           {{
             currentLang === "en" ? "2# - Coach & Mentor" : "2# - Coach & Mentor"
@@ -129,19 +135,37 @@
         min-height: 400px;
       "
     >
-      <div class="w-50 mx-auto">
+      <div class="w-50 mx-auto text-shadow">
         <h4>
-          {{
-            currentLang === "en"
-              ? "4# - Friend & Partner"
-              : "4# - Freund & Partner"
-          }}
+          {{ currentLang === "en" ? "4# - Partner" : "4# - Partner" }}
         </h4>
         <p>
           {{
             currentLang === "en"
-              ? "Deep, honest, and fun relationships are essential to me. I experience partnership as a space for healing, growth, and reflection. They are my greatest teachers."
-              : "Tiefe, ehrliche und freudvolle Beziehungen sind mir wesentlich. Partnerschaft erlebe ich als Raum für Heilung, Wachstum und Spiegelung. Sie sind der grösste Lehrmeister."
+              ? "I experience partnership as a space for healing, growth, and reflection. They are my greatest teachers."
+              : "Partnerschaft erlebe ich als Raum für Heilung, Wachstum und Spiegelung. Sie sind der grösste Lehrmeister."
+          }}
+        </p>
+      </div>
+    </div>
+    <div
+      class="carousel-item p-4"
+      style="
+        background-image: url(./../../../assets/friends.jpg);
+        background-size: cover;
+        background-position: center;
+        min-height: 400px;
+      "
+    >
+      <div class="w-50 mx-auto text-shadow">
+        <h4>
+          {{ currentLang === "en" ? "5# - Friends" : "5# - Freunde" }}
+        </h4>
+        <p>
+          {{
+            currentLang === "en"
+              ? "Deep, honest, and fun relationships are essential to me."
+              : "Tiefe, ehrliche und freudvolle Beziehungen sind mir wesentlich."
           }}
         </p>
       </div>
@@ -156,12 +180,12 @@
         min-height: 400px;
       "
     >
-      <div class="w-50 mx-auto">
+      <div class="w-50 mx-auto text-shadow">
         <h4>
           {{
             currentLang === "en"
-              ? "5# - Mountains, nature & sports enthusiast"
-              : "5# - Berg- & Sportbegeisterter"
+              ? "6# - Mountains, nature & sports enthusiast"
+              : "6# - Berg- & Sportbegeisterter"
           }}
         </h4>
         <p>
