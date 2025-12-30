@@ -39,9 +39,23 @@ Abonniere den kostenlosen Newsletter und entwickle einen klaren Geist, innere An
           </div>
           <div class="col-md-9">
             <div class="card-body">
-              <h5 class="card-title">
-                Flow: The Psychology of Optimal Experience
-              </h5>
+              <figure class="text-center">
+                <blockquote class="blockquote">
+                  <p>
+                    {{
+                      currentLang === "en"
+                        ? "Flow: The Psychology of Optimal Experience"
+                        : "Flow: Das Geheimnis des Glücks"
+                    }}
+                  </p>
+                </blockquote>
+                <figcaption class="blockquote-footer">
+                  Mihaly Robert Csikszentmihalyi<cite title="Source Title"
+                    >Flow</cite
+                  >
+                </figcaption>
+              </figure>
+
               @if (currentLang === "en") {
                 <section lang="en">
                   <p>
@@ -129,7 +143,7 @@ Abonniere den kostenlosen Newsletter und entwickle einen klaren Geist, innere An
         </div>
       </div>
     </div>
-    <div class="col-6">
+    <div class="col-9">
       <div class="card mb-3">
         <div class="row g-0">
           <div class="col-md-4">
@@ -141,10 +155,17 @@ Abonniere den kostenlosen Newsletter und entwickle einen klaren Geist, innere An
           </div>
           <div class="col-md-8">
             <div class="card-body">
-              <h5 class="card-title">
-                Near Enemies of the Truth: Avoid the Pitfalls of a Spiritual
-                Life and Become Radically Free
-              </h5>
+              <figure class="text-center">
+                <blockquote class="blockquote">
+                  <p>
+                    Near Enemies of the Truth: Avoid the Pitfalls of a Spiritual
+                    Life and Become Radically Free
+                  </p>
+                </blockquote>
+                <figcaption class="blockquote-footer">
+                  Christopher D. Wallis
+                </figcaption>
+              </figure>
               <p class="card-text">
                 @if (currentLang === "en") {
                   Spirituality can be a powerful tool and mindset if it is
@@ -177,7 +198,175 @@ Abonniere den kostenlosen Newsletter und entwickle einen klaren Geist, innere An
               </p>
               <p class="card-text">
                 <small class="text-body-secondary"
-                  >Last updated 3 mins ago</small
+                  >Last updated 28.12.2025</small
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-12">
+      <div class="card mb-3">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img
+              src="./../../assets/books/7_habits.jpg"
+              class="img-fluid rounded-start"
+            />
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <figure class="text-center">
+                <blockquote class="blockquote">
+                  <p>
+                    {{
+                      currentLang === "en"
+                        ? "7 Habits of highly effective people"
+                        : "7 Wege der Effektivität"
+                    }}
+                  </p>
+                </blockquote>
+                <figcaption class="blockquote-footer">Stephen Covey</figcaption>
+              </figure>
+              <p class="card-text">
+                @if (currentLang === "en") {
+                  <p>
+                    The book clearly and convincingly shows what truly leads to
+                    a fulfilling and successful life
+                    <strong>not in the short term, but sustainably</strong>.
+                  </p>
+
+                  <ul>
+                    <li>
+                      <strong>Purpose before activity:</strong>
+                      People are truly happy and effective when they know
+                      <em>why</em> they do what they do. They set their
+                      priorities consciously, self-determined, and in alignment
+                      with their values.
+                    </li>
+
+                    <li>
+                      <strong
+                        >Dealing with complexity instead of overwhelm:</strong
+                      >
+                      The real problem is not complexity or speed, but how we
+                      relate to them: clear priorities, healthy boundaries, a
+                      clear inner intention, and supportive systems and habits.
+                    </li>
+
+                    <li>
+                      <strong>The cultural misconception:</strong>
+                      Our modern culture preaches:
+                      <em>Do more. Do it faster.</em>
+                      Speed becomes the supposed solution to everything without
+                      asking what for, and at what cost.
+                    </li>
+
+                    <li>
+                      <strong>Focus creates inner peace:</strong>
+                      Balance and inner calm arise from a clear sense of the
+                      highest priorities and the courage to focus on them.
+                    </li>
+
+                    <li>
+                      <strong>External success ≠ inner fulfillment:</strong>
+                      Many people are outwardly successful, yet inwardly
+                      experience an unresolved hunger for alignment, genuine
+                      effectiveness, and deeply fulfilling relationships.
+                    </li>
+                  </ul>
+
+                  <p>
+                    The
+                    <strong>Character Ethic as the foundation</strong> states:
+                    True success and lasting fulfillment emerge from deeply
+                    rooted inner values and character traits not from
+                    superficial techniques, hacks, or short-term strategies.
+                  </p>
+
+                  <ul>
+                    <li>
+                      <strong
+                        >The principle of impact (from inside out):</strong
+                      >
+                      DNA &amp; past experiences → physiological state →
+                      perceptual filters, inner models &amp; beliefs → behavior
+                      &amp; habits → identity, character &amp; energy →
+                      environment, reality &amp; life trajectory
+                    </li>
+                  </ul>
+                } @else {
+                  <p>
+                    Das Buch zeigt auf
+                    <strong>klare und überzeugende Weise</strong>, was wirklich
+                    zu einem erfüllten und erfolgreichen Leben führt –
+                    <strong>nicht kurzfristig, sondern nachhaltig</strong>.
+                  </p>
+
+                  <ul>
+                    <li>
+                      <strong>Sinn vor Aktivität:</strong>
+                      Wirklich glücklich und wirksam sind Menschen, die wissen,
+                      <em>warum</em> sie tun, was sie tun. Sie setzen ihre
+                      Prioritäten bewusst, selbstbestimmt und im Einklang mit
+                      ihren Werten.
+                    </li>
+
+                    <li>
+                      <strong>Umgang statt Überforderung:</strong>
+                      Nicht Komplexität oder Geschwindigkeit sind das
+                      eigentliche Problem, sondern unser Umgang damit: klare
+                      Prioritäten, gesunde Grenzen, ein klares inneres Wollen
+                      sowie tragfähige Systeme und Gewohnheiten.
+                    </li>
+
+                    <li>
+                      <strong>Der kulturelle Irrtum:</strong>
+                      Unsere moderne Kultur predigt:
+                      <em>Mach mehr. Mach schneller.</em>
+                      Geschwindigkeit wird zur vermeintlichen Lösung für alles –
+                      ohne zu fragen, wofür und zu welchem Preis.
+                    </li>
+
+                    <li>
+                      <strong>Fokus erzeugt inneren Frieden:</strong>
+                      Balance und innere Ruhe entstehen durch ein klares Gefühl
+                      für die höchsten Prioritäten und den mutigen Fokus darauf.
+                    </li>
+
+                    <li>
+                      <strong>Äußerer Erfolg ≠ innere Erfüllung:</strong>
+                      Viele Menschen sind äußerlich erfolgreich, erleben
+                      innerlich jedoch einen ungelösten Hunger nach Stimmigkeit,
+                      echter Wirksamkeit und tief erfüllenden Beziehungen.
+                    </li>
+                  </ul>
+
+                  <p>
+                    Die <strong>Charakter-Ethik als Fundament</strong> besagt:
+                    Wahrer Erfolg und nachhaltige Erfüllung entstehen aus tief
+                    verankerten inneren Werten und Charaktereigenschaften, nicht
+                    aus oberflächlichen Techniken, Hacks oder kurzfristigen
+                    Strategien.
+                  </p>
+
+                  <ul>
+                    <li>
+                      <strong
+                        >Das Wirkungsprinzip (von innen nach außen):</strong
+                      >
+                      DNA & vergangene Erfahrungen → physiologischer Zustand →
+                      Wahrnehmungsfilter, innere Modelle &amp; Überzeugungen →
+                      Verhalten & Gewohnheiten → Identität, Charakter &amp;
+                      Energie → Umfeld, Realität &amp; Lebensverlauf
+                    </li>
+                  </ul>
+                }
+              </p>
+              <p class="card-text">
+                <small class="text-body-secondary"
+                  >Last updated 28.12.2025</small
                 >
               </p>
             </div>
@@ -186,46 +375,32 @@ Abonniere den kostenlosen Newsletter und entwickle einen klaren Geist, innere An
       </div>
     </div>
     <div class="col-6">
-      <div class="card mb-3" style="max-width: 540px">
+      <div class="card mb-3">
         <div class="row g-0">
           <div class="col-md-4">
-            <img src="..." class="img-fluid rounded-start" alt="..." />
+            <img
+              src="./../../assets/books/dose_effect.jpg"
+              class="img-fluid rounded-start"
+            />
           </div>
           <div class="col-md-8">
             <div class="card-body">
-              <h5 class="card-title">Card title</h5>
+              <figure class="text-center">
+                <blockquote class="blockquote">
+                  <p>
+                    The DOSE Effect: Optimize Your Brain and Body by Boosting
+                    Your Dopamine, Oxytocin, Serotonin, and Endorphins
+                  </p>
+                </blockquote>
+                <figcaption class="blockquote-footer">Tj Power</figcaption>
+              </figure>
               <p class="card-text">
-                This is a wider card with supporting text below as a natural
-                lead-in to additional content. This content is a little bit
-                longer.
+                @if (currentLang === "en") {
+                } @else {}
               </p>
               <p class="card-text">
                 <small class="text-body-secondary"
-                  >Last updated 3 mins ago</small
-                >
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-6">
-      <div class="card mb-3" style="max-width: 540px">
-        <div class="row g-0">
-          <div class="col-md-4">
-            <img src="..." class="img-fluid rounded-start" alt="..." />
-          </div>
-          <div class="col-md-8">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">
-                This is a wider card with supporting text below as a natural
-                lead-in to additional content. This content is a little bit
-                longer.
-              </p>
-              <p class="card-text">
-                <small class="text-body-secondary"
-                  >Last updated 3 mins ago</small
+                  >Last updated 28.12.2025</small
                 >
               </p>
             </div>
