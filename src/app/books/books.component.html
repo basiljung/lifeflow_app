@@ -143,7 +143,7 @@ Abonniere den kostenlosen Newsletter und entwickle einen klaren Geist, innere An
         </div>
       </div>
     </div>
-    <div class="col-9">
+    <div class="col-12">
       <div class="card mb-3">
         <div class="row g-0">
           <div class="col-md-4">
@@ -374,7 +374,7 @@ Abonniere den kostenlosen Newsletter und entwickle einen klaren Geist, innere An
         </div>
       </div>
     </div>
-    <div class="col-6">
+    <div class="col-12">
       <div class="card mb-3">
         <div class="row g-0">
           <div class="col-md-4">
@@ -396,7 +396,10 @@ Abonniere den kostenlosen Newsletter und entwickle einen klaren Geist, innere An
               </figure>
               <p class="card-text">
                 @if (currentLang === "en") {
-                } @else {}
+                  Comming...
+                } @else {
+                  Comming...
+                }
               </p>
               <p class="card-text">
                 <small class="text-body-secondary"
@@ -404,6 +407,44 @@ Abonniere den kostenlosen Newsletter und entwickle einen klaren Geist, innere An
                 >
               </p>
             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-12">
+    <div class="card mb-3">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img
+            src="./../../assets/books/thinking_fast_slow.jpg"
+            class="img-fluid rounded-start"
+          />
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <figure class="text-center">
+              <blockquote class="blockquote">
+                <p>
+                  {{
+                    currentLang === "en"
+                      ? "Thinking, Fast and Slow"
+                      : "Schnelles Denken, langsames Denken"
+                  }}
+                </p>
+              </blockquote>
+              <figcaption class="blockquote-footer">Daniel Kahneman</figcaption>
+            </figure>
+            <p class="card-text">
+              @if (currentLang === "en") {
+                Comming...
+              } @else {
+                Comming...
+              }
+            </p>
+            <p class="card-text">
+              <small class="text-body-secondary">Last updated 28.12.2025</small>
+            </p>
           </div>
         </div>
       </div>

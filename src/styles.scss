@@ -236,6 +236,7 @@ main {
 // Variants
 .title-box-green {
   @include title-box($color-secondary, $color-accent, #ffffff);
+  box-shadow: 0 10px 25px #0d1b2a;
   p,
   ol,
   ul {

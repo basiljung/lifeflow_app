@@ -22,7 +22,11 @@
         <a
           class="btn waves-effect waves-light btn-selector btn-gradient pulse-btn"
           [routerLink]="['/', currentLang, 'clarity']"
-          >{{ currentLang === "en" ? "Orientation" : "Orientierung" }}
+          >{{
+            currentLang === "en"
+              ? "Lack of direction"
+              : "Orientierungslosigkeit"
+          }}
           <i class="bi bi-geo-alt"></i>
         </a>
       </div>
@@ -34,7 +38,7 @@
         <a
           class="btn waves-effect waves-light btn-selector btn-gradient pulse-btn"
           [routerLink]="['/', currentLang, 'inner-peace']"
-          >{{ currentLang === "en" ? "Inner Peace" : "Innere Ruhe" }}
+          >{{ currentLang === "en" ? "Inner Restlesness" : "Innere Unruhe" }}
           <i class="bi bi-circle"></i>
         </a>
       </div>
@@ -46,7 +50,7 @@
         <a
           class="btn waves-effect waves-light btn-selector btn-gradient pulse-btn"
           [routerLink]="['/', currentLang, 'drive']"
-          >{{ currentLang === "en" ? "Energy" : "Energie" }}
+          >{{ currentLang === "en" ? "Lack of Energy" : "Fehlende Energie" }}
           <i class="bi bi-lightning"></i>
         </a>
       </div>
