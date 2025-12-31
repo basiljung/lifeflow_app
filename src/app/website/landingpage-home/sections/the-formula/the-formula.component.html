@@ -28,45 +28,49 @@
         <i>
           {{
             currentLang === "en"
-              ? "Once you realize you can’t get anywhere, you start to act and think differently - enter the LifeFlow.Now-CYCLE™."
-              : "Sobald du erkennst, dass du nirgends ankommen wirst, beginnst du anders zu handeln und zu denken - steige in the LifeFlow.Now-ZYKLUS™ ein. "
+              ? "Once you realize you can’t get anywhere, you start to act and think differently; enter the LifeFlow.Now-CYCLE™."
+              : "Sobald du erkennst, dass du nirgends ankommen wirst, beginnst du anders zu handeln und zu denken; steige in the LifeFlow.Now-ZYKLUS™ ein. "
           }}</i
         >
       </p>
     </div>
   </div>
 
-  <hr style="color: white" />
+  <div class="row my-4 justify-content-center">
+    <hr class="my-0 w-50 color-white" />
+  </div>
 
   <app-carousel-formula> </app-carousel-formula>
 
-  <hr style="color: white" />
+  <div class="row my-4 justify-content-center">
+    <hr class="my-0 w-50 color-white" />
+  </div>
 
-  <div class="row" style="margin: 1rem">
-    <div
-      class="card text-center col-sm-10 col-md-8 mx-auto"
-      style="background-color: #1e6f5c"
-    >
-      <div class="card-body card-custom-text-formula">
-        <h5>
-          <i>{{
-            currentLang === "en"
-              ? "Life repeats itself until we face what we try to avoid. Once we realize there’s nothing to fear in our inner world, life turns into play. True change begins within—let’s explore it together."
-              : "Das Leben wiederholt sich, bis wir uns öffnen für das, was wir zu vermeiden versuchen. Sobald wir erkennen, dass wir keine Angst vor unserer inneren Welt haben müssen, wird das Leben zum Spiel. Wahre Veränderung beginnt im Inneren – lass uns gemeinsam dorthin schauen."
-          }}</i>
-        </h5>
-      </div>
-      <div style="margin: 2rem">
+  <div>
+    <app-details-process></app-details-process>
+  </div>
+
+  <div class="card bg-transparent hero-card">
+    <img
+      src="./../../../../../assets/mountainlake.jpg"
+      class="card-img h-100 w-100 object-fit-cover"
+    />
+    <div class="card-img-overlay">
+      <p class="m-4 font-formula-custom">
+        {{
+          currentLang === "en"
+            ? "Life repeats itself until we face what we try to avoid. Once we realize there’s nothing to fear in our inner world, life turns into play. True change begins within. Let’s explore it together."
+            : "Das Leben wiederholt sich, bis wir uns öffnen für das, was wir zu vermeiden versuchen. Sobald wir erkennen, dass wir keine Angst vor unserer inneren Welt haben müssen, wird das Leben zum Spiel. Wahre Veränderung beginnt im Inneren. Lass uns gemeinsam dorthin schauen."
+        }}
+      </p>
+      <div class="mt-auto d-flex justify-content-center p-3">
         <a
-          class="btn waves-effect waves-light btn-selector btn-gradient pulse-btn"
+          class="waves-effect waves-light btn bg-highlight pulse-btn"
           data-bs-toggle="collapse"
           href="#collapseDetails"
-          role="button"
           style="border-radius: 12px"
-          aria-expanded="false"
-          aria-controls="collapseExample"
         >
-          <span class="text-secondary">{{
+          <span>{{
             currentLang === "en"
               ? "TELL ME MORE ABOUT THE PROCESS"
               : "MEHR ERFAHREN ÜBER DEN PROZESS"
@@ -75,8 +79,4 @@
       </div>
     </div>
   </div>
-</div>
-
-<div>
-  <app-details-process></app-details-process>
 </div>

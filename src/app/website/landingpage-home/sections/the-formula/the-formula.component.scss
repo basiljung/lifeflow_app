@@ -1,4 +1,23 @@
 .font-formula-custom {
   font-size: clamp(18px, 1vw + 0.4rem, 20px);
-  font-weight: 800;
+  font-weight: 500;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.35);
+}
+
+.hero-card {
+  min-height: 250px; /* safe minimum for small screens */
+  height: 40vh; /* responsive feel */
+  max-height: 450px; /* avoid getting ridiculous on large screens */
+}
+
+@media (min-width: 768px) {
+  .hero-card {
+    height: 60vh;
+  }
+}
+
+@media (min-width: 1200px) {
+  .hero-card {
+    height: 520px; /* or keep vh if you prefer */
+  }
 }
