@@ -4,14 +4,14 @@
       <h5>
         @if (currentLang === "en") {
           LifeFlow Coaching & Mentoring™ helps you understand your inner
-          operating system—what drives you, shapes your decisions, and
+          operating system what drives you, shapes your decisions, and
           influences your behavior. By aligning values, strengths, needs, and
           inner guidance, you move forward with clarity, inner peace, and
           grounded confidence. Built for ambitious, time-constrained
           individuals.
         } @else {
           LifeFlow Coaching & Mentoring™ hilft dir, dein inneres Betriebssystem
-          zu verstehen – das, was dich antreibt, deine Entscheidungen prägt und
+          zu verstehen das, was dich antreibt, deine Entscheidungen prägt und
           dein Verhalten beeinflusst. Durch die Ausrichtung von Werten, Stärken,
           Bedürfnissen und innerer Führung gehst du deinen Weg mit mehr
           Klarheit, innerer Ruhe und geerdetem Selbstvertrauen. Entwickelt für
@@ -209,7 +209,7 @@
       </div>
     </section>
   </div>
-  <section id="usp" class="usp-section">
+  <div>
     <h2>
       {{
         currentLang === "en"
@@ -219,207 +219,132 @@
     </h2>
 
     <app-read-more [lines]="3" slot="text">
-      <p class="text-primary fw-bold">
-        {{ currentLang === "en" ? "5# – Integration" : "5# – Integration" }}
-      </p>
-      <div class="mx-4 text-primary">
-        <span
-          >•
-          {{
-            currentLang === "en"
-              ? "Live & cultivate flow"
-              : "Lebe & kultiviere Flow"
-          }}</span
-        ><br />
-        <span
-          >•
-          {{
-            currentLang === "en"
-              ? "Observe yourself and the signals of your system."
-              : "Beobachte dich und die Signale deines Systems."
-          }}</span
-        ><br />
-        <span
-          >•
-          {{
-            currentLang === "en"
-              ? "Act, feel, reflect align thinking, feeling, and action; integrate emotions and intuition with awareness."
-              : "Handle, fühle, reflektiere bringe Denken, Fühlen und Handeln in Einklang; integriere Emotionen und Intuition bewusst."
-          }}</span
-        ><br />
-        <span
-          >•
-          {{
-            currentLang === "en"
-              ? "Review, adjust, and create add play and celebration so learning lasts."
-              : "Überprüfe, passe an und erschaffe füge Spiel und Feier hinzu, damit das Lernen nachhaltig wirkt."
-          }}</span
-        ><br />
-      </div>
       <div slot="text-readmore-comp">
-        <div style="margin: 0.5rem">
-          <div>
-            •
-            <b>{{
-              currentLang === "en" ? "1:1, not a crowd." : "1:1, keine Masse."
-            }}</b>
+        <span
+          >•
+          <b>{{
+            currentLang === "en" ? "1:1, not a crowd." : "1:1, keine Masse."
+          }}</b>
+          {{
+            currentLang === "en"
+              ? "You work directly with me, fully seen, supported, and accountable."
+              : "Du arbeitest direkt mit mir voll gesehen, unterstützt und verantwortlich begleitet."
+          }} </span
+        ><br />
+        <span
+          >•
+          <b>{{ currentLang === "en" ? "Certified." : "Zertifiziert." }}</b>
+          {{
+            currentLang === "en"
+              ? "I’m a certified coach in a world where everyone’s a “coach,” I hold the line on quality and responsibility."
+              : "Ich bin ein zertifizierter Coach in einer Welt, in der sich jeder „Coach“ nennt, halte ich an Qualität und Verantwortung fest."
+          }}</span
+        ><br />
+        <span
+          >•
+          <b>{{
+            currentLang === "en" ? "Identity shift." : "Identitätswandel."
+          }}</b>
+          {{
+            currentLang === "en"
+              ? "We shape a new identity   carried by transformed beliefs and your personal sense of meaning."
+              : "Wir formen eine neue Identität   getragen von transformierten Glaubenssätzen und deinem persönlichen Sinn."
+          }}</span
+        ><br />
+        <span
+          >•
+          <b>{{
+            currentLang === "en"
+              ? "Built for busy & ambitions people."
+              : "Gemacht für beschäftigte & ambitionierte Menschen."
+          }}</b>
+          {{
+            currentLang === "en"
+              ? "Flexible. Online. Automated. Easy access."
+              : "Flexible. Online. Automatisiert. Einfacher Zugriff."
+          }}</span
+        ><br />
+        <span
+          >•
+          <b>{{
+            currentLang === "en" ? "Practice + theory." : "Praxis + Theorie."
+          }}</b>
+          {{
+            currentLang === "en"
+              ? "Short, targeted exercises with fast feedback. You track insights in one place, see steady progress, and keep the overview."
+              : "Kurze, gezielte Übungen mit schnellem Feedback. Du hältst deine Erkenntnisse an einem Ort fest, siehst kontinuierlichen Fortschritt und behältst den Überblick."
+          }}</span
+        ><br />
+        <span
+          >•
+          {{
+            currentLang === "en"
+              ? "We also assess your"
+              : "Wir beurteilen auch Ihr "
+          }}
+          <b>
             {{
               currentLang === "en"
-                ? "You work directly with me—fully seen, supported, and accountable."
-                : "Du arbeitest direkt mit mir – voll gesehen, unterstützt und verantwortlich begleitet."
+                ? "neurotransmitter balance."
+                : "Neurotransmitter-Gleichgewicht."
             }}
-          </div>
-          <br />
-
-          <div>
-            •
-            <b>{{ currentLang === "en" ? "Certified." : "Zertifiziert." }}</b>
+          </b></span
+        ><br />
+        <span
+          >•
+          <b>
             {{
               currentLang === "en"
-                ? "I’m a certified coach in a world where everyone’s a “coach,” I hold the line on quality and responsibility."
-                : "Ich bin ein zertifizierter Coach – in einer Welt, in der sich jeder „Coach“ nennt, halte ich an Qualität und Verantwortung fest."
+                ? "Grounded. Systematic. Integral perspective - no woo-woo."
+                : "Bodenständig. Systematische. Integrale Perspektive   kein woo-woo."
             }}
-          </div>
-          <br />
-
-          <div>
-            •
-            <b>{{
-              currentLang === "en" ? "Identity shift." : "Identitätswandel."
-            }}</b>
-            {{
-              currentLang === "en"
-                ? "We shape a new identity – carried by transformed beliefs and your personal sense of meaning."
-                : "Wir formen eine neue Identität – getragen von transformierten Glaubenssätzen und deinem persönlichen Sinn."
-            }}
-          </div>
-          <br />
-
-          <div>
-            •
-            <b>{{
-              currentLang === "en"
-                ? "Built for busy & ambitions people."
-                : "Gemacht für beschäftigte & ambitionierte Menschen."
-            }}</b>
-            {{
-              currentLang === "en"
-                ? "Flexible. Online. Automated. Easy access."
-                : "Flexible. Online. Automatisiert. Einfacher Zugriff."
-            }}
-          </div>
-          <br />
-
-          <div>
-            •
-            <b>{{
-              currentLang === "en" ? "Practice + theory." : "Praxis + Theorie."
-            }}</b>
-            {{
-              currentLang === "en"
-                ? "Short, targeted exercises with fast feedback. You track insights in one place, see steady progress, and keep the overview."
-                : "Kurze, gezielte Übungen mit schnellem Feedback. Du hältst deine Erkenntnisse an einem Ort fest, siehst kontinuierlichen Fortschritt und behältst den Überblick."
-            }}
-          </div>
-          <br />
-
-          <div>
-            •
-            {{
-              currentLang === "en"
-                ? "We also assess your"
-                : "Wir beurteilen auch Ihr "
-            }}
-            <b>
-              {{
-                currentLang === "en"
-                  ? "neurotransmitter balance."
-                  : "Neurotransmitter-Gleichgewicht."
-              }}
-            </b>
-          </div>
-          <br />
-
-          <div>
-            •
-            <b>
-              {{
-                currentLang === "en"
-                  ? "Grounded. Systematic. Integral perspective - no woo-woo."
-                  : "Bodenständig. Systematische. Integrale Perspektive – kein woo-woo."
-              }}
-            </b>
-          </div>
-          <br />
-
-          <div>
-            •
-            <b>{{
-              currentLang === "en"
-                ? "Know yourself, prompt better."
-                : "Erkenne dich selbst, bessere Prompts."
-            }}</b>
-            {{
-              currentLang === "en"
-                ? "Muddy inputs = muddy outputs. You’ll learn how you work—patterns, energy, biology—and what generally works for humans. Result: sharper thinking and far better GPT prompts for your self-reflexion."
-                : "Unklare Eingaben = unklare Ergebnisse. Du lernst, wie du funktionierst – Muster, Energie, Biologie – und was allgemein für Menschen funktioniert. Ergebnis: klareres Denken und deutlich bessere GPT-Prompts für deine Selbstreflexion."
-            }}
-          </div>
-          <br />
-
-          <div>
-            •
-            <b>{{
-              currentLang === "en"
-                ? "Clear roadmap, tailored pace."
-                : "Klarer Fahrplan, angepasstes Tempo."
-            }}</b>
-            {{
-              currentLang === "en"
-                ? "A proven step-by-step path sets the guardrails; inside them, we adapt to your speed & need. - Programm was co-created with real clients."
-                : "Ein bewährter Schritt-für-Schritt-Prozess setzt die Leitplanken; darin passen wir uns deinem Tempo und deinen Bedürfnissen an. – Das Programm wurde mit echten Klienten entwickelt."
-            }}
-          </div>
-          <br />
-
-          <div>
-            •
-            <b>{{
-              currentLang === "en" ? "We go deep." : "Wir gehen in die Tiefe."
-            }}</b>
-            {{
-              currentLang === "en"
-                ? "Coaching uncovers the hidden stories that shape your present – and opens space for change."
-                : "Coaching deckt die verborgenen Geschichten auf, die deine Gegenwart prägen – und öffnet Raum für Veränderung."
-            }}
-          </div>
-          <br />
-
-          <div>
-            •
-            <b>{{ currentLang === "en" ? "Approach:" : "Ansatz:" }}</b>
-            {{
-              currentLang === "en"
-                ? "Depth, Long-term thinking, Simplicity"
-                : "Tiefe, Langfristigkeit, Einfachheit"
-            }}
-          </div>
-        </div>
+          </b></span
+        ><br />
+        <span
+          >•
+          <b>{{
+            currentLang === "en"
+              ? "Clear roadmap, tailored pace."
+              : "Klarer Fahrplan, angepasstes Tempo."
+          }}</b>
+          {{
+            currentLang === "en"
+              ? "A proven step-by-step path sets the guardrails; inside them, we adapt to your speed & need. Programm was co-created with real clients."
+              : "Ein bewährter Schritt-für-Schritt-Prozess setzt die Leitplanken; darin passen wir uns deinem Tempo und deinen Bedürfnissen an. Das Programm wurde mit echten Klienten entwickelt."
+          }}</span
+        ><br />
+        <span
+          >•
+          {{
+            currentLang === "en"
+              ? "Uncover the hidden stories shaping your present and creating space for change."
+              : "Entdecke die verborgenen Geschichten, die deine Gegenwart prägen und Raum für Veränderung öffnen."
+          }}</span
+        ><br />
+        <span
+          >•
+          <b>{{ currentLang === "en" ? "Approach:" : "Ansatz:" }}</b>
+          {{
+            currentLang === "en"
+              ? "Depth, Long-term thinking, Simplicity"
+              : "Tiefe, Langfristigkeit, Einfachheit"
+          }}</span
+        >
       </div>
     </app-read-more>
-  </section>
+  </div>
 
   <hr class="bg-primary" />
 
   <div class="row text-center">
     <div class="ccol s-12 m-8">
-      <h2>
+      <h3>
         {{
           currentLang === "en"
             ? "I know your challenge is unique, that's why we work 1:1"
             : "Ich weiß, dass deine Herausforderung einzigartig ist, deshalb arbeiten wir 1:1"
         }}
-      </h2>
+      </h3>
       @if (currentLang === "en") {
         <p>
           As a certified LTC &
@@ -428,8 +353,8 @@
             target="_blank"
             >EASC</a
           >
-          coach and mentor, I’m here to guide you systematically - with empathy
-          and awareness - through your personal development process.
+          coach and mentor, I’m here to guide you systematically, with empathy
+          and awareness, through your personal development process.
         </p>
       } @else {
         <p>
