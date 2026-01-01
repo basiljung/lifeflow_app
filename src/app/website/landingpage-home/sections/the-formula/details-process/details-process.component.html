@@ -1,191 +1,423 @@
 <div class="collapse" id="collapseDetails">
-  <div class="card card-body title-box-white container">
+  <div>
+    <div class="m-4">
+      <h5>
+        @if (currentLang === "en") {
+          LifeFlow Coaching & Mentoring™ helps you understand your inner
+          operating system—what drives you, shapes your decisions, and
+          influences your behavior. By aligning values, strengths, needs, and
+          inner guidance, you move forward with clarity, inner peace, and
+          grounded confidence. Built for ambitious, time-constrained
+          individuals.
+        } @else {
+          LifeFlow Coaching & Mentoring™ hilft dir, dein inneres Betriebssystem
+          zu verstehen – das, was dich antreibt, deine Entscheidungen prägt und
+          dein Verhalten beeinflusst. Durch die Ausrichtung von Werten, Stärken,
+          Bedürfnissen und innerer Führung gehst du deinen Weg mit mehr
+          Klarheit, innerer Ruhe und geerdetem Selbstvertrauen. Entwickelt für
+          ambitionierte, zeitlich stark eingebundene Menschen.
+        }
+      </h5>
+    </div>
+
+    <app-overview-program></app-overview-program>
+    <app-take-aways></app-take-aways>
     <section>
-      <app-overview-program></app-overview-program>
-    </section>
-    <section>
-      <app-take-aways></app-take-aways>
-    </section>
-    <section>
-      <h2>
+      <h3>
         {{ currentLang === "en" ? "5 phases" : "5 Phasen" }}
-      </h2>
+      </h3>
       <div
         class="scroll-container-vertical scroll-container"
         style="margin: 1rem"
       >
         <!-- 1) Direction · Resilience -->
         <div class="card card-body">
-          <h4>
+          <p class="text-primary fw-bold">
             {{ currentLang === "en" ? "1# – Awareness" : "1# – Bewusstsein" }}
-          </h4>
-          <ul style="margin: 0rem">
-            <li>
+          </p>
+          <div class="mx-4 text-primary">
+            <span
+              >•
               {{
                 currentLang === "en"
-                  ? "Map your inner landscape: thoughts, emotions, behaviors — and the ways you block yourself."
-                  : "Erkunde deine innere Landschaft: Gedanken, Gefühle, Verhaltensweisen — und die Wege, wie du dich selbst blockierst."
-              }}
-            </li>
-
-            <li>
+                  ? "Map your inner landscape: thoughts, emotions, behaviors and the ways you block yourself."
+                  : "Erkunde deine innere Landschaft: Gedanken, Gefühle, Verhaltensweisen und die Wege, wie du dich selbst blockierst."
+              }}</span
+            ><br />
+            <span
+              >•
               {{
                 currentLang === "en"
                   ? "Establish your standpoint using salutogenesis (what strengthens health and resilience)."
                   : "Finde deinen Standpunkt mithilfe der Salutogenese (was Gesundheit und Resilienz stärkt)."
-              }}
-            </li>
-
-            <li>
+              }}</span
+            ><br />
+            <span
+              >•
               {{
                 currentLang === "en"
-                  ? "Practice presence. Apply an integral perspective — Head (clarity), Heart (connection), Hands (action)."
-                  : "Übe Präsenz. Nutze eine integrale Perspektive — Kopf (Klarheit), Herz (Verbindung), Hände (Handeln)."
-              }}
-            </li>
-          </ul>
+                  ? "Practice presence. Apply an integral perspective Head (clarity), Heart (connection), Hands (action)."
+                  : "Übe Präsenz. Nutze eine integrale Perspektive Kopf (Klarheit), Herz (Verbindung), Hände (Handeln)."
+              }}</span
+            ><br />
+          </div>
         </div>
 
         <!-- 2) Self-Understanding · Self-Awareness -->
         <div class="card card-body">
-          <h4>
+          <p class="text-primary fw-bold">
             {{
               currentLang === "en"
                 ? "2# – Self-Knowledge"
                 : "2# – Selbstkenntnis"
             }}
-          </h4>
-          <ul style="margin: 0rem">
-            <li>
+          </p>
+          <div class="mx-4 text-primary">
+            <span
+              >•
               {{
                 currentLang === "en"
                   ? "Look at biology and neurobalance: how body states shape mood, focus, and energy."
                   : "Betrachte Biologie und Neurobalance: wie Körperzustände Stimmung, Fokus und Energie beeinflussen."
-              }}
-            </li>
-
-            <li>
+              }}</span
+            ><br />
+            <span
+              >•
               {{
                 currentLang === "en"
                   ? "Clarify values, strengths, needs, motivators, consciousness level, and limbic type."
                   : "Kläre Werte, Stärken, Bedürfnisse, Motivatoren, Bewusstseinsstufe und limbischen Typ."
-              }}
-            </li>
-          </ul>
+              }}</span
+            ><br />
+          </div>
         </div>
 
         <!-- 3) Align · Strategy -->
         <div class="card card-body">
-          <h4>
+          <p class="text-primary fw-bold">
             {{
               currentLang === "en"
                 ? "3# – Direction · Purpose"
                 : "3# – Richtung · Sinn"
             }}
-          </h4>
-          <ul style="margin: 0rem">
-            <li>
+          </p>
+          <div class="mx-4 text-primary">
+            <span
+              >•
               {{
                 currentLang === "en"
                   ? "Define authentic goals, visions, and purpose."
                   : "Definiere authentische Ziele, Visionen und deinen Sinn."
-              }}
-            </li>
-
-            <li>
+              }}</span
+            ><br />
+            <span
+              >•
               {{
                 currentLang === "en"
                   ? "Translate them into structures, priorities, habits, and simple systems."
                   : "Übersetze sie in Strukturen, Prioritäten, Gewohnheiten und einfache Systeme."
-              }}
-            </li>
-
-            <li>
+              }}</span
+            ><br />
+            <span
+              >•
               {{
                 currentLang === "en"
-                  ? "Design for motivation and joy — not just willpower."
-                  : "Gestalte für Motivation und Freude — nicht nur für Willenskraft."
-              }}
-            </li>
-          </ul>
+                  ? "Design for motivation and joy not just willpower."
+                  : "Gestalte für Motivation und Freude nicht nur für Willenskraft."
+              }}</span
+            ><br />
+          </div>
         </div>
 
         <!-- 4) Align · Strategy -->
         <div class="card card-body">
-          <h4>
+          <p class="text-primary fw-bold">
             {{
               currentLang === "en"
                 ? "4# – Priorities & joyful action"
                 : "4# – Prioritäten & begeistertes Handeln"
             }}
-          </h4>
-          <ul style="margin: 0rem">
-            <li>
+          </p>
+          <div class="mx-4 text-primary">
+            <span
+              >•
               {{
                 currentLang === "en"
                   ? "You take action with confidence and joy, because the next step makes sense."
                   : "Du handelst mit Selbstbewusstsein und Freude, weil der nächste Schritt Sinn ergibt."
-              }}
-            </li>
-
-            <li>
+              }}</span
+            ><br />
+            <span
+              >•
               {{
                 currentLang === "en"
                   ? "Translate insights into structures, priorities, habits, and simple systems."
                   : "Übersetze Erkenntnisse in Strukturen, Prioritäten, Gewohnheiten und einfache Systeme."
-              }}
-            </li>
-
-            <li>
+              }}</span
+            ><br />
+            <span
+              >•
               {{
                 currentLang === "en"
-                  ? "Design for motivation and joy — not just willpower."
-                  : "Gestalte für Motivation und Freude — nicht nur für Willenskraft."
-              }}
-            </li>
-          </ul>
+                  ? "Design for motivation and joy not just willpower."
+                  : "Gestalte für Motivation und Freude nicht nur für Willenskraft."
+              }}</span
+            ><br />
+          </div>
         </div>
 
         <!-- 5) Live · Cultivate Flow -->
         <div class="card card-body">
-          <h4>
+          <p class="text-primary fw-bold">
             {{ currentLang === "en" ? "5# – Integration" : "5# – Integration" }}
-          </h4>
-          <ul style="margin: 0rem">
-            <li>
+          </p>
+          <div class="mx-4 text-primary">
+            <span
+              >•
               {{
                 currentLang === "en"
                   ? "Live & cultivate flow"
                   : "Lebe & kultiviere Flow"
-              }}
-            </li>
-
-            <li>
+              }}</span
+            ><br />
+            <span
+              >•
               {{
                 currentLang === "en"
                   ? "Observe yourself and the signals of your system."
                   : "Beobachte dich und die Signale deines Systems."
-              }}
-            </li>
-
-            <li>
+              }}</span
+            ><br />
+            <span
+              >•
               {{
                 currentLang === "en"
-                  ? "Act, feel, reflect — align thinking, feeling, and action; integrate emotions and intuition with awareness."
-                  : "Handle, fühle, reflektiere — bringe Denken, Fühlen und Handeln in Einklang; integriere Emotionen und Intuition bewusst."
-              }}
-            </li>
-
-            <li>
+                  ? "Act, feel, reflect align thinking, feeling, and action; integrate emotions and intuition with awareness."
+                  : "Handle, fühle, reflektiere bringe Denken, Fühlen und Handeln in Einklang; integriere Emotionen und Intuition bewusst."
+              }}</span
+            ><br />
+            <span
+              >•
               {{
                 currentLang === "en"
-                  ? "Review, adjust, and create — add play and celebration so learning lasts."
-                  : "Überprüfe, passe an und erschaffe — füge Spiel und Feier hinzu, damit das Lernen nachhaltig wirkt."
-              }}
-            </li>
-          </ul>
+                  ? "Review, adjust, and create add play and celebration so learning lasts."
+                  : "Überprüfe, passe an und erschaffe füge Spiel und Feier hinzu, damit das Lernen nachhaltig wirkt."
+              }}</span
+            ><br />
+          </div>
         </div>
       </div>
     </section>
+  </div>
+  <section id="usp" class="usp-section">
+    <h1>
+      {{
+        currentLang === "en"
+          ? "What makes the LifeFlow Coaching™ different?"
+          : "Was zeichnet das LifeFlow Coaching™ aus?"
+      }}
+    </h1>
+
+    <app-read-more [lines]="3" slot="text">
+      <div slot="text-readmore-comp">
+        <div style="margin: 0.5rem">
+          <div>
+            •
+            <b>{{
+              currentLang === "en" ? "1:1, not a crowd." : "1:1, keine Masse."
+            }}</b>
+            {{
+              currentLang === "en"
+                ? "You work directly with me—fully seen, supported, and accountable."
+                : "Du arbeitest direkt mit mir – voll gesehen, unterstützt und verantwortlich begleitet."
+            }}
+          </div>
+          <br />
+
+          <div>
+            •
+            <b>{{ currentLang === "en" ? "Certified." : "Zertifiziert." }}</b>
+            {{
+              currentLang === "en"
+                ? "I’m a certified coach in a world where everyone’s a “coach,” I hold the line on quality and responsibility."
+                : "Ich bin ein zertifizierter Coach – in einer Welt, in der sich jeder „Coach“ nennt, halte ich an Qualität und Verantwortung fest."
+            }}
+          </div>
+          <br />
+
+          <div>
+            •
+            <b>{{
+              currentLang === "en" ? "Identity shift." : "Identitätswandel."
+            }}</b>
+            {{
+              currentLang === "en"
+                ? "We shape a new identity – carried by transformed beliefs and your personal sense of meaning."
+                : "Wir formen eine neue Identität – getragen von transformierten Glaubenssätzen und deinem persönlichen Sinn."
+            }}
+          </div>
+          <br />
+
+          <div>
+            •
+            <b>{{
+              currentLang === "en"
+                ? "Built for busy & ambitions people."
+                : "Gemacht für beschäftigte & ambitionierte Menschen."
+            }}</b>
+            {{
+              currentLang === "en"
+                ? "Flexible. Online. Automated. Easy access."
+                : "Flexible. Online. Automatisiert. Einfacher Zugriff."
+            }}
+          </div>
+          <br />
+
+          <div>
+            •
+            <b>{{
+              currentLang === "en" ? "Practice + theory." : "Praxis + Theorie."
+            }}</b>
+            {{
+              currentLang === "en"
+                ? "Short, targeted exercises with fast feedback. You track insights in one place, see steady progress, and keep the overview."
+                : "Kurze, gezielte Übungen mit schnellem Feedback. Du hältst deine Erkenntnisse an einem Ort fest, siehst kontinuierlichen Fortschritt und behältst den Überblick."
+            }}
+          </div>
+          <br />
+
+          <div>
+            •
+            {{
+              currentLang === "en"
+                ? "We also assess your"
+                : "Wir beurteilen auch Ihr "
+            }}
+            <b>
+              {{
+                currentLang === "en"
+                  ? "neurotransmitter balance."
+                  : "Neurotransmitter-Gleichgewicht."
+              }}
+            </b>
+          </div>
+          <br />
+
+          <div>
+            •
+            <b>
+              {{
+                currentLang === "en"
+                  ? "Grounded. Systematic. Integral perspective - no woo-woo."
+                  : "Bodenständig. Systematische. Integrale Perspektive – kein woo-woo."
+              }}
+            </b>
+          </div>
+          <br />
+
+          <div>
+            •
+            <b>{{
+              currentLang === "en"
+                ? "Know yourself, prompt better."
+                : "Erkenne dich selbst, bessere Prompts."
+            }}</b>
+            {{
+              currentLang === "en"
+                ? "Muddy inputs = muddy outputs. You’ll learn how you work—patterns, energy, biology—and what generally works for humans. Result: sharper thinking and far better GPT prompts for your self-reflexion."
+                : "Unklare Eingaben = unklare Ergebnisse. Du lernst, wie du funktionierst – Muster, Energie, Biologie – und was allgemein für Menschen funktioniert. Ergebnis: klareres Denken und deutlich bessere GPT-Prompts für deine Selbstreflexion."
+            }}
+          </div>
+          <br />
+
+          <div>
+            •
+            <b>{{
+              currentLang === "en"
+                ? "Clear roadmap, tailored pace."
+                : "Klarer Fahrplan, angepasstes Tempo."
+            }}</b>
+            {{
+              currentLang === "en"
+                ? "A proven step-by-step path sets the guardrails; inside them, we adapt to your speed & need. - Programm was co-created with real clients."
+                : "Ein bewährter Schritt-für-Schritt-Prozess setzt die Leitplanken; darin passen wir uns deinem Tempo und deinen Bedürfnissen an. – Das Programm wurde mit echten Klienten entwickelt."
+            }}
+          </div>
+          <br />
+
+          <div>
+            •
+            <b>{{
+              currentLang === "en" ? "We go deep." : "Wir gehen in die Tiefe."
+            }}</b>
+            {{
+              currentLang === "en"
+                ? "Coaching uncovers the hidden stories that shape your present – and opens space for change."
+                : "Coaching deckt die verborgenen Geschichten auf, die deine Gegenwart prägen – und öffnet Raum für Veränderung."
+            }}
+          </div>
+          <br />
+
+          <div>
+            •
+            <b>{{ currentLang === "en" ? "Approach:" : "Ansatz:" }}</b>
+            {{
+              currentLang === "en"
+                ? "Depth, Long-term thinking, Simplicity"
+                : "Tiefe, Langfristigkeit, Einfachheit"
+            }}
+          </div>
+        </div>
+      </div>
+    </app-read-more>
+  </section>
+
+  <hr class="bg-primary" />
+
+  <div class="row text-center">
+    <div class="ccol s-12 m-8">
+      <h2>
+        {{
+          currentLang === "en"
+            ? "I know your challenge is unique, that's why we work 1:1"
+            : "Ich weiß, dass deine Herausforderung einzigartig ist, deshalb arbeiten wir 1:1"
+        }}
+      </h2>
+      @if (currentLang === "en") {
+        <p>
+          As a certified LTC &
+          <a
+            href="https://www.easc-online.eu/in-ihrer-naehe/profil/basil-jung"
+            target="_blank"
+            >EASC</a
+          >
+          coach and mentor, I’m here to guide you systematically - with empathy
+          and awareness - through your personal development process.
+        </p>
+      } @else {
+        <p>
+          Als zertifizierter LTC &
+          <a
+            href="https://www.easc-online.eu/in-ihrer-naehe/profil/basil-jung"
+            target="_blank"
+            >EASC</a
+          >
+          Coach und Mentor begleite ich dich systematisch - mit Empathie und
+          Achtsamkeit - ​​durch deinen persönlichen Entwicklungsprozess.
+        </p>
+      }
+      <img src="assets/LTC-siegel.png" width="120" class="img-setting" />
+    </div>
+
+    <div class="col s-12 m-4">
+      <div class="about-me-wrapper">
+        <img
+          src="assets/basil-biz.jpg"
+          style="border-radius: 50%"
+          width="150"
+          class="img-setting"
+        />
+      </div>
+    </div>
   </div>
 </div>

@@ -1,10 +1,6 @@
 <div id="formula-selector" class="title-box-green container">
   <h1>
-    {{
-      currentLang === "en"
-        ? "LifeFlow.Now™ a simple cycle for living in flow"
-        : "LifeFlow.Now™ ein einfacher zyklus um im Flow zu leben"
-    }}
+    {{ currentLang === "en" ? "THE FORMULA" : "DIE FORMEL" }}
   </h1>
 
   <div class="row" style="margin: 1rem">
@@ -29,7 +25,7 @@
           {{
             currentLang === "en"
               ? "Once you realize you can’t get anywhere, you start to act and think differently; enter the LifeFlow.Now-CYCLE™."
-              : "Sobald du erkennst, dass du nirgends ankommen wirst, beginnst du anders zu handeln und zu denken; steige in the LifeFlow.Now-ZYKLUS™ ein. "
+              : "Sobald du erkennst, dass du nirgends ankommen wirst, beginnst du anders zu handeln und zu denken; steige in den LifeFlow.Now-ZYKLUS™ ein."
           }}</i
         >
       </p>
@@ -44,10 +40,6 @@
 
   <div class="row my-4 justify-content-center">
     <hr class="my-0 w-50 color-white" />
-  </div>
-
-  <div>
-    <app-details-process></app-details-process>
   </div>
 
   <div class="card bg-transparent hero-card">
@@ -72,11 +64,12 @@
         >
           <span>{{
             currentLang === "en"
-              ? "TELL ME MORE ABOUT THE PROCESS"
-              : "MEHR ERFAHREN ÜBER DEN PROZESS"
+              ? "TELL ME MORE ABOUT THE PROCESS & OFFER"
+              : "MEHR ERFAHREN ÜBER DEN PROZESS & ANGEBOT"
           }}</span>
         </a>
       </div>
     </div>
   </div>
+  <app-details-process></app-details-process>
 </div>
