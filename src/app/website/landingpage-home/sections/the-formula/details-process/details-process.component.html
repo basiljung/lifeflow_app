@@ -24,7 +24,7 @@
     <app-take-aways></app-take-aways>
     <section>
       <h3>
-        {{ currentLang === "en" ? "5 phases" : "5 Phasen" }}
+        {{ currentLang === "en" ? "5 Phases" : "5 Phasen" }}
       </h3>
       <div
         class="scroll-container-vertical scroll-container"
@@ -134,8 +134,8 @@
           <p class="text-primary fw-bold">
             {{
               currentLang === "en"
-                ? "4# – Priorities & joyful action"
-                : "4# – Prioritäten & begeistertes Handeln"
+                ? "4# – Priorities · Joyful Action"
+                : "4# – Prioritäten · Begeistertes Handeln"
             }}
           </p>
           <div class="mx-4 text-primary">
@@ -210,15 +210,52 @@
     </section>
   </div>
   <section id="usp" class="usp-section">
-    <h1>
+    <h2>
       {{
         currentLang === "en"
-          ? "What makes the LifeFlow Coaching™ different?"
-          : "Was zeichnet das LifeFlow Coaching™ aus?"
+          ? "What makes it different?"
+          : "Was zeichnet es aus?"
       }}
-    </h1>
+    </h2>
 
     <app-read-more [lines]="3" slot="text">
+      <p class="text-primary fw-bold">
+        {{ currentLang === "en" ? "5# – Integration" : "5# – Integration" }}
+      </p>
+      <div class="mx-4 text-primary">
+        <span
+          >•
+          {{
+            currentLang === "en"
+              ? "Live & cultivate flow"
+              : "Lebe & kultiviere Flow"
+          }}</span
+        ><br />
+        <span
+          >•
+          {{
+            currentLang === "en"
+              ? "Observe yourself and the signals of your system."
+              : "Beobachte dich und die Signale deines Systems."
+          }}</span
+        ><br />
+        <span
+          >•
+          {{
+            currentLang === "en"
+              ? "Act, feel, reflect align thinking, feeling, and action; integrate emotions and intuition with awareness."
+              : "Handle, fühle, reflektiere bringe Denken, Fühlen und Handeln in Einklang; integriere Emotionen und Intuition bewusst."
+          }}</span
+        ><br />
+        <span
+          >•
+          {{
+            currentLang === "en"
+              ? "Review, adjust, and create add play and celebration so learning lasts."
+              : "Überprüfe, passe an und erschaffe füge Spiel und Feier hinzu, damit das Lernen nachhaltig wirkt."
+          }}</span
+        ><br />
+      </div>
       <div slot="text-readmore-comp">
         <div style="margin: 0.5rem">
           <div>
