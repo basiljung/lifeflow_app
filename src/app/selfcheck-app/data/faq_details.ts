@@ -110,7 +110,7 @@ export const FAQDETAILSDATA_DE: {
   <blockquote>  
     <p>
       1. <strong>Klarheit, Ausrichtung & Ziel</strong> --> <em
-        >Weißt du, wo du hin willst? Kennst du dein Ziel?</em
+        >Weisst du, wo du hin willst? Kennst du dein Ziel?</em
       >
     </p>
     <p>
@@ -188,7 +188,7 @@ export const FAQDETAILSDATA_DE: {
   },
   {
     title: '📃 Haftungsausschluss',
-    text: `Diese App dient ausschließlich der Information und Selbstreflexion.
+    text: `Diese App dient ausschliesslich der Information und Selbstreflexion.
     Sie ist kein medizinisches oder psychologisches Diagnosewerkzeug und
     ersetzt keine professionelle Beratung, Diagnose oder Behandlung. Die
     bereitgestellten Einsichten basieren auf allgemeinen
@@ -218,7 +218,7 @@ export const FAQDETAILSDATA_DE: {
 
     <h6>2. Keine medizinische Beratung</h6>
     <p>
-      Die App und ihre Inhalte dienen ausschließlich der Information und
+      Die App und ihre Inhalte dienen ausschliesslich der Information und
       Bildung. Sie ersetzen keine medizinische, psychologische oder
       therapeutische Beratung, Diagnose oder Behandlung. Wenn du unter
       psychischen Belastungen leidest, die über den Rahmen von
@@ -237,9 +237,9 @@ export const FAQDETAILSDATA_DE: {
     <p>
       Diese App speichert oder analysiert deine individuellen Antworten
       nicht. Alle Angaben verbleiben auf deinem Gerät und dienen
-      ausschließlich der unmittelbaren Rückmeldung. Wenn du optional Name
+      ausschliesslich der unmittelbaren Rückmeldung. Wenn du optional Name
       und E-Mail angibst (z. B. für Updates oder ergänzendes Material),
-      werden diese Daten sicher gespeichert und ausschließlich für die
+      werden diese Daten sicher gespeichert und ausschliesslich für die
       Kommunikation im Zusammenhang mit der App oder
       Coaching-Dienstleistungen verwendet. Siehe dazu die
       [Datenschutzerklärung] für weitere Informationen.

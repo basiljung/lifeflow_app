@@ -119,7 +119,7 @@ export const QUESTIONS_DE: Question[] = [
     ],
   },
   {
-    text: 'Meine Aufgaben oder mein Alltag überfordern mich regelmäßig.',
+    text: 'Meine Aufgaben oder mein Alltag überfordern mich regelmässig.',
     answers: [
       {
         text: '5 – trifft voll zu',
@@ -189,7 +189,7 @@ export const QUESTIONS_DE: Question[] = [
     ],
   },
   {
-    text: 'Ich weiß, wie ich meine Ziele in konkrete Schritte umsetze.',
+    text: 'Ich weiss, wie ich meine Ziele in konkrete Schritte umsetze.',
     answers: [
       {
         text: '5 – trifft voll zu',
@@ -609,7 +609,7 @@ export const QUESTIONS_DE: Question[] = [
     ],
   },
   {
-    text: 'Ich erlebe regelmäßig Momente von Vertrauen und emotionaler Nähe.',
+    text: 'Ich erlebe regelmässig Momente von Vertrauen und emotionaler Nähe.',
     answers: [
       {
         text: '5 – trifft voll zu',
@@ -924,7 +924,7 @@ export const QUESTIONS_DE: Question[] = [
     ],
   },
   {
-    text: 'Ich finde regelmäßig kleine Dinge, über die ich mich freuen kann.',
+    text: 'Ich finde regelmässig kleine Dinge, über die ich mich freuen kann.',
     answers: [
       {
         text: '5 – trifft voll zu',

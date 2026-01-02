@@ -55,7 +55,7 @@ export const RESULTDATA_DE: ResultData = {
       'Das kultivieren der Verbindung zu dir selbst fehlt.',
     ],
     input:
-      'Es wird ausgeschüttet bei emotionaler Nähe, menschlichem Kontakt und echten Momenten der Verbindung – sei es mit anderen oder mit dir selbst. Beim Kuscheln, Umarmen oder in tiefen Gesprächen steigt der Oxytocin-Spiegel spürbar an. Es stärkt unser Gefühl von Vertrauen, Selbstvertrauen, Geborgenheit und emotionaler Sicherheit. Dass wir uns mit anderen Menschen verbinden, ist kein Zufall. Die Evolution hat uns so „programmiert“ – weil Verbindung unser Überleben sichert: Wir helfen einander, sorgen füreinander, gründen Familien und halten als Gemeinschaft zusammen. Diese Verbindung gilt nicht nur nach außen. Auch die Beziehung zu dir selbst.',
+      'Es wird ausgeschüttet bei emotionaler Nähe, menschlichem Kontakt und echten Momenten der Verbindung – sei es mit anderen oder mit dir selbst. Beim Kuscheln, Umarmen oder in tiefen Gesprächen steigt der Oxytocin-Spiegel spürbar an. Es stärkt unser Gefühl von Vertrauen, Selbstvertrauen, Geborgenheit und emotionaler Sicherheit. Dass wir uns mit anderen Menschen verbinden, ist kein Zufall. Die Evolution hat uns so „programmiert“ – weil Verbindung unser Überleben sichert: Wir helfen einander, sorgen füreinander, gründen Familien und halten als Gemeinschaft zusammen. Diese Verbindung gilt nicht nur nach aussen. Auch die Beziehung zu dir selbst.',
   },
   serotonin: {
     area: 'Serotonin',
@@ -141,7 +141,7 @@ export const RESULTDATA_DE: ResultData = {
     tips: [
       {
         title: '1. Realistische Schritte planen',
-        text: 'Zerlege große Ziele in kleine, machbare Etappen.',
+        text: 'Zerlege grosse Ziele in kleine, machbare Etappen.',
       },
       {
         title: '2. Ressourcen prüfen',
@@ -182,7 +182,7 @@ export const RESULTDATA_DE: ResultData = {
     ],
     reasons: [
       'Keine Verbindung zu den eigenen Werten → Wer nicht weiss, was ihm wirklich wichtig ist, empfindet das eigene Handeln schnell als leer.',
-      'Fremdgesteuertes Leben → Man folgt äußeren Erwartungen (Familie, Gesellschaft, Karriere), statt der eigenen inneren Stimme.',
+      'Fremdgesteuertes Leben → Man folgt äusseren Erwartungen (Familie, Gesellschaft, Karriere), statt der eigenen inneren Stimme.',
       'Fehlende Selbstkenntnis → Ohne Zugang zu sich selbst ist es schwer zu spüren, was einem wichtig ist.',
     ],
   },
@@ -197,7 +197,7 @@ export const RESULTDATA_DE: ResultData = {
       },
       {
         title: '2. Die Kraft der Natur nutzen',
-        text: 'Verbringe Zeit draußen – Natur beruhigt dein Nervensystem und schafft Raum für innere Klarheit.',
+        text: 'Verbringe Zeit draussen – Natur beruhigt dein Nervensystem und schafft Raum für innere Klarheit.',
       },
       {
         title: '3. Meditation',
@@ -235,7 +235,7 @@ export const RESULTDATA_DE: ResultData = {
     reasons: [
       'Zu viele offene Baustellen → Ohne klare Prioritäten konkurrieren zu viele Aufgaben um Aufmerksamkeit – das Gehirn springt ständig hin und her.',
       'Keine klare Planung oder Tagesstruktur → Wer nur „nach Gefühl“ arbeitet, verliert sich leicht im Dringlichen statt im Wichtigen.',
-      'Digitale Ablenkung & Reizüberflutung → Ständige Unterbrechungen (z. B. Handy, Benachrichtigungen) zerreißen die Konzentration.',
+      'Digitale Ablenkung & Reizüberflutung → Ständige Unterbrechungen (z. B. Handy, Benachrichtigungen) zerreissen die Konzentration.',
     ],
   },
 };
