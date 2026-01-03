@@ -1,3 +1,29 @@
 .text-shadow {
   text-shadow: 4px 4px 10px #0d1b2a;
 }
+
+.bg {
+  background-size: cover; /* fills the div */
+  background-position: center; /* keeps image centered */
+  background-repeat: no-repeat;
+
+  min-height: 300px; /* REQUIRED */
+  padding: 2rem; /* so content has space */
+  color: white;
+}
+
+/* Overlay */
+.bg::before {
+  content: "";
+  position: absolute;
+  inset: 0; /* top:0 right:0 bottom:0 left:0 */
+
+  background: rgba(0, 0, 0, 0.4); /* adjust for contrast */
+  z-index: 1;
+}
+
+/* Keep content above overlay */
+.bg > * {
+  position: relative;
+  z-index: 2;
+}

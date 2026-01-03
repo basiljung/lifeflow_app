@@ -46,6 +46,7 @@
     <img
       src="./../../../../../assets/mountainlake.jpg"
       class="card-img h-100 w-100 object-fit-cover"
+      style="filter: brightness(0.7)"
     />
     <div class="card-img-overlay">
       <p class="m-4 font-formula-custom">
@@ -55,17 +56,16 @@
             : "Das Leben wiederholt sich, bis wir uns öffnen für das, was wir zu vermeiden versuchen. Sobald wir erkennen, dass wir keine Angst vor unserer inneren Welt haben müssen, wird das Leben zum Spiel. Wahre Veränderung beginnt im Inneren. Lass uns gemeinsam dorthin schauen."
         }}
       </p>
-      <div class="mt-auto d-flex justify-content-center p-3">
+      <div class="d-flex justify-content-center p-3">
         <a
-          class="waves-effect waves-light btn pulse-btn-yellow"
+          class="btn pulse-btn-yellow"
           data-bs-toggle="collapse"
           href="#collapseDetails"
-          style="border-radius: 12px"
         >
           <span>{{
             currentLang === "en"
               ? "TELL ME MORE ABOUT THE PROCESS & OFFER"
-              : "MEHR ERFAHREN ÜBER DEN PROZESS & ANGEBOT"
+              : "MEHR ERFAHREN ÜBER DEN PROZESS & DAS ANGEBOT"
           }}</span>
         </a>
       </div>

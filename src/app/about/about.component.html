@@ -120,8 +120,8 @@
     </div>
   </div>
 
-  <div class="row my-4 justify-content-center">
-    <div class="col-12 col-md-10">
+<!--   <div class="row my-4 justify-content-center">
+    <div class="col-12 col-md-6">
       <div class="card bg-light border-light">
         <div class="card-body">
           <h5 class="card-title">
@@ -140,7 +140,7 @@
           </p>
         </div>
       </div>
-    </div>
+    </div> -->
 
     <div class="col-12 col-md-6 m-4">
       <div class="card border-light m-4">
@@ -148,13 +148,63 @@
           <h5 class="card-title">
             {{ currentLang === "en" ? "Mission" : "Mission" }}
           </h5>
-          <p class="card-text">
-            {{
-              currentLang === "en"
-                ? "My mission is to bring integral awareness into everyday life. Not only onto the meditation cushion or into retreats, but into the lived reality of relationships, work, decision-making, and responsibility. Into the places where awareness can create the greatest stability and impact. I believe we need more people doing meaningful, useful work, and environments where awareness is present, so humanity, purpose, effectiveness, and responsibility can come together. From this, a world can emerge that lives in greater harmony with nature and supports a form of development that serves us."
-                : "Meine Mission ist es, integrales Bewusstsein in den Alltag zu bringen, nicht nur auf das Meditationskissen oder in Retreats, sondern in die gelebte Realität von Beziehung, Arbeit, Entscheidungsfindung und Verantwortung. Dorthin, wo Bewusstsein die grösste Stabilität und Wirkung entfalten kann. Ich bin überzeugt, dass wir mehr Menschen brauchen, die sinnvolle und nützliche Arbeit tun, und Arbeitsumfelder, in denen Bewusstsein präsent ist, sodass Menschlichkeit, Sinn, Wirksamkeit und Verantwortung zusammenfinden können. Daraus kann eine Welt entstehen, die in grösserer Harmonie mit der Natur lebt und eine Form von Entwicklung ermöglicht, die uns dient"
-            }}
-          </p>
+          @if (currentLang === "en") {
+            <p>
+              <strong
+                >My mission is to bring integral awareness into everyday
+                life.</strong
+              ><br />
+              Not as a retreat from life, but as conscious, responsible
+              participation, in relationships, in work, and in the decisions
+              that truly matter.
+            </p>
+
+            <p>
+              I work with people who are willing to meet themselves honestly,
+              understand their body–mind system, and follow their inner
+              compass.<br />
+              People who make clear decisions, take responsibility, and shape
+              their lives deliberately, rather than being shaped by
+              circumstances.
+            </p>
+
+            <p>
+              Through deep self-knowledge, integral perspectives, and practical,
+              everyday application, clarity, inner calm, and fulfillment
+              emerge.<br />
+              In this way, people develop the capacity to act effectively and to
+              embody development that serves themselves, their communities,
+              their environment, and life itself.
+            </p>
+          } @else {
+            <p>
+              <strong
+                >Meine Mission ist es, integrales Bewusstsein in den Alltag zu
+                bringen.</strong
+              ><br />
+              Nicht als Rückzug aus dem Leben, sondern als bewusste,
+              verantwortliche Teilnahme, in Beziehungen, im Beruf und in den
+              Entscheidungen, die wirklich zählen.
+            </p>
+
+            <p>
+              Ich begleite Menschen, die bereit sind, sich selbst ehrlich zu
+              begegnen, ihr Körper-Geist-System zu verstehen und ihrem inneren
+              Kompass zu folgen.<br />
+              Menschen, die klare Entscheidungen treffen, Verantwortung
+              übernehmen und ihr Leben bewusst gestalten, statt sich von
+              Umständen bestimmen zu lassen.
+            </p>
+
+            <p>
+              Durch tiefe Selbstkenntnis, integrale Perspektiven und
+              alltagstaugliche Praxis entstehen Klarheit, innere Ruhe und
+              Erfüllung.<br />
+              So entwickeln sich Menschen, die wirksam handeln und Entwicklung
+              verkörpern, die ihnen selbst, der Gesellschaft, ihrem Umfeld und
+              dem Leben dient.
+            </p>
+          }
         </div>
       </div>
     </div>
