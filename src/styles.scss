@@ -142,6 +142,7 @@ main {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.05rem;
+  border-radius: 12px;
 }
 
 .title-card-result {
@@ -159,14 +160,18 @@ main {
   color: transparent;
 }
 
-.btn-gradient {
-  background: $color-accent;
-}
-
-.pulse-btn {
+.pulse-btn-green {
   background-color: $color-secondary;
   color: white;
   box-shadow: 0 0 0 $color-secondary;
+  border-radius: 12px;
+}
+
+.pulse-btn-yellow {
+  background-color: $color-accent;
+  color: white;
+  box-shadow: 0 0 0 $color-secondary;
+  border-radius: 12px;
 }
 
 @keyframes pulse {

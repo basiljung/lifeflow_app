@@ -1,9 +1,10 @@
-.btn-selector {
-  border-radius: 15px;
-}
+.bg {
+  background-image: url("../../../../../assets/mountainlake.jpg");
+  background-size: cover; /* fills the div */
+  background-position: center; /* keeps image centered */
+  background-repeat: no-repeat;
 
-.gradient-title-sm {
-  font-size: 2rem;
-  color: #0f4f45;
-  padding: 0.4rem;
+  min-height: 300px; /* REQUIRED */
+  padding: 2rem; /* so content has space */
+  color: white;
 }

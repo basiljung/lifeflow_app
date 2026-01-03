@@ -1,6 +1,6 @@
 <div
   id="topic-selector"
-  class="container my-5 d-flex flex-column justify-content-center"
+  class="d-flex flex-column justify-content-center bg"
   style="height: 75vh"
 >
   <div class="row text-center mb-5">
@@ -20,7 +20,7 @@
     <div class="col-12 col-md-4">
       <div class="d-flex flex-column align-items-center">
         <a
-          class="btn waves-effect waves-light btn-selector btn-gradient pulse-btn"
+          class="btn pulse-btn-green"
           [routerLink]="['/', currentLang, 'clarity']"
           >{{
             currentLang === "en"
@@ -36,7 +36,7 @@
     <div class="col-12 col-md-4">
       <div class="d-flex flex-column align-items-center">
         <a
-          class="btn waves-effect waves-light btn-selector btn-gradient pulse-btn"
+          class="btn waves-effect waves-light btn-selector pulse-btn-green"
           [routerLink]="['/', currentLang, 'inner-peace']"
           >{{ currentLang === "en" ? "Inner Restlesness" : "Innere Unruhe" }}
           <i class="bi bi-circle"></i>
@@ -48,7 +48,7 @@
     <div class="col-12 col-md-4">
       <div class="d-flex flex-column align-items-center">
         <a
-          class="btn waves-effect waves-light btn-selector btn-gradient pulse-btn"
+          class="btn waves-effect waves-light btn-selector pulse-btn-green"
           [routerLink]="['/', currentLang, 'drive']"
           >{{ currentLang === "en" ? "Lack of Energy" : "Fehlende Energie" }}
           <i class="bi bi-lightning"></i>
