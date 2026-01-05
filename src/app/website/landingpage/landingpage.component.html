@@ -13,13 +13,15 @@
       <div class="row justify-content-center mb-5">
         <div class="col-12 col-md-6">
           <div class="card border-light text-center">
-            <div class="card-body">
+            <div class="card-body img-setting">
               <h5 class="card-title">
-                {{
-                  currentLang === "en"
-                    ? "LifeFlow Newsletter™ - Free"
-                    : "LifeFlow Newsletter™ - Kostenlos"
-                }}
+                @if (currentLang === "en") {
+                  LifeFlow Newsletter™ -
+                  <span class="highlight-marker-yellow">Free</span>
+                } @else {
+                  LifeFlow Newsletter™ -
+                  <span class="highlight-marker-yellow">Kostenlos</span>
+                }
               </h5>
               <p class="card-text">
                 {{
@@ -44,13 +46,15 @@
       <div class="row justify-content-center">
         <div class="col-12 col-md-6">
           <div class="card border-light text-center mb-5">
-            <div class="card-body">
+            <div class="card-body img-setting">
               <h5 class="card-title">
-                {{
-                  currentLang === "en"
-                    ? "LifeFlowCheck™ - Free"
-                    : "LifeFlowCheck™ - Kostenlos"
-                }}
+                @if (currentLang === "en") {
+                  LifeFlowCheck™ -
+                  <span class="highlight-marker-yellow">Free</span>
+                } @else {
+                  LifeFlowCheck™ -
+                  <span class="highlight-marker-yellow">Kostenlos</span>
+                }
               </h5>
               <p class="card-text">
                 {{
@@ -74,13 +78,15 @@
       <div class="row justify-content-center">
         <div class="col-12 col-md-6">
           <div class="card border-light text-center mb-5">
-            <div class="card-body">
+            <div class="card-body img-setting">
               <h5 class="card-title">
-                {{
-                  currentLang === "en"
-                    ? "LifeFlow Self-discovery Course™ - Coming soon"
-                    : "LifeFlow Self-discovery Course™ - Kommt bald"
-                }}
+                @if (currentLang === "en") {
+                  LifeFlow Self-discovery Course™ -
+                  <span>Coming soon</span>
+                } @else {
+                  LifeFlow Self-discovery Course™ -
+                  <span>Kommt bald</span>
+                }
               </h5>
               <p class="card-text">
                 {{
@@ -103,9 +109,13 @@
         <div class="row justify-content-center">
           <div class="col-12 col-md-6">
             <div class="card border-light text-center mb-5">
-              <div class="card-body">
+              <div class="card-body img-setting">
                 <h5 class="card-title">
-                  {{ currentLang === "en" ? "1:1" : "1:1" }}
+                  @if (currentLang === "en") {
+                    <span>LifeFlow 1:1™</span>
+                  } @else {
+                    <span>LifeFlow 1:1™</span>
+                  }
                 </h5>
                 <p class="card-text">
                   {{
