@@ -11,72 +11,70 @@
   <div style="margin-top: 8rem">
     <div class="container">
       <div class="row justify-content-center mb-5">
-        <div class="col-12 col-md-6">
+        <div class="col-12 col-md-10">
           <div class="card border-light text-center">
             <div class="card-body img-setting">
-              <h5 class="card-title">
-                @if (currentLang === "en") {
-                  LifeFlow Newsletter™ -
-                  <span class="highlight-marker-yellow">Free</span>
-                } @else {
-                  LifeFlow Newsletter™ -
-                  <span class="highlight-marker-yellow">Kostenlos</span>
-                }
-              </h5>
-              <p class="card-text">
-                {{
-                  currentLang === "en"
-                    ? "Learn the tactics & mindset to build a fulfilling and joyful life."
-                    : "Lerne die Taktiken und das Mindset für ein erfüllendes und
+              <div class="m-4 p-4">
+                <h5 class="card-title">
+                  @if (currentLang === "en") {
+                    LifeFlow Newsletter™ -
+                    <span class="highlight-marker-yellow">Free</span>
+                  } @else {
+                    LifeFlow Newsletter™ -
+                    <span class="highlight-marker-yellow">Kostenlos</span>
+                  }
+                </h5>
+                <p class="card-text">
+                  {{
+                    currentLang === "en"
+                      ? "Learn the tactics & mindset to build a fulfilling and joyful life."
+                      : "Lerne die Taktiken und das Mindset für ein erfüllendes und
               freudvolles Leben."
-                }}
-              </p>
-              <a
-                (click)="scrollToTop()"
-                class="btn pulse-btn-yellow"
-                [routerLink]="['/', currentLang, 'click']"
-                style="border-radius: 12px"
-              >
-                {{ currentLang === "en" ? "Discover more" : "Mehr erfahren" }}
-              </a>
+                  }}
+                </p>
+                <a
+                  (click)="scrollToTop()"
+                  class="btn pulse-btn-yellow"
+                  [routerLink]="['/', currentLang, 'click']"
+                  style="border-radius: 12px"
+                >
+                  {{ currentLang === "en" ? "Discover more" : "Mehr erfahren" }}
+                </a>
+              </div>
+
+              <div class="m-4 p-4">
+                <h5 class="card-title">
+                  @if (currentLang === "en") {
+                    LifeFlowCheck™ -
+                    <span class="highlight-marker-yellow">Free</span>
+                  } @else {
+                    LifeFlowCheck™ -
+                    <span class="highlight-marker-yellow">Kostenlos</span>
+                  }
+                </h5>
+                <p class="card-text">
+                  {{
+                    currentLang === "en"
+                      ? "A quick check-in to unlock your potential, and boost your flow, balance & energy."
+                      : "Ein kurzer Check-in, der dir hilft, dein Potenzial zu entdecken, für mehr Flow, Balance und Energie."
+                  }}
+                </p>
+                <a
+                  (click)="scrollToTop()"
+                  class="btn pulse-btn-yellow"
+                  [routerLink]="['/', currentLang, 'app']"
+                  style="border-radius: 12px"
+                >
+                  {{ currentLang === "en" ? "Discover more" : "Mehr erfahren" }}
+                </a>
+              </div>
             </div>
           </div>
         </div>
       </div>
+
       <div class="row justify-content-center">
-        <div class="col-12 col-md-6">
-          <div class="card border-light text-center mb-5">
-            <div class="card-body img-setting">
-              <h5 class="card-title">
-                @if (currentLang === "en") {
-                  LifeFlowCheck™ -
-                  <span class="highlight-marker-yellow">Free</span>
-                } @else {
-                  LifeFlowCheck™ -
-                  <span class="highlight-marker-yellow">Kostenlos</span>
-                }
-              </h5>
-              <p class="card-text">
-                {{
-                  currentLang === "en"
-                    ? "A quick check-in to unlock your potential, and boost your flow, balance & energy."
-                    : "Ein kurzer Check-in, der dir hilft, dein Potenzial zu entdecken, für mehr Flow, Balance und Energie."
-                }}
-              </p>
-              <a
-                (click)="scrollToTop()"
-                class="btn pulse-btn-yellow"
-                [routerLink]="['/', currentLang, 'app']"
-                style="border-radius: 12px"
-              >
-                {{ currentLang === "en" ? "Discover more" : "Mehr erfahren" }}
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row justify-content-center">
-        <div class="col-12 col-md-6">
+        <div class="col-12 col-md-10">
           <div class="card border-light text-center mb-5">
             <div class="card-body img-setting">
               <h5 class="card-title">
@@ -107,7 +105,7 @@
           </div>
         </div>
         <div class="row justify-content-center">
-          <div class="col-12 col-md-6">
+          <div class="col-12 col-md-10">
             <div class="card border-light text-center mb-5">
               <div class="card-body img-setting">
                 <h5 class="card-title">
