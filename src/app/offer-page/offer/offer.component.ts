@@ -1,9 +1,8 @@
 import { Component, OnDestroy, OnInit, computed, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterModule, RouterOutlet } from '@angular/router';
+import { RouterModule } from '@angular/router';
 import { Subject, takeUntil } from 'rxjs';
 
-import { TakeAwaysComponent } from '../../website/landingpage-home/sections/the-formula/take-aways/take-aways.component';
 import { OfferFirstPartComponent } from './offer-first-part/offer-first-part.component';
 import { LanguageService } from '../../services/language.service';
 
@@ -12,13 +11,7 @@ type PackageKey = '4' | '8' | '12';
 @Component({
   selector: 'app-offer',
   standalone: true,
-  imports: [
-    CommonModule,
-    RouterOutlet,
-    TakeAwaysComponent,
-    OfferFirstPartComponent,
-    RouterModule,
-  ],
+  imports: [CommonModule, OfferFirstPartComponent, RouterModule],
   templateUrl: './offer.component.html',
   styleUrls: ['./offer.component.scss'],
 })

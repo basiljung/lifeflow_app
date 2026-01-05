@@ -2,7 +2,6 @@ import { AfterViewInit, Component, OnDestroy, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router, RouterModule } from '@angular/router';
 import { SenjaCoachingTestimonialsComponent } from '../../testimonials/senja-coaching-testimonials/senja-coaching-testimonials.component';
-import { TitlePageTopComponent } from './title-page-top/title-page-top.component';
 import { TopicSelectorComponent } from './title-page-top/topic-selector/topic-selector.component';
 import { Subject, takeUntil } from 'rxjs';
 import { LanguageService } from '../../services/language.service';
@@ -17,7 +16,6 @@ import { FaqComponent } from './sections/faq/faq.component';
 import { ForWhoIsItComponent } from './sections/for-who-is-it/for-who-is-it.component';
 import { SectionTrapComponent } from './sections/section-trap/section-trap.component';
 import { UnderstandingSectionComponent } from './sections/understanding-section/understanding-section.component';
-import { UspComponent } from './sections/usp/usp.component';
 import { WhatNextComponent } from './sections/what-next/what-next.component';
 import { RelevantsComponent } from './sections/relevants/relevants.component';
 import { Cta2Component } from './sections/cta-2/cta-2.component';
@@ -28,7 +26,6 @@ import { Cta2Component } from './sections/cta-2/cta-2.component';
     CommonModule,
     RouterModule,
     SenjaCoachingTestimonialsComponent,
-    TitlePageTopComponent,
     TopicSelectorComponent,
     DriveComponent,
     InnerPeaceComponent,
@@ -37,7 +34,6 @@ import { Cta2Component } from './sections/cta-2/cta-2.component';
     SectionTrapComponent,
     PersonalStoryComponent,
     TheFormulaComponent,
-    UspComponent,
     UnderstandingSectionComponent,
     Cta1Component,
     FaqComponent,

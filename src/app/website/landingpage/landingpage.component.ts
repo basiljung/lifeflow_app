@@ -14,7 +14,6 @@ import { Subject, takeUntil } from 'rxjs';
     RouterModule,
     TitlePageComponent,
     NewsletterBannerComponent,
-    CertificationBannerComponent,
   ],
   templateUrl: './landingpage.component.html',
   styleUrl: './landingpage.component.scss',
