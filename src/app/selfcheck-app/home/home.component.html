@@ -1,15 +1,13 @@
 <div class="m-3 card border-light shadow-sm">
-  <div class="card-body">
-    <h5 class="card-title m-4">
-      {{
-        currentLang === "en"
-          ? "🧠🌿 Welcome to the LifeFlowCheck™"
-          : "🧠🌿 Willkommen beim LifeFlowCheck™"
-      }}
-    </h5>
-    <hr class="my-0" style="border-color: #0f4f45; opacity: 1" />
-    <app-self-check-logic></app-self-check-logic>
-  </div>
+  <h5 class="m-4">
+    {{
+      currentLang === "en"
+        ? "🧠🌿 Welcome to the LifeFlowCheck™"
+        : "🧠🌿 Willkommen beim LifeFlowCheck™"
+    }}
+  </h5>
+  <hr class="my-0" style="border-color: #0f4f45; opacity: 1" />
+  <app-self-check-logic></app-self-check-logic>
 
   <!-- Actions -->
   <div class="card-footer d-flex justify-content-between align-items-center">

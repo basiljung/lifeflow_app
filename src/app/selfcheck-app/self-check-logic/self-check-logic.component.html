@@ -74,12 +74,11 @@
 
   @if (showResult) {
     @if (currentLangSelfCheck === "en") {
-      <h5>Your Results:</h5>
       <app-display-result
         [results]="resultDataSet.outOfBalance"
         [lang]="currentLangSelfCheck"
       >
-        <div slot="top" class="row" style="margin: 0px">
+        <div slot="top" class="row mt-4">
           <div class="card title-card-result">
             🌿 Your biggest potential for more flow lies here!...
           </div>
