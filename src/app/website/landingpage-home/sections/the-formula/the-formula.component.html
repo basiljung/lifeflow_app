@@ -42,6 +42,20 @@
     <hr class="my-0 w-50 color-white" />
   </div>
 
+  <div class="d-flex justify-content-center p-3">
+    <a
+      class="btn pulse-btn-yellow"
+      data-bs-toggle="collapse"
+      href="#collapseDetails"
+    >
+      <span>{{
+        currentLang === "en"
+          ? "TELL ME MORE ABOUT THE PROCESS & OFFER"
+          : "MEHR ERFAHREN ÜBER DEN PROZESS & DAS ANGEBOT"
+      }}</span>
+    </a>
+  </div>
+
   <div class="card bg-transparent hero-card">
     <img
       src="./../../../../../assets/mountainlake.jpg"
@@ -56,19 +70,6 @@
             : "Das Leben wiederholt sich, bis wir uns öffnen für das, was wir zu vermeiden versuchen. Sobald wir erkennen, dass wir keine Angst vor unserer inneren Welt haben müssen, wird das Leben zum Spiel. Wahre Veränderung beginnt im Inneren. Lass uns gemeinsam dorthin schauen."
         }}
       </p>
-      <div class="d-flex justify-content-center p-3">
-        <a
-          class="btn pulse-btn-yellow"
-          data-bs-toggle="collapse"
-          href="#collapseDetails"
-        >
-          <span>{{
-            currentLang === "en"
-              ? "TELL ME MORE ABOUT THE PROCESS & OFFER"
-              : "MEHR ERFAHREN ÜBER DEN PROZESS & DAS ANGEBOT"
-          }}</span>
-        </a>
-      </div>
     </div>
   </div>
   <app-details-process></app-details-process>
