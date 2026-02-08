@@ -171,50 +171,62 @@ export class SelfcheckLogicComponent
 
   getTestResults() {
     const outOfBalanceKeys: SelfcheckTopics[] = []; // 1) score < 0
-    const lowestAreaKeys: SelfcheckTopics[] = []; // 2) lowest score(s)
-    const easyWinsKeys: SelfcheckTopics[] = []; // 3) score 0–3
-    const goodFlowKeys: SelfcheckTopics[] = []; // 4) score 4–6
-    const topAreasKeys: SelfcheckTopics[] = []; // 5) highest score(s)
+    const lowestAreaKeys: SelfcheckTopics[] = []; // 2) lowest score(s) among non-negative
+    const easyWinsKeys: SelfcheckTopics[] = []; // 3) score 0–3 (excluding lowest)
+    const goodFlowKeys: SelfcheckTopics[] = []; // 4) score 4–6 (excluding top)
+    const topAreasKeys: SelfcheckTopics[] = []; // 5) highest score(s) among 4+
 
-    let currentMinScore = Number.POSITIVE_INFINITY;
-    let currentMaxScore = Number.NEGATIVE_INFINITY;
+    // First pass: categorize all scores
+    const allKeys = Object.keys(this.scores) as SelfcheckTopics[];
 
-    for (let key in this.scores) {
-      const score = this.scores[key as SelfcheckTopics];
+    // 1) Identify out of balance (negative scores)
+    const negativeKeys = allKeys.filter((key) => this.scores[key] < 0);
+    outOfBalanceKeys.push(...negativeKeys);
 
-      // 1) Out of balance
-      if (score < 0) {
-        outOfBalanceKeys.push(key as SelfcheckTopics);
-      }
+    // Work with non-negative scores for remaining categories
+    const nonNegativeKeys = allKeys.filter((key) => this.scores[key] >= 0);
 
-      // 2) Most potential
-      if (score < currentMinScore) {
-        currentMinScore = score;
-        lowestAreaKeys.length = 0;
-        lowestAreaKeys.push(key as SelfcheckTopics);
-      } else if (score === currentMinScore) {
-        lowestAreaKeys.push(key as SelfcheckTopics);
-      }
+    if (nonNegativeKeys.length > 0) {
+      // 2) Find lowest score(s) among non-negative
+      const minScore = Math.min(
+        ...nonNegativeKeys.map((key) => this.scores[key]),
+      );
+      const lowestKeys = nonNegativeKeys.filter(
+        (key) => this.scores[key] === minScore,
+      );
+      lowestAreaKeys.push(...lowestKeys);
 
-      // 3) Easy wins
-      if (score >= 0 && score <= 3) {
-        easyWinsKeys.push(key as SelfcheckTopics);
-      }
+      // 3) Easy wins: 0-3 range, excluding those already in lowestAreaKeys
+      const easyWinsPool = nonNegativeKeys.filter(
+        (key) =>
+          this.scores[key] >= 0 &&
+          this.scores[key] <= 3 &&
+          !lowestKeys.includes(key),
+      );
+      easyWinsKeys.push(...easyWinsPool);
 
-      // 4) Good flow
-      if (score >= 4 && score <= 6) {
-        goodFlowKeys.push(key as SelfcheckTopics);
-      }
+      // For scores 4+, find the highest
+      const highScoreKeys = nonNegativeKeys.filter(
+        (key) => this.scores[key] >= 4,
+      );
 
-      // 5) Top areas
-      if (score >= 4) {
-        if (score > currentMaxScore) {
-          currentMaxScore = score;
-          topAreasKeys.length = 0;
-          topAreasKeys.push(key as SelfcheckTopics);
-        } else if (score === currentMaxScore) {
-          topAreasKeys.push(key as SelfcheckTopics);
-        }
+      if (highScoreKeys.length > 0) {
+        const maxScore = Math.max(
+          ...highScoreKeys.map((key) => this.scores[key]),
+        );
+        const topKeys = highScoreKeys.filter(
+          (key) => this.scores[key] === maxScore,
+        );
+        topAreasKeys.push(...topKeys);
+
+        // 4) Good flow: 4-6 range, excluding those in topAreasKeys
+        const goodFlowPool = highScoreKeys.filter(
+          (key) =>
+            this.scores[key] >= 4 &&
+            this.scores[key] <= 6 &&
+            !topKeys.includes(key),
+        );
+        goodFlowKeys.push(...goodFlowPool);
       }
     }
 
@@ -227,7 +239,6 @@ export class SelfcheckLogicComponent
       }, {} as ResultData);
     };
 
-    // Assign categorized results -- comment for dummy
     this.resultDataSet = {
       outOfBalance: reduceToResultData(outOfBalanceKeys),
       lowestAreaPotential: reduceToResultData(lowestAreaKeys),

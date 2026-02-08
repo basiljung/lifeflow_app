@@ -1,16 +1,18 @@
-<div class="m-3 card border-light shadow-sm">
+<div class="m-2 p-2 card border-light shadow-sm">
   <h5 class="m-4">
     {{
       currentLang === "en"
-        ? "🧠🌿 Welcome to the LifeFlowCheck™"
-        : "🧠🌿 Willkommen beim LifeFlowCheck™"
+        ? "🌿 Welcome to the LifeFlowCheck™"
+        : "🌿 Willkommen beim LifeFlowCheck™"
     }}
   </h5>
   <hr class="my-0" style="border-color: #0f4f45; opacity: 1" />
   <app-self-check-logic></app-self-check-logic>
 
   <!-- Actions -->
-  <div class="card-footer d-flex justify-content-between align-items-center">
+  <div
+    class="card-footer bg-white d-flex justify-content-between align-items-center"
+  >
     <!-- If you really want a new tab, prefer href over routerLink -->
     <a class="text-secondary text-decoration-none">LifeFlow.Now™</a>
 

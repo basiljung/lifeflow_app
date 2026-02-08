@@ -36,6 +36,9 @@
             data-bs-parent="#resultAccordion"
           >
             <div class="accordion-body left-align" style="text-align: justify">
+              <p class="block-text">
+                <i>{{ entry.value.input }}</i>
+              </p>
               <h6>
                 <b>{{ lang() === "en" ? "🔍  Reason" : "🔍  Ursache" }}</b>
               </h6>
@@ -80,11 +83,6 @@
                   width: 10rem;
                 "
               ></div>
-
-              <h6>
-                <b>{{ lang() === "en" ? "✚ Details" : "✚ Details" }}</b>
-              </h6>
-              <p class="block-text">{{ entry.value.input }}</p>
 
               <app-cta-whatsapp></app-cta-whatsapp>
             </div>

@@ -74,20 +74,19 @@
 
   @if (showResult) {
     @if (currentLangSelfCheck === "en") {
+      <!-- 1. Out of Balance - Most critical -->
       <app-display-result
         [results]="resultDataSet.outOfBalance"
         [lang]="currentLangSelfCheck"
       >
         <div slot="top" class="row mt-4">
-          <div class="card title-card-result">
-            🌿 Your biggest potential for more flow lies here!...
-          </div>
+          <div class="card title-card-result">⚠️ Areas out of balance</div>
         </div>
         <div slot="bottom">
           <div class="row" style="margin: 0px">
             <div class="card title-card-result">
-              👏 Great job – no strongly unbalanced areas detected!
-              <span>Tell me your secret...</span>
+              👏 Great job – no areas out of balance!
+              <span>Keep up the good work...</span>
             </div>
           </div>
           <div
@@ -99,46 +98,55 @@
           ></div>
         </div>
       </app-display-result>
-      <app-display-result
-        [results]="resultDataSet.easyWins"
-        [lang]="currentLangSelfCheck"
-      >
-        <div slot="top" class="row" style="margin: 0px">
-          <div class="card title-card-result">
-            ⚖️ Here is more room for flow, minor tweaks are enough!
-          </div>
-        </div>
-      </app-display-result>
+
+      <!-- 2. Lowest Area - Needs attention -->
       <app-display-result
         [results]="resultDataSet.lowestAreaPotential"
         [lang]="currentLangSelfCheck"
       >
         <div slot="top" class="row" style="margin: 0px">
           <div class="card title-card-result">
-            ⛔️ This area shows the least flow. Do you know why?
+            🌿 Your biggest potential for more flow – worth focusing on
           </div>
         </div>
       </app-display-result>
+
+      <!-- 3. Easy Wins - Quick improvements -->
+      <app-display-result
+        [results]="resultDataSet.easyWins"
+        [lang]="currentLangSelfCheck"
+      >
+        <div slot="top" class="row" style="margin: 0px">
+          <div class="card title-card-result">
+            ⚖️ Easy wins – small tweaks can make a difference here
+          </div>
+        </div>
+      </app-display-result>
+
+      <!-- 4. Good Flow - Doing well -->
       <app-display-result
         [results]="resultDataSet.goodFlow"
         [lang]="currentLangSelfCheck"
       >
         <div slot="top" class="row" style="margin: 0px">
           <div class="card title-card-result">
-            🌟 Congratulation. You're pretty much in flow here!
+            🌟 You're in good flow here – keep it up!
           </div>
         </div>
       </app-display-result>
+
+      <!-- 5. Top Areas - Celebrate strengths -->
       <app-display-result
         [results]="resultDataSet.topAreas"
         [lang]="currentLangSelfCheck"
       >
         <div slot="top" class="row" style="margin: 0px">
           <div class="card title-card-result">
-            🚀 Your strongest area(s) – Would you say that’s true?
+            🚀 Your strongest areas – these are your superpowers!
           </div>
         </div>
       </app-display-result>
+
       <h6>I am very happy to receive feedback.</h6>
       <button
         onclick="window.open('https://feedback.lifeflow.now', '_blank')"
@@ -148,21 +156,21 @@
       </button>
       <br />
     } @else {
-      <h5>Dein Resultat:</h5>
+      <!-- German version -->
       <app-display-result
         [results]="resultDataSet.outOfBalance"
         [lang]="currentLangSelfCheck"
       >
         <div slot="top" class="row" style="margin: 0px">
           <div class="card title-card-result">
-            🌿 Dein Potenzial für mehr Flow liegt hier...
+            ⚠️ Bereiche aus dem Gleichgewicht – deine größten Wachstumschancen
           </div>
         </div>
         <div slot="bottom">
           <div class="row" style="margin: 0px">
             <div class="card title-card-result">
-              👏 Sehr gut – keine stark unausgeglichenen Bereiche erkannt!
-              <span>Verrate mir dein Geheimnis...</span>
+              👏 Sehr gut – keine Bereiche aus dem Gleichgewicht!
+              <span>Mach weiter so...</span>
             </div>
           </div>
           <div
@@ -174,47 +182,51 @@
           ></div>
         </div>
       </app-display-result>
-      <app-display-result
-        [results]="resultDataSet.easyWins"
-        [lang]="currentLangSelfCheck"
-      >
-        <div slot="top" class="row" style="margin: 0px">
-          <div class="card title-card-result">
-            ⚖️ Hier steckt Entwicklungspotenzial für mehr Flow, kleinere
-            Anpassungen reichen.
-          </div>
-        </div>
-      </app-display-result>
+
       <app-display-result
         [results]="resultDataSet.lowestAreaPotential"
         [lang]="currentLangSelfCheck"
       >
         <div slot="top" class="row" style="margin: 0px">
           <div class="card title-card-result">
-            ⛔️ In diesem Bereich ist dein Flow am geringsten. Weisst du warum?
+            🌿 Dein größtes Potenzial für mehr Flow – lohnt sich zu fokussieren
           </div>
         </div>
       </app-display-result>
+
+      <app-display-result
+        [results]="resultDataSet.easyWins"
+        [lang]="currentLangSelfCheck"
+      >
+        <div slot="top" class="row" style="margin: 0px">
+          <div class="card title-card-result">
+            ⚖️ Schnelle Erfolge – kleine Anpassungen können hier viel bewirken
+          </div>
+        </div>
+      </app-display-result>
+
       <app-display-result
         [results]="resultDataSet.goodFlow"
         [lang]="currentLangSelfCheck"
       >
         <div slot="top" class="row" style="margin: 0px">
           <div class="card title-card-result">
-            🌟 Gratulation. Du bist ziemlich im Flow hier!
+            🌟 Du bist gut im Flow hier – mach weiter so!
           </div>
         </div>
       </app-display-result>
+
       <app-display-result
         [results]="resultDataSet.topAreas"
         [lang]="currentLangSelfCheck"
       >
         <div slot="top" class="row" style="margin: 0px">
           <div class="card title-card-result">
-            🚀 Das ist oder sind dein(e) Top-Bereich(e) – stimmst du zu?
+            🚀 Deine stärksten Bereiche – das sind deine Superkräfte!
           </div>
         </div>
       </app-display-result>
+
       <h6>Ich freue mich über dein Feedback.</h6>
       <button
         onclick="window.open('https://forms.gle/zLWnFkRnFZtoCNEY6', '_blank')"
@@ -225,10 +237,13 @@
       <br />
     }
     <div
-      style="border-bottom: 1px solid #0f4f45; margin: 3rem auto; width: 20rem"
+      style="border-bottom: 1px solid #0f4f45; margin: 1rem auto; width: 20rem"
     ></div>
 
-    <a class="btn pulse-btn-yellow" style="border-radius: 12px">
+    <a
+      class="btn pulse-btn-yellow"
+      style="border-radius: 12px; margin-top: 2rem; margin-bottom: 4rem"
+    >
       <app-cta-email-course></app-cta-email-course>
     </a>
   } @else {
