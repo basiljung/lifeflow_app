@@ -1,5 +1,5 @@
 import { AfterViewInit, Component, OnInit } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { LanguageService } from '../../services/language.service';
 import { Subject, takeUntil } from 'rxjs';
 import { CommonModule } from '@angular/common';
@@ -16,7 +16,11 @@ export class HeaderComponent implements OnInit {
   currentLang: string | null = null;
   isMenuOpen = false;
 
-  constructor(private langService: LanguageService) {}
+  constructor(
+    private langService: LanguageService,
+    private router: Router,
+    private route: ActivatedRoute,
+  ) {}
 
   ngOnInit(): void {
     this.langService.lang$.pipe(takeUntil(this.destroy$)).subscribe((lang) => {
@@ -30,6 +34,10 @@ export class HeaderComponent implements OnInit {
 
   toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen;
+  }
+
+  login() {
+    this.router.navigate([`/${this.currentLang}/login`]);
   }
 
   closeMenu() {
