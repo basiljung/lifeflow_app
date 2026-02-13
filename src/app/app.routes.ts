@@ -1,5 +1,6 @@
 import { Routes } from '@angular/router';
 import { LandingpageComponent } from './website/landingpage/landingpage.component';
+import { LoginComponent } from './login/login.component';
 
 export const routes: Routes = [
   { path: 'app', redirectTo: 'en/app', pathMatch: 'full' },
@@ -8,6 +9,7 @@ export const routes: Routes = [
     path: ':lang',
     children: [
       { path: '', component: LandingpageComponent },
+      { path: 'login', component: LoginComponent },
       {
         path: 'app',
         loadComponent: () =>
