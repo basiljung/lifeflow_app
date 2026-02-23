@@ -1,9 +1,10 @@
-import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { LanguageService } from '../../services/language.service';
-import { Subject, takeUntil } from 'rxjs';
 import { CommonModule } from '@angular/common';
 import { CtaEmailCourseComponent } from '../cta-email-course/cta-email-course.component';
+import { Subject, takeUntil } from 'rxjs';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-header',
@@ -12,14 +13,15 @@ import { CtaEmailCourseComponent } from '../cta-email-course/cta-email-course.co
   styleUrl: './header.component.scss',
 })
 export class HeaderComponent implements OnInit {
-  private destroy$ = new Subject<void>();
   currentLang: string | null = null;
+  private destroy$ = new Subject<void>();
   isMenuOpen = false;
 
   constructor(
     private langService: LanguageService,
     private router: Router,
     private route: ActivatedRoute,
+    protected authService: AuthService,
   ) {}
 
   ngOnInit(): void {
@@ -40,7 +42,17 @@ export class HeaderComponent implements OnInit {
     this.router.navigate([`/${this.currentLang}/login`]);
   }
 
+  logout() {
+    this.router.navigate([`/${this.currentLang}`]);
+    this.authService.logout();
+  }
+
   closeMenu() {
     this.isMenuOpen = false;
+  }
+
+  ngOnDestroy(): void {
+    this.destroy$.next();
+    this.destroy$.complete();
   }
 }

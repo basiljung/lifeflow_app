@@ -7,21 +7,33 @@ import {
   user,
   User,
 } from '@angular/fire/auth';
-import { Observable } from 'rxjs';
+import { Observable, Subject, takeUntil } from 'rxjs';
+import { LanguageService } from './language.service';
 
 @Injectable({
   providedIn: 'root',
 })
 export class AuthService {
+  private destroy$ = new Subject<void>();
   user$: Observable<User | null>;
   currentUser = signal<User | null>(null);
+  currentLang: string | null = null;
 
-  constructor(private auth: Auth) {
+  constructor(
+    private auth: Auth,
+    private langService: LanguageService,
+  ) {
     this.user$ = user(this.auth);
 
     // Update the signal whenever auth state changes
     this.user$.subscribe((user) => {
       this.currentUser.set(user);
+    });
+  }
+
+  ngOnInit(): void {
+    this.langService.lang$.pipe(takeUntil(this.destroy$)).subscribe((lang) => {
+      this.currentLang = lang;
     });
   }
 
@@ -66,5 +78,10 @@ export class AuthService {
   // Check if user is logged in
   isLoggedIn(): boolean {
     return this.currentUser() !== null;
+  }
+
+  ngOnDestroy(): void {
+    this.destroy$.next();
+    this.destroy$.complete();
   }
 }

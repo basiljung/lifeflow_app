@@ -119,17 +119,33 @@
             </button></a
           >
         </li>
-        <li class="nav-item">
-          <a
-            ><button
-              type="button"
-              class="btn text-light custom-item"
-              (click)="login()"
+        @if (authService.currentUser()) {
+          <li class="nav-item">
+            <a
+              ><button
+                type="button"
+                class="btn text-light custom-item"
+                (click)="logout()"
+              >
+                <strong>{{
+                  currentLang === "en" ? "Logout" : "Logout"
+                }}</strong>
+              </button></a
             >
-              <strong>{{ currentLang === "en" ? "Login" : "Login" }}</strong>
-            </button></a
-          >
-        </li>
+          </li>
+        } @else {
+          <li class="nav-item">
+            <a
+              ><button
+                type="button"
+                class="btn text-light custom-item"
+                (click)="login()"
+              >
+                <strong>{{ currentLang === "en" ? "Login" : "Login" }}</strong>
+              </button></a
+            >
+          </li>
+        }
       </ul>
     </div>
   </div>

@@ -1,6 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subject, takeUntil } from 'rxjs';
-import { LanguageService } from '../services/language.service';
+import { LanguageService } from '../../services/language.service';
 
 @Component({
   selector: 'app-selfdiscovery-course',

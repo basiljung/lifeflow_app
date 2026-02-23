@@ -1,6 +1,7 @@
 import { Routes } from '@angular/router';
 import { LandingpageComponent } from './website/landingpage/landingpage.component';
 import { LoginComponent } from './login/login.component';
+import { authGuard } from './guards/auth.guard';
 
 export const routes: Routes = [
   { path: 'app', redirectTo: 'en/app', pathMatch: 'full' },
@@ -10,6 +11,15 @@ export const routes: Routes = [
     children: [
       { path: '', component: LandingpageComponent },
       { path: 'login', component: LoginComponent },
+      {
+        path: 'course-home',
+        loadComponent: () =>
+          import('./course-home/course-home.component').then(
+            (m) => m.CourseHomeComponent,
+          ),
+        canActivate: [authGuard],
+        canActivateChild: [authGuard],
+      },
       {
         path: 'app',
         loadComponent: () =>
@@ -55,9 +65,9 @@ export const routes: Routes = [
       {
         path: 'course',
         loadComponent: () =>
-          import('./selfdiscovery-course/selfdiscovery-course.component').then(
-            (m) => m.SelfdiscoveryCourseComponent,
-          ),
+          import(
+            './course-home/selfdiscovery-course/selfdiscovery-course.component'
+          ).then((m) => m.SelfdiscoveryCourseComponent),
       },
       {
         path: 'about',
