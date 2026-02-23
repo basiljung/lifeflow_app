@@ -1,0 +1,1 @@
+import{Fb as s,Va as t,ob as n,pb as a}from"./chunk-BGKTTZVK.js";var p=class o{static \u0275fac=function(e){return new(e||o)};static \u0275cmp=t({type:o,selectors:[["app-dashboard"]],decls:3,vars:0,consts:[[1,"container","py-4"]],template:function(e,d){e&1&&(n(0,"div",0)(1,"p"),s(2,"You don't have any course yet."),a()())},encapsulation:2})};export{p as DashboardComponent};
