@@ -14,8 +14,8 @@ export const routes: Routes = [
       {
         path: 'course-home',
         loadComponent: () =>
-          import('./course-home/course-home.component').then(
-            (m) => m.CourseHomeComponent,
+          import('./dashboard/dashboard.component').then(
+            (m) => m.DashboardComponent,
           ),
         canActivate: [authGuard],
         canActivateChild: [authGuard],
@@ -66,7 +66,7 @@ export const routes: Routes = [
         path: 'course',
         loadComponent: () =>
           import(
-            './course-home/selfdiscovery-course/selfdiscovery-course.component'
+            './dashboard/selfdiscovery-course/selfdiscovery-course.component'
           ).then((m) => m.SelfdiscoveryCourseComponent),
       },
       {
