@@ -9,8 +9,18 @@ export const routes: Routes = [
   {
     path: ':lang',
     children: [
-      { path: '', component: LandingpageComponent },
-      { path: 'login', component: LoginComponent },
+      {
+        path: '',
+        loadComponent: () =>
+          import('./website/landingpage/landingpage.component').then(
+            (m) => m.LandingpageComponent,
+          ),
+      },
+      {
+        path: 'login',
+        loadComponent: () =>
+          import('./login/login.component').then((m) => m.LoginComponent),
+      },
       {
         path: 'course-home',
         loadComponent: () =>
