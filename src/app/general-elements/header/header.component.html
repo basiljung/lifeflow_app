@@ -125,7 +125,7 @@
               ><button
                 type="button"
                 class="btn text-light custom-item"
-                (click)="logout()"
+                (click)="logout(); toggleMenu()"
               >
                 <strong>{{
                   currentLang === "en" ? "Logout" : "Logout"
@@ -139,7 +139,7 @@
               ><button
                 type="button"
                 class="btn text-light custom-item"
-                (click)="login()"
+                (click)="login(); toggleMenu()"
               >
                 <strong>{{ currentLang === "en" ? "Login" : "Login" }}</strong>
               </button></a
