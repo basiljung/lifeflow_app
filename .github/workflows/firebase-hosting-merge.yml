@@ -12,6 +12,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: |
+          mkdir -p src/environments
           cat > src/environments/environment.ts << 'EOF'
           export const firebaseConfig = {
             apiKey: "${{ secrets.FIREBASE_API_KEY }}",
